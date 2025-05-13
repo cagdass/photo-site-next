@@ -1,0 +1,8 @@
+{
+  "theme_color": "#0f0f0f",
+  "background_color": "#0f0f0f",
+  "display": "standalone",
+  "name": "Çağdaş",
+  "short_name": "Çağdaş",
+  "start_url": "."
+}
