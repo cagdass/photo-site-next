@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #0070f3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-div {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #777;
+  border-top: 1px solid #eaeaea;
+}
+
+.dark .logo-img {
+  filter: invert(1) brightness(2);
+}
+
+.light .logo-img {
+  filter: none;
+}

@@ -1,103 +1,49 @@
-import Image from "next/image";
+// app/page.tsx
+import HeroFlip from '@/components/HeroFlip';
+import HomePageProjects from '@/components/HomePageProjects';
+import './home.css';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <section className="px-4">
+      <div className="hero-text text-sm sm:text-base mb-6 text-center mt-8">
+        <p>
+          Postcard-unfriendly photography from the places I've been
+        </p>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-4 sm:px-8 lg:px-16">
+        <HomePageProjects />
+      </div>
+
+      <div className="max-w-2xl mt-10 mb-8 mx-auto px-4">
+        <p className="text-lg leading-relaxed mb-6">
+          I’m a street and documentary photographer — and a budget traveler — among other things, loosely based in Stockholm, Sweden. I explore life on the margins: red light alleys in Thailand, sleepy Asian towns, right-wing extremists, obscure villages by ancient rivers, refugees, genocide memorials, poor gutters, and forgotten corners of the Balkans.
+          <br /><br />
+          I’ve biked across Europe along the eastern edge of the Iron Curtain, from Scandinavia to Turkey. I walk a lot, shoot way too many photos, and edit excruciatingly slowly — always aiming to capture people the way they’d want to be remembered… or at least not forgotten.
+        </p>
+
+        <p className="text-lg leading-relaxed mb-4">
+          I’m currently on a break from coding (except for this site). Too restless, perhaps, for office life — as an old manager once asked me:
+        </p>
+
+        <blockquote className="mt-10 text-xl font-serif mb-2">
+          “Should we chain you to your chair?”
+        </blockquote>
+        <p className="text-sm text-gray-500 text-right italic mb-6">— my old manager</p>
+
+        <p className="text-lg leading-relaxed">
+          Maybe he should’ve. <br />
+          Now I’ve got no time for that. <br />
+          I’m out capturing people of my own.
+        </p>
+      </div>
+
+      <HeroFlip />
+
+      <p className="hero text-sm sm:text-base mt-4 text-center text-gray-500 italic">
+        Tag along, I'm on a journey to be king of photographers!
+      </p>
+    </section>
   );
 }

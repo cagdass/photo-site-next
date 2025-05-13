@@ -1,0 +1,38 @@
+.hero-flip-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  overflow: hidden;
+  perspective: 1000px;
+  margin: auto;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.hero-flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.hero-flip-container.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
