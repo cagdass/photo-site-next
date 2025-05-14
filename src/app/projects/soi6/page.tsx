@@ -1,5 +1,8 @@
 // src/app/projects/soi6/page.tsx
+import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
+import PhotoEssay from '@/components/PhotoEssay';
+import soi6EssayBlocks from '@/data/soi6EssayBlocks';
 
 export const metadata: Metadata = {
   title: 'Soi 6 — ซอยหก – Çağdaş',
@@ -29,13 +32,19 @@ export const metadata: Metadata = {
 
 export default function Soi6Page() {
   return (
-    <main className="max-w-3xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-2">Soi 6 — ซอยหก</h1>
-      <p className="text-gray-700 mb-4 italic">For seven weeks, I photographed a bar street in Pattaya, Thailand</p>
-      <p className="text-sm text-gray-500">Work in progress</p>
-
-      {/* Replace below with real essay blocks, components or markdown later */}
-      <p className="mt-6">[Essay content goes here...]</p>
-    </main>
+    <PhotoEssay
+      title="Soi 6 — ซอยหก"
+      subtitle="For seven weeks, I photographed a bar street in Pattaya, Thailand"
+      cover={{
+        src: '/images/pattaya/soi6-01.jpg',
+        caption: 'Start of a new working day, June 2024.',
+      }}
+      published={false}
+      publishedDate="Work in progress"
+      essayBlocks={soi6EssayBlocks}
+      shareUrl="https://cagdas.photos/projects/soi6"
+      shareTitle="A Photo Essay on Pattaya’s Soi 6"
+      collapsible={true}
+    />
   );
 }

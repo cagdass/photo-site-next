@@ -3,42 +3,60 @@
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-    if (typeof window === 'undefined') return 'light';
-    return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
-  });
+  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Tailwind's `md` breakpoint
+    };
+
+    handleResize(); // run once on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
+    const htmlClass = root.classList.contains('dark') ? 'dark' : 'light';
+    setTheme(htmlClass);
+    setMounted(true);
+  }, []);
 
-    if (theme === 'dark') {
-      root.style.setProperty('--background', '#0a0a0a');
-      root.style.setProperty('--foreground', '#ededed');
-      root.classList.add('dark');
-      root.classList.remove('light');
-    } else {
-      root.style.setProperty('--background', '#ffffff');
-      root.style.setProperty('--foreground', '#171717');
-      root.classList.add('light');
-      root.classList.remove('dark');
-    }
+  useEffect(() => {
+    const root = document.documentElement;
+    const htmlClass = root.classList.contains('dark') ? 'dark' : 'light';
+    setTheme(htmlClass);
+  }, [isMobile]);
 
+  useEffect(() => {
+    if (!mounted) return;
+
+    const root = document.documentElement;
     localStorage.setItem('theme', theme);
-  }, [theme]);
+    root.classList.remove('light', 'dark');
+    root.classList.add(theme);
 
-  const toggleTheme = () =>
+    root.style.setProperty('--background', theme === 'dark' ? '#0a0a0a' : '#ffffff');
+    root.style.setProperty('--foreground', theme === 'dark' ? '#ededed' : '#171717');
+  }, [theme, mounted]);
+
+  const toggleTheme = () => {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  };
+
+  if (!mounted) return null;
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 border rounded"
+      className="p-1 px-2 border rounded cursor-pointer"
       title="Toggle theme"
     >
-      {theme === 'dark' ? '🌞' : '🌙'}
-      {' '}
+      {theme === 'dark' ? '🌞' : '🌙'}{' '}
       <span className="md:hidden text-sm">
-        &nbsp;{theme === 'dark' ? ' Light theme' : ' Dark theme'}
+        {theme === 'dark' ? ' Light theme' : ' Dark theme'}
       </span>
     </button>
   );

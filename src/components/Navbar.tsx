@@ -77,15 +77,25 @@ export default function Navbar() {
         color: 'var(--foreground)',
       }}
     >
-      <div className="flex flex-col justify-start items-center h-full px-6 py-8 space-y-6 relative">
-        <button
-          onClick={() => setMenuOpen(false)}
-          className="absolute top-4 right-4 text-3xl"
-          aria-label="Close menu"
-        >
-          ✖
-        </button>
+      {/* LOGO at top-left */}
+      <div className="absolute top-3 left-4 z-50">
+        <Link href="/" className="flex items-center gap-2">
+          <img src="/logo.png" alt="Logo" className="h-8 logo-img" />
+          <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
+        </Link>
+      </div>
 
+      {/* CLOSE BUTTON at top-right */}
+      <button
+        onClick={() => setMenuOpen(false)}
+        className="absolute top-2 right-4 text-3xl z-50"
+        aria-label="Close menu"
+      >
+        ✖
+      </button>
+
+      {/* Menu content */}
+      <div className="flex flex-col justify-start items-center h-full px-6 py-8 space-y-6 pt-20">
         <ul className="text-center text-xl font-semibold space-y-4 mt-6 w-full">
           {LINKS.map((item, idx) =>
             item.subLinks ? (
@@ -98,9 +108,7 @@ export default function Navbar() {
                   <span>{expanded[item.label] ? '▾' : '▸'}</span>
                 </button>
                 <ul
-                  className={`transition-all duration-300 ease-in-out overflow-hidden text-lg font-normal ${expanded[item.label]
-                    ? 'max-h-96 opacity-100'
-                    : 'max-h-0 opacity-0'
+                  className={`transition-all duration-300 ease-in-out overflow-hidden text-lg font-normal ${expanded[item.label] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                 >
                   {item.subLinks.map((sub, sidx) => (
@@ -130,7 +138,7 @@ export default function Navbar() {
           )}
         </ul>
 
-        <div className="pt-8 border-t w-full flex justify-center mt-auto">
+        <div className="pt-8 border-t w-full flex justify-center mt-auto cursor-pointer">
           <ThemeToggle />
         </div>
       </div>

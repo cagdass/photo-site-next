@@ -18,20 +18,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-Bx4wZTynq2d8kMQOiLHlVQ0zXo8Y/MLvH9Il3MGe3GqTKLkAwnZkZPxg3WZhzYnbKgyHXBjCJcBoA5mA4h0fHw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
-                  const theme = localStorage.getItem('theme');
+                  const theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
                   const root = document.documentElement;
-                  if (theme === 'dark') {
-                    root.style.setProperty('--background', '#0a0a0a');
-                    root.style.setProperty('--foreground', '#ededed');
-                  } else {
-                    root.style.setProperty('--background', '#ffffff');
-                    root.style.setProperty('--foreground', '#171717');
-                  }
+                  root.classList.add(theme);
+                  root.style.setProperty('--background', theme === 'dark' ? '#0a0a0a' : '#ffffff');
+                  root.style.setProperty('--foreground', theme === 'dark' ? '#ededed' : '#171717');
                 } catch(e) {}
               })();
             `,
@@ -42,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Navbar />
           <div className="h-20" /> {/* spacer to offset the fixed navbar */}
-          <main className="pt-[72px] min-h-screen">{children}</main>
+          <main className="pt-[72px] w-full min-h-screen">{children}</main>
           <Footer />
         </Providers>
       </body>
