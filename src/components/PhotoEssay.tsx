@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import ShareButtons from '@/components/ShareButtons';
 import PhotoEssayText from '@/components/PhotoEssayText';
+import EssayImage from '@/components/EssayImage';
 
 export interface PhotoEssayProps {
   title: string;
@@ -122,26 +123,20 @@ export default function PhotoEssay({
                 {blocks.map((block, j) => {
                   if (block.type === 'text') {
                     return (
-                      <div key={j} className="max-w-3xl mx-auto px-4">
-                        <p className="text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line">
-                          {block.content}
-                        </p>
-                      </div>
+                      <PhotoEssayText key={j}>
+                        {block.content}
+                      </PhotoEssayText>
                     );
                   }
 
                   if (block.type === 'image') {
                     return (
-                      <div key={j} className="w-full flex justify-center my-8 px-4">
-                        <div className="w-full max-w-5xl">
-                          <img src={block.src} alt={block.alt || ''} className="w-full rounded" />
-                          {block.caption && (
-                            <p className="text-sm text-gray-400 dark:text-gray-300 italic text-center mt-2">
-                              {block.caption}
-                            </p>
-                          )}
-                        </div>
-                      </div>
+                      <EssayImage
+                        key={j}
+                        src={block.src}
+                        alt={block.alt}
+                        caption={block.caption}
+                      />
                     );
                   }
 
