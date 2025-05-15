@@ -38,7 +38,23 @@ export default function PhotoEssay({
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
-  let currentHeadingId: string | null = null;
+  // Group blocks under each heading
+  type Group = {
+    heading: { id: string; text: string };
+    blocks: typeof essayBlocks;
+  };
+
+  const groups: Group[] = [];
+  let currentGroup: Group | null = null;
+
+  essayBlocks.forEach(block => {
+    if (block.type === 'heading') {
+      currentGroup = { heading: block, blocks: [] };
+      groups.push(currentGroup);
+    } else if (currentGroup) {
+      currentGroup.blocks.push(block);
+    }
+  });
 
   return (
     <div className="font-garamond">
@@ -76,64 +92,72 @@ export default function PhotoEssay({
 
       {/* Essay content */}
       <div className="w-full py-10">
-        {essayBlocks.map((block, i) => {
-          if (block.type === 'heading' && block.id) {
-            currentHeadingId = block.id;
-            return (
-              <div key={i} className="pt-10 px-4 max-w-[900px] mx-auto">
-                <div className="flex justify-between items-center cursor-pointer"
-                  onClick={() => toggleCollapse(block.id)}
+        {groups.map(({ heading, blocks }, i) => {
+          const isCollapsed = collapsedSections[heading.id];
+
+          return (
+            <div key={i}>
+              {/* Heading with toggle */}
+              <div className="pt-10 px-4 max-w-[900px] mx-auto">
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() => toggleCollapse(heading.id)}
                 >
-                  <h2 className="text-2xl font-bold" id={block.id}>{block.text}</h2>
-                  <button className="text-sm">
-                    {collapsedSections[block.id] ? '▼' : '▲'}
-                  </button>
+                  <h2 className="text-2xl font-bold" id={heading.id}>{heading.text}</h2>
+                  <span
+                    className={`inline-block transition-transform duration-300 text-sm ${isCollapsed ? 'rotate-0' : 'rotate-90'
+                      }`}
+                  >
+                    ▶
+                  </span>
                 </div>
                 <hr className="mt-2 mb-4" />
               </div>
-            );
-          }
 
-          // Only hide these if they belong under a collapsed heading
-          const isCollapsed = currentHeadingId && collapsedSections[currentHeadingId];
+              {/* Animated content wrapper */}
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${isCollapsed ? 'max-h-0 opacity-0' : 'max-h-[2000px] opacity-100'
+                  }`}
+              >
+                {blocks.map((block, j) => {
+                  if (block.type === 'text') {
+                    return (
+                      <div key={j} className="max-w-3xl mx-auto px-4">
+                        <p className="text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line">
+                          {block.content}
+                        </p>
+                      </div>
+                    );
+                  }
 
-          if (block.type === 'text') {
-            if (isCollapsed) return null;
-            return (
-              <div key={i} className="max-w-3xl mx-auto px-4">
-                <p className="text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line">
-                  {block.content}
-                </p>
+                  if (block.type === 'image') {
+                    return (
+                      <div key={j} className="w-full flex justify-center my-8 px-4">
+                        <div className="w-full max-w-5xl">
+                          <img src={block.src} alt={block.alt || ''} className="w-full rounded" />
+                          {block.caption && (
+                            <p className="text-sm text-gray-400 dark:text-gray-300 italic text-center mt-2">
+                              {block.caption}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  if (block.type === 'component' && typeof block.render === 'function') {
+                    return (
+                      <div key={j} className="my-8 w-full mx-auto">
+                        {block.render()}
+                      </div>
+                    );
+                  }
+
+                  return null;
+                })}
               </div>
-            );
-          }
-
-          if (block.type === 'image') {
-            if (isCollapsed) return null;
-            return (
-              <div key={i} className="w-full flex justify-center my-8 px-4">
-                <div className="w-full max-w-5xl">
-                  <img src={block.src} alt={block.alt || ''} className="w-full rounded" />
-                  {block.caption && (
-                    <p className="text-sm text-gray-400 dark:text-gray-300 italic text-center mt-2">
-                      {block.caption}
-                    </p>
-                  )}
-                </div>
-              </div>
-            );
-          }
-
-          if (block.type === 'component' && typeof block.render === 'function') {
-            if (isCollapsed) return null;
-            return (
-              <div key={i} className="my-8 w-full mx-auto">
-                {block.render()}
-              </div>
-            );
-          }
-
-          return null;
+            </div>
+          );
         })}
       </div>
     </div>
