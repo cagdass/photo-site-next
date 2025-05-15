@@ -134,10 +134,15 @@ export default function PhotoEssay({
               >
                 {blocks.map((block, j) => {
                   if (block.type === 'text') {
+                    const paragraphs = block.content.split('\n').filter((p: string) => p.trim() !== '');
                     return (
-                      <PhotoEssayText key={j}>
-                        {block.content}
-                      </PhotoEssayText>
+                      <div key={j} className="max-w-3xl mx-auto ">
+                        {paragraphs.map((para: string, i: number) => (
+                          <PhotoEssayText key={i}>
+                            {para}
+                          </PhotoEssayText>
+                        ))}
+                      </div>
                     );
                   }
 
