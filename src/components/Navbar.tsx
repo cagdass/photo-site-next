@@ -10,7 +10,7 @@ const LINKS = [
     label: 'Projects',
     subLinks: [
       { to: '/projects/soi6', label: 'Soi 6 — ซอยหก' },
-      { to: '/projects/biking_home', label: 'Bikepacking' },
+      { to: '/projects/bikepacking', label: 'Bikepacking' },
     ],
   },
   {
