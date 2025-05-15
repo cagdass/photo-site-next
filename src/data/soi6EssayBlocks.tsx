@@ -7,7 +7,7 @@ import PortraitReel from '@/components/PortraitReel';
 import Soi6Poem from '@/components/Soi6Poem';
 
 const component_p_className = "essay-text text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line"
-const component_div_className = "w-full max-w-[900px] mx-auto px-4 text-lg leading-8 md:text-xl md:leading-9"
+const component_div_className = "w-full max-w-3xl mx-auto px-4 text-lg leading-8 md:text-xl md:leading-9"
 
 const essayContent = [
   {

@@ -94,7 +94,7 @@ export default function PhotoEssay({
 
           if (block.type === 'text') {
             return (
-              <div key={i} className="max-w-[900px] mx-auto px-4">
+              <div key={i} className="max-w-3xl mx-auto px-4">
                 <p className="text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line">
                   {block.content}
                 </p>
@@ -105,10 +105,10 @@ export default function PhotoEssay({
           if (block.type === 'image') {
             return (
               <div key={i} className="w-full flex justify-center my-8 px-4">
-                <div className="w-full max-w-[1400px]">
+                <div className="w-full max-w-5xl">
                   <img src={block.src} alt={block.alt || ''} className="w-full rounded" />
                   {block.caption && (
-                    <p className="text-sm text-gray-500 italic text-center mt-2">{block.caption}</p>
+                    <p className="text-sm text-gray-400 italic text-center mt-2">{block.caption}</p>
                   )}
                 </div>
               </div>
@@ -117,7 +117,7 @@ export default function PhotoEssay({
 
           if (block.type === 'component' && typeof block.render === 'function') {
             return (
-              <div key={i} className="my-8 max-w-[1400px] mx-auto">
+              <div key={i} className="my-8 w-full mx-auto">
                 {block.render()}
               </div>
             );
