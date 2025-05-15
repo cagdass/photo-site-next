@@ -40,6 +40,7 @@ export default function SihanoukvillePage() {
       published={true}
       publishedDate="Published on 6 May 2025"
       essayBlocks={sihanoukvilleEssayBlocks}
+      photoBlocks={[]}
       shareUrl="https://cagdas.photos/brief/sihanoukville"
       shareTitle="A Brief Photo Series on Sihanoukville"
     />

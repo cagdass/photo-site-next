@@ -17,6 +17,7 @@ export default function SamosBriefPage() {
       }}
       published={false}
       essayBlocks={[]}
+      photoBlocks={[]}
       shareUrl="https://cagdas.photos/brief/songkran"
       shareTitle="Songkran — Brief"
     />

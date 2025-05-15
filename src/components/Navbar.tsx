@@ -48,7 +48,7 @@ export default function Navbar() {
                   <li key={sidx}>
                     <Link
                       href={sub.to}
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-500"
                     >
                       {sub.label}
                     </Link>

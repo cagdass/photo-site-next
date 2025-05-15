@@ -1,0 +1,170 @@
+const soi6Photos = [
+  {
+    src: '/images/pattaya/soi6-01.jpg',
+    alt: 'A man walking past girls lined up on the street in Pattaya',
+    caption: 'Start of a new working day, June 2024.',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/soi6-02.jpg',
+    alt: 'Close-up of legs and shoes at the entrance',
+    caption: 'Entrance welcome mat, Pattaya',
+    width: 1200,
+    height: 800,
+  },
+
+  // portraits and landscapes alternating start here:
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-01.jpg',
+    alt: 'Portrait of a man with intense gaze',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-03.jpg',
+    alt: 'Street scene in Pattaya with motorbikes',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-02.jpg',
+    alt: 'Portrait of a woman looking sideways',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-04.jpg',
+    alt: 'Shadow and light play on a street corner',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-03.jpg',
+    alt: 'Portrait of an older man with beard',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-05.jpg',
+    alt: 'Street bar with neon lights and people',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-04.jpg',
+    alt: 'Portrait of a woman with bob haircut',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-06.jpg',
+    alt: 'Man smoking a cigarette near a bar',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-05.jpg',
+    alt: 'Portrait of a young woman smiling',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-07.jpg',
+    alt: 'Night scene of busy street in Pattaya',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-06.jpg',
+    alt: 'Portrait of a man with tattoos on back',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-08.jpg',
+    alt: 'People chatting outside a bar',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-07.jpg',
+    alt: 'Portrait of a woman looking serious',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-09.jpg',
+    alt: 'Market scene with signage in background',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-08.jpg',
+    alt: 'Portrait of a young man with glasses',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-10.jpg',
+    alt: 'Entrance door with stickers',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-09.jpg',
+    alt: 'Portrait of a woman with earrings',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-11.jpg',
+    alt: 'People walking on a rainy street',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-10.jpg',
+    alt: 'Portrait of a man with hat',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-12.jpg',
+    alt: 'Interior bar scene with people',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-11.jpg',
+    alt: 'Portrait of woman with short hair',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-13.jpg',
+    alt: 'Street vendor in Pattaya',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/portraits/soi6_portrait-12.jpg',
+    alt: 'Portrait of an elderly woman',
+    width: 800,
+    height: 1200,
+  },
+  {
+    src: '/images/pattaya/soi6-14.jpg',
+    alt: 'Busy street corner with neon lights',
+    width: 1200,
+    height: 800,
+  },
+  {
+    src: '/images/pattaya/soi6-15.jpg',
+    alt: 'Bar street at dusk',
+    width: 1200,
+    height: 800,
+  },
+];
+
+export default soi6Photos;

@@ -17,6 +17,7 @@ export default function BikepackingPage() {
       }}
       published={false}
       essayBlocks={[]}
+      photoBlocks={[]}
       shareUrl="https://cagdas.photos/projects/bikepacking"
       shareTitle="Bikepacking"
     />
