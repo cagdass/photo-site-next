@@ -38,6 +38,8 @@ export default function PhotoEssay({
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
+  let currentHeadingId: string | null = null;
+
   return (
     <div className="font-garamond">
       {/* Header */}
@@ -76,6 +78,7 @@ export default function PhotoEssay({
       <div className="w-full py-10">
         {essayBlocks.map((block, i) => {
           if (block.type === 'heading' && block.id) {
+            currentHeadingId = block.id;
             return (
               <div key={i} className="pt-10 px-4 max-w-[900px] mx-auto">
                 <div className="flex justify-between items-center cursor-pointer"
@@ -91,9 +94,11 @@ export default function PhotoEssay({
             );
           }
 
-          if (collapsedSections[block.id || '']) return null;
+          // Only hide these if they belong under a collapsed heading
+          const isCollapsed = currentHeadingId && collapsedSections[currentHeadingId];
 
           if (block.type === 'text') {
+            if (isCollapsed) return null;
             return (
               <div key={i} className="max-w-3xl mx-auto px-4">
                 <p className="text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line">
@@ -104,12 +109,15 @@ export default function PhotoEssay({
           }
 
           if (block.type === 'image') {
+            if (isCollapsed) return null;
             return (
               <div key={i} className="w-full flex justify-center my-8 px-4">
                 <div className="w-full max-w-5xl">
                   <img src={block.src} alt={block.alt || ''} className="w-full rounded" />
                   {block.caption && (
-                    <p className="text-sm text-gray-400 italic text-center mt-2">{block.caption}</p>
+                    <p className="text-sm text-gray-400 dark:text-gray-300 italic text-center mt-2">
+                      {block.caption}
+                    </p>
                   )}
                 </div>
               </div>
@@ -117,6 +125,7 @@ export default function PhotoEssay({
           }
 
           if (block.type === 'component' && typeof block.render === 'function') {
+            if (isCollapsed) return null;
             return (
               <div key={i} className="my-8 w-full mx-auto">
                 {block.render()}
