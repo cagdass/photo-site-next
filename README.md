@@ -2,6 +2,8 @@
 
 This is a Next.js project showcasing photo essays, including long-form stories with photos, lightbox galleries, and responsive masonry layouts. It is built with React, Tailwind CSS, and several modern libraries such as `react-photo-album` and `yet-another-react-lightbox`.
 
+The live site is available at [cagdas.photos](https://cagdas.photos).
+
 ## Features
 
 - Responsive photo galleries and masonry layouts
