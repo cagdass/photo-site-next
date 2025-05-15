@@ -9,6 +9,7 @@ interface EssayImageProps {
   caption?: string;
   width?: number;
   height?: number;
+  onClick?: () => void;
 }
 
 export default function EssayImage({
@@ -17,11 +18,15 @@ export default function EssayImage({
   caption,
   width = 1200,
   height = 800,
+  onClick,
 }: EssayImageProps) {
   return (
     <div className="w-full flex justify-center my-8 px-4">
       <div className="w-full max-w-5xl">
-        <div className="relative w-full h-auto aspect-[3/2]">
+        <div
+          className={`relative w-full h-auto aspect-[3/2] ${onClick ? 'cursor-pointer' : ''}`}
+          onClick={onClick}
+        >
           <Image
             src={src}
             alt={alt}

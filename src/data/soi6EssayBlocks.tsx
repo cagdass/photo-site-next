@@ -74,6 +74,10 @@ const essayContent = [
       )
   },
   {
+    type: 'text',
+    content: `A month or two before I first arrived in Thailand, I was helping organize my teacher’s photobook library—over a thousand titles, many of them worn at the edges, signed, lived in. Two books shortly before my visit caught my eye: Kungariket and Drottninglandet by Elin Berge. They portrayed Swedish–Thai couples, always with the Thai partner being a woman. One traced their lives in Sweden, the other in Thailand. I remember sitting with them in silence, flipping each page slowly. Something about those images stayed with me—the quiet, the distance, the awkwardness and tender dissonance of coexisting worlds. Even then, before I had set foot in Thailand, I found myself wondering what I might see. What I might photograph.`
+  },
+  {
     type: 'image',
     src: '/images/pattaya/soi6-03.jpg',
     caption: 'Man with a bar-fined girl, December 2023.'

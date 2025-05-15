@@ -1,9 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ShareButtons from '@/components/ShareButtons';
-import PhotoEssayText from '@/components/PhotoEssayText';
 import EssayImage from '@/components/EssayImage';
+import PhotoEssayText from '@/components/PhotoEssayText';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 export interface PhotoEssayProps {
   title: string;
@@ -34,12 +37,18 @@ export default function PhotoEssay({
   collapsible = false,
 }: PhotoEssayProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const toggleCollapse = (id: string) => {
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
-  // Group blocks under each heading
+  const imageBlocks = essayBlocks.filter(b => b.type === 'image');
+  const slides = [
+    { src: cover.src },
+    ...imageBlocks.map(b => ({ src: b.src })),
+  ];
+
   type Group = {
     heading: { id: string; text: string };
     blocks: typeof essayBlocks;
@@ -59,7 +68,6 @@ export default function PhotoEssay({
 
   return (
     <div className="font-garamond">
-      {/* Header */}
       <div className="photo-essay-header px-4">
         <center>
           <h1 className="essay-title text-4xl font-bold mb-2">{title}</h1>
@@ -76,7 +84,6 @@ export default function PhotoEssay({
         </center>
       </div>
 
-      {/* Cover image */}
       <div className="flex justify-center px-4 mt-6">
         <div className="w-full max-w-[1400px] relative">
           <img
@@ -84,6 +91,7 @@ export default function PhotoEssay({
             alt="cover"
             className="w-full rounded essay-cover-image"
             data-testid="essay-cover-img"
+            onClick={() => setLightboxIndex(0)}
           />
           <p className="image-caption mb-4 text-center italic text-gray-500 text-sm mt-2 dark:text-white">
             {cover.caption}
@@ -91,34 +99,38 @@ export default function PhotoEssay({
         </div>
       </div>
 
-      {/* Essay content */}
       <div className="w-full py-10">
         {groups.map(({ heading, blocks }, i) => {
           const isCollapsed = collapsedSections[heading.id];
+          const contentRef = useRef<HTMLDivElement>(null);
+
+          useEffect(() => {
+            if (!isCollapsed && contentRef.current) {
+              contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
+            }
+          }, [isCollapsed]);
 
           return (
             <div key={i}>
-              {/* Heading with toggle */}
               <div className="pt-10 px-4 max-w-[900px] mx-auto">
                 <div
                   className="flex justify-between items-center cursor-pointer"
                   onClick={() => toggleCollapse(heading.id)}
                 >
                   <h2 className="text-2xl font-bold" id={heading.id}>{heading.text}</h2>
-                  <span
-                    className={`inline-block transition-transform duration-300 text-sm ${isCollapsed ? 'rotate-0' : 'rotate-90'
-                      }`}
+                  <button
+                    className={`text-sm cursor-pointer transition-transform duration-300 transform ${isCollapsed ? 'rotate-270' : 'rotate-0'}`}
                   >
-                    ▶
-                  </span>
+                    ▼
+                  </button>
                 </div>
                 <hr className="mt-2 mb-4" />
               </div>
 
-              {/* Animated content wrapper */}
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${isCollapsed ? 'max-h-0 opacity-0' : 'max-h-[2000px] opacity-100'
-                  }`}
+                ref={contentRef}
+                className={`overflow-hidden transition-all duration-300 ease-in-out opacity-100`}
+                style={{ maxHeight: isCollapsed ? 0 : `${contentRef.current?.scrollHeight}px` }}
               >
                 {blocks.map((block, j) => {
                   if (block.type === 'text') {
@@ -136,6 +148,11 @@ export default function PhotoEssay({
                         src={block.src}
                         alt={block.alt}
                         caption={block.caption}
+                        onClick={() =>
+                          setLightboxIndex(
+                            slides.findIndex(slide => slide.src === block.src)
+                          )
+                        }
                       />
                     );
                   }
@@ -155,6 +172,15 @@ export default function PhotoEssay({
           );
         })}
       </div>
+
+      <Lightbox
+        open={lightboxIndex !== null}
+        close={() => setLightboxIndex(null)}
+        slides={slides}
+        index={lightboxIndex ?? 0}
+        plugins={[Zoom]}
+        zoom={{ maxZoomPixelRatio: 2 }}
+      />
     </div>
   );
 }
