@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import PhotoEssayText from '@/components/PhotoEssayText';
 
 const sihanoukvilleEssayBlocks = [
   {
@@ -66,21 +67,19 @@ const sihanoukvilleEssayBlocks = [
 
     type: 'component',
     render: () => (
-      <div className="max-w-2xl mx-auto px-4">
-        <p className="essay-text">
-          Later that afternoon, as I walked through the casino district,
-          I saw women stepping out of high-rise residential towers to collect food deliveries —
-          some in flashy pajamas, others in branded slippers, their outfits skimming the edge of the workday ahead.
-          It reminded me of{" "}
-          <Link href="/projects/soi6" className="underline text-blue-600 hover:text-blue-800">
-            <strong>Pattaya’s Soi 6</strong>
-          </Link>
-          , where sex workers would rise slowly in the late morning, eat breakfast,
-          and prepare for another night under the neon lights.
-          Here too, the rhythm of the day was shaped by nightlife,
-          just veiled differently — less obvious, but still tightly orchestrated.
-        </p>
-      </div>
+      <PhotoEssayText>
+        Later that afternoon, as I walked through the casino district,
+        I saw women stepping out of high-rise residential towers to collect food deliveries —
+        some in flashy pajamas, others in branded slippers, their outfits skimming the edge of the workday ahead.
+        It reminded me of{" "}
+        <Link href="/projects/soi6" className="underline text-blue-600 hover:text-blue-800">
+          <strong>Pattaya’s Soi 6</strong>
+        </Link>
+        , where sex workers would rise slowly in the late morning, eat breakfast,
+        and prepare for another night under the neon lights.
+        Here too, the rhythm of the day was shaped by nightlife,
+        just veiled differently — less obvious, but still tightly orchestrated.
+      </PhotoEssayText>
     )
   },
   {

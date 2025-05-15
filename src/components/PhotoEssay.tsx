@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import ShareButtons from '@/components/ShareButtons';
+import PhotoEssayText from '@/components/PhotoEssayText';
 
 export interface PhotoEssayProps {
   title: string;

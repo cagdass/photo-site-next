@@ -5,9 +5,7 @@ import Link from 'next/link';
 import FootnoteButton from '@/components/FootnoteButton';
 import PortraitReel from '@/components/PortraitReel';
 import Soi6Poem from '@/components/Soi6Poem';
-
-const component_p_className = "essay-text text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line"
-const component_div_className = "w-full max-w-3xl mx-auto px-4 text-lg leading-8 md:text-xl md:leading-9"
+import PhotoEssayText from '@/components/PhotoEssayText';
 
 const essayContent = [
   {
@@ -23,15 +21,13 @@ const essayContent = [
     type: 'component',
     collapsible: true,
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          I had just started photography that summer. My teacher, to whom I inevitably refer a lot throughout this writing and pay a proper homage in{" "}
-          <Link href="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-400">
-            <strong>this blog post</strong>
-          </Link>
-          , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and <em>shoot with my heart, not my brain</em>.
-        </p>
-      </div>
+      <PhotoEssayText>
+        I had just started photography that summer. My teacher, to whom I inevitably refer a lot throughout this writing and pay a proper homage in{" "}
+        <Link href="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-400">
+          <strong>this blog post</strong>
+        </Link>
+        , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and <em>shoot with my heart, not my brain</em>.
+      </PhotoEssayText>
     )
   },
   {
@@ -64,19 +60,17 @@ const essayContent = [
     type: 'component',
     render:
       () => (
-        <div className={component_div_className}>
-          <p className={component_p_className}>
-            I was hungry for all of it. Everything was new.
-            At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
-            I was especially drawn to international couples.
-            Whenever I saw an older Western man—what locals call a <i>farang</i>—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it.
-            The contrast spoke volumes. But what struck me just as much was the silence between them.
-            I rarely saw them talk.
-            They’d sit next to each other at a bar or restaurant, their bodies close but their eyes elsewhere—on their phones,
-            on the street, on nothing in particular.
-            It was as if they existed side by side, not together.
-          </p>
-        </div>
+        <PhotoEssayText>
+          I was hungry for all of it. Everything was new.
+          At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
+          I was especially drawn to international couples.
+          Whenever I saw an older Western man—what locals call a <i>farang</i>—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it.
+          The contrast spoke volumes. But what struck me just as much was the silence between them.
+          I rarely saw them talk.
+          They’d sit next to each other at a bar or restaurant, their bodies close but their eyes elsewhere—on their phones,
+          on the street, on nothing in particular.
+          It was as if they existed side by side, not together.
+        </PhotoEssayText>
       )
   },
   {
@@ -119,35 +113,31 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          It’s an oft-repeated fact,
-          but one this photo essay bears repeating here:
-          Pattaya began as a sleepy fishing village.
-          Today, high-rises line Beach Road,
-          rooftop bars crown luxury hotels,
-          sprawling malls lure in tourists,
-          and the city never seems to stop building.
-          The origin of this transformation is usually
-          traced back to the Vietnam War, when American
-          soldiers came here for rest and recreation.
-          That first boom never really ended.
-          It’s easy to forget this history
-          when walking past bars named <em>the Pussy Club</em>,
-          <em>Horny Bar</em>, or
-          <em>Slutz on Soi 6</em>—but the scaffolding of that myth still booms beneath the neon.
-        </p>
-      </div>
+      <PhotoEssayText>
+        It’s an oft-repeated fact,
+        but one this photo essay bears repeating here:
+        Pattaya began as a sleepy fishing village.
+        Today, high-rises line Beach Road,
+        rooftop bars crown luxury hotels,
+        sprawling malls lure in tourists,
+        and the city never seems to stop building.
+        The origin of this transformation is usually
+        traced back to the Vietnam War, when American
+        soldiers came here for rest and recreation.
+        That first boom never really ended.
+        It’s easy to forget this history
+        when walking past bars named <em>the Pussy Club</em>,
+        <em>Horny Bar</em>, or
+        <em>Slutz on Soi 6</em>—but the scaffolding of that myth still booms beneath the neon.
+      </PhotoEssayText>
     )
   },
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          As we walked, I started to understand the calls of the bar girls: “Sexy man,” “Handsome man,” “Where you go?”—basic English, shouted with practiced ease. But it wasn’t just words. Every few meters, a girl reached out—grabbing an arm, a waist, sometimes even the groin—trying to physically pull us inside. You couldn’t just walk past. You were part of the show.
-        </p>
-      </div>
+      <PhotoEssayText>
+        As we walked, I started to understand the calls of the bar girls: “Sexy man,” “Handsome man,” “Where you go?”—basic English, shouted with practiced ease. But it wasn’t just words. Every few meters, a girl reached out—grabbing an arm, a waist, sometimes even the groin—trying to physically pull us inside. You couldn’t just walk past. You were part of the show.
+      </PhotoEssayText>
     )
   },
   {
@@ -157,19 +147,17 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          We kept walking past bar names that,
-          anywhere else in the world,
-          would be pure cringe: <em>Sexy in the City</em>. <em>Seduction</em>. <em>Toy Box</em>.
-          &nbsp;<em>Bender</em>—with a giant print of the alcoholic robot from <em>Futurama</em> out
-          front, a reference I doubt was meant for the local population.
-          Some names sounded like biblical sins:&nbsp;
-          <em>Avarice</em>. <em>Wrath</em>. <em>Lust</em>.
-          A few tried to look classy, but ended up even sleazier. No bouncers. No doors.
-          Just open-front bars, fully exposed. The street was alive—and it was built to feed.
-        </p>
-      </div>
+      <PhotoEssayText>
+        We kept walking past bar names that,
+        anywhere else in the world,
+        would be pure cringe: <em>Sexy in the City</em>. <em>Seduction</em>. <em>Toy Box</em>.
+        &nbsp;<em>Bender</em>—with a giant print of the alcoholic robot from <em>Futurama</em> out
+        front, a reference I doubt was meant for the local population.
+        Some names sounded like biblical sins:&nbsp;
+        <em>Avarice</em>. <em>Wrath</em>. <em>Lust</em>.
+        A few tried to look classy, but ended up even sleazier. No bouncers. No doors.
+        Just open-front bars, fully exposed. The street was alive—and it was built to feed.
+      </PhotoEssayText>
     )
   },
   {
@@ -210,11 +198,9 @@ const essayContent = [
     type: 'component',
     render:
       () => (
-        <div className={component_div_className}>
-          <p className={component_p_className}>
-            My teacher spoke quite a bit of Thai and started teaching me from day one. <em>Sawatdee khrap</em> for hello. <em>Sabai dee mai?</em> for how are you. <em>Tai ruup dai mai?</em> to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—<em>sawatdee khrap</em> became <em>savadikap</em>, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say <em>Nà-làk mâak mâak</em>, meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon!</em> One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked <em>Namkeng! Namkeng!</em>—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for <em>cold</em>. But it sure was entertaining.
-          </p>
-        </div>
+        <PhotoEssayText>
+          My teacher spoke quite a bit of Thai and started teaching me from day one. <em>Sawatdee khrap</em> for hello. <em>Sabai dee mai?</em> for how are you. <em>Tai ruup dai mai?</em> to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—<em>sawatdee khrap</em> became <em>savadikap</em>, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say <em>Nà-làk mâak mâak</em>, meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon!</em> One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked <em>Namkeng! Namkeng!</em>—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for <em>cold</em>. But it sure was entertaining.
+        </PhotoEssayText>
       )
   },
   {
@@ -253,17 +239,15 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          My teacher also had a few Thai expressions he liked to throw at me, half-mocking, half-endearing.
-          His favorite was <i>tin-ton farang</i> (ติ๊นต๊องฝรั่ง)—crazy foreigner.
-          He’d call me that whenever I was too enthusiastic, acting silly, or trying too hard to charm someone.
-          Another was <i>mao</i>, which means drunk.
-          Sometimes, while I was crouched down taking portraits on Soi 6, he’d shout <i>tin-ton farang</i>!
-          from across the street, or tease me with <i>maomao</i>! It always cracked up the bar girls nearby.
-          Moments like those broke the ice. They helped soften the scene, loosen everyone’s guard.
-        </p>
-      </div>
+      <PhotoEssayText>
+        My teacher also had a few Thai expressions he liked to throw at me, half-mocking, half-endearing.
+        His favorite was <i>tin-ton farang</i> (ติ๊นต๊องฝรั่ง)—crazy foreigner.
+        He’d call me that whenever I was too enthusiastic, acting silly, or trying too hard to charm someone.
+        Another was <i>mao</i>, which means drunk.
+        Sometimes, while I was crouched down taking portraits on Soi 6, he’d shout <i>tin-ton farang</i>!
+        from across the street, or tease me with <i>maomao</i>! It always cracked up the bar girls nearby.
+        Moments like those broke the ice. They helped soften the scene, loosen everyone’s guard.
+      </PhotoEssayText>
     )
   },
   {
@@ -283,15 +267,13 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          I started walking Soi 6/1 often,
-          partly to catch my breath,
-          partly to find more natural moments—away from the endless calls of “handsome man” and
-          the engineered performances on the main street.
-          It was there that I quickly learned something else: Soi 6/1 was where many of the <em>kathoey</em>s—Thai trans women—waited for customers.
-        </p>
-      </div>
+      <PhotoEssayText>
+        I started walking Soi 6/1 often,
+        partly to catch my breath,
+        partly to find more natural moments—away from the endless calls of “handsome man” and
+        the engineered performances on the main street.
+        It was there that I quickly learned something else: Soi 6/1 was where many of the <em>kathoey</em>s—Thai trans women—waited for customers.
+      </PhotoEssayText>
     )
   },
   {
@@ -357,11 +339,9 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          Sometimes I wasn’t just “photo man”—I was a potential customer, too. Like most men on Soi 6, I’d sometimes get grabbed by the wrist and pulled toward a bar for a drink. I learned to carry myself lightly in those situations—almost like a playful little boy—smiling, joking, gently saying no. Raising my hands in a respectful <i>namaste</i> and saying, “Nong kap, mai ao kap”—sister, I don’t want—was disarming. They would smile back, salute me, and let me go.
-        </p>
-      </div>
+      <PhotoEssayText>
+        Sometimes I wasn’t just “photo man”—I was a potential customer, too. Like most men on Soi 6, I’d sometimes get grabbed by the wrist and pulled toward a bar for a drink. I learned to carry myself lightly in those situations—almost like a playful little boy—smiling, joking, gently saying no. Raising my hands in a respectful <i>namaste</i> and saying, “Nong kap, mai ao kap”—sister, I don’t want—was disarming. They would smile back, salute me, and let me go.
+      </PhotoEssayText>
     )
   },
   {
@@ -404,11 +384,9 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          At the call of “sexy man, handsome man”—shouted with cheerful repetition—some men beamed like schoolboys, delighted at the attention. Others avoided eye contact, unsure how to respond. But for a moment, even the most average man could feel wanted, desirable—even if only because he had cash to spend. I began to suspect that for many, this was the real allure. Not just the promise of <i>boom boom</i>—as the girls referred to sex—, but the warm illusion of being chosen.
-        </p>
-      </div>
+      <PhotoEssayText>
+        At the call of “sexy man, handsome man”—shouted with cheerful repetition—some men beamed like schoolboys, delighted at the attention. Others avoided eye contact, unsure how to respond. But for a moment, even the most average man could feel wanted, desirable—even if only because he had cash to spend. I began to suspect that for many, this was the real allure. Not just the promise of <i>boom boom</i>—as the girls referred to sex—, but the warm illusion of being chosen.
+      </PhotoEssayText>
     )
   },
   {
@@ -466,26 +444,24 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          The more I walked the street, the more I began to notice the system behind the surface.
-          Every bar followed a routine. The girls would arrive around early afternoon—
-          sometimes still in their pajamas, sometimes already dressed for the shift.
-          A few lived upstairs; I’d seen some I knew standing on balconies, hanging laundry,
-          waving at me down to the street. These rooms weren’t just dormitories—they doubled
-          as short-time rooms where customers took them for sex.
-          A single room might serve as both sleeping quarters and workspace,
-          usually accessed via a staircase tucked inside the bar.
-          When a customer paid the <em>mamasan</em>—an older Thai woman who oversees the bar—,
-          they’d head up together. Others had places elsewhere in the city—some boasted of
-          having a whole condo to themselves, others just a small room—and
-          they’d hop on a motorbike taxi after their shift and return the next day.
-          But not everyone fit the pattern. One girl, Kwang (a pseudonym),
-          actually commuted by bicycle. She once let me borrow it for a slow photo tour of Soi 6.
-          All this would unravel under the watch of the mamasan who recruited workers,
-          managed the floor, and ensured everyone stayed in character.
-        </p>
-      </div>
+      <PhotoEssayText>
+        The more I walked the street, the more I began to notice the system behind the surface.
+        Every bar followed a routine. The girls would arrive around early afternoon—
+        sometimes still in their pajamas, sometimes already dressed for the shift.
+        A few lived upstairs; I’d seen some I knew standing on balconies, hanging laundry,
+        waving at me down to the street. These rooms weren’t just dormitories—they doubled
+        as short-time rooms where customers took them for sex.
+        A single room might serve as both sleeping quarters and workspace,
+        usually accessed via a staircase tucked inside the bar.
+        When a customer paid the <em>mamasan</em>—an older Thai woman who oversees the bar—,
+        they’d head up together. Others had places elsewhere in the city—some boasted of
+        having a whole condo to themselves, others just a small room—and
+        they’d hop on a motorbike taxi after their shift and return the next day.
+        But not everyone fit the pattern. One girl, Kwang (a pseudonym),
+        actually commuted by bicycle. She once let me borrow it for a slow photo tour of Soi 6.
+        All this would unravel under the watch of the mamasan who recruited workers,
+        managed the floor, and ensured everyone stayed in character.
+      </PhotoEssayText>
     )
   },
   {
@@ -508,11 +484,9 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
-          These birthdays weren’t private affairs. Bars promoted them openly on Telegram, often with a glamorous portrait of the birthday girl. Messages like, <code className="text-sm text-gray-600">“It’s Yoshi’s and Nam’s birthday party today! Come and make great memories with us at Toy Box Pattaya Soi 6, from 4 PM till 2 AM 🎉🎂🍻🥃🍾👩🏻🎶”</code><FootnoteButton number={1} note={"From an announcement on 17 April 2025, posted in the \"We Love Soi 6\" Telegram channel with 8,032 subscribers as of 30 April 2025."} /> would pop up daily—personal milestones turned into public invitations to spend.
-        </p>
-      </div>
+      <PhotoEssayText>
+        These birthdays weren’t private affairs. Bars promoted them openly on Telegram, often with a glamorous portrait of the birthday girl. Messages like, <code className="text-sm text-gray-600">“It’s Yoshi’s and Nam’s birthday party today! Come and make great memories with us at Toy Box Pattaya Soi 6, from 4 PM till 2 AM 🎉🎂🍻🥃🍾👩🏻🎶”</code><FootnoteButton number={1} note={"From an announcement on 17 April 2025, posted in the \"We Love Soi 6\" Telegram channel with 8,032 subscribers as of 30 April 2025."} /> would pop up daily—personal milestones turned into public invitations to spend.
+      </PhotoEssayText>
     )
   },
   {
@@ -547,8 +521,8 @@ const essayContent = [
     girl: 'May',
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
+      <>
+        <PhotoEssayText>
           May’s story echoed what Swedish journalist Joakim Medin explores in his 2019 book Thailandsvenskarna.
           In addition to traveling to Thailand to investigate the phenomenon firsthand,
           Medin also draws on revealing demographic data.
@@ -557,22 +531,21 @@ const essayContent = [
           man.
           That number is striking—especially when compared to countries like Afghanistan,
           where the overwhelming majority of migrants are men.
-        </p>
-        <p className={component_p_className}>
+        </PhotoEssayText>
+        <PhotoEssayText>
           In Sweden,
           many of these women live in legally precarious situations:
           their right to stay is tied to the continuation of the relationship.
           If it ends, they risk deportation. Medin describes women who are isolated,
           cut off from support networks, and trapped in controlling or abusive dynamics—treated as housekeepers,
           caregivers, or worse.
-        </p>
-        <p className={component_p_className}>
+        </PhotoEssayText>
+        <PhotoEssayText>
           As someone who has lived in Sweden with a temporary residence permit for 4 years,
           my anxiety with the Swedish Migration Authority must have been an anthill.
           For these women, the power imbalance is built in.
-        </p>
-      </div>
-
+        </PhotoEssayText>
+      </>
     )
   },
   {
@@ -713,14 +686,14 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
+      <>
+        <PhotoEssayText>
           My teacher had returned to Sweden just as Songkran began.
           He got splashed a little—but nothing compared to what was waiting for me.
           Luckily for me, he had spoken to his friend who owned the two apartments and, I suspect,
           put in a good word. I was allowed to stay as long as I wanted.
-        </p>
-        <p className={component_p_className}>
+        </PhotoEssayText>
+        <PhotoEssayText>
           Despite my hurting ankle, I couldn’t miss Songkran.
           I went out on a couple of days with my backup camera, an OM System TG-7—waterproof,
           just as it needed to be. I took quite a few photos, some of which I’ve included{" "}
@@ -728,8 +701,8 @@ const essayContent = [
             <strong>here</strong>
           </Link>
           .
-        </p>
-      </div>
+        </PhotoEssayText>
+      </>
     )
   },
   {
@@ -778,8 +751,8 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <div className={component_div_className}>
-        <p className={component_p_className}>
+      <>
+        <PhotoEssayText>
           Then I was in Cambodia.
           I went to see Angkor Wat and had a fantastic time touring the temple complex by motorcycle—dodging the $37 entrance fee for foreigners that is lifted just before sunset.
           Originally, my trip was supposed to be just a visa run—but it turned into a much-needed breather from Pattaya.
@@ -795,8 +768,8 @@ const essayContent = [
           </Link>
           . I went to Koh Rong, where I even managed a run along the white beach,
           and eventually made it to Kampot—the once French colonial city—before heading to the capital, Phnom Penh.
-        </p>
-        <p className={component_p_className}>
+        </PhotoEssayText>
+        <PhotoEssayText>
           My first night in Phnom Penh, I started noticing familiar signs—ads from the Nightwish Group, saying they own more than 30 bars in Pattaya.
           I was immediately alerted.
           The ad was plastered on the side of a passing tuk-tuk and it promoted that they <i>finally</i> opened a bar in Phnom Penh too.
@@ -808,8 +781,8 @@ const essayContent = [
           It made my stomach turn.
           I remember immediately texting my teacher who was back in Stockholm.
           He said to be careful, and not be too rash to take photos.
-        </p>
-      </div>
+        </PhotoEssayText>
+      </>
     )
   },
   {
@@ -928,7 +901,7 @@ const essayContent = [
     collapsible: false,
     noWrap: true,
     render: () => (
-      <div className={component_div_className}>
+      <div className="">
         <Soi6Poem />
       </div>
     )
