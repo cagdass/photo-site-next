@@ -1,6 +1,7 @@
 import './globals.css';
 import './App.css';
 import type { Metadata } from "next";
+import { Suspense } from 'react';
 import { EB_Garamond, Inter } from 'next/font/google';
 import Providers from './providers';
 import Analytics from '@/components/Analytics';
@@ -48,7 +49,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="h-20" /> {/* spacer to offset the fixed navbar */}
           <main className="pt-[72px] w-full min-h-screen">{children}</main>
           <Footer />
-          <Analytics />
+          <Suspense fallback={null}>
+            <Analytics />
+          </Suspense>
         </Providers>
       </body>
     </html >
