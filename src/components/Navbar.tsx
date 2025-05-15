@@ -76,6 +76,7 @@ export default function Navbar() {
         background: 'var(--background)',
         color: 'var(--foreground)',
       }}
+      data-testid="mobile-menu"
     >
       {/* LOGO at top-left */}
       <div className="absolute top-3 left-4 z-50">
