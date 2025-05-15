@@ -199,6 +199,10 @@ const essayContent = [
     caption: 'Another Goya face, December 2023.'
   },
   {
+    type: 'text',
+    content: `In my first days—while still getting to know the environment—I shot from the hip, at random, whenever the fever took me. I didn’t know what I was doing exactly. The lens was wide, the light was low, and I rarely looked through the viewfinder. I just wandered—snapping, drifting. Most of those images came out blurred, ghosted, smudged at the corners. But later, when I began editing, I grew fond of some of them. There was something dreamlike in their haze. Faces half-caught, eyes like smears of charcoal. I started calling them the Goya photos—they reminded me of his black paintings. A street that looked more like an end-time city than a place on a map. It made me think of Michael Ackerman’s Fiction, or D’Agata’s Insomnia—not in technique, but in tone. Flu photos, in a way. Feverish. Disoriented. Maybe that’s what happens when you walk Soi 6 with a camera and a heartbeat. A Goya painting rendered in CMOS.`
+  },
+  {
     type: 'component',
     render:
       () => (
@@ -798,7 +802,13 @@ const essayContent = [
     type: 'text',
     content: `This above photo is from that night still haunts me. At the time, I didn’t fully realize what I was seeing, but I had a bad feeling about it. I took a photo of this boy next to the bar girls at a bar's entrance in Phnom Penh's red light street. Then I gave him a few coins as pocket money and went in for a beer and to see what it's like. I got my beer, but the mamasan that show my interest in the kid brought him to my table and said he wants an orange juice. I said sure get him one, but she sat the boy on my table next to me and was making him say thank you and everything. I felt really bizarre and soon left. I thought it was her kid, but that bad feeling lingered. Only later, when editing my photos from Cambodia, did the horror hit. I researched. I found reports. I found NGOs fighting child trafficking in Cambodia. I contacted them, but never heard back. But just the sheer fact that such NGOs must exist fills me with dread.
 
-    Sorry for the digression—but it had to be said. After Phnom Penh, I crossed into Vietnam by land, traveling from the south all the way to the north. Then into Laos. I was back to walking again without so much pain, saw wonderful things. I'm grateful for that getaway.`
+    I never saw any underage sex workers on Soi 6 or elsewhere. And from what I’ve read since returning, there do seem to be serious efforts to curb that part of the trade.
+
+    I’d also heard—before and during my time in Pattaya—that many sex workers weren’t Thai at all. People said they came from Myanmar, Laos, Cambodia, even China. But on Soi 6, I didn’t knowingly meet any. In restaurants, yes—I spoke to a few Burmese workers who’d fled civil war—but none in the bars. Then again, not everyone reveals where they’re from. And even when they do, you never really know if it’s true.
+
+    After seeing that Night Wish group ad in Phnom Penh, I kept migrant sex workers in mind and stayed alert for anything Pattaya-like on my journey. I crossed into Vietnam by land, traveling south to north, then into Laos. I was walking again, with less pain, discovering wonderful places and taking many photos. I didn’t see signs of sex work beyond faint traces in Saigon and Hanoi, two sprawling cities in Vietnam.
+
+    But even still, there’s something from my reading after returning that stuck with me: Kevin Bales, in an essay written two decades ago, describes how many Lao women pose as Thai, speak fluent Thai, and carry fake ID cards. In Thailand’s northeast, where Thai and Lao languages merge, it’s often impossible to tell locals from migrants. Research from the Empower Foundation echoes this: many Lao and Chinese women cross into Thailand undocumented, work for a while, then return home to obtain proper papers before coming back legally. Most are literate in Thai, and in daily life and work, they’re indistinguishable from local Thai sex workers. So maybe they were there all along — I just never noticed.`
   },
   {
     type: 'image',
@@ -816,7 +826,9 @@ const essayContent = [
 
     On the way, I stopped in Khon Kaen and Udon Thani—two cities in the Isan region, the same part of Thailand where many of the women I’d met in Pattaya had come from. I had hoped to stay longer, to meet people, to see the poor villages they had described. I wanted to understand what made them leave. I wanted to photograph what I found. But I didn’t have time. I passed through quickly, knowing these would be my final days photographing Soi 6.
 
-    I spent my remaining days in June—right up until my flight—on Soi 6. I stayed longer than usual each day, moving slower, shooting more deliberately. I gave it everything I had in those final days, trying to get closer to people. Some of my favorite photos—most of the ones I ended up picking—came from that stretch.`
+On the way to Pattaya from Khon Kaen in Isan, I overnighted in Ayutthaya to see the old capital of Siam. There, I met two Slovak backpackers who casually asked if I’d seen a ping-pong show. I thought I had, but I didn’t even know what it was. They explained it to me, and I felt I could’ve done without the knowledge. Once again, I realized: after all this time, after all these photos, there’s a whole world I still don’t know. Despite immersing myself in the thick of it — I still can’t begin to gauge how much I haven’t seen.
+
+The day after, I was back in Pattaya for what would be my last stay there, lasting another week. I spent my remaining days in June—right up until my flight—on Soi 6. I stayed longer than usual each day, moving slower, shooting more deliberately. I gave it everything I had in those final days, trying to get closer to people. Some of my favorite photos—most of the ones I ended up picking—came from that stretch.`
   },
   {
     type: 'image',
@@ -829,7 +841,6 @@ const essayContent = [
 
     I remember praying for rain. I had never seen Soi 6 in the rain, and I longed for that different kind of light, that different kind of mood. It came—just once. And I went out with my camera. But by then, I’d already exhausted what little energy I had left. That was it.`
   },
-
   {
     type: 'text',
     content: `Afterwards, I flew to Turkey and went straight to my parents. Cancer is never easy, but my mom was doing better than I feared. I was relieved.
