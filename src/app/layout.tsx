@@ -3,6 +3,7 @@ import './App.css';
 import type { Metadata } from "next";
 import { EB_Garamond, Inter } from 'next/font/google';
 import Providers from './providers';
+import Analytics from '@/components/Analytics';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="h-20" /> {/* spacer to offset the fixed navbar */}
           <main className="pt-[72px] w-full min-h-screen">{children}</main>
           <Footer />
+          <Analytics />
         </Providers>
       </body>
     </html >
