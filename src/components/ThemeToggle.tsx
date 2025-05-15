@@ -46,18 +46,22 @@ export default function ThemeToggle() {
     setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  if (!mounted) return null;
-
   return (
     <button
       onClick={toggleTheme}
       className="p-1 px-2 border rounded cursor-pointer"
       title="Toggle theme"
     >
-      {theme === 'dark' ? '🌞' : '🌙'}{' '}
-      <span className="md:hidden text-sm">
-        {theme === 'dark' ? ' Light theme' : ' Dark theme'}
-      </span>
+      {mounted ? (
+        <>
+          {theme === 'dark' ? '🌞' : '🌙'}{' '}
+          <span className="md:hidden text-sm">
+            {theme === 'dark' ? ' Light theme' : ' Dark theme'}
+          </span>
+        </>
+      ) : (
+        '⏳'
+      )}
     </button>
   );
 }
