@@ -23,6 +23,7 @@ export interface PhotoEssayProps {
   shareTitle?: string;
   collapsible?: boolean;
   showPhotoEssayToggle?: boolean;
+  photoOnly?: boolean;
 }
 
 export default function PhotoEssay({
@@ -38,10 +39,11 @@ export default function PhotoEssay({
   shareTitle,
   collapsible = false,
   showPhotoEssayToggle = false,
+  photoOnly = false,
 }: PhotoEssayProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [showEssay, setShowEssay] = useState(!showPhotoEssayToggle);
+  const [showEssay, setShowEssay] = useState(!showPhotoEssayToggle && !photoOnly);
 
   const toggleCollapse = (id: string) => {
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
@@ -82,11 +84,11 @@ export default function PhotoEssay({
           ) : (
             <p className="essay-published text-sm text-red-400">Work in progress</p>
           )}
-          <div className="share-buttons mt-2 flex justify-center">
+          <div className="share-buttons mb-4 flex justify-center">
             <ShareButtons url={shareUrl!} title={shareTitle!} />
           </div>
-          {showPhotoEssayToggle && (
-            <div className="flex justify-center mt-2 mb-6">
+          {!photoOnly && showPhotoEssayToggle && (
+            <div className="flex justify-center mb-6">
               <ToggleSwitch
                 label="Photo-essay mode"
                 checked={showEssay}
