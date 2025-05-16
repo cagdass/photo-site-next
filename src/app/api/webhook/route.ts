@@ -18,16 +18,20 @@ export async function POST(request: NextRequest) {
       process.env.STRIPE_WEBHOOK_SECRET!
     );
   } catch (err: any) {
-    return NextResponse.json({ error: `Webhook Error: ${err.message}` }, { status: 400 });
+    console.error('❌ Webhook Error:', err.message);
+    return NextResponse.json({ error: 'Webhook Error' }, { status: 400 });
   }
+
+  console.log('✅ Stripe event received:', event.type);
 
   switch (event.type) {
     case 'checkout.session.completed':
       const session = event.data.object as Stripe.Checkout.Session;
-      // TODO: handle checkout session completed
+      console.log('🎉 Checkout session completed:', session);
+      // TODO: fulfill the order or notify yourself
       break;
     default:
-      console.log(`Unhandled event type ${event.type}`);
+      console.log(`⚠️ Unhandled event type ${event.type}`);
   }
 
   return NextResponse.json({ received: true });
