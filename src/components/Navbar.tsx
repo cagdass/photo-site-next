@@ -19,6 +19,7 @@ const LINKS = [
       { to: '/brief/samos', label: 'Samos' },
       { to: '/brief/sihanoukville', label: 'Sihanoukville' },
       { to: '/brief/songkran', label: 'Songkran' },
+      { to: '/brief/carmen', label: 'Carmen' },
     ],
   },
   { to: '/blog', label: 'Blog' },
