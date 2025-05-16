@@ -139,7 +139,7 @@ export default function Navbar() {
           )}
         </ul>
 
-        <div className="pt-8 border-t w-full flex justify-center mt-auto cursor-pointer">
+        <div className="dark-theme-button pt-8 border-t w-full flex justify-center mt-auto cursor-pointer">
           <ThemeToggle />
         </div>
       </div>

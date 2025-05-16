@@ -21,3 +21,10 @@ body,
 .font-garamond {
   font-family: 'EB Garamond', serif;
 }
+
+.dark-theme-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 100px);
+}
