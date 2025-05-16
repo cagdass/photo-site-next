@@ -43,7 +43,7 @@ export default function PhotoEssay({
 }: PhotoEssayProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [showEssay, setShowEssay] = useState(!showPhotoEssayToggle && !photoOnly);
+  const [showEssay, setShowEssay] = useState(!photoOnly);
 
   const toggleCollapse = (id: string) => {
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
