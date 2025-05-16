@@ -37,33 +37,33 @@ export default function HomePageProjects() {
       caption: "I photographed Thailand's wettest day with a waterproof camera"
     },
     {
-      id: '/brief/songkran2',
-      image: '/images/songkran/songkran-01.jpg',
-      objectPosition: 'object-[60%_center]',
-      title: 'Songkran',
-      caption: "I photographed Thailand's wettest day with a waterproof camera"
+      id: '/brief/carmen',
+      image: '/images/carmen/carmen-05.jpg',
+      // objectPosition: 'object-[60%_center]',
+      title: 'Carmen',
+      caption: "Scenes from Stockholm's trashiest, most likely, bar"
     },
-    {
-      id: '/brief/songkran3',
-      image: '/images/songkran/songkran-01.jpg',
-      objectPosition: 'object-[60%_center]',
-      title: 'Songkran',
-      caption: "I photographed Thailand's wettest day with a waterproof camera"
-    },
-    {
-      id: '/brief/songkran4',
-      image: '/images/songkran/songkran-01.jpg',
-      objectPosition: 'object-[60%_center]',
-      title: 'Songkran',
-      caption: "I photographed Thailand's wettest day with a waterproof camera"
-    },
-    {
-      id: '/brief/songkran5',
-      image: '/images/songkran/songkran-01.jpg',
-      objectPosition: 'object-[60%_center]',
-      title: 'Songkran',
-      caption: "I photographed Thailand's wettest day with a waterproof camera"
-    },
+    // {
+    //   id: '/brief/songkran3',
+    //   image: '/images/songkran/songkran-01.jpg',
+    //   objectPosition: 'object-[60%_center]',
+    //   title: 'Songkran',
+    //   caption: "I photographed Thailand's wettest day with a waterproof camera"
+    // },
+    // {
+    //   id: '/brief/songkran4',
+    //   image: '/images/songkran/songkran-01.jpg',
+    //   objectPosition: 'object-[60%_center]',
+    //   title: 'Songkran',
+    //   caption: "I photographed Thailand's wettest day with a waterproof camera"
+    // },
+    // {
+    //   id: '/brief/songkran5',
+    //   image: '/images/songkran/songkran-01.jpg',
+    //   objectPosition: 'object-[60%_center]',
+    //   title: 'Songkran',
+    //   caption: "I photographed Thailand's wettest day with a waterproof camera"
+    // },
   ];
 
   return (

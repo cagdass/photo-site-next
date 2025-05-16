@@ -5,10 +5,10 @@ import carmenPhotos from '@/data/carmenPhotos';
 
 export const metadata: Metadata = {
   title: 'Carmen – Çağdaş',
-  description: 'Few photos from Söder\'s infamous dive bar',
+  description: 'Scenes from Stockholm\'s trashiest, most likely, bar',
   openGraph: {
     title: 'Carmen – Çağdaş',
-    description: 'Few photos from Söder\'s infamous dive bar',
+    description: 'Scenes from Stockholm\'s trashiest, most likely, bar',
     url: 'https://cagdas.photos/brief/carmen',
     siteName: 'Çağdaş',
     images: [
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Carmen – Çağdaş',
-    description: 'Few photos from Söder\'s infamous dive bar',
+    description: 'Scenes from Stockholm\'s trashiest, most likely, bar',
     images: ['https://cagdas.photos/images/carmen/carmen-22.jpg'],
   },
 };
 
-export default function SihanoukvillePage() {
+export default function CarmenPage() {
   return (
     <PhotoEssay
       title="Carmen"
-      subtitle="Few photos from Söder\'s infamous dive bar"
+      subtitle="A few photos from Södermalm's infamous dive bar"
       cover={{
         src: '/images/carmen/carmen-14.jpg',
         caption: 'Another fun night at the pub.',
