@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PhotoEssay from '@/components/PhotoEssay';
 import sihanoukvilleEssayBlocks from '@/data/sihanoukvilleEssayBlocks';
+import sihanoukvillePhotos from '@/data/sihanoukvillePhotos';
 
 export const metadata: Metadata = {
   title: 'Sihanoukville – Çağdaş',
@@ -40,7 +41,8 @@ export default function SihanoukvillePage() {
       published={true}
       publishedDate="Published on 6 May 2025"
       essayBlocks={sihanoukvilleEssayBlocks}
-      photoBlocks={[]}
+      photoBlocks={sihanoukvillePhotos}
+      showPhotoEssayToggle={true}
       shareUrl="https://cagdas.photos/brief/sihanoukville"
       shareTitle="A Brief Photo Series on Sihanoukville"
     />
