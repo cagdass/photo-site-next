@@ -64,7 +64,7 @@ export default function PhotoEssayContent({
             data-testid="essay-cover-img"
             onClick={() => setLightboxIndex(0)}
           />
-          <p className="image-caption mb-4 text-center italic text-gray-500 text-sm mt-2 dark:text-white">
+          <p className="image-caption mb-4 text-center italic text-gray-500 text-sm mt-2">
             {cover.caption}
           </p>
         </div>

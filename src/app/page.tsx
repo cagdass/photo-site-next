@@ -12,8 +12,10 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-4 sm:px-8 lg:px-16">
-        <HomePageProjects />
+      <div className="w-full px-4 sm:px-8 lg:px-16">
+        <div className="max-w-screen-xl mx-auto">
+          <HomePageProjects />
+        </div>
       </div>
 
       <div className="max-w-2xl mt-10 mb-8 mx-auto px-4">
