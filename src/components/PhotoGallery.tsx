@@ -6,7 +6,7 @@ import { RenderImageContext, RenderImageProps, RowsPhotoAlbum } from "react-phot
 import Lightbox from "yet-another-react-lightbox";
 import "react-photo-album/rows.css";
 import "yet-another-react-lightbox/styles.css";
-import Captions from "yet-another-react-lightbox/plugins/captions";
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 interface Photo {
   src: string;
@@ -71,7 +71,8 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
         close={() => setIndex(null)}
         slides={slides}
         index={index ?? 0}
-        plugins={[Captions]}
+        plugins={[Zoom]}
+        zoom={{ maxZoomPixelRatio: 2 }}
       />
     </div>
   );

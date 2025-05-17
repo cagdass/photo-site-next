@@ -21,6 +21,7 @@ export interface PhotoEssayProps {
   photoBlocks: any[];
   shareUrl?: string;
   shareTitle?: string;
+  prelude?: React.ReactNode;
   collapsible?: boolean;
   showPhotoEssayToggle?: boolean;
   photoOnly?: boolean;
@@ -37,6 +38,7 @@ export default function PhotoEssay({
   photoBlocks,
   shareUrl,
   shareTitle,
+  prelude,
   collapsible = false,
   showPhotoEssayToggle = false,
   photoOnly = false,
@@ -98,11 +100,11 @@ export default function PhotoEssay({
           )}
         </center>
       </div>
-
       {showEssay
         ? (
           <PhotoEssayContent
             cover={cover}
+            prelude={prelude}
             essayBlocks={essayBlocks}
             collapsible={collapsible}
           />

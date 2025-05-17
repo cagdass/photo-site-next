@@ -1,4 +1,5 @@
 import PhotoEssay from '@/components/PhotoEssay';
+import ScrollMapPhotoEssay from '@/components/ScrollMapPhotoEssay';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function BikepackingPage() {
       published={false}
       essayBlocks={[]}
       photoBlocks={[]}
+      prelude={<ScrollMapPhotoEssay />}
       shareUrl="https://cagdas.photos/projects/bikepacking"
       shareTitle="Bikepacking"
     />

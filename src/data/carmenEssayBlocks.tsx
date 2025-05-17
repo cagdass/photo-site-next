@@ -43,8 +43,8 @@ const carmenEssayBlocks = [
   },
   {
     type: 'image',
-    src: '/images/carmen/carmen-13.jpg',
-    caption: 'Peak chaos and flash glare',
+    src: '/images/carmen/carmen-18.jpg',
+    caption: 'The chessmaster',
   },
   {
     type: 'image',
@@ -101,7 +101,7 @@ const carmenEssayBlocks = [
   },
   {
     type: 'image',
-    src: '/images/carmen/carmen-32.jpg',
+    src: '/images/carmen/carmen-23.jpg',
     caption: 'Caught in shadow and light',
   },
   {

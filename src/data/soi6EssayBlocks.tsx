@@ -15,18 +15,19 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `I first arrived in Pattaya in December 2023. My photography teacher—a close friend—had arranged a place for me to stay. It was partly an escape from the Swedish winter, partly wanderlust. I’d heard of Pattaya before—maybe from him, maybe just from its reputation. Either way, I was curious. I had three weeks of vacation from my software engineering job, which was draining the life out of me, and I decided to take it all.`
+    content: `I first arrived in Pattaya in December 2023. My photography teacher—a close friend—had arranged a place for me to stay. It was partly an escape from the Swedish winter, partly wanderlust. I can't recall whether I’d first heard of Pattaya from him, or if it was its reputation that had reached me. Either way, I was curious. I had three weeks of vacation from my software engineering job, which was draining the life out of me, and I decided to take it all.`
   },
   {
     type: 'component',
     collapsible: true,
     render: () => (
       <PhotoEssayText>
-        I had just started photography that summer. My teacher, to whom I inevitably refer a lot throughout this writing and pay a proper homage in{" "}
-        <Link href="/blog/starting-to-shoot" className="underline text-blue-600 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-400">
-          <strong>this blog post</strong>
-        </Link>
-        , mentored me with informal lessons and themed assignments like nightlife, dreams, and taxi drivers. His homework taught me how to move around with a camera, approach strangers, and <em>shoot with my heart, not my brain</em>.
+        I had just started photography that summer. My teacher,
+        to whom I inevitably refer a lot throughout this writing,
+        mentored me with informal lessons and themed assignments
+        like nightlife, dreams, and taxi drivers. His homework
+        taught me how to move around with a camera,
+        approach strangers, and <em>shoot with my heart, not my brain</em>.
       </PhotoEssayText>
     )
   },
@@ -41,14 +42,14 @@ const essayContent = [
     We stayed in touch often. When I asked him about visiting him in Thailand, he said I could come. He had a place for me to stay—the vacant unit next door was his friend’s too. I asked if three weeks, all I could take off from work, would be too long. He said, “You can stay here rent-free for as long as you want.”`
   },
   {
+    type: 'heading',
+    id: 'pattaya',
+    text: 'Welcome to Pattaya'
+  },
+  {
     type: 'image',
     src: '/images/pattaya/soi6-02.jpg',
     caption: 'The customer is always welcome, June 2024.'
-  },
-  {
-    type: 'heading',
-    id: 'pattaya',
-    text: 'Pattaya'
   },
   {
     type: 'text',
@@ -213,7 +214,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `I even took a Thai class online through Preply, and visited a language school in Pattaya to inquire about joining in person. But honestly, I wasn’t satisfied with the teaching. What helped more were the textbooks my teacher had kept from when he’d taken formal lessons years ago. I practiced with those instead, combining them with YouTube classes, and slowly built up the basics.`
+    content: `I took a Thai class online through Preply and even visited a language school in Pattaya to inquire about joining in person. But honestly, I wasn’t convinced about the teaching quality or whether it was worth investing my time and money for just a few weeks. What helped me more were the textbooks and notes my teacher had kept from his own formal lessons years ago. I practiced with those instead, supplemented by YouTube classes, and slowly built up the basics.`
   },
   {
     type: 'image',
@@ -430,17 +431,30 @@ const essayContent = [
     I stopped trying to capture shame. Instead, I tried to photograph the reality of it—not the scandal, but the quiet ordinariness. Because for them, that’s what it was: a drink, a smile, a bar stool, a question, an agreement. Nothing illegal. Nothing hidden. Just something you’re not supposed to look at too closely.`
   },
   {
+    type: 'component',
+    render: () => (
+      <PhotoEssayText>
+        Months later, after my last visit to Pattaya,
+        watching Sam Rockwell’s monologue in <em>White Lotus</em>—his messy,
+        raw confession about chasing desire—reminded me of the men I photographed on Soi 6.
+        If anything, I felt pity for his character; long ago, I shed any contempt.
+        That sense of searching, lost in their own ways, made me see them
+        less as villains and more as people caught in the tide of the system.
+      </PhotoEssayText>
+    )
+  },
+  {
     type: 'image',
     src: '/images/pattaya/soi6-92.jpg',
     caption: 'Man with a shawl, December 2023.'
   },
   {
     type: 'text',
-    content: `Once, a huge guy—easily close to two meters tall—appeared out of nowhere and slammed his arm onto my back, shouting, “What’s up?” I was startled for a moment, but quickly realized he was simply high. He was English. We exchanged a few words, I took a photo of him, and then, just as suddenly, he spotted a bar girl. Without hesitation, he wrapped a long shawl he was carrying around her shoulders and pulled her away. She didn’t resist. She just went with him.
+    content: `Once, a huge guy—easily close to two meters tall—appeared out of nowhere and slammed his arm onto my back, shouting, “What’s up?” I was startled for a moment, but quickly realized he was simply high and being friendly in his own way. He was English. We exchanged a few words, I took a photo of him, and then he spotted a bar girl. Without hesitation, he wrapped a long shawl he was carrying around her shoulders and pulled her away. She didn’t resist. She just went with him. He disappeared just as suddenly as he had apppeared.
 
     At the time, I didn’t even know about the bar-fine system—how a customer pays a fee, usually between 1,500 and 2,000 baht, to the bar to “take” a woman out. All I knew was that what I had witnessed felt absurd. And it still does—unless I somehow missed him paying.
 
-    I liked the story more than the photo I got. The girl he pulled away kept smiling theatrically for the camera. Even stranger: later that same night, I ran into the Englishman again. He didn’t recognize me at all. He just walked past without a second glance.
+    I liked the story more than the photo I got. The girl he pulled away kept smiling theatrically for the camera. Even stranger: later that same night, I walked past the Englishman again. He didn’t recognize me at all. He just shuffled straight without a second glance.
 
     As positive as I tried to keep these encounters with the men, and even though I managed to photograph many of them, I never built any real connection. Each meeting remained exactly that—a single, passing encounter.`
   },
@@ -448,6 +462,11 @@ const essayContent = [
     type: 'image',
     src: '/images/pattaya/soi6-13.jpg',
     caption: 'An international couple, December 2023.',
+  },
+  {
+    type: 'heading',
+    text: 'Learning the Ropes',
+    id: 'ropes',
   },
   {
     type: 'component',
@@ -680,7 +699,7 @@ const essayContent = [
 
     We hadn’t talked in a while, so I told her we could get a coffee and catch up once I was back. She said okay.
 
-    When I returned to Pattaya, she messaged again. She said a customer had “bought” her out of the bar and would keep her for the next ten days. “Linda did it because Linda needed money to live like this,” she wrote. “The bar was very quiet.” I asked, “Are you happy?” She replied, “Yes, he is very nice. He is 56 years old.”
+    When I returned to Pattaya, she messaged again. She said a customer had “bought” her out of the bar and would keep her for the next ten days. “Linda did it because Linda needed money to live like this,” she wrote. “The bar was very quiet.” I asked, “Are you happy?” Her reply was, “Yes, he is very nice. He is 56 years old.”
 
     A few days later, the tone changed. “Can’t be with the customer,” she wrote. “He’s doing drugs.” I asked how she was. She eventually told me, “Yes, some days he hurts Linda, but Linda can’t go anywhere, so she has to wait until he returns because he already received his money.”
 

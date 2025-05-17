@@ -35,7 +35,7 @@ export default function CarmenPage() {
       title="Carmen"
       subtitle="A few photos from Södermalm's infamous dive bar"
       cover={{
-        src: '/images/carmen/carmen-14.jpg',
+        src: '/images/carmen/carmen-13.jpg',
         caption: 'Another fun night at the pub.',
       }}
       published={true}

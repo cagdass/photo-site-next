@@ -11,12 +11,14 @@ interface PhotoEssayContentProps {
   cover: { src: string; caption?: string };
   essayBlocks: any[];
   collapsible?: boolean;
+  prelude?: React.ReactNode;
 }
 
 export default function PhotoEssayContent({
   cover,
   essayBlocks,
   collapsible = false,
+  prelude,
 }: PhotoEssayContentProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -70,7 +72,9 @@ export default function PhotoEssayContent({
         </div>
       </div>
 
-      <div className="w-full py-10">
+      {prelude && <div className="my-12">{prelude}</div>}
+
+      {!prelude && <div className="w-full py-10">
         {groups.map(({ heading, blocks }, i) => {
           const isCollapsed = collapsedSections[heading.id];
           const contentRef = useRef<HTMLDivElement>(null);
@@ -149,7 +153,7 @@ export default function PhotoEssayContent({
             </div>
           );
         })}
-      </div>
+      </div>}
 
       <Lightbox
         open={lightboxIndex !== null}
