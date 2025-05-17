@@ -14,6 +14,10 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 export const metadata: Metadata = {
   title: 'Çağdaş – Photography',
   description: 'Postcard-unfriendly photography from the places I’ve been.',
+  icons: {
+    icon: '/favicon.png',
+  },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
