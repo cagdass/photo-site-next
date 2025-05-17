@@ -6,6 +6,7 @@ import FootnoteButton from '@/components/FootnoteButton';
 import PortraitReel from '@/components/PortraitReel';
 import Soi6Poem from '@/components/Soi6Poem';
 import PhotoEssayText from '@/components/PhotoEssayText';
+import PhotoEssay from '@/components/PhotoEssay';
 
 const essayContent = [
   {
@@ -186,7 +187,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `In my first days, whenever I saw such a pair, I had an instinct to take a photo. And I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
+    content: `In my first days, whenever I a pair of older Western man and a young Thai woman, I had an instinct to take a photo. And I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
 
     She once told me she had stopped walking hand in hand with her father when she was barely a teenager—people would mistake them for a mail-order couple, and her dad for her husband. I remember how bizarre it sounded, and how deeply it must have hurt. In Sweden, growing up not looking “ethnically Swedish” already makes life hard enough. In the Philippines, she said, locals would sometimes shout at them in the street, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
 
@@ -433,14 +434,22 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <PhotoEssayText>
-        Months later, after my last visit to Pattaya,
-        watching Sam Rockwell’s monologue in <em>White Lotus</em>—his messy,
-        raw confession about chasing desire—reminded me of the men I photographed on Soi 6.
-        If anything, I felt pity for his character; long ago, I shed any contempt.
-        That sense of searching, lost in their own ways, made me see them
-        less as villains and more as people caught in the tide of the system.
-      </PhotoEssayText>
+      <>
+        <PhotoEssayText>
+          Months later, after my last visit to Pattaya,
+          watching Sam Rockwell’s monologue in <em>White Lotus</em>—his messy,
+          raw confession about chasing desire—reminded me of the men I photographed on Soi 6.
+          If anything, I felt pity for his character; long ago, I shed any contempt.
+          That sense of searching, lost in their own ways, made me see them
+          less as villains and more as people caught in the tide of the system.
+        </PhotoEssayText>
+        <PhotoEssayText>
+          And no, the man walking past the bunch of school-uniformed bar girls on
+          the essay cover isn’t Walton Goggins. But he might as well be—the two worlds overlap
+          in strange ways. Between the raw, true stories of Soi 6 and the scripted chaos of fiction,
+          I’m convinced Soi 6 is stranger than fiction.
+        </PhotoEssayText>
+      </>
     )
   },
   {
