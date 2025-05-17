@@ -10,10 +10,10 @@ export default function SamosBriefPage() {
   return (
     <PhotoEssay
       title="Samos"
-      subtitle="Brief stopover in Greece"
+      subtitle="My biking home to Turkey from Sweden trip had a twist"
       cover={{
-        src: '/photos/samos/cover.jpg',
-        caption: 'Cover photo placeholder',
+        src: '/images/samos/samos-01.jpg',
+        caption: 'Refugees enjoying a game of backgammon and a breather from the camp.',
       }}
       published={false}
       essayBlocks={[]}

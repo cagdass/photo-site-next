@@ -12,7 +12,7 @@ export default function BikepackingPage() {
       title="Bikepacking"
       subtitle="Heading home"
       cover={{
-        src: '/images/bikepacking/bikepacking-00.jpg',
+        src: '/images/bikepacking/bikepacking-01.jpg',
         caption: 'Swung by small Russia',
       }}
       published={false}
