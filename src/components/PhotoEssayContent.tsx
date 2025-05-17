@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import Image from 'next/image';
 import EssayImage from '@/components/EssayImage';
 import PhotoEssayText from '@/components/PhotoEssayText';
-import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
-import Zoom from 'yet-another-react-lightbox/plugins/zoom';
-
 interface PhotoEssayContentProps {
   cover: { src: string; caption?: string };
   essayBlocks: any[];
@@ -59,13 +59,21 @@ export default function PhotoEssayContent({
     <>
       <div className="flex justify-center px-4 mt-6">
         <div className="w-full max-w-[1400px] relative">
-          <img
-            src={cover.src}
-            alt="cover"
-            className="w-full rounded essay-cover-image"
-            data-testid="essay-cover-img"
-            onClick={() => setLightboxIndex(0)}
-          />
+
+          <div className="cursor-pointer"
+            style={{ position: "relative", width: "100%", aspectRatio: "3 / 2" }}
+          >
+            <Image
+              src={cover.src}
+              alt="cover"
+              fill
+              className="rounded"
+              priority={true}
+              data-testid="essay-cover-img"
+              onClick={() => setLightboxIndex(0)}
+            />
+
+          </div>
           <p className="image-caption mb-4 text-center italic text-gray-500 text-sm mt-2">
             {cover.caption}
           </p>

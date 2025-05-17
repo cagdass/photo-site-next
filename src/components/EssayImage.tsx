@@ -33,7 +33,6 @@ export default function EssayImage({
             fill
             sizes="(min-width: 1024px) 900px, 100vw"
             className="rounded object-contain"
-            priority={false}
           />
         </div>
         {caption && (
