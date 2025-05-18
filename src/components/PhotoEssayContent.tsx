@@ -39,7 +39,18 @@ export default function PhotoEssayContent({
   prelude,
   hasTableOfContents = false,
 }: PhotoEssayContentProps) {
-  const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
+  const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
+    const initialState: Record<string, boolean> = {};
+
+    essayBlocks.forEach(block => {
+      if (block.type === "heading" && typeof block.collapsed === "boolean") {
+        // if collapsed === false, section should be open (false means expanded)
+        initialState[block.id] = block.collapsed;
+      }
+    });
+
+    return initialState;
+  });
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [tocVisible, setTocVisible] = useState(true);
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -55,7 +66,7 @@ export default function PhotoEssayContent({
   ];
 
   type Group = {
-    heading: { id: string; text: string };
+    heading: { id: string; text: string, collapsed?: boolean, };
     blocks: typeof essayBlocks;
   };
 
@@ -86,7 +97,9 @@ export default function PhotoEssayContent({
     if (isMobile) {
       const allCollapsed: Record<string, boolean> = {};
       groups.forEach(g => {
-        allCollapsed[g.heading.id] = true;
+        if (g.heading.id !== 'default' && g.heading.collapsed !== false) {
+          allCollapsed[g.heading.id] = true;
+        }
       });
       setCollapsedSections(allCollapsed);
     } else {

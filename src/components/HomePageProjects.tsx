@@ -82,7 +82,7 @@ export default function HomePageProjects() {
       {/* Scrollable Row */}
       <div
         ref={scrollRef}
-        className="scroll-container overflow-x-auto flex space-x-6 px-4 py-2 snap-x snap-mandatory scroll-smooth"
+        className="scroll-container overflow-x-auto flex space-x-6 py-2 snap-x snap-mandatory scroll-smooth"
       >
         {featured.map((project, idx) => (
           <div key={project.id || idx}

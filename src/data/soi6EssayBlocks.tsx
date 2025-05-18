@@ -96,7 +96,8 @@ const essayContent = [
   {
     type: 'heading',
     id: 'welcome_to_pattaya',
-    text: 'Welcome to Pattaya'
+    text: 'Welcome to Pattaya',
+    collapsed: false,
   },
   {
     type: 'image',
