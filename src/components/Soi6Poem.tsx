@@ -5,7 +5,7 @@ import React from 'react';
 export default function Soi6Poem() {
   return (
     <div className="py-8 px-4 max-w-2xl mx-auto">
-      <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+      <div className="text-lg leading-relaxed">
         <section className="photo-essay-poem">
           <p className="poem-intro text-base">
             This doesn’t end with a caption. It ends with a scribble I had forgotten about.
@@ -124,7 +124,7 @@ export default function Soi6Poem() {
           <br />
           <small className="poem-note">*In Thai, the number 6 is pronounced “หก” (hok) with a falling tone.</small>
         </section>
-      </p>
+      </div>
     </div>
   );
 }

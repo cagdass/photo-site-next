@@ -139,7 +139,7 @@ export default function PhotoEssayContent({
               return (
                 <div key={i}>
                   {heading.text && (
-                    <div className="max-w-[900px] mx-auto">
+                    <div className="max-w-[900px] px-4 mx-auto">
                       <div
                         className="flex justify-between items-center cursor-pointer"
                         onClick={() => toggleCollapse(heading.id)}

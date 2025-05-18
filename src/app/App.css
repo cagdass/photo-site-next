@@ -37,3 +37,11 @@ body,
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
+
+.dark .signal-icon {
+  filter: invert(1) brightness(2);
+}
+
+.light .signal-icon {
+  filter: none;
+}

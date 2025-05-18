@@ -26,6 +26,13 @@ const LINKS = [
   { to: '/contact', label: 'Contact' },
 ];
 
+function handleMenuClick(e: React.MouseEvent<HTMLElement>) {
+  // only scroll to top if clicked directly on container (not on links/buttons inside)
+  if (e.target === e.currentTarget) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [expanded, setExpanded] = useState<{ [key: string]: boolean }>({});
@@ -157,7 +164,10 @@ export default function Navbar() {
           borderColor: 'var(--foreground)',
         }}
       >
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div
+          className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"
+          onClick={handleMenuClick}
+        >
           <Link href="/" className="flex items-center gap-2">
             <img src="/logo.png" alt="Logo" className="h-8 logo-img" />
             <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
