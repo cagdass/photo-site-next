@@ -12,31 +12,50 @@ const essayContent = [
   {
     type: 'component',
     render: () => (
-      <PhotoEssayText divClassName="max-w-md -mt-20" textSize="text-base">
-        My name is Çağdaş—I’m a software engineer currently taking a break,
-        and a hobby photographer based in Stockholm, Sweden.
-        Between December 2023 and June 2024,
-        I spent about seven weeks photographing Soi 6,
-        a bar street in Pattaya, Thailand.
-        Initially, I shared these photos privately with friends and fellow photographers,
-        who encouraged me to consider publishing a book—something completely new to me.
-        Instead, I decided to first create a website and share my work online.
-        Earlier this year, I revisited the project, posting a selection on the {" "}
-        <Link
-          href="https://www.instagram.com/p/DIG8ZHhogrY/?img_index=1"
-          className="underline text-blue-400 hover:text-blue-600"
-        >
-          Instagram
-        </Link>
-        {" "}and the{" "}
-        <Link
-          href="https://www.reddit.com/r/streetphotography/comments/1juqsru/documenting_nightlife_sex_work_in_pattaya/"
-          className="underline text-blue-400 hover:text-blue-600"
-        >
-          Reddit
-        </Link>.
-        The strong responses and thoughtful questions I received inspired me to write this personal essay, reflecting on my experiences and the complex realities I observed in Pattaya. The essay remains a work in progress, much like my thoughts about the place itself.
-      </PhotoEssayText>
+      <>
+        <PhotoEssayText divClassName="-mt-20" textSize="text-base">
+          My name is Çağdaş—I’m a software engineer currently taking a break,
+          and a hobby photographer based in Stockholm, Sweden.
+          Between December 2023 and June 2024,
+          I spent about seven weeks photographing Soi 6,
+          a bar street in Pattaya, Thailand.
+          Initially, I shared these photos privately with friends and fellow photographers,
+          who encouraged me to consider publishing a book—something completely new to me.
+          Instead, I decided to first create a website and share my work online.
+          Earlier this year, I revisited the project, my personal notes and photos,
+          posting a selection on the {" "}
+          <Link
+            href="https://www.instagram.com/p/DIG8ZHhogrY/?img_index=1"
+            className="underline text-blue-400 hover:text-blue-600"
+          >
+            Instagram
+          </Link>
+          {" "}and the{" "}
+          <Link
+            href="https://www.reddit.com/r/streetphotography/comments/1juqsru/documenting_nightlife_sex_work_in_pattaya/"
+            className="underline text-blue-400 hover:text-blue-600"
+          >
+            Reddit
+          </Link>.
+        </PhotoEssayText>
+        <PhotoEssayText textSize="text-base">
+          The strong responses and thoughtful questions I received inspired me to write this personal essay.
+          Many people know Pattaya from TV shows and films,
+          but I don’t believe most truly understand what happens there.
+          This essay is my attempt to explore and present that reality
+          —not as a definitive report, but as a personal journey
+          through my experiences and reflections, accompanied by the photographs I took.
+          The essay is rather lengthy and personal, so if you want to dive straight into Pattaya,
+          feel free to skip this introduction and start reading from{" "}
+          <a href="#welcome_to_pattaya"
+            className="underline text-blue-400 hover:text-blue-600"
+          >Welcome to Pattaya</a>.
+        </PhotoEssayText>
+        <PhotoEssayText textSize="text-base">
+          The essay remains a work in progress, much like my evolving
+          thoughts about the place itself and the world in which we live in.
+        </PhotoEssayText>
+      </>
     )
   },
   {
@@ -131,7 +150,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `That same night, we returned to Beach Road. It was another kind of madness. I saw people of every nation and color—many foreign women too, mostly Western. Families with small children strolled past scenes of negotiation, where freelance sex workers bargained with men under the coconut trees. The shadows of the swaying leaves danced in the glow of the streetlights, stretching across the sidewalk and onto the sand. I’d see the same scenes again and again.
+    content: `Shortly after, we returned to Beach Road. It was a breather from the Walking Street, even though it was another kind of madness. I saw people of every nation and color—many foreign women too, mostly Western. Families with small children strolled past scenes of negotiation, where freelance sex workers bargained with men under the coconut trees. The shadows of the swaying leaves danced in the glow of the streetlights, stretching across the sidewalk and onto the sand. I’d see the same scenes again and again.
 
     We passed street vendors selling ready-to-smoke joints, Viagra substitutes, and children’s toys—often side by side. Children ran through the crowds. Thousands of people moved past, each one a character of their own.`
   },
