@@ -47,7 +47,7 @@ export default function PortraitReel({
   };
 
   return (
-    <div className="relative my-8 z-30">
+    <div className="relative my-8 z-40">
       {title && (
         <h3 className="text-xl font-semibold mb-2 text-center">{title}</h3>
       )}
@@ -60,7 +60,7 @@ export default function PortraitReel({
         <div
           onClick={() => scrollByImageWidth('left')}
           className="sticky left-0 top-1/2 -translate-y-1/2
-          bg-black bg-opacity-50 text-white rounded-full p-2 z-40
+          bg-black bg-opacity-50 text-white rounded-full p-2
           hover:bg-opacity-75 transition border cursor-pointer max-h-[30px] flex justify-center items-center"
           aria-label="Scroll left"
         >
@@ -81,7 +81,7 @@ export default function PortraitReel({
         <button
           onClick={() => scrollByImageWidth('right')}
           className="sticky right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50
-          text-white rounded-full p-2 z-40 hover:bg-opacity-75 transition
+          text-white rounded-full p-2 hover:bg-opacity-75 transition
           border cursor-pointer max-h-[30px] flex justify-center items-center"
           aria-label="Scroll right"
           type="button"
@@ -91,7 +91,7 @@ export default function PortraitReel({
       </div>
 
       {caption && (
-        <p className="text-sm italic text-gray-600 text-center dark:text-white px-4 mt-2">
+        <p className="text-sm italic text-gray-600 text-center px-60 mt-2 mb-10">
           {caption}
         </p>
       )}
