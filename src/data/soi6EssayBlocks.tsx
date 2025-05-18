@@ -238,13 +238,13 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `In my first days, whenever I a pair of older Western man and a young Thai woman, I had an instinct to take a photo. And I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
+    content: `In my first days, whenever I saw a pair of older Western man and a young Thai woman, I had an instinct to take a photo. And I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
 
     She once told me she had stopped walking hand in hand with her father when she was barely a teenager—people would mistake them for a mail-order couple, and her dad for her husband. I remember how bizarre it sounded, and how deeply it must have hurt. In Sweden, growing up not looking “ethnically Swedish” already makes life hard enough. In the Philippines, she said, locals would sometimes shout at them in the street, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
 
     I thought about that story often in Pattaya. I caught myself hoping, foolishly, that many of the older Western men and young Thai women I saw were actually fathers and daughters. That maybe there was a happier story hidden in the pairings. Even when I saw a very young Thai woman—perhaps in her teens—sandwiched between two older Western men on a motorcycle at a traffic light, even though disgust rose in me, I tried to write a kinder story in my head: maybe a father, an uncle, a niece.
 
-    Still, I instinctively took the photo. It’s a photo that haunts me—her distressed expression frozen mid-glance. One I will not share. I didn’t ask permission, and they never noticed me. And after all the time I spent in Pattaya, I know better now. They weren’t family.`
+    Still, I instinctively took the photo. It’s one of the many photos I took that haunts me—her distressed expression frozen mid-glance. One I will not share. I didn’t ask permission, and they never noticed me. And after all the time I spent in Pattaya, I know better now. They weren’t family.`
   },
   {
     type: 'image',
