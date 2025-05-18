@@ -72,7 +72,7 @@ const sihanoukvilleEssayBlocks = [
         I saw women stepping out of high-rise residential towers to collect food deliveries —
         some in flashy pajamas, others in branded slippers, their outfits skimming the edge of the workday ahead.
         It reminded me of{" "}
-        <Link href="/projects/soi6" className="underline text-blue-600 hover:text-blue-800">
+        <Link href="/soi6" className="underline text-blue-600 hover:text-blue-800">
           <strong>Pattaya’s Soi 6</strong>
         </Link>
         , where sex workers would rise slowly in the late morning, eat breakfast,

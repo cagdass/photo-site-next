@@ -20,7 +20,7 @@ export default function BikepackingPage() {
       essayBlocks={[]}
       photoBlocks={[]}
       prelude={<ScrollMapPhotoEssay />}
-      shareUrl="https://cagdas.photos/projects/bikepacking"
+      shareUrl="https://cagdas.photos/bikepacking"
       shareTitle="Bikepacking"
     />
   );

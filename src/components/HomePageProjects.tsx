@@ -29,7 +29,7 @@ export default function HomePageProjects() {
 
   const featured = [
     {
-      id: '/projects/soi6',
+      id: '/soi6',
       image: '/images/pattaya/portraits/soi6_portrait-01.jpg',
       title: 'Soi 6',
       caption: 'For seven weeks, I photographed a bar street in Pattaya, Thailand'
