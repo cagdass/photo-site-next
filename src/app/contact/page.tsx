@@ -53,7 +53,7 @@ export default function ContactPage() {
           rel="noopener noreferrer"
           className="text-blue-400 hover:underline break-words"
         >
-          open-source code for the website
+          open-source (vibe mostly) code for the website
         </a>
       </div>
 
@@ -111,7 +111,7 @@ export default function ContactPage() {
       </section>
 
       <p className="text-md whitespace-normal break-words mt-10">
-        Also, if you know of any grants or lucky breaks, I’m all ears. I’m barely eking out a living, and while I’m glad not to be writing code for a living right now, building this site reminded me how fun (and painstaking) it can be. So if something comes up — ideally remote, ideally meaningful — I’m open. More than anything, I’d love to see some of this work in print, reach more people, and keep photographing for as long as I can.
+        Also, if you know of any grants or lucky breaks, I’m all ears. I’m barely eking out a living, and while I’m glad not to be writing code for a living right now, building this site reminded me how fun (and painstaking) it can be. Either way, I'm proud to have something of my own at a time where mainstream social media oligarchs are bending over backwards for the worst people. So anyways... if a coding opportunity pops up — ideally remote, ideally meaningful — I’m open. But more than that, I’d love to see some of this work — Soi 6 — in print, reach more people, and keep photographing for as long as I can.
       </p>
     </section>
   );
