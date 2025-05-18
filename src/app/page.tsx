@@ -1,6 +1,8 @@
 // app/page.tsx
 import HeroFlip from '@/components/HeroFlip';
 import HomePageProjects from '@/components/HomePageProjects';
+import PhotoGallery from '@/components/PhotoGallery';
+import miscPhotos from '@/data/miscPhotos';
 import './home.css';
 
 export default function Home() {
@@ -46,6 +48,10 @@ export default function Home() {
       <p className="hero text-sm sm:text-base mt-4 text-center text-gray-500 italic">
         Tag along, I'm on a journey to be king of photographers!
       </p>
+
+      <div className="mt-4">
+        <PhotoGallery photos={miscPhotos} />
+      </div>
     </section>
   );
 }
