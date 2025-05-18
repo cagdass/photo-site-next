@@ -46,6 +46,7 @@ export default function Soi6Page() {
       shareTitle="A Photo Essay on Pattaya’s Soi 6"
       collapsible={true}
       showPhotoEssayToggle={true}
+      hasTableOfContents={true}
     />
   );
 }

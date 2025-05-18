@@ -10,8 +10,38 @@ import PhotoEssay from '@/components/PhotoEssay';
 
 const essayContent = [
   {
+    type: 'component',
+    render: () => (
+      <PhotoEssayText divClassName="max-w-md -mt-20" textSize="text-base">
+        My name is Çağdaş—I’m a software engineer currently taking a break,
+        and a hobby photographer based in Stockholm, Sweden.
+        Between December 2023 and June 2024,
+        I spent about seven weeks photographing Soi 6,
+        a bar street in Pattaya, Thailand.
+        Initially, I shared these photos privately with friends and fellow photographers,
+        who encouraged me to consider publishing a book—something completely new to me.
+        Instead, I decided to first create a website and share my work online.
+        Earlier this year, I revisited the project, posting a selection on the {" "}
+        <Link
+          href="https://www.instagram.com/p/DIG8ZHhogrY/?img_index=1"
+          className="underline text-blue-400 hover:text-blue-600"
+        >
+          Instagram
+        </Link>
+        {" "}and the{" "}
+        <Link
+          href="https://www.reddit.com/r/streetphotography/comments/1juqsru/documenting_nightlife_sex_work_in_pattaya/"
+          className="underline text-blue-400 hover:text-blue-600"
+        >
+          Reddit
+        </Link>.
+        The strong responses and thoughtful questions I received inspired me to write this personal essay, reflecting on my experiences and the complex realities I observed in Pattaya. The essay remains a work in progress, much like my thoughts about the place itself.
+      </PhotoEssayText>
+    )
+  },
+  {
     type: 'heading',
-    id: 'intro',
+    id: 'introduction',
     text: 'Introduction'
   },
   {
@@ -34,7 +64,9 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `But by September, our informal kitchen classes came to an end. It was time for my teacher to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
+    content: `During one of our early homework assignments that summer, my teacher told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I believe black and white is more elegant. It cuts through the noise and lets you focus on what really matters.
+
+    But by September, our informal kitchen classes came to an end. It was time for my teacher to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
 
     He gave me a key to his apartment though and I spent long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite a few signed to his name. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
@@ -44,7 +76,7 @@ const essayContent = [
   },
   {
     type: 'heading',
-    id: 'pattaya',
+    id: 'welcome_to_pattaya',
     text: 'Welcome to Pattaya'
   },
   {
@@ -182,7 +214,7 @@ const essayContent = [
   },
   {
     type: 'heading',
-    id: 'impressions',
+    id: 'first_impressions',
     text: 'First Impressions',
   },
   {
@@ -191,7 +223,7 @@ const essayContent = [
 
     She once told me she had stopped walking hand in hand with her father when she was barely a teenager—people would mistake them for a mail-order couple, and her dad for her husband. I remember how bizarre it sounded, and how deeply it must have hurt. In Sweden, growing up not looking “ethnically Swedish” already makes life hard enough. In the Philippines, she said, locals would sometimes shout at them in the street, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
 
-    I thought about that story often in Pattaya. I caught myself hoping, foolishly, that many of the older Western men and young Thai women I saw were actually fathers and daughters. That maybe there was a happier story hidden in the pairings. Even when I saw a very young Thai woman—perhaps even underage—sandwiched between two older Western men on a motorcycle at a traffic light, even though disgust rose in me, I tried to write a kinder story in my head: maybe a father, an uncle, a niece.
+    I thought about that story often in Pattaya. I caught myself hoping, foolishly, that many of the older Western men and young Thai women I saw were actually fathers and daughters. That maybe there was a happier story hidden in the pairings. Even when I saw a very young Thai woman—perhaps in her teens—sandwiched between two older Western men on a motorcycle at a traffic light, even though disgust rose in me, I tried to write a kinder story in my head: maybe a father, an uncle, a niece.
 
     Still, I instinctively took the photo. It’s a photo that haunts me—her distressed expression frozen mid-glance. One I will not share. I didn’t ask permission, and they never noticed me. And after all the time I spent in Pattaya, I know better now. They weren’t family.`
   },
@@ -228,8 +260,8 @@ const essayContent = [
   },
   {
     type: 'heading',
-    text: 'Photographing Soi 6',
-    id: 'soi_6',
+    text: 'Starting to Shoot',
+    id: 'starting_to_shoot',
   },
   {
     type: 'text',
@@ -475,7 +507,7 @@ const essayContent = [
   {
     type: 'heading',
     text: 'Learning the Ropes',
-    id: 'ropes',
+    id: 'learning_the_ropes',
   },
   {
     type: 'component',
@@ -531,9 +563,9 @@ const essayContent = [
     caption: 'Birthday girl, June 2024.',
   },
   {
-    type: 'heading',
+    type: 'subheading',
     text: 'Learning Names',
-    id: 'names',
+    id: 'learning_names',
   },
   {
     girl: 'May',
@@ -559,7 +591,8 @@ const essayContent = [
     render: () => (
       <>
         <PhotoEssayText>
-          May’s story echoed what Swedish journalist Joakim Medin explores in his 2019 book Thailandsvenskarna.
+          May’s story echoed what Swedish journalist Joakim Medin explores in his 2019 book
+          <em>Thailandssvenskarna</em>.
           In addition to traveling to Thailand to investigate the phenomenon firsthand,
           Medin also draws on revealing demographic data.
           According to Sweden’s national statistics agency, 78 percent of Thai migrants to Sweden are women,
@@ -583,11 +616,6 @@ const essayContent = [
         </PhotoEssayText>
       </>
     )
-  },
-  {
-    girl: 'May',
-    type: 'text',
-    content: `At the time of writing this, Medin is imprisoned in Turkey—my home country—while his wife awaits the birth of their daughter.`
   },
   {
     type: 'image',
@@ -733,7 +761,7 @@ const essayContent = [
           Despite my hurting ankle, I couldn’t miss Songkran.
           I went out on a couple of days with my backup camera, an OM System TG-7—waterproof,
           just as it needed to be. I took quite a few photos, some of which I’ve included{" "}
-          <Link href="/brief/songkran" className="underline text-blue-600 hover:text-blue-800">
+          <Link href="/brief/songkran" className="underline text-blue-400 hover:text-blue-600">
             <strong>here</strong>
           </Link>
           .
@@ -799,7 +827,7 @@ const essayContent = [
           Battambang, the Cardamom Mountains,
           Khemarak Phoumin, Pursat, and Sihanoukville—where I took some of the photos I
           share{" "}
-          <Link href="/brief/sihanoukville" className="underline text-blue-600 hover:text-blue-800">
+          <Link href="/brief/sihanoukville" className="underline text-blue-400 hover:text-blue-600">
             <strong>here</strong>
           </Link>
           . I went to Koh Rong, where I even managed a run along the white beach,

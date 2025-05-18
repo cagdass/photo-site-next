@@ -25,6 +25,7 @@ export interface PhotoEssayProps {
   collapsible?: boolean;
   showPhotoEssayToggle?: boolean;
   photoOnly?: boolean;
+  hasTableOfContents?: boolean;
 }
 
 export default function PhotoEssay({
@@ -42,6 +43,7 @@ export default function PhotoEssay({
   collapsible = false,
   showPhotoEssayToggle = false,
   photoOnly = false,
+  hasTableOfContents = false,
 }: PhotoEssayProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -107,6 +109,7 @@ export default function PhotoEssay({
             prelude={prelude}
             essayBlocks={essayBlocks}
             collapsible={collapsible}
+            hasTableOfContents={hasTableOfContents}
           />
         )
         : (

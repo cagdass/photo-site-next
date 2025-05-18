@@ -47,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={`${inter.variable} ${garamond.variable} bg-white text-black dark:bg-black dark:text-white transition-colors`}>
+      <body className={`${inter.variable} ${garamond.variable} transition-colors`}>
         <Providers>
           <Navbar />
           <div className="h-20" /> {/* spacer to offset the fixed navbar */}

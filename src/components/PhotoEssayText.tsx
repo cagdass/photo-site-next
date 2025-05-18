@@ -4,15 +4,13 @@ type Props = {
   children: React.ReactNode;
   divClassName?: string;
   pClassName?: string;
+  textSize?: string;
 };
 
-const component_p_className = ""
-const component_div_className = ""
-
-export default function PhotoEssayText({ children, divClassName = '', pClassName = '' }: Props) {
+export default function PhotoEssayText({ children, divClassName = '', pClassName = '', textSize = 'text-xl' }: Props) {
   return (
-    <div className={`w-full mb-10 max-w-3xl mx-auto px-4 text-lg leading-8 md:text-xl md:leading-9 ${divClassName}`}>
-      <p className="essay-text text-lg leading-8 md:text-xl md:leading-9 whitespace-pre-line">
+    <div className={`w-full mb-10 mt-10 max-w-3xl mx-auto px-4 leading-8 md:leading-9 ${textSize} ${divClassName}`}>
+      <p className={`${pClassName} px-2 tracking-wide leading-relaxed essay-text leading-8  md:leading-9 whitespace-pre-line ${pClassName}`}>
         {children}
       </p>
     </div>
