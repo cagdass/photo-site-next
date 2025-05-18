@@ -97,7 +97,7 @@ export default function HomePageProjects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className={`w-full h-auto aspect-[2/3] object-cover transition duration-300 group-hover:brightness-90 ${project.objectPosition || 'object-center'}`}
+                  className={`w-full h-auto aspect-[2/3] object-cover transition duration-300 group-hover:brightness-110 ${project.objectPosition || 'object-center'}`}
                 />
                 <div className="absolute bottom-0 w-full bg-black/60 text-white px-3 py-2 h-[4.5rem] transition-all duration-300 group-hover:bg-black/80 group-hover:translate-y-[6px]">
                   <h3 className="text-base font-semibold leading-tight">{project.title}</h3>
