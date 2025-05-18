@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Navbar />
           <div className="h-20" /> {/* spacer to offset the fixed navbar */}
-          <main className="pt-[72px] w-full min-h-screen">{children}</main>
+          <main className="md:py-12 w-full min-h-screen">{children}</main>
           <Footer />
           <Suspense fallback={null}>
             <Analytics />
