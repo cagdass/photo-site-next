@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Soi 6 — ซอยหก – Çağdaş',
     description: 'A photo essay documenting seven weeks on Soi 6, Pattaya’s infamous bar street.',
-    url: 'https://cagdas.photos/projects/soi6',
+    url: 'https://cagdas.photos/soi6',
     siteName: 'Çağdaş',
     images: [
       {
@@ -42,7 +42,7 @@ export default function Soi6Page() {
       publishedDate="Work in progress"
       essayBlocks={soi6EssayBlocks}
       photoBlocks={soi6Photos}
-      shareUrl="https://cagdas.photos/projects/soi6"
+      shareUrl="https://cagdas.photos/soi6"
       shareTitle="A Photo Essay on Pattaya’s Soi 6"
       collapsible={true}
       showPhotoEssayToggle={true}
