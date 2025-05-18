@@ -20,7 +20,13 @@ const routePoints = [
   { x: 190, y: 280 },   // Mostar?
   { x: 195, y: 295 },   // Montenegro ?
   { x: 210, y: 300 },   // Shkoder ?
-  { x: 220, y: 310 },   // Shkoder ?
+  { x: 205, y: 310 },   // Vlore ?
+  { x: 212, y: 323 },   // Somewhere ?
+  { x: 220, y: 330 },   // Patras ?
+  { x: 232, y: 330 },   // Athens ?
+  { x: 248, y: 336 },   // Adalar ?
+  { x: 265, y: 329 },   // Kusadasi ?
+  { x: 215, y: 330 },   // Kusadasi ?
 ];
 
 export default function ScrollMapPhotoEssay() {
@@ -112,7 +118,7 @@ function PhotoBlock({
       <div className="text-xl font-semibold">{caption}</div>
       <div className="mt-2 text-sm text-gray-500">
         <img
-          src={`/images/bikepacking/test${String(index + 1).padStart(2, '0')}.PNG`}
+          src={`/images/bikepacking/test${String((index + 1) % 9 + 1).padStart(2, '0')}.PNG`}
           alt={`Photo Stop ${index + 1}`}
           className="w-36 rounded mt-4"
         />
