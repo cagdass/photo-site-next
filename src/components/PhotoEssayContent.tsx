@@ -138,7 +138,7 @@ export default function PhotoEssayContent({
     return (
       <>
         {!prelude && (
-          <div className="w-full -mt-20 py-10">
+          <div className="w-full pr-2 -mt-20 py-10">
             {groups.map(({ heading, blocks }, i) => {
               const isCollapsed = collapsedSections[heading.id];
               const contentRef = useRef<HTMLDivElement>(null);

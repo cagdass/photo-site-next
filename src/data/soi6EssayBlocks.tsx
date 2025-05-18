@@ -85,7 +85,7 @@ const essayContent = [
     type: 'text',
     content: `During one of our early homework assignments that summer, my teacher told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I believe black and white is more elegant. It cuts through the noise and lets you focus on what really matters.
 
-    But by September, our informal kitchen classes came to an end. It was time for my teacher to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
+    But by September, our informal kitchen classes had come to an end. It was time for my teacher to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
 
     He gave me a key to his apartment though and I spent long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite a few signed to his name. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
@@ -106,7 +106,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `He welcomed me at the bus station in Pattaya, took me to the flat, handed me a key, and let me rest. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
+    content: `My photography teacher welcomed me at the bus station in Pattaya one late December night. He took me to the flat, handed me a key, and let me rest and adjust to the tropical warmth. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
 
     I had broken my camera back in Stockholm just before the trip. I worried I wouldn’t be able to photograph anything—especially after all the hype about Pattaya’s sex tourism—but he lent me his: the older Fujifilm X-Pro1 I had practiced with during the summer. We shared the same 18mm f/2.0 lens. The setup was lightweight, unimposing. Just wide enough for the kind of close, intimate frames I wanted. Not the best in low light, but somehow the softness suited the city.`
   },
@@ -902,9 +902,9 @@ const essayContent = [
 
     On the way, I stopped in Khon Kaen and Udon Thani—two cities in the Isan region, the same part of Thailand where many of the women I’d met in Pattaya had come from. I had hoped to stay longer, to meet people, to see the poor villages they had described. I wanted to understand what made them leave. I wanted to photograph what I found. But I didn’t have time. I passed through quickly, knowing these would be my final days photographing Soi 6.
 
-On the way to Pattaya from Khon Kaen in Isan, I overnighted in Ayutthaya to see the old capital of Siam. There, I met two Slovak backpackers who casually asked if I’d seen a ping-pong show. I thought I had, but I didn’t even know what it was. They explained it to me, and I felt I could’ve done without the knowledge. Once again, I realized: after all this time, after all these photos, there’s a whole world I still don’t know. Despite immersing myself in the thick of it — I still can’t begin to gauge how much I haven’t seen.
+    On the way to Pattaya from Khon Kaen in Isan, I overnighted in Ayutthaya to see the old capital of Siam. There, I met two Slovak backpackers who casually asked if I’d seen a ping-pong show. I thought I had, but I didn’t even know what it was. They explained it to me, and I felt I could’ve done without the knowledge. Once again, I realized: after all this time, after all these photos, there’s a whole world I still don’t know. Despite immersing myself in the thick of it — I still can’t begin to gauge how much I haven’t seen.
 
-The day after, I was back in Pattaya for what would be my last stay there, lasting another week. I spent my remaining days in June—right up until my flight—on Soi 6. I stayed longer than usual each day, moving slower, shooting more deliberately. I gave it everything I had in those final days, trying to get closer to people. Some of my favorite photos—most of the ones I ended up picking—came from that stretch.`
+    The day after, I was back in Pattaya for what would be my last stay there, lasting another week. I spent my remaining days in June—right up until my flight—on Soi 6. I stayed longer than usual each day, moving slower, shooting more deliberately. I gave it everything I had in those final days, trying to get closer to people. Some of my favorite photos—most of the ones I ended up picking—came from that stretch.`
   },
   {
     type: 'image',
