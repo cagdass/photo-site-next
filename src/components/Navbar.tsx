@@ -9,8 +9,8 @@ const LINKS = [
   {
     label: 'Projects',
     subLinks: [
-      { to: '/projects/soi6', label: 'Soi 6 — ซอยหก' },
-      { to: '/projects/bikepacking', label: 'Bikepacking' },
+      { to: '/soi6', label: 'Soi 6 — ซอยหก' },
+      { to: '/bikepacking', label: 'Bikepacking' },
     ],
   },
   {
