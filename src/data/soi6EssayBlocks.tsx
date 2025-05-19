@@ -134,6 +134,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-03.jpg',
+    srcColor: '/images/pattaya/color/soi6-03.jpg',
     caption: 'Man with a bar-fined girl, December 2023.'
   },
   {
@@ -296,7 +297,7 @@ const essayContent = [
     type: 'text',
     content: `Apart from a trip to Chiang Mai and Bangkok for a few days, for the rest of my stay, even though I continued taking photos wherever I was, I returned to Soi 6 almost every day as part of our Beach Road walk—sometimes twice a day, once in the afternoon and again at night. My teacher usually came with me, offering tips on how to interact. He’d watch both me and the street, and later at home, he’d offer critique—on my presence, what I did or didn’t do.
 
-    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, dancing for TikTok, replying to messages. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.`
+    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, binging TikToks, texting men. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.`
   },
   {
     type: 'component',
@@ -354,6 +355,11 @@ const essayContent = [
     During that first visit, I took many photos on Beach Road. I hadn’t yet locked in on Soi 6 as the core of the project. I was just drawn to what was unfolding in front of me—this strange ecosystem where families brushed shoulders with transactional intimacy, children in swimsuits skipped past sex workers in heels. Pattaya wasn’t hiding anything. Everyone was part of the same current.`
   },
   {
+    type: 'subheading',
+    text: 'Beach Road Photos',
+    id: 'beach_road_photos',
+  },
+  {
     type: 'component',
     collapsible: false,
     render: () => {
@@ -364,7 +370,7 @@ const essayContent = [
 
       return (
         <PortraitReel
-          title="Beach Road Photos"
+          // title="Beach Road Photos"
           images={beachRoadImages}
           orientation="landscape"
           caption="Before I had a clear focus on Soi 6, I collected photos during our twice-daily walks on the Beach Road. December 2023."
@@ -488,18 +494,14 @@ const essayContent = [
     render: () => (
       <>
         <PhotoEssayText>
-          Months later, after my last visit to Pattaya,
-          watching Sam Rockwell’s monologue in <em>White Lotus</em>—his messy,
-          raw confession about chasing desire—reminded me of the men I photographed on Soi 6.
-          If anything, I felt pity for his character; long ago, I shed any contempt.
-          That sense of searching, lost in their own ways, made me see them
-          less as villains and more as people caught in the tide of the system.
-        </PhotoEssayText>
-        <PhotoEssayText>
-          And no, the man walking past the bunch of school-uniformed bar girls on
-          the essay cover isn’t Walton Goggins. But he might as well be—the two worlds overlap
-          in strange ways. Between the raw, true stories of Soi 6 and the scripted chaos of fiction,
-          I’m convinced Soi 6 is stranger than fiction.
+          A few months ago,
+          watching a clip of Sam Rockwell’s monologue from <em>White Lotus</em> that went viral—
+          his messy, raw confession about chasing desire—reminded me of the men
+          I photographed on Soi 6. Even though it’s a fictional soliloquy
+          taken to an extreme, I believe many of the men I met in Pattaya had been off the rails,
+          like Rockwell’s character, enslaved in the pursuit of desire.
+          That sense of searching, lost in their own ways,
+          fuels this massive system financially, drawing more sex workers into it.
         </PhotoEssayText>
       </>
     )
@@ -562,6 +564,11 @@ const essayContent = [
     caption: 'Mamasan taking the roll call, March 2024.',
   },
   {
+    type: 'subheading',
+    text: 'Telegram Groups',
+    id: 'telegram_groups',
+  },
+  {
     type: 'text',
     content: `Later, I found one of the Telegram channels where those photos were uploaded—subscribed to by thousands. Each post showed the girls in matching outfits, standing against the same wall, tagged with names, short descriptions, and a bar logo. The lighting was identical. The framing never changed. You could scroll through them like a food delivery app.`
   },
@@ -588,11 +595,18 @@ const essayContent = [
     id: 'learning_names',
   },
   {
+    type: 'text',
+    content: `As days passed, I became friendly with many familiar faces. I was often offered bubble tea, fruit, grilled chicken—whatever the girls happened to be snacking on—as I walked by, whether in the morning or late at night. Looking back, I remember a general sense of warmth. But the ones I knew by name were fewer; still, by December 2023, I had already jotted down over a dozen names in my notes.`
+  },
+  {
+    type: 'subheading',
+    text: 'May',
+    id: 'may',
+  },
+  {
     girl: 'May',
     type: 'text',
-    content: `As days passed, I became friendly with many familiar faces. I was often offered bubble tea, fruit, grilled chicken—whatever the girls happened to be snacking on—as I walked by, whether in the morning or late at night. Looking back, I remember a general sense of warmth. But the ones I knew by name were fewer; still, by December 2023, I had already jotted down over a dozen names in my notes.
-
-    One of them was May—a pseudonym. She was conversational in English. She told me she had once lived in Sweden, supposedly for school, though I quietly suspected there was more to the story. When she learned I had lived there too, she lit up and started showing me photos. Her photos showed a life that felt oddly familiar to me: warm jackets, snowy sidewalks, Christmas lights, sterile IKEA interiors—though every meal still had a bowl of rice at the center.`
+    content: `One of them was May—a pseudonym. She was conversational in English. She told me she had once lived in Sweden, supposedly for school, though I quietly suspected there was more to the story. When she learned I had lived there too, she lit up and started showing me photos. Her photos showed a life that felt oddly familiar to me: warm jackets, snowy sidewalks, Christmas lights, sterile IKEA interiors—though every meal still had a bowl of rice at the center.`
   },
 
   // <span
@@ -643,6 +657,11 @@ const essayContent = [
     caption: 'Street scene, June 2024.',
   },
   {
+    type: 'subheading',
+    text: 'Linda',
+    id: 'linda',
+  },
+  {
     girl: 'Linda',
     type: 'text',
     content: `I met Linda—a pseudonym— early on, and from that first encounter, she always waved when she saw me on the street. She liked being photographed—or at least, she played that part well. Every time I sent her a picture, she’d reply with mock outrage: “Ugly!!! No want photo!” But the next day, there she was again, posing and laughing like nothing had changed. It became our ritual.
@@ -659,6 +678,11 @@ const essayContent = [
     caption: 'With a customer, April 2024.',
   },
   {
+    type: 'subheading',
+    text: 'Mint',
+    id: 'mint',
+  },
+  {
     girl: 'Mint',
     type: 'text',
     content: `One of the people I grew close to on Soi 6 was Mint—a kathoey and under another pseudonym. She was upfront from the beginning. As she put it, “I’m ladyboy.”. At first, she saw me as a potential customer. I gently explained I wasn’t interested in that—but asked if I could take her photograph. She absolutely loved the idea. She posed like an experienced model—serious expression, sharp angles—flowing from one stance to the next while I scrambled to frame her properly amid the chaos of Soi 6.
@@ -673,6 +697,11 @@ const essayContent = [
     caption: 'Nightfall after the water fights during Songkran, April 2024.',
   },
   {
+    type: 'subheading',
+    text: 'Namtan',
+    id: 'Namtan',
+  },
+  {
     girl: 'Namtan',
     type: 'text',
     content: `I first photographed Namtan—yet another pseudonym— in December 2023. She was lively, confident, and always camera-ready. We followed each other on Instagram—I’d send her the pictures I took of her, and in return, I got small glimpses into her life. Unlike many of the women I met, Namtan didn’t have children, and she moved with a kind of freedom that stood out on Soi 6.
@@ -684,6 +713,11 @@ const essayContent = [
     She reminded me of how Ray Manzarek once described Jim Morrison in his autobiography: someone who could drink until collapse, then get up and keep going like nothing happened. That was Namtan. She burned through nights, smiled at the hangovers, and stayed standing through it all. Not every story on the street followed the same script. Hers ran louder, looser, and very much on her own terms.`
   },
   {
+    type: 'subheading',
+    text: 'Friends from Soi 6',
+    id: 'friends_from_soi_6',
+  },
+  {
     type: 'component',
     collapsible: false,
     render: () => {
@@ -692,7 +726,9 @@ const essayContent = [
         return `/images/pattaya/portraits/soi6_portrait-${num}.jpg`;
       });
 
-      return <PortraitReel title="Friends from Soi 6" images={portraitImages} caption="Taken across March, April, and June 2024." />;
+      return <PortraitReel
+        images={portraitImages}
+        caption="Taken across March, April, and June 2024." />;
     }
   },
   {
