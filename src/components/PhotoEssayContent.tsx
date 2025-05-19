@@ -307,7 +307,7 @@ export default function PhotoEssayContent({
 
       {prelude && <div className="my-12">{prelude}</div>}
       {hasTableOfContents && (
-        <div className="lg:block w-48 h-0 mt-10 sticky top-24 left-2">
+        <div className="lg:block w-48 h-0 mt-6 sticky top-24 left-2">
           <TableOfContents headings={headings} activeId={activeId} />
         </div>
       )}

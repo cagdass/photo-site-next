@@ -39,21 +39,23 @@ const essayContent = [
           </Link>.
         </PhotoEssayText>
         <PhotoEssayText textSize="text-base">
-          The strong responses and thoughtful questions I received inspired me to write this personal essay.
-          Many people know Pattaya from TV shows and films,
-          but I don’t believe most truly understand what happens there.
-          This essay is my attempt to explore and present that reality
-          —not as a definitive report, but as a personal journey
-          through my experiences and reflections, accompanied by the photographs I took.
-          The essay is rather lengthy and personal, so if you want to dive straight into Pattaya,
-          feel free to skip this introduction and start reading from{" "}
-          <a href="#welcome_to_pattaya"
-            className="underline text-blue-400 hover:text-blue-600"
-          >Welcome to Pattaya</a>.
+          The strong reactions I received inspired me to write this essay.
+          Many people know Pattaya by reputation — but few understand the systems at play.
+          I don't claim to understand it.
+          This isn’t an exposé, nor a photojournalistic report.
+          It’s a personal attempt to explore a place, the people in it,
+          and my own evolving thoughts through photography and reflection.
         </PhotoEssayText>
         <PhotoEssayText textSize="text-base">
-          The essay remains a work in progress, much like my evolving
-          thoughts about the place itself and the world in which we live in.
+          It’s a long and personal read — so if you’d rather skip the context and dive right in,
+          start with{" "}
+          <a href="#welcome_to_pattaya"
+            className="underline text-blue-400 hover:text-blue-600"
+          >Welcome to Pattaya</a>
+          . Otherwise, thank you for joining me at the beginning.
+        </PhotoEssayText>
+        <PhotoEssayText textSize="text-base">
+          This essay is still a work in progress — much like my thoughts on Pattaya, and the world it reflects.
         </PhotoEssayText>
       </>
     )
@@ -858,7 +860,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `When I returned to Soi 6, I saw that Namtan and Mint—pseudonyms—were still on the street. But I couldn’t find May. I texted her, and she told me she had gone back to her hometown in Korat, in the Isan province. She said she was tired of Pattaya.
+    content: `When I returned to Soi 6, I saw that Namtan and Mint—still pseudonyms—were still on the street. But I couldn’t find May. I texted her, and she told me she had gone back to her hometown in Korat, in the Isan province. She said she was tired of Pattaya.
 
     I asked if I could visit her in Isan. She said I could. By then, I was starting to feel I had to see Isan with my own eyes—to understand what drives so many young women to sex work in Pattaya. I began toying with the idea of expanding the project beyond Soi 6—maybe even developing two parallel photo series. Of course, I had no idea how to do this as a hobby photographer, but I thought May could give me a lead. And the least I could do was take photos.
 

@@ -7,10 +7,20 @@ type Props = {
   textSize?: string;
 };
 
-export default function PhotoEssayText({ children, divClassName = '', pClassName = '', textSize = 'text-xl' }: Props) {
+export default function PhotoEssayText({
+  children,
+  divClassName = '',
+  pClassName = '',
+  textSize = 'text-xl',
+}: Props) {
   return (
-    <div className={`w-full mb-10 mt-6 max-w-3xl mx-auto px-4 leading-8 md:leading-9 ${textSize} ${divClassName}`}>
-      <p className={`${pClassName} px-2 tracking-wide leading-relaxed essay-text leading-8  md:leading-9 whitespace-pre-line ${pClassName}`}>
+    <div
+      className={`w-full mb-10 mt-6 max-w-prose mx-auto px-4 leading-8 md:leading-9 ${textSize} ${divClassName}`}
+    >
+      <p
+        className={`${pClassName} tracking-wide leading-relaxed essay-text`}
+        style={{ display: 'table' }}
+      >
         {children}
       </p>
     </div>
