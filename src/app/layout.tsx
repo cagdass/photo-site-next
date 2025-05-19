@@ -31,7 +31,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <script async src="/count.js"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -47,6 +47,7 @@ export default function EssayImage({
                 e.stopPropagation();
                 toggleColor();
               }}
+              style={{ opacity: 0.66 }}
               className="absolute cursor-pointer w-16 min-w-[4rem]
               border top-2 right-2 bg-black bg-opacity-60
               text-white px-3 py-1 rounded text-xs z-10 flex items-center justify-center hover:bg-opacity-40"
