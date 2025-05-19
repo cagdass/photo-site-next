@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useMemo, useState, useRef, useEffect } from 'react';
-import Lightbox from 'yet-another-react-lightbox';
+import Lightbox, { Render } from "yet-another-react-lightbox";
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import Image from 'next/image';
 import EssayImage from '@/components/EssayImage';
@@ -52,6 +52,8 @@ export default function PhotoEssayContent({
     return initialState;
   });
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showColorMap, setShowColorMap] = useState<Record<number, boolean>>({});
+
   const [tocVisible, setTocVisible] = useState(true);
   const [activeId, setActiveId] = useState<string | null>(null);
 
@@ -59,11 +61,60 @@ export default function PhotoEssayContent({
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
+  // Prepare slides with optional srcColor
   const imageBlocks = essayBlocks.filter(b => b.type === 'image');
-  const slides = [
+  const slides = useMemo(() => [
     { src: cover.src },
-    ...imageBlocks.map(b => ({ src: b.src })),
-  ];
+    ...imageBlocks.map(b => ({
+      src: b.src,
+      srcColor: b.srcColor, // optional color image URL
+      caption: b.caption,
+      alt: b.alt,
+    })),
+  ], [cover.src, imageBlocks]);
+
+  // Toggle color state per slide index
+  function toggleColor(index: number) {
+    setShowColorMap(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  }
+
+  const render: Render = {
+    slide: (slideProps: any, slideRenderProps: any) => {
+      console.log(`slideProps: ${JSON.stringify(slideProps)}`);
+      console.log(`slideRenderProps: ${JSON.stringify(slideRenderProps)}`);
+      const { slide, rect } = slideProps;
+      const index = slideRenderProps?.index ?? 0; // default to 0 if undefined
+      const useColor = showColorMap[index] && slide.srcColor;
+
+      return (
+        <div style={{ position: "relative", width: rect.width, height: rect.height }}>
+          <img
+            src={useColor ? slide.srcColor : slide.src}
+            alt={slide.alt || ""}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+          />
+          {slide.srcColor && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleColor(index);
+              }}
+              className="absolute top-1 -mt-1 left-1 w-16 bg-black border
+              font-garamond
+              bg-opacity-50 text-white py-1 cursor-pointer
+              z-50 rounded text-center select-none hover:bg-opacity-40"
+              aria-label="Toggle color"
+            >
+              {useColor ? "BW" : "Color"}
+            </button>
+          )}
+        </div>
+      );
+    },
+  };
 
   type Group = {
     heading: { id: string; text: string, collapsed?: boolean, };
@@ -207,6 +258,7 @@ export default function PhotoEssayContent({
                                 slides.findIndex(slide => slide.src === block.src)
                               )
                             }
+                            {...(block.srcColor ? { srcColor: block.srcColor } : {})}
                           />
                         );
                       }
@@ -272,6 +324,7 @@ export default function PhotoEssayContent({
         index={lightboxIndex ?? 0}
         plugins={[Zoom]}
         zoom={{ maxZoomPixelRatio: 2 }}
+        render={render}  // use custom slide render with color toggle
       />
     </>
   );
