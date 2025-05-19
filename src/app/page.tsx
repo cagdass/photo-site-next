@@ -28,8 +28,11 @@ export default function Home() {
         </p>
 
         <p className="text-lg leading-relaxed mb-4">
-          I’m currently on a break from coding (except for this site). Too restless, perhaps, for office life — as an old manager once asked me:
+          I’m currently on a break from coding, except for this website, which I started developing in April 2025. I thought it was about time.
+          <br /> <br />
+          Otherwise I still feel too restless for office life — as an old manager once asked me:
         </p>
+
 
         <blockquote className="mt-10 text-xl font-serif mb-2">
           “Should we chain you to your chair?”
