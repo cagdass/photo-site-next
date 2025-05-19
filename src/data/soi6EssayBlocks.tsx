@@ -148,6 +148,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-19.jpg',
+    srcColor: '/images/pattaya/color/soi6-19.jpg',
     caption: 'Children were often around, March 2024.',
   },
   {

@@ -82,11 +82,9 @@ export default function PhotoEssayContent({
   }
 
   const render: Render = {
-    slide: (slideProps: any, slideRenderProps: any) => {
-      console.log(`slideProps: ${JSON.stringify(slideProps)}`);
-      console.log(`slideRenderProps: ${JSON.stringify(slideRenderProps)}`);
+    slide: (slideProps: any) => {
       const { slide, rect } = slideProps;
-      const index = slideRenderProps?.index ?? 0; // default to 0 if undefined
+      const index = slides.findIndex(s => s.src === slideProps.slide.src);
       const useColor = showColorMap[index] && slide.srcColor;
 
       return (
@@ -247,17 +245,17 @@ export default function PhotoEssayContent({
                       }
 
                       if (block.type === 'image') {
+                        const slideIndex = slides.findIndex(s => s.src === block.src);
+
                         return (
                           <EssayImage
                             key={j}
                             src={block.src}
                             alt={block.alt}
                             caption={block.caption}
-                            onClick={() =>
-                              setLightboxIndex(
-                                slides.findIndex(slide => slide.src === block.src)
-                              )
-                            }
+                            showColor={!!showColorMap[slideIndex]}
+                            toggleColor={() => toggleColor(slideIndex)}
+                            onClick={() => setLightboxIndex(slides.findIndex(slide => slide.src === block.src))}
                             {...(block.srcColor ? { srcColor: block.srcColor } : {})}
                           />
                         );
@@ -322,6 +320,7 @@ export default function PhotoEssayContent({
         close={() => setLightboxIndex(null)}
         slides={slides}
         index={lightboxIndex ?? 0}
+        on={{ view: ({ index: currentIndex }) => setLightboxIndex(currentIndex) }}
         plugins={[Zoom]}
         zoom={{ maxZoomPixelRatio: 2 }}
         render={render}  // use custom slide render with color toggle

@@ -11,6 +11,8 @@ interface EssayImageProps {
   width?: number;
   height?: number;
   onClick?: () => void;
+  showColor: boolean;       // passed from parent, controls color mode
+  toggleColor: () => void;  // passed from parent, toggles color mode
 }
 
 export default function EssayImage({
@@ -21,14 +23,9 @@ export default function EssayImage({
   width = 1200,
   height = 800,
   onClick,
+  showColor,
+  toggleColor,
 }: EssayImageProps) {
-  const [showColor, setShowColor] = useState(false);
-
-  const toggleColor = (e: React.MouseEvent) => {
-    e.stopPropagation(); // prevent triggering onClick of the image wrapper
-    if (srcColor) setShowColor(!showColor);
-  };
-
   return (
     <div className="w-full flex justify-center my-8 px-4">
       <div className="w-full max-w-6xl">
@@ -46,7 +43,10 @@ export default function EssayImage({
           {srcColor && (
             <button
               type="button"
-              onClick={toggleColor}
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleColor();
+              }}
               className="absolute cursor-pointer w-16 min-w-[4rem]
               border top-2 right-2 bg-black bg-opacity-60
               text-white px-3 py-1 rounded text-xs z-10 flex items-center justify-center hover:bg-opacity-40"
