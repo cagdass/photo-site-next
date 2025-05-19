@@ -45,3 +45,7 @@ body,
 .light .signal-icon {
   filter: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
