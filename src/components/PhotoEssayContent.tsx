@@ -3,11 +3,15 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import Lightbox, { Render } from "yet-another-react-lightbox";
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import { ImageSlide, SlideImage } from "yet-another-react-lightbox";
 import Image from 'next/image';
 import EssayImage from '@/components/EssayImage';
 import PhotoEssayText from '@/components/PhotoEssayText';
 import TableOfContents from '@/components/TableOfContents';
 import 'yet-another-react-lightbox/styles.css';
+import imageDimensions from '@/data/imageDimensions';
+
+const typedImageDimensions = imageDimensions as Record<string, { width: number; height: number }>;
 
 interface PhotoEssayContentProps {
   cover: { src: string; caption?: string };
@@ -16,6 +20,10 @@ interface PhotoEssayContentProps {
   prelude?: React.ReactNode;
   hasTableOfContents?: boolean;
 }
+
+type CustomSlide = SlideImage & {
+  srcColor?: string;
+};
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(false);
@@ -63,14 +71,25 @@ export default function PhotoEssayContent({
 
   // Prepare slides with optional srcColor
   const imageBlocks = essayBlocks.filter(b => b.type === 'image');
-  const slides = useMemo(() => [
-    { src: cover.src },
-    ...imageBlocks.map(b => ({
-      src: b.src,
-      srcColor: b.srcColor, // optional color image URL
-      caption: b.caption,
-      alt: b.alt,
-    })),
+  const slides: CustomSlide[] = useMemo(() => [
+    {
+      src: cover.src,
+      ...(typedImageDimensions[cover.src.replace(/^\//, '')] || {})
+    },
+    ...imageBlocks.map(b => {
+      const key = b.src;
+
+      return {
+        src: b.src,
+        srcColor: b.srcColor,
+        caption: b.caption,
+        alt: b.alt,
+        ...(typedImageDimensions[b.src] || {
+          width: 1200,
+          height: 800,
+        }),
+      };
+    })
   ], [cover.src, imageBlocks]);
 
   // Toggle color state per slide index
@@ -82,28 +101,31 @@ export default function PhotoEssayContent({
   }
 
   const render: Render = {
-    slide: (slideProps: any) => {
-      const { slide, rect } = slideProps;
-      const index = slides.findIndex(s => s.src === slideProps.slide.src);
-      const useColor = showColorMap[index] && slide.srcColor;
+    slide: ({ slide, offset, rect }) => {
+      const customSlide = slide as CustomSlide; // ✅ type cast here
+      const index = slides.findIndex(s => s.src === customSlide.src);
+      const useColor = showColorMap[index] && customSlide.srcColor;
+
+      const updatedSlide: CustomSlide = {
+        ...customSlide,
+        src: useColor ? customSlide.srcColor! : customSlide.src,
+      };
 
       return (
-        <div style={{ position: "relative", width: rect.width, height: rect.height }}>
-          <img
-            src={useColor ? slide.srcColor : slide.src}
-            alt={slide.alt || ""}
-            style={{ width: "100%", height: "100%", objectFit: "contain" }}
-          />
-          {slide.srcColor && (
+        <div className="relative flex items-center justify-center"
+          style={{ width: rect.width, height: rect.height }}
+        >
+          <ImageSlide slide={updatedSlide} offset={offset} rect={rect} />
+          {customSlide.srcColor && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 toggleColor(index);
               }}
               className="absolute top-1 -mt-1 left-1 w-16 bg-black border
-              font-garamond
-              bg-opacity-50 text-white py-1 cursor-pointer
-              z-50 rounded text-center select-none hover:bg-opacity-40"
+                font-garamond
+                bg-opacity-50 text-white py-1 cursor-pointer
+                z-50 rounded text-center select-none hover:bg-opacity-40"
               aria-label="Toggle color"
             >
               {useColor ? "BW" : "Color"}
@@ -113,6 +135,39 @@ export default function PhotoEssayContent({
       );
     },
   };
+
+  // const render: Render = {
+  //   slide: (slideProps: any) => {
+  //     const { slide, rect } = slideProps;
+  //     const index = slides.findIndex(s => s.src === slideProps.slide.src);
+  //     const useColor = showColorMap[index] && slide.srcColor;
+
+  //     return (
+  //       <div style={{ position: "relative", width: rect.width, height: rect.height }}>
+  //         <img
+  //           src={useColor ? slide.srcColor : slide.src}
+  //           alt={slide.alt || ""}
+  //           style={{ width: "100%", height: "100%", objectFit: "contain" }}
+  //         />
+  //         {slide.srcColor && (
+  //           <button
+  //             onClick={(e) => {
+  //               e.stopPropagation();
+  //               toggleColor(index);
+  //             }}
+  //             className="absolute top-1 -mt-1 left-1 w-16 bg-black border
+  //             font-garamond
+  //             bg-opacity-50 text-white py-1 cursor-pointer
+  //             z-50 rounded text-center select-none hover:bg-opacity-40"
+  //             aria-label="Toggle color"
+  //           >
+  //             {useColor ? "BW" : "Color"}
+  //           </button>
+  //         )}
+  //       </div>
+  //     );
+  //   },
+  // };
 
   type Group = {
     heading: { id: string; text: string, collapsed?: boolean, };
@@ -236,8 +291,11 @@ export default function PhotoEssayContent({
 
                       if (block.type === 'subheading') {
                         return (
-                          <div key={j} className="max-w-3xl px-6 mx-auto mt-10 mb-4">
-                            <h3 id={block.id} className="subheading text-xl font-bold">
+                          <div key={j} className="max-w-2xl px-4 mx-auto mt-10 mb-4">
+                            <h3
+                              id={block.id}
+                              className="subheading text-xl font-bold"
+                            >
                               {block.text}
                             </h3>
                           </div>

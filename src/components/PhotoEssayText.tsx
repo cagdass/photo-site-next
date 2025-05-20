@@ -15,7 +15,7 @@ export default function PhotoEssayText({
 }: Props) {
   return (
     <div
-      className={`w-full mb-10 mt-6 max-w-prose mx-auto px-4 leading-8 md:leading-9 ${textSize} ${divClassName}`}
+      className={`w-full mb-10 mt-6 max-w-2xl mx-auto px-4 leading-8 md:leading-9 ${textSize} ${divClassName}`}
     >
       <p
         className={`${pClassName} tracking-wide leading-relaxed essay-text`}
