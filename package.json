@@ -6,7 +6,7 @@
       "generate:build-meta": "node scripts/generateBuildMeta.js",
       "gen:img-meta": "node scripts/generate-image-dimensions.js",
     "dev": "next dev",
-    "prebuild": "npm run generate:build-meta",
+      "prebuild": "npm run gen:img-meta && npm run generate:build-meta",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
