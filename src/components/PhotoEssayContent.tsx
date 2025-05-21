@@ -74,7 +74,10 @@ export default function PhotoEssayContent({
   const slides: CustomSlide[] = useMemo(() => [
     {
       src: cover.src,
-      ...(typedImageDimensions[cover.src.replace(/^\//, '')] || {})
+      ...(typedImageDimensions[cover.src] || {
+        width: 1200,
+        height: 800
+      })
     },
     ...imageBlocks.map(b => {
       const key = b.src;
@@ -111,63 +114,43 @@ export default function PhotoEssayContent({
         src: useColor ? customSlide.srcColor! : customSlide.src,
       };
 
+      const [loaded, setLoaded] = useState(false);
+
       return (
         <div className="relative flex items-center justify-center"
           style={{ width: rect.width, height: rect.height }}
         >
-          <ImageSlide slide={updatedSlide} offset={offset} rect={rect} />
+          {!loaded && (
+            <div className="absolute inset-0 flex items-center justify-center z-10">
+              <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-white" />
+            </div>
+          )}
+
+          <ImageSlide
+            slide={updatedSlide}
+            offset={offset}
+            rect={rect}
+            onLoad={() => setLoaded(true)}
+          />
           {customSlide.srcColor && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 toggleColor(index);
               }}
-              className="absolute top-1 -mt-1 left-1 w-16 bg-black border
+              className="absolute top-1 -mt-1 left-1 w-20 bg-black border
                 font-garamond
-                bg-opacity-50 text-white py-1 cursor-pointer
+                bg-opacity-70 text-white py-1 cursor-pointer
                 z-50 rounded text-center select-none hover:bg-opacity-40"
               aria-label="Toggle color"
             >
-              {useColor ? "BW" : "Color"}
+              {useColor ? "B & W" : "Color"}
             </button>
           )}
         </div>
       );
     },
   };
-
-  // const render: Render = {
-  //   slide: (slideProps: any) => {
-  //     const { slide, rect } = slideProps;
-  //     const index = slides.findIndex(s => s.src === slideProps.slide.src);
-  //     const useColor = showColorMap[index] && slide.srcColor;
-
-  //     return (
-  //       <div style={{ position: "relative", width: rect.width, height: rect.height }}>
-  //         <img
-  //           src={useColor ? slide.srcColor : slide.src}
-  //           alt={slide.alt || ""}
-  //           style={{ width: "100%", height: "100%", objectFit: "contain" }}
-  //         />
-  //         {slide.srcColor && (
-  //           <button
-  //             onClick={(e) => {
-  //               e.stopPropagation();
-  //               toggleColor(index);
-  //             }}
-  //             className="absolute top-1 -mt-1 left-1 w-16 bg-black border
-  //             font-garamond
-  //             bg-opacity-50 text-white py-1 cursor-pointer
-  //             z-50 rounded text-center select-none hover:bg-opacity-40"
-  //             aria-label="Toggle color"
-  //           >
-  //             {useColor ? "BW" : "Color"}
-  //           </button>
-  //         )}
-  //       </div>
-  //     );
-  //   },
-  // };
 
   type Group = {
     heading: { id: string; text: string, collapsed?: boolean, };
