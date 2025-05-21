@@ -39,7 +39,7 @@ export default function SongkranBriefPage() {
       }}
       published={true}
       publishedDate="Published on 16 May 2025"
-      essayBlocks={[]}
+      essayBlocksContent={{ blocks: [] }}
       photoBlocks={songkranPhotos}
       photoOnly={true}
       shareUrl="https://cagdas.photos/brief/songkran"
