@@ -16,7 +16,7 @@ export default function SamosBriefPage() {
         caption: 'Refugees enjoying a game of backgammon and a breather from the camp.',
       }}
       published={false}
-      essayBlocks={[]}
+      essayBlocksContent={{ blocks: [] }}
       photoBlocks={[]}
       shareUrl="https://cagdas.photos/brief/samos"
       shareTitle="Samos — Brief"

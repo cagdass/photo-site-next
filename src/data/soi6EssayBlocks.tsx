@@ -6,10 +6,12 @@ import FootnoteButton from '@/components/FootnoteButton';
 import PortraitReel from '@/components/PortraitReel';
 import Soi6Poem from '@/components/Soi6Poem';
 import PhotoEssayText from '@/components/PhotoEssayText';
-import PhotoEssay from '@/components/PhotoEssay';
 
-const essayContent = [
-  {
+const essayContent = {
+  options: {
+    imgSrcReplaceStr: '/pattaya/'
+  },
+  blocks: [{
     type: 'component',
     render: () => (
       <>
@@ -136,7 +138,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-03.jpg',
-    srcColor: '/images/pattaya/color/soi6-03.jpg',
+    color: true,
     caption: 'Man with a bar-fined girl, December 2023.'
   },
   {
@@ -150,7 +152,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-19.jpg',
-    srcColor: '/images/pattaya/color/soi6-19.jpg',
+    color: true,
     caption: 'Children were often around, March 2024.',
   },
   {
@@ -170,6 +172,7 @@ const essayContent = [
   {
     type: 'image',
     src: '/images/pattaya/soi6-04.jpg',
+    color: true,
     caption: 'Some even part of the workforce, April 2024.'
   },
   {
@@ -1057,35 +1060,36 @@ const essayContent = [
     alt: 'Closing image from Soi 6',
     caption: 'Dog with a bottle, December 2023.',
   },
-  // {
-  //   item: 'footnotes',
-  //   type: 'component',
-  //   collapsible: false,
-  //   render: () => (
-  //     <section className="mt-12 border-t pt-6" id="footnotes">
-  //       <h2 className="text-lg font-semibold mb-4">Footnotes</h2>
-  //       <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
-  //         <li id="footnote-1" className="mt-10 text-sm text-gray-600">
-  //           [1] Joakim Medin, <i>Thailandsvenskarna</i>, 2019.
-  //           <a href="https://joakimmedin.se/wp-content/uploads/2018/12/Welcome-to-Sin-City-Schyst-resande-okt-2018.pdf"
-  //             className="footnote-ref text-blue-600 hover:underline ml-1" target="_blank" rel="noopener noreferrer">
-  //             PDF ↗
-  //           </a>
-  //           <span
-  //             onClick={() => {
-  //               const el = document.getElementById('ref-1');
-  //               if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
-  //             }}
-  //             className="ml-2 cursor-pointer text-blue-600 hover:underline"
-  //           >
-  //             ↩︎
-  //           </span>
-  //         </li>
-  //         {/* more footnotes */}
-  //       </ol>
-  //     </section>
-  //   )
-  // }
-];
+    // {
+    //   item: 'footnotes',
+    //   type: 'component',
+    //   collapsible: false,
+    //   render: () => (
+    //     <section className="mt-12 border-t pt-6" id="footnotes">
+    //       <h2 className="text-lg font-semibold mb-4">Footnotes</h2>
+    //       <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+    //         <li id="footnote-1" className="mt-10 text-sm text-gray-600">
+    //           [1] Joakim Medin, <i>Thailandsvenskarna</i>, 2019.
+    //           <a href="https://joakimmedin.se/wp-content/uploads/2018/12/Welcome-to-Sin-City-Schyst-resande-okt-2018.pdf"
+    //             className="footnote-ref text-blue-600 hover:underline ml-1" target="_blank" rel="noopener noreferrer">
+    //             PDF ↗
+    //           </a>
+    //           <span
+    //             onClick={() => {
+    //               const el = document.getElementById('ref-1');
+    //               if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
+    //             }}
+    //             className="ml-2 cursor-pointer text-blue-600 hover:underline"
+    //           >
+    //             ↩︎
+    //           </span>
+    //         </li>
+    //         {/* more footnotes */}
+    //       </ol>
+    //     </section>
+    //   )
+    // }
+  ]
+};
 
 export default essayContent;

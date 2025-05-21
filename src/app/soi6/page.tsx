@@ -40,7 +40,7 @@ export default function Soi6Page() {
       }}
       published={false}
       publishedDate="Work in progress"
-      essayBlocks={soi6EssayBlocks}
+      essayBlocksContent={soi6EssayBlocks}
       photoBlocks={soi6Photos}
       shareUrl="https://cagdas.photos/soi6"
       shareTitle="A Photo Essay on Pattaya’s Soi 6"

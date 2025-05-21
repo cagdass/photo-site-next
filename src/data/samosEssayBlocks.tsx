@@ -1,10 +1,15 @@
 'use-client'
 
-const samosEssayBlocks = [
-  {
-    type: 'text',
-    content: `Samos.`
+const samosEssayBlocks = {
+  options: {
+    imgSrcReplaceStr: '/samos/'
   },
-];
+  blocks: [
+    {
+      type: 'text',
+      content: `Samos.`
+    },
+  ],
+};
 
 export default samosEssayBlocks;

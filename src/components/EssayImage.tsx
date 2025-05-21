@@ -13,6 +13,7 @@ interface EssayImageProps {
   onClick?: () => void;
   showColor: boolean;
   toggleColor: () => void;
+  imgSrcReplaceStr?: string,
 }
 
 export default function EssayImage({
@@ -25,9 +26,10 @@ export default function EssayImage({
   onClick,
   showColor,
   toggleColor,
+  imgSrcReplaceStr,
 }: EssayImageProps) {
   const [loaded, setLoaded] = useState(false);
-  const displaySrc = showColor && srcColor ? srcColor : src;
+  const displaySrc = showColor && imgSrcReplaceStr ? src.replace(imgSrcReplaceStr, imgSrcReplaceStr + 'color/') : src;
 
   return (
     <div className="w-full flex justify-center my-8 px-4">
@@ -55,7 +57,7 @@ export default function EssayImage({
           />
 
           {/* Toggle button */}
-          {srcColor && (
+          {imgSrcReplaceStr && (
             <button
               type="button"
               onClick={(e) => {

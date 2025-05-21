@@ -19,10 +19,11 @@ interface PhotoEssayContentProps {
   collapsible?: boolean;
   prelude?: React.ReactNode;
   hasTableOfContents?: boolean;
+  imgSrcReplaceStr?: string,
 }
 
 type CustomSlide = SlideImage & {
-  srcColor?: string;
+  color?: boolean;
 };
 
 function useIsMobile(breakpoint = 768) {
@@ -46,6 +47,7 @@ export default function PhotoEssayContent({
   collapsible = false,
   prelude,
   hasTableOfContents = false,
+  imgSrcReplaceStr,
 }: PhotoEssayContentProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
     const initialState: Record<string, boolean> = {};
@@ -84,7 +86,7 @@ export default function PhotoEssayContent({
 
       return {
         src: b.src,
-        srcColor: b.srcColor,
+        color: b.color,
         caption: b.caption,
         alt: b.alt,
         ...(typedImageDimensions[b.src] || {
@@ -107,11 +109,11 @@ export default function PhotoEssayContent({
     slide: ({ slide, offset, rect }) => {
       const customSlide = slide as CustomSlide; // ✅ type cast here
       const index = slides.findIndex(s => s.src === customSlide.src);
-      const useColor = showColorMap[index] && customSlide.srcColor;
+      const useColor = showColorMap[index] && customSlide.color && imgSrcReplaceStr;
 
       const updatedSlide: CustomSlide = {
         ...customSlide,
-        src: useColor ? customSlide.srcColor! : customSlide.src,
+        src: useColor ? customSlide.src.replace(imgSrcReplaceStr, imgSrcReplaceStr + 'color/') : customSlide.src,
       };
 
       const [loaded, setLoaded] = useState(false);
@@ -125,14 +127,13 @@ export default function PhotoEssayContent({
               <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-white" />
             </div>
           )}
-
           <ImageSlide
             slide={updatedSlide}
             offset={offset}
             rect={rect}
             onLoad={() => setLoaded(true)}
           />
-          {customSlide.srcColor && (
+          {customSlide.color && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -297,7 +298,7 @@ export default function PhotoEssayContent({
                             showColor={!!showColorMap[slideIndex]}
                             toggleColor={() => toggleColor(slideIndex)}
                             onClick={() => setLightboxIndex(slides.findIndex(slide => slide.src === block.src))}
-                            {...(block.srcColor ? { srcColor: block.srcColor } : {})}
+                            {...(block.color && imgSrcReplaceStr ? { imgSrcReplaceStr } : {})}
                           />
                         );
                       }

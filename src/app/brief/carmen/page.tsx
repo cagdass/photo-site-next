@@ -40,7 +40,7 @@ export default function CarmenPage() {
       }}
       published={true}
       publishedDate="Published on 17 May 2025"
-      essayBlocks={carmenEssayBlocks}
+      essayBlocksContent={carmenEssayBlocks}
       photoBlocks={carmenPhotos}
       showPhotoEssayToggle={true}
       shareUrl="https://cagdas.photos/brief/carmen"

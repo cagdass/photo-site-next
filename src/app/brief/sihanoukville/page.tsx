@@ -40,7 +40,7 @@ export default function SihanoukvillePage() {
       }}
       published={true}
       publishedDate="Published on 6 May 2025"
-      essayBlocks={sihanoukvilleEssayBlocks}
+      essayBlocksContent={sihanoukvilleEssayBlocks}
       photoBlocks={sihanoukvillePhotos}
       showPhotoEssayToggle={true}
       shareUrl="https://cagdas.photos/brief/sihanoukville"

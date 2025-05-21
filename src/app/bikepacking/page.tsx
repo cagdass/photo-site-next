@@ -17,7 +17,7 @@ export default function BikepackingPage() {
         caption: 'Swung by small Russia',
       }}
       published={false}
-      essayBlocks={[]}
+      essayBlocksContent={{ blocks: [] }}
       photoBlocks={[]}
       prelude={<ScrollMapPhotoEssay />}
       shareUrl="https://cagdas.photos/bikepacking"

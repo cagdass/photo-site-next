@@ -17,7 +17,12 @@ export interface PhotoEssayProps {
   published?: boolean;
   publishedDate?: string;
   updatedDate?: string;
-  essayBlocks: any[];
+  essayBlocksContent: {
+    blocks: any[];
+    options?: {
+      imgSrcReplaceStr?: string,
+    },
+  },
   photoBlocks: any[];
   shareUrl?: string;
   shareTitle?: string;
@@ -35,7 +40,7 @@ export default function PhotoEssay({
   published = false,
   publishedDate,
   updatedDate,
-  essayBlocks,
+  essayBlocksContent = { blocks: [] },
   photoBlocks,
   shareUrl,
   shareTitle,
@@ -48,6 +53,10 @@ export default function PhotoEssay({
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showEssay, setShowEssay] = useState(!photoOnly);
+
+  const essayBlocks = essayBlocksContent.blocks;
+  const essayOptions = essayBlocksContent.options || {};
+  const { imgSrcReplaceStr } = essayOptions;
 
   const toggleCollapse = (id: string) => {
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
@@ -110,6 +119,7 @@ export default function PhotoEssay({
             essayBlocks={essayBlocks}
             collapsible={collapsible}
             hasTableOfContents={hasTableOfContents}
+            {...(imgSrcReplaceStr ? { imgSrcReplaceStr } : {})}
           />
         )
         : (
