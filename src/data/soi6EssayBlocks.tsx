@@ -761,7 +761,8 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-90.jpg',
-    caption: 'All alone and lost, April 2024.'
+    caption: 'All alone and lost, April 2024.',
+    color: true,
   },
   {
     type: 'text',
