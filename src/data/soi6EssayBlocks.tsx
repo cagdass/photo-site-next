@@ -289,7 +289,7 @@ const essayContent = [
   },
   {
     type: 'text',
-    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. And it became what it was when I was there to photograph.`
+    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already live-streaming their own stories. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. And it became what it was when I was there to photograph.`
   },
   {
     type: 'image',
@@ -477,7 +477,7 @@ const essayContent = [
 
     It’s something I’m still learning from him. As he once put it—in Turkish—“Biz insanları ayrıştırmak için çabalamıyoruz, kaynaştırmak için uğraşıyoruz.” We’re not trying to divide people, but to bring them together. There’s plenty we could disagree on, plenty that could pull us apart. But instead, we meet halfway. We find common ground, and choose to look past each other’s flaws.
 
-    That mindset helped me talk to all kinds of people on the street—especially the tourists. If they were Swedish, I’d say, “Bra, jag pratar en liten grann svenska också.” I could hold my own with Norwegians, and catch a word or two from the Danes. If they were French, I’d mention that I religiously practiced Duolingo every day. If they were Welsh, I’d say I used to work with a guy from Caerphilly. Japanese? I had a quote from my favorite anime ready to go. Sometimes I played the like-minded tourist.
+    That mindset helped me talk to all kinds of people on the street—especially the tourists. If they were Swedish, I’d say, “Bra, jag pratar en liten grann svenska också.” I could hold my own with Norwegians, and catch a word or two from the Danes—even though most Scandinavians weren't too talkative. If they were French, I’d mention that I religiously practiced Duolingo every day. If they were Welsh, I’d say I used to work with a guy from Caerphilly. Japanese? I had a quote from my favorite anime ready to go. Sometimes I played the like-minded tourist.
 
     Sometimes I didn’t need to say much at all—just mentioning I was Turkish was enough to spark a conversation. “That’s where I got my hair transplant,” they’d say, or, “I flew there for my teeth.” Cheap and professional, they’d grin, showing their pearly white smiles.`
   },
@@ -528,6 +528,10 @@ const essayContent = [
     type: 'image',
     src: '/images/pattaya/soi6-13.jpg',
     caption: 'An international couple, December 2023.',
+  },
+  {
+    type: 'text',
+    content: `One night at a bar, I chatted with a man nursing a small bottle of Leo beer wrapped in a foam sleeve. “You should spend your time partying mate, not photographing,” he said with a grin. He told me about taking a young waitress from a fast-food pizza chain to dinner. Later, they had sex—and to his surprise, she asked him for money afterward. He speculated that maybe, because I was young and handsome, I wouldn’t always have to pay in Pattaya. Beneath his bravado, though, I caught a wistfulness—a longing to be young again. At least here, he had the money to keep loneliness at bay. Back home in England, he didn’t.`
   },
   {
     type: 'heading',
@@ -764,6 +768,10 @@ const essayContent = [
 
     Then in February 2024, my manager set up a meeting. I got fired—part of a global layoff that affected thousands of people across the company. And honestly, I couldn’t have been happier. At least for myself.
 
+    February 2024 marked a turning point for me. For the first time in years, I had time for myself. I wasn’t heading back to work anytime soon, and I had some severance money set aside. Having naturalized as a Swedish citizen a year earlier, I no longer had to stay in Sweden out of fear of losing my residence permit. It felt like a rare chance to step back, breathe, and explore something new—something I’d always wanted to do but never quite had the space for.
+
+    For a brief moment, I was overwhelmed by the sheer number of choices: Should I go hiking in the Canary Islands? Bikepack across Europe to Turkey—something I’d long dreamed of and eventually did later that year? Or stay put in Stockholm and search for another job? But in the end, it was clear.
+
     I rented out my Stockholm bedsit, which more or less covered the mortgage, and booked a one-way ticket to Singapore. My teacher joined me there. We walked, took pictures, ate well. After a few days of sightseeing, we returned to Pattaya. The plan was to take photos, travel somewhere new in Asia, return to our base in Pattaya and repeat.`
   },
   {
@@ -780,7 +788,11 @@ const essayContent = [
     type: 'text',
     content: `When I got back to Pattaya in March, some people on Soi 6 recognized me. The recognition was warm—smiles, waves, the occasional “photo man!” called out from a bar. That familiarity softened my return.
 
-    I spent a week in Pattaya that March. This time, my teacher didn’t join me in Soi 6. He said that street drained him. I understood. It wasn’t light work. We continued on to the Philippines and Taiwan—two of the few countries in Asia my teacher hadn’t yet visited. I’d been to the Philippines before and helped translate here and there and assumed the tour guide's mantle. A few days after the earthquake in Taiwan we were back in our base. And soon later my teacher returned to Stockholm. Now I was alone.
+    I spent a week in Pattaya that March. This time, my teacher didn’t join me in Soi 6. He said that street drained him. I understood. It wasn’t light work. We continued on to the Philippines and Taiwan—two of the few countries in Asia my teacher hadn’t yet visited.
+
+    A few days before I was to leave on a trip to the Philippines with my teacher, I got to know an elderly South African man at the gym. He spoke about his ex-girlfriend from the Philippines—generalizing the beauty of Filipina women in his own blunt way and wistfully wishing he was my age and visiting the Philippines now—but then again, that was part of the scene’s rough honesty. Despite this, he had clearly made an effort to speak fluent Thai and understand local customs, and he talked about his Thai girlfriend with respect. That set him apart from many others who do not deign to be part of Thai society, except to spend money.
+
+    I’d been to the Philippines before and helped translate here and there and assumed the tour guide's mantle. A few days after the earthquake in Taiwan we were back in our base. And soon later my teacher returned to Stockholm. Now I was alone.
 
     What I hadn’t planned for was a motorcycle accident. It happened just before we left for Manila—another motorcyclist crashed into me, and I twisted my ankle badly. I still feel it at the time of writing this, 13 months after the crash and I still haven't managed to see a doctor about it, which is a long story in itself. We, anyways, continued the trip, but my ankle certainly didn't make it easier. After a few weeks of touristing, we returned to Pattaya. During our travels—whether in Singapore, Davao City, or Cebu City—we stumbled upon scenes that echoed Pattaya’s nightlife and sex work culture, though always on a smaller scale. Pattaya remained unmatched in scale, openness, and intensity. And I wasn't ready to deal with that intensity when we returned to Pattaya in April, the pain lingered and I just didn't mentally have the energy to put myself out there. I stayed home some days. But later on, I pushed through. I figured I’d keep photographing for the project while I still had the energy, and start traveling once I needed space. A win-win. I spent another three weeks in Pattaya that April.`
   },
@@ -939,9 +951,11 @@ const essayContent = [
     type: 'text',
     content: `That’s when I got the news—my mother had been diagnosed with cancer back in Turkey. I cut the trip short, hitchhiked to the Laotian captial and began making my way back to Pattaya, trying to figure out how to return home.
 
-    On the way, I stopped in Khon Kaen and Udon Thani—two cities in the Isan region, the same part of Thailand where many of the women I’d met in Pattaya had come from. I had hoped to stay longer, to meet people, to see the poor villages they had described. I wanted to understand what made them leave. I wanted to photograph what I found. But I didn’t have time. I passed through quickly, knowing these would be my final days photographing Soi 6.
+    On the way, I stopped in Udon Thani and Khon Kaen cities in the Isan region, the same part of Thailand where many of the women I’d met in Pattaya had come from. I had hoped to stay longer, to meet people, to see the poor villages they had described. I wanted to understand what made them leave. I wanted to photograph what I found. But I didn’t have time. I passed through quickly, knowing these would be my final days photographing Soi 6.
 
-    On the way to Pattaya from Khon Kaen in Isan, I overnighted in Ayutthaya to see the old capital of Siam. There, I met two Slovak backpackers who casually asked if I’d seen a ping-pong show. I thought I had, but I didn’t even know what it was. They explained it to me, and I felt I could’ve done without the knowledge. Once again, I realized: after all this time, after all these photos, there’s a whole world I still don’t know. Despite immersing myself in the thick of it — I still can’t begin to gauge how much I haven’t seen.
+    On the way to Khon Kaen, I met a younger South African man traveling with his Thai girlfriend and their baby. They seemed like a healthy, balanced couple—joking and laughing together, sharing physical affection. They happily posed for a few photographs. Their relationship felt on another level compared to many others I’d seen in Pattaya—a reminder that amid Pattaya’s complicated nightlife, real connections and family life for international couples quietly persist elsewhere in Thailand.
+
+    From Khon Kaen, I arrived in Ayutthaya to stay overnight and figure out how to get to Pattaya and see the old capital of Siam. There, I met two Slovak backpackers who casually asked if I’d seen a ping-pong show. I thought I had, but I didn’t even know what it was. They explained it to me, and I felt I could’ve done without the knowledge. Once again, I realized: after all this time, after all these photos, there’s a whole world I still don’t know. Despite immersing myself in the thick of it — I still can’t begin to gauge how much I haven’t seen.
 
     The day after, I was back in Pattaya for what would be my last stay there, lasting another week. I spent my remaining days in June—right up until my flight—on Soi 6. I stayed longer than usual each day, moving slower, shooting more deliberately. I gave it everything I had in those final days, trying to get closer to people. Some of my favorite photos—most of the ones I ended up picking—came from that stretch.`
   },
@@ -954,6 +968,8 @@ const essayContent = [
     type: 'text',
     content: `It was also then that I noticed a shift. More Western bar managers had appeared since I’d returned from my trip. They noticed me too. A few came up to me, trying to intimidate me. Some threatened me outright—speaking in British or American accents, telling me not to take photos if I liked my face the way it was. The space felt tighter. And maybe that meant it was time to stop.
 
+    In June, there was one particular vlogger I saw almost every day on the street. He was crude—groping women, lifting their skirts if they had one. Sometimes he’d point his selfie stick right between their legs and live-stream it. To my surprise, the women often went along with it. I’d take photos of him, and he’d flash me a thumbs up, posing right next to the women before returning to his antics. But one day, when I photographed him, he got unexpectedly angry, saying I couldn’t take his photo—as if he’d just had a wake-up call and we were interacting for the first time. I asked, “How is that different from you filming these women?” He shrugged and said, “At least I pay them.” During this exchange, a Western man suddenly came out from a bar to intimidate me into leaving, calling me a “lowlife” for “ratting them out.” Meanwhile, the vlogging man lingered, carrying on as if nothing had happened. That moment left me unsettled—caught between complicity and confrontation, and reminded me how blurred the lines can be in a place like Soi 6.
+
     I remember praying for rain. I had never seen Soi 6 in the rain, and I longed for that different kind of light, that different kind of mood. It came—just once. And I went out with my camera. But by then, I’d already exhausted what little energy I had left. That was it.`
   },
   {
@@ -964,7 +980,6 @@ const essayContent = [
 
     I convinced my parents, packed light, and started pedaling from Sweden in late August. I crossed countries slowly, watching autumn unfold one European country at a time, and arrived home just before Christmas—though in Turkey, that’s just another day.`
   },
-
   {
     type: 'text',
     content: `The ride was long, beautiful, and not without hardship. But it recharged me. I met wonderful people. I laughed a lot. It gave me the energy I needed to return to the Pattaya photos—months later, finally ready to sit with them. To edit. To remember. To really look.
