@@ -91,9 +91,11 @@ export default function PortraitReel({
       </div>
 
       {caption && (
-        <p className="text-sm italic text-gray-600 text-center px-60 mt-2 mb-10">
-          {caption}
-        </p>
+        <div className="flex justify-center px-4">
+          <p className="text-sm italic text-gray-600 text-center max-w-lg mt-2 mb-10">
+            {caption}
+          </p>
+        </div>
       )}
 
       <Lightbox

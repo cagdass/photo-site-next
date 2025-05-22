@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
+import { eventBus } from '@/utils/eventBus';
 
 const LINKS = [
   { to: '/', label: 'Home' },
@@ -33,9 +34,39 @@ function handleMenuClick(e: React.MouseEvent<HTMLElement>) {
   }
 }
 
-export default function Navbar() {
+export interface NavbarProps {
+  pageTitle?: string;
+}
+
+export default function Navbar({ pageTitle = '' }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [expanded, setExpanded] = useState<{ [key: string]: boolean }>({});
+
+  const [showPageTitleInNavbar, setShowPageTitleInNavbar] = useState(false);
+
+  useEffect(() => {
+    const target = document.getElementById('cover-title'); // or h1 container
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowPageTitleInNavbar(!entry.isIntersecting);
+      },
+      { rootMargin: '-100px 0px 0px 0px' } // adjust for fixed navbar height
+    );
+
+    observer.observe(target);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen((v) => !v);
+  };
+
+  useEffect(() => {
+    eventBus.emit(menuOpen ? 'mobileMenuOpened' : 'mobileMenuClosed');
+  }, [menuOpen]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -96,7 +127,7 @@ export default function Navbar() {
 
       {/* CLOSE BUTTON at top-right */}
       <button
-        onClick={() => setMenuOpen(false)}
+        onClick={() => toggleMenu()}
         className="absolute top-2 right-4 text-3xl z-50"
         aria-label="Close menu"
       >
@@ -125,7 +156,7 @@ export default function Navbar() {
                       <Link
                         href={sub.to}
                         className="block py-1 hover:underline"
-                        onClick={() => setMenuOpen(false)}
+                        onClick={() => toggleMenu()}
                       >
                         {sub.label}
                       </Link>
@@ -137,7 +168,7 @@ export default function Navbar() {
               <li key={idx}>
                 <Link
                   href={item.to}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => toggleMenu()}
                   className="block py-2 hover:underline uppercase tracking-wide"
                 >
                   {item.label}
@@ -173,12 +204,26 @@ export default function Navbar() {
             <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
           </Link>
 
+          {pageTitle && (
+            <div
+              id="navbar-page-title"
+              onClick={handleMenuClick}
+              className={`
+      absolute left-1/2 -translate-x-1/2 text-md md:hidden
+      transition-opacity duration-500 ease-in-out font-garamond
+      ${showPageTitleInNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+    `}
+            >
+              {pageTitle}
+            </div>
+          )}
+
           <div className="flex items-center gap-4">
             {renderDesktopNav()}
             <div className="md:hidden">
               <button
                 className="text-2xl focus:outline-none"
-                onClick={() => setMenuOpen(prev => !prev)}
+                onClick={() => toggleMenu()}
               >
                 {menuOpen ? '✖' : '☰'}
               </button>

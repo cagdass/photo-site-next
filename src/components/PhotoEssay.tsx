@@ -89,7 +89,7 @@ export default function PhotoEssay({
     <div className="font-garamond">
       <div className="photo-essay-header px-4">
         <center>
-          <h1 className="essay-title text-4xl font-bold mb-2">{title}</h1>
+          <h1 id="cover-title" className="essay-title text-4xl font-bold mb-2">{title}</h1>
           <p className="text-lg italic">{subtitle}</p>
           <p className="essay-author">by Çağdaş</p>
           {published ? (

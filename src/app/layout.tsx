@@ -5,8 +5,9 @@ import { Suspense } from 'react';
 import { EB_Garamond, Inter } from 'next/font/google';
 import Providers from './providers';
 import Analytics from '@/components/Analytics';
-import Navbar from '@/components/Navbar';
+import NavbarWithTitle from '@/components/NavbarWithTitle';
 import Footer from '@/components/Footer';
+import { PageTitleProvider, usePageTitle } from '@/context/PageTitleContext';
 
 const garamond = EB_Garamond({ subsets: ['latin'], variable: '--font-garamond', display: 'swap' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
@@ -49,13 +50,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${inter.variable} ${garamond.variable} transition-colors`}>
         <Providers>
-          <Navbar />
-          <div className="h-20" /> {/* spacer to offset the fixed navbar */}
-          <main className="md:py-12 w-full min-h-screen">{children}</main>
-          <Footer />
-          <Suspense fallback={null}>
-            <Analytics />
-          </Suspense>
+          <PageTitleProvider>
+            <NavbarWithTitle />
+            <div className="h-20" /> {/* spacer to offset the fixed navbar */}
+            <main className="md:py-12 w-full min-h-screen">{children}</main>
+            <Footer />
+            <Suspense fallback={null}>
+              <Analytics />
+            </Suspense>
+          </PageTitleProvider>
         </Providers>
       </body>
     </html >

@@ -7,6 +7,7 @@ import { ImageSlide, SlideImage } from "yet-another-react-lightbox";
 import Image from 'next/image';
 import EssayImage from '@/components/EssayImage';
 import PhotoEssayText from '@/components/PhotoEssayText';
+import MobileTOC from '@/components/MobileTOC';
 import TableOfContents from '@/components/TableOfContents';
 import 'yet-another-react-lightbox/styles.css';
 import imageDimensions from '@/data/imageDimensions';
@@ -70,6 +71,29 @@ export default function PhotoEssayContent({
   const toggleCollapse = (id: string) => {
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
   };
+
+  function handleJumpTo(id: string) {
+    // find the group (heading) that contains this id
+    const group = groups.find(g =>
+      g.heading.id === id || g.blocks.some(b => b.id === id)
+    );
+
+    if (group) {
+      // open the section
+      setCollapsedSections(prev => ({
+        ...prev,
+        [group.heading.id]: false
+      }));
+
+      // wait for DOM to update, then scroll
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 500); // ⏱️ slight delay to let expand animation/layout finish
+    }
+  }
 
   // Prepare slides with optional srcColor
   const imageBlocks = essayBlocks.filter(b => b.type === 'image');
@@ -353,6 +377,7 @@ export default function PhotoEssayContent({
           <TableOfContents headings={headings} activeId={activeId} />
         </div>
       )}
+      {isMobile && hasTableOfContents && <MobileTOC headings={headings} onJumpTo={handleJumpTo} />}
       <main className="flex-1">
         {renderEssayContent()}
       </main>
