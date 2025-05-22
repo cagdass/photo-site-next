@@ -92,9 +92,15 @@ export default function PhotoEssay({
           <h1 id="cover-title" className="essay-title text-4xl font-bold mb-2">{title}</h1>
           <p className="text-lg italic">{subtitle}</p>
           <p className="essay-author">by Çağdaş</p>
-          {published ? (
-            <p className="essay-published text-sm text-gray-400">{publishedDate}</p>
-          ) : (
+          {published && updatedDate && (
+            <p className="essay-published text-sm text-gray-400">{publishedDate}, {updatedDate}</p>
+          )}
+          {(
+            published && !updatedDate && (
+              <p className="essay-published text-sm text-gray-400">{publishedDate}</p>
+            )
+          )}
+          {!published && (
             <p className="essay-published text-sm text-red-400">Work in progress</p>
           )}
           <div className="share-buttons mb-4 flex justify-center">

@@ -91,7 +91,7 @@ const essayContent = {
 
     But by September, our informal kitchen classes had come to an end. It was time for my teacher to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
 
-    He gave me a key to his apartment though and I spent long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite a few signed to his name. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
+    Before he left though, he gave me the key to his apartment, where I would spend long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite many signed with a dedication to him. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
     That winter, Stockholm felt lifeless. Colder and darker than usual. My job was draining me. I was buried under my mortgage and rising interest rates. I could barely afford to do the things I used to. I'd spend what little remained of my salary on a few screenings at the film festival, then scraping by on potatoes till the end of the month. Street photography no longer gave me the same spark. Maybe it’s a weak excuse, but I still think Stockholm isn’t the most exciting place for photography—too clean, too quiet, too conforming.
 
@@ -118,17 +118,23 @@ const essayContent = {
     type: 'component',
     render:
       () => (
-        <PhotoEssayText>
-          I was hungry for all of it. Everything was new.
-          At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
-          I was especially drawn to international couples.
-          Whenever I saw an older Western man—what locals call a <i>farang</i>—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it.
-          The contrast spoke volumes. But what struck me just as much was the silence between them.
-          I rarely saw them talk.
-          They’d sit next to each other at a bar or restaurant, their bodies close but their eyes elsewhere—on their phones,
-          on the street, on nothing in particular.
-          It was as if they existed side by side, not together.
-        </PhotoEssayText>
+        <>
+          <PhotoEssayText>
+            I was hungry for all of it. Everything was new.
+            At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
+          </PhotoEssayText>
+          <PhotoEssayText>
+            The utility poles all around were a mess—too many cables tangled and dangling everywhere. My teacher warned me to watch out for them. He said, “They have poles like this in Japan because of earthquakes, but Pattaya isn’t near any fault lines, so I don’t know why.” Still, he was right—I had recognized those chaotic poles from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
+          </PhotoEssayText>
+          <PhotoEssayText>
+            But with my photography, I found myself repeatedly drawn to a particular pairing: international couples.
+            Whenever I saw an older Western man—what locals call a farang—paired with a young,
+            striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it.
+            The contrast spoke volumes. But what struck me just as much was the silence between them.
+            I rarely saw them talk. They’d sit next to each other at a bar or restaurant,
+            their bodies close but their eyes elsewhere—on their phones, on the street, on nothing in particular. It was as if they existed side by side, not together.
+          </PhotoEssayText>
+        </>
       )
   },
   {
@@ -356,7 +362,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `Whenever I left Soi 6, I found myself back on Beach Road. It was a kind of decompression zone. The chaos thinned out a bit—but the contradictions didn’t. Russian families—some seemingly on a perpetual vacation since the war in Ukraine made going home impossible—strolled past scenes of open negotiation. Whole families with small kids, sometimes even a baby in a stroller, walked right past freelancers leaning against lampposts, haggling with men I’d later see again on Soi 6. Groups of South Asian men often surrounded a single sex worker, which I assumed was for a group engagement. I saw tour buses offloading Indian and Chinese men en masse. Curious, I’d sometimes say hi and ask about their time in Pattaya. The answers could be bizarre—one man told me “Nana Plaza is better,” referring to Bangkok’s bar-packed red-light district. I also heard Turkish often. I assumed the speakers felt at ease many thousand miles from home, and maybe that’s why I caught so many unfiltered conversations—casual bragging, crude jokes, all circling around their exploits. Some men laughed loudly. Others scanned the street in silence.
+    content: `Whenever I left Soi 6, I found myself back on Beach Road. It was a kind of decompression zone. The chaos thinned out a bit—but the contradictions didn’t. Russian families—some seemingly on a perpetual vacation since the war in Ukraine made going home impossible—strolled past scenes of open negotiation. Whole families with small kids, sometimes even a baby in a stroller, walked right past freelancers leaning against lampposts, haggling with men I’d later see again on Soi 6. Groups of South Asian men often surrounded a single sex worker, which I assumed was for a group engagement. Mostly Western white men filled the streets, but that could quickly change when a shuttle bus arrived, unloading waves of Indian and Chinese men en masse. Curious, I’d occasionally say hello and ask about their time in Pattaya. The answers could be bizarre—one man told me “Nana Plaza is better,” referring to Bangkok’s bar-packed red-light district. I often heard my native Turkish spoken. I assumed the speakers felt at ease many thousand miles from home, and maybe that’s why I caught so many unfiltered conversations—casual bragging, crude jokes, all circling around their exploits.
 
     During that first visit, I took many photos on Beach Road. I hadn’t yet locked in on Soi 6 as the core of the project. I was just drawn to what was unfolding in front of me—this strange ecosystem where families brushed shoulders with transactional intimacy, children in swimsuits skipped past sex workers in heels. Pattaya wasn’t hiding anything. Everyone was part of the same current.`
   },
@@ -811,9 +817,17 @@ const essayContent = {
 
     We hadn’t talked in a while, so I told her we could get a coffee and catch up once I was back. She said okay.
 
-    When I returned to Pattaya, she messaged again. She said a customer had “bought” her out of the bar and would keep her for the next ten days. “Linda did it because Linda needed money to live like this,” she wrote. “The bar was very quiet.” I asked, “Are you happy?” Her reply was, “Yes, he is very nice. He is 56 years old.”
-
-    A few days later, the tone changed. “Can’t be with the customer,” she wrote. “He’s doing drugs.” I asked how she was. She eventually told me, “Yes, some days he hurts Linda, but Linda can’t go anywhere, so she has to wait until he returns because he already received his money.”
+    When I returned to Pattaya, she messaged again. She said a customer had “bought” her out of the bar and would keep her for the next ten days. “Linda did it because Linda needed money to live like this,” she wrote. “The bar was very quiet.” I asked, “Are you happy?” Her reply was, “Yes, he is very nice. He is 56 years old.”`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-78.jpg',
+    caption: 'Linda in the water, April 2024.',
+    color: true,
+  },
+  {
+    type: 'text',
+    content: `A few days later, the tone changed. “Can’t be with the customer,” she wrote. “He’s doing drugs.” I asked how she was. She eventually told me, “Yes, some days he hurts Linda, but Linda can’t go anywhere, so she has to wait until he returns because he already received his money.”
 
     When I saw her again during Songkran, she was back at the bar, working like nothing had happened. The whole thing stayed with me—not just what she endured, but the fact that she had reached out to me. Maybe she didn’t have many people to talk to. Maybe she wasn’t looking for help. But she wanted someone to know. And for reasons I still don’t fully understand, I was one such someone.`
   },

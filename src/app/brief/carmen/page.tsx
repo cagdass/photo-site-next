@@ -40,6 +40,7 @@ export default function CarmenPage() {
       }}
       published={true}
       publishedDate="Published on 17 May 2025"
+      updatedDate="updated on 23 May 2025"
       essayBlocksContent={carmenEssayBlocks}
       photoBlocks={carmenPhotos}
       showPhotoEssayToggle={true}

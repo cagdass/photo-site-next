@@ -76,7 +76,7 @@ const carmenEssayBlocks = {
     },
     {
       type: 'text',
-      content: `Eventually, I did. The owner’s son — notorious among both my friends and the Google Maps reviews — pulled an ice cube prank on me one night, dropping it down the back of my shirt. One of those guys who acts like you’re friends, but you’re not. That was it. I stopped showing up. Stopped photographing there too.`,
+      content: `Eventually, I did. The owner’s son — notorious among both my friends and the Google Maps reviews — pulled an ice cube prank on me one night, dropping it down the back of my shirt. One of those guys who acts like you’re friends, but you’re not. That was it. Soon after I stopped showing up. Naturally, I stopped photographing there too.`,
     },
     {
       type: 'image',
