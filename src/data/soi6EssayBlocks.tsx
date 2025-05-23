@@ -32,7 +32,7 @@ const essayContent = {
           >
             Instagram
           </Link>
-          {" "}and the{" "}
+          {" "}&nbsp;and the{" "}
           <Link
             href="https://www.reddit.com/r/streetphotography/comments/1juqsru/documenting_nightlife_sex_work_in_pattaya/"
             className="underline text-blue-400 hover:text-blue-600"
@@ -359,6 +359,10 @@ const essayContent = {
     type: 'image',
     src: '/images/pattaya/soi6-41.jpg',
     caption: 'A trans sex worker at a Soi 6/1 bar, April 2024.'
+  },
+  {
+    type: 'text',
+    content: `I saw kathoeys everywhere in Thailand—working at 7-Elevens, in massage parlors, just walking down the street. They seemed openly visible, a natural part of everyday life. Some were openly engaged in sex work, too—not just in Pattaya. I remember one morning in Chiang Mai when a local tuk-tuk driver shouted at me, making a crude hand gesture—grabbing one elbow and raising his forearm—and yelled, “I have ladyboy, big cock, big cock.” Even with such bluntness, their visibility felt normalized. This stood out to me, especially compared to Sweden, where I don’t recall seeing nearly as many openly trans people. In fact, I can remember many moments when LGBTQ+ folks were marginalized behind closed doors, despite Sweden’s reputation as one of the world’s most progressive countries. That contrast made me realize how different cultures shape visibility and acceptance—and how the kathoeys on Soi 6 were far more than exotic performers; they were part of the gang. Of course, I wasn’t part of Thai society and didn’t speak the language, so I can’t claim to know what really goes on in smaller circles. But my personal experience, augmented by watching several documentaries since my return, convinces me kathoeys are an integral part of the social fabric.`
   },
   {
     type: 'text',
