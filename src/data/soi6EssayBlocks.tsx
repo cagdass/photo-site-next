@@ -762,7 +762,7 @@ const essayContent = {
 
     I hadn’t had many chances to travel during my six-plus years in Sweden. Gaining citizenship took time and mental stamina, even if I didn’t have to wait as long as some people do. And now, after finally getting that little EU passport of top-tier privilege, I was returning to a place that felt emotionally colder than ever.
 
-    What hit me most was how social and easygoing Thailand had been. I’d grown used to joining my palms and greeting everyone with a cheerful “sawatdee khrap”—and seeing warm, smiling faces respond. So during my first few morning runs back in Stockholm, I instinctively said “god morgon” to people passing by. Most looked at me like I was insane. The silence stung. I also remembered I was a Middle Eastern immigrant—the word expat in Sweden reserved for people from the States, Australia, or Western Europe. Unlike in Thailand, where I was read as a white tourist, here I was just another foreigner in the wrong category—one that closes doors, not opens them.
+    What hit me most was how social and easygoing Thailand had been. I’d grown used to joining my palms and greeting everyone with a cheerful “sawatdee khrap”—and seeing warm, smiling faces respond. So during my first few morning runs back in Stockholm, I instinctively said “god morgon” to people passing by. Most looked at me like I was insane. The silence stung. I also remembered I was a Middle Eastern immigrant—the word expat in Sweden reserved for people from the States, Australia, or Western Europe. Unlike in Thailand, where I was read as a white tourist, here I was just another foreigner in the wrong category—which did not necessarily open the doors.
 
     I missed Thai food too. Before I left, the family who ran the little restaurant we ate at almost every night had gifted me a small bag of spices—real, serious chili. Back in Sweden, I added it to everything. It was the only way I could feel some heat.
 
@@ -776,17 +776,34 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `Still, I made a small album on my phone of what I thought were the best. I showed it to a few friends. They were astonished. A photographer I look up to told me I should get them published—easy for him to say, but I was flattered. Their reactions made me want to return. To go deeper.
+    content: `Still, I made a small album on my phone of what I thought were the best. I showed it to a few friends. They were astonished. I met a friend of my teacher's at an exhibition, another photographer I look up to. Later when I met him in his darkroom in the old city of Stockholm he told me I had to make a book from my photos, but that I have to go back and get closer. Asking to get photos published—easy for him to say, but I was flattered. The reactions I received made me want to return. To go deeper.
 
     But life in Stockholm was far from great. Work was still draining me. Money was tight. The thought of enduring another few months of Swedish winter filled me with dread. I started looking for another job, but the idea of jumping straight into another software engineering role without a real break felt unbearable. I had no energy left.
 
     Then in February 2024, my manager set up a meeting. I got fired—part of a global layoff that affected thousands of people across the company. And honestly, I couldn’t have been happier. At least for myself.
 
-    February 2024 marked a turning point for me. For the first time in years, I had time for myself. I wasn’t heading back to work anytime soon, and I had some severance money set aside. Having naturalized as a Swedish citizen a year earlier, I no longer had to stay in Sweden out of fear of losing my residence permit. It felt like a rare chance to step back, breathe, and explore something new—something I’d always wanted to do but never quite had the space for.
-
-    For a brief moment, I was overwhelmed by the sheer number of choices: Should I go hiking in the Canary Islands? Bikepack across Europe to Turkey—something I’d long dreamed of and eventually did later that year? Or stay put in Stockholm and search for another job? But in the end, it was clear.
-
-    I rented out my Stockholm bedsit, which more or less covered the mortgage, and booked a one-way ticket to Singapore. My teacher joined me there. We walked, took pictures, ate well. After a few days of sightseeing, we returned to Pattaya. The plan was to take photos, travel somewhere new in Asia, return to our base in Pattaya and repeat.`
+    February 2024 marked a turning point for me. For the first time in years, I had time for myself. I wasn’t heading back to work anytime soon, and I had been given generous severance money. Having naturalized as a Swedish citizen a year earlier, I no longer had to stay in Sweden out of fear of losing my residence permit. It felt like a rare chance to step back, breathe, and explore something new—something I’d always wanted to do but never quite had the space for. I felt so relieved.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <PhotoEssayText>
+        For a brief moment, I was overwhelmed by the sheer possibilites:
+        Take a classic working-class vacation to Portugal or Spain?
+        Visit Africa or the Americas—which I have never done.
+        Do an Interrail all around Europe?
+        Bikepack across Europe to Turkey—something
+        I’d long dreamed of and{" "}
+        <Link href="/projects/bikepacking" className="underline text-blue-400 hover:text-blue-600">
+          eventually and luckily managed later that year.
+        </Link>
+        &nbsp;Or stay put in Stockholm and search for another job? But in the end, it was dead clear.
+      </PhotoEssayText>
+    )
+  },
+  {
+    type: 'text',
+    content: `I rented out my Stockholm bedsit, which more or less covered the mortgage, and booked a one-way ticket to Singapore. My teacher joined me there. We walked, took pictures, ate well. After a few days of sightseeing, we returned to Pattaya. The plan was to take photos, travel somewhere new in Asia, return to our base in Pattaya and repeat.`
   },
   {
     type: 'image',
