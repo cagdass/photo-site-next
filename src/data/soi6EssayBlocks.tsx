@@ -409,7 +409,23 @@ const essayContent = {
     type: 'text',
     content: `Carrying a camera changes the rules of engagement. I felt I had a duty to the women to ask for their permission before taking a photo. A few times I couldn’t—like when photographing a big scene with dozens of people and only half a heartbeat to catch it—but otherwise, I made sure to ask. Some didn’t want to be seen. You could tell even without words: a hand raised to cover their face before I even lifted my camera. I never bothered them. Sometimes, if I took a photo without asking first, I would go up afterward, show it to them, and make sure they were okay with it.
 
-    I'd sometimes need to muster some backing up to myself. I’d show them some of my older photos on Instagram, explain I wasn’t just some random tourist, and promise to send the picture if they wanted. Sometimes, even with a smile, they’d instinctively cover their face or shake their head. I would not push then. That was that. Other times, they’d say they looked ugly or weren’t ready. In those moments, if I felt there was real warmth between us, I’d gently protest: “Kun suay mâak mâak”—you’re very beautiful. More often than not, it cracked a smile and turned the no into a yes. Not always. But enough times to feel like I’d earned the moment.
+    I realized within a few days that the culture around photography in Thailand was very lighthearted. Smiles would naturally grow on faces when people posed, and hands often made peace signs or the Asian heart gesture. I took many photos like that—simple, joyful moments capturing everyday spirit.
+
+    But more often, I tried to explain the kind of photos I was aiming for. I’d often show them some of my older photos on Instagram, explain I wasn’t just some random tourist, and promise to send the picture if they wanted. But what really helped was that I had gathered a few images that aligned with the project’s direction—little summaries of Soi 6 and the sex tourism scene in Thailand. I put those photos into an album on my phone and showed them to my subjects to give a clearer idea. Most of the time, they understood immediately, which made them more serious.
+
+    I’d ask them to go back to what they were doing before I arrived with my camera. Of course, a smile might linger, so I’d often do a shush gesture—finger pressed to my lips—or mimic zipping my mouth shut to remind them. I have tens of thousands of shots from Soi 6, and such a sequence has become a cliché to me: a series of photos of a smiling face turning into a serious one.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-66.jpg',
+    color: true,
+    caption: 'Picture in a picture, April 2024.'
+  },
+  {
+    type: 'text',
+    content: `Sometimes, even with a smile, they’d instinctively cover their face or shake their head. I would not push then. That was that. Other times, they’d say they looked ugly or weren’t ready. In those moments, if I felt there was real warmth between us, I’d gently protest: “Kun suay mâak mâak”—you’re very beautiful. More often than not, it cracked a smile and turned the no into a yes. Not always. But enough times to feel like I’d earned the moment.
+
+    Rarely, a girl would jokingly ask for money to be photographed. A few were serious about it, but I’d try to turn it into a joke: “You mean you pay me?” or say, “No money, nong kap,” while pointing at the bar and adding, “but I do dishes,” rinsing the palm of my left hand as if it were a dirty plate.
 
     Later, I would learn why some women were so cautious. Many had boyfriends, significant others, husbands, or family back in their hometown villages—people who didn’t know they were working in Pattaya. Or if they knew, they believed what they had been told: that she worked at a restaurant, a hotel, or a 7-Eleven. A photograph could unravel a carefully maintained story. And sometimes, it was simply anxiety—a reflex born from living between two worlds.
 
@@ -684,13 +700,17 @@ const essayContent = {
   {
     girl: 'Linda',
     type: 'text',
-    content: `I met Linda—a pseudonym— early on, and from that first encounter, she always waved when she saw me on the street. She liked being photographed—or at least, she played that part well. Every time I sent her a picture, she’d reply with mock outrage: “Ugly!!! No want photo!” But the next day, there she was again, posing and laughing like nothing had changed. It became our ritual.
+    content: `I met Linda—a pseudonym—early on, and from that first encounter, she always waved when she saw me on the street. She liked being photographed—or at least, she played that part well. Every time I sent her a picture, she’d reply with mock outrage: “Ugly!!! No want photo!” But the next day, there she was again, posing and laughing like nothing had changed. It became our ritual.
 
-    Linda was older than most of the women I met on Soi 6. You could see it in the lines on her face. She said she didn’t have children, and she carried herself with a kind of confidence that stood out. I noticed how the younger girls at her bar looked to her—not with fear, but with a quiet deference. She wasn’t the mamasan; there was already one at her bar. But Linda held her own space.
+    Linda was older than most of the women I met on Soi 6. You could see it in the lines on her face. She said she didn’t have children and carried herself with a kind of confidence that stood out. I noticed how the younger girls at her bar looked to her—not with fear, but with quiet deference. She wasn’t the mamasan; there was already one at her bar. But Linda held her own space.
 
     When I passed by, she’d sometimes grab my arm and say she was hungry, asking for pizza. There was only one place on Soi 6 that sold it—a little shop crammed between bars. It felt like a luxury amid the usual local stalls. I got her a slice a few times. She’d smile, thank me, and go back to work—unless she wanted ice cream, that is.
 
-    We shared a few drinks together—usually me ordering her a lady-drink and a small Chang for myself. Her English was limited, but she knew how to navigate conversations with customers using her phone and body language. You could tell she’d done it a thousand times. She wasn’t the loudest, or the most aggressive, but her experience showed.`
+    Her English was limited, so when conversation got tricky, she’d pull out her phone and use a translator bot extension on Line. She tapped diligently on the screen and smoothly turned the interaction into a conversation with ease. I wondered if she was simply tech savvy or had developed this habit over time. These conversations usually unfolded over a drink—me ordering her a lady-drink and a small Chang for myself. It was a reprieve for me, and I was happy she was just in it for the conversation—no touchiness, no pressure for another drink. She’d often share gossip about the customers—funny stories about the guys, and some not so funny, which made me feel sad.
+
+    She had also traveled for work before, freelancing a few times in Singapore where the money was good. But she wanted to go to the United States instead—she knew someone who could arrange a green card. Working there would be more profitable for her. I would sit in amazement and bewilderment at her future plans and grow more confused about the world.
+
+    She taught me a lot about the street in a short time. You could tell she handled people well. She wasn’t the loudest or the most aggressive, but her experience showed.`
   },
   {
     type: 'image',
