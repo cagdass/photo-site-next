@@ -24,7 +24,7 @@ export default function ContactPage() {
       <h1 className="text-3xl font-bold mb-6">Contact</h1>
 
       <p className="text-md mb-6">
-        Feel free to reach out — whether it’s about collaboration, exhibitions, prints, or just conversation.
+        My full name is Çağdaş Öztekin, I am loosely based in Stockholm, Sweden. Feel free to reach out — whether it’s about collaboration, exhibitions, prints, or just conversation.
       </p>
 
       <div className="flex items-center gap-2 mb-4">
