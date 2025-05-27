@@ -82,11 +82,11 @@ export default function HomePageProjects() {
       {/* Scrollable Row */}
       <div
         ref={scrollRef}
-        className="scroll-container overflow-x-auto flex space-x-6 py-2 snap-x snap-mandatory scroll-smooth"
+        className="scroll-container overflow-x-auto flex space-x-8 py-2 snap-x snap-mandatory scroll-smooth"
       >
         {featured.map((project, idx) => (
           <div key={project.id || idx}
-            className="gallery-card w-[360px] mr-8 shrink-0"
+            className="gallery-card w-[360px] shrink-0"
           >
             <Link
               key={project.id || idx}
@@ -114,7 +114,7 @@ export default function HomePageProjects() {
         onClick={() => scroll('left')}
         className="absolute top-1/2 -translate-y-1/2 left-2 z-10
              bg-[var(--foreground)] border text-[var(--background)]
-             p-2 rounded-full shadow hover:scale-110 transition"
+             p-1.5 rounded-full shadow hover:scale-110 transition"
       >
         <ChevronLeft size={20} />
       </button>
@@ -122,7 +122,7 @@ export default function HomePageProjects() {
         onClick={() => scroll('right')}
         className="absolute top-1/2 -translate-y-1/2 right-2 z-10
              bg-[var(--foreground)] border text-[var(--background)]
-             p-2 rounded-full shadow hover:scale-110 transition"
+             p-1.5 rounded-full shadow hover:scale-110 transition"
       >
         <ChevronRight size={20} />
       </button>
