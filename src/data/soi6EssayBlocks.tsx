@@ -298,18 +298,24 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already live-streaming their own stories. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. And it became what it was when I was there to photograph.`
+    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. There were motorcycles and the occasional car, but it was walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already live-streaming their own stories. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers or flashlights at any raised lens, and most of the action was hidden behind closed doors. I didn't go back to the Walking Street again, I wasn't interested in where I couldn't photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. And it became what it was when I was there to photograph.`
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-59.jpg',
-    caption: 'Allure of the open bar, December 2023.',
+    src: '/images/pattaya/walking_street.jpg',
+    color: true,
+    caption: 'The entrance of a Walking Street go-go club, December 2023.',
   },
   {
     type: 'text',
     content: `Apart from a trip to Chiang Mai and Bangkok for a few days, for the rest of my stay, even though I continued taking photos wherever I was, I returned to Soi 6 almost every day as part of our Beach Road walk—sometimes twice a day, once in the afternoon and again at night. My teacher usually came with me, offering tips on how to interact. He’d watch both me and the street, and later at home, he’d offer critique—on my presence, what I did or didn’t do.
 
     I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, binging TikToks, texting men. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-59.jpg',
+    caption: 'Allure of the open bar on Soi 6, December 2023.',
   },
   {
     type: 'component',
@@ -459,11 +465,11 @@ const essayContent = {
     type: 'text',
     content: `Of course, part of me felt uneasy. I was “buying” time, and by extension, buying the photos. I couldn’t help but feel strange about it—here I was, a six-months-into-it, barely-budding photographer, buying drinks for sex workers. But when I managed to take a photograph that felt real, one that captured something more than a transaction, it somehow made up for it.
 
-    But for most, when I asked where they came from, the answer was always the same: Isan. Isan. Isan. Thailand’s northeast. A rice-farming region. Poor. Hard to leave. After my first few conversations, I went home and started watching YouTube documentaries about it.
+    For most, when I asked where they came from, the answer was always the same: Isan. Isan. Isan. Thailand’s northeast—a rice-farming region, poor and hard to leave. Many sex workers from Isan that I spoke to had children. Many were in their early twenties but already had multiple kids. While they earned money in Pattaya, they’d send money back home, and their children were raised by the women’s own parents. The father was always a Thai man and was typically out of the picture. The women weren’t so happy to talk about them anyway. But they spoke about their children openly and without shame. In fact, they lit up when I asked. There was a sincere, almost childlike happiness in their voices and eyes. They would scroll through the photo gallery on their mobile phones and bombard me with snaps of their little kids, laughing and proud. I vividly remember one woman tapping her phone’s lock screen and beaming, “My baby—two years!” then grinning at me like she’d pulled off a magic trick.
 
-    They spoke about their children openly and without shame. In fact, they lit up when I asked. There was a sincere, almost childlike happiness in their voices, in their eyes. They would scroll through photos, laughing, proud. One woman tapped her phone’s lock screen and beamed: “My baby—two year!” Then grinned at me like she’d pulled off a magic trick.
+    I’d ask when they last saw their children. It was usually months. Sometimes the grandparents would visit Pattaya with the kids so the family could reunite. Maybe that was a question better left alone. But I’d always ask to get more of an idea. I kept trying to make sense of the system that had brought them here—the same system that pulled in millions of men every year.
 
-    I’d ask when they last saw their children. It was usually months. Maybe that was a question better left alone. But I cared. I kept wondering about it. I kept trying to make sense of the system that had brought them here—the same system that pulled in millions of men every year.`
+    After my first few conversations, I went home and started watching YouTube documentaries about it. As I later reaffirmed in essays and books I read about sex workers from Pattaya, many of them dreamt of building a concrete house in their village in Isan, instead of the traditional bamboo house. I immediately thought of my time in the rural parts of the underdeveloped but touristy island of Palawan in the Philippines when I visited Southeast Asia for the first time a year earlier. I would occasionally be pointed out a concrete house and told, “That means they have an Overseas Filipino Worker in the family sending remittances.”`
   },
   {
     type: 'image',
@@ -626,13 +632,22 @@ const essayContent = {
     caption: 'Birthday girl, June 2024.',
   },
   {
+    type: 'text',
+    content: `On Christmas Eve, the temperature dropped to 22 degrees Celsius. The girls on Soi 6, usually clad in bikinis, wrapped themselves in blankets and laughed as they complained about the sudden chill. Many bars had Christmas-themed outfits, making it as close to a white Christmas as one could get in Thailand—a quirky, trying-to-stay-warm contrast to the usual tropical heat.`,
+  },
+  {
+    type: 'image',
+    src: '/n/a',
+    caption: 'Christmas '
+  },
+  {
     type: 'subheading',
     text: 'Learning Names',
     id: 'learning_names',
   },
   {
     type: 'text',
-    content: `As days passed, I became friendly with many familiar faces. I was often offered bubble tea, fruit, grilled chicken—whatever the girls happened to be snacking on—as I walked by, whether in the morning or late at night. Looking back, I remember a general sense of warmth. But the ones I knew by name were fewer; still, by December 2023, I had already jotted down over a dozen names in my notes.`
+    content: `As days passed, I became friendly with many familiar faces. I was often offered bubble tea, fruit, grilled chicken—whatever the girls happened to be snacking on—as I walked by, whether in the morning or late at night. Looking back, I remember a general sense of warmth. But the ones I knew by name were fewer; still, by the end of my trip in December 2023, I had already jotted down over a dozen names in my notes.`
   },
   {
     type: 'subheading',
