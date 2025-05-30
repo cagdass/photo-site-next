@@ -14,7 +14,7 @@ describe('Navbar', () => {
     const links = within(desktopNav).getAllByRole('link');
 
     expect(links.some(link => link.textContent === 'Home' && link.getAttribute('href') === '/')).toBe(true);
-    expect(links.some(link => link.textContent === 'Contact' && link.getAttribute('href') === '/contact')).toBe(true);
+    expect(links.some(link => link.textContent === 'About' && link.getAttribute('href') === '/about')).toBe(true);
   });
 
   it('opens and closes mobile menu when toggled', () => {

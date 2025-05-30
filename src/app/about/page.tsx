@@ -1,4 +1,4 @@
-// src/app/contact/page.tsx
+// src/app/about/page.tsx
 'use client';
 
 import React from 'react';
@@ -7,7 +7,7 @@ import { Mail, Instagram, Github } from 'lucide-react';
 import { buildMeta } from '@/buildMeta';
 import Link from 'next/link';
 
-export default function ContactPage() {
+export default function AboutPage() {
   const [formattedDate, setFormattedDate] = useState('');
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function ContactPage() {
 
   return (
     <section className="py-10 px-4 max-w-md mx-auto break-words text-left">
-      <h1 className="text-3xl font-bold mb-6">Contact</h1>
+      <h1 className="text-3xl font-bold mb-6">About</h1>
 
       <p className="text-md mb-6">
         My full name is Çağdaş Öztekin, I am loosely based in Stockholm, Sweden. Feel free to reach out — whether it’s about collaboration, exhibitions, prints, or just conversation.

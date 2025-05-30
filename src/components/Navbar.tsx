@@ -24,7 +24,7 @@ const LINKS = [
     ],
   },
   { to: '/blog', label: 'Blog' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/about', label: 'About' },
 ];
 
 function handleMenuClick(e: React.MouseEvent<HTMLElement>) {
