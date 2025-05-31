@@ -146,16 +146,16 @@ export default function PhotoEssayContent({
         <div className="relative flex items-center justify-center"
           style={{ width: rect.width, height: rect.height }}
         >
-          {!loaded && (
+          {/* {!loaded && (
             <div className="absolute inset-0 flex items-center justify-center z-10">
               <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-white" />
             </div>
-          )}
+          )} */}
           <ImageSlide
             slide={updatedSlide}
             offset={offset}
             rect={rect}
-            onLoad={() => setLoaded(true)}
+          // onLoad={() => setLoaded(true)}
           />
           {customSlide.color && (
             <button
