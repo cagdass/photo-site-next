@@ -124,6 +124,9 @@ const essayContent = {
             At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
           </PhotoEssayText>
           <PhotoEssayText>
+            One small detail that stood out early on was the supermarkets. Pattaya had aisles upon aisles of dairy products—dozens of cheeses in all varieties, milk from multiple countries, yogurts in every shape and flavor. This was strikingly different from my time in smaller towns in the Philippines, where such variety was rare or nonexistent. It was a quiet reminder of how Pattaya was a global crossroads, catering to tastes far beyond its tropical locale.
+          </PhotoEssayText>
+          <PhotoEssayText>
             The utility poles all around were a mess—too many cables tangled and dangling everywhere. My teacher warned me to watch out for them. He said, “They have poles like this in Japan because of earthquakes, but Pattaya isn’t near any fault lines, so I don’t know why.” Still, he was right—I had recognized those chaotic poles from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
           </PhotoEssayText>
           <PhotoEssayText>
