@@ -112,6 +112,8 @@ const essayContent = {
     type: 'text',
     content: `My photography teacher welcomed me at the bus station in Pattaya one late December night. He took me to the flat, handed me a key, and let me rest and adjust to the tropical warmth. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
 
+    He also gave me a tour of the city and a few landmarks. While doing so, he outlined the city for me—the main road, Pattaya Klang, which led down to Beach Road. He showed me the streets that ran parallel to Beach Road, like Third Road and Soi Bukhao, pointing out which were one-way streets and noting various details. This introduction helped me orient myself within the city’s geography and daily flow.
+
     I had broken my camera back in Stockholm just before the trip. I worried I wouldn’t be able to photograph anything—especially after all the hype about Pattaya’s sex tourism—but he lent me his: the older Fujifilm X-Pro1 I had practiced with during the summer. We shared the same 18mm f/2.0 lens. The setup was lightweight, unimposing. Just wide enough for the kind of close, intimate frames I wanted. Not the best in low light, but somehow the softness suited the city.`
   },
   {
@@ -124,10 +126,10 @@ const essayContent = {
             At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
           </PhotoEssayText>
           <PhotoEssayText>
-            One small detail that stood out early on was the supermarkets. Pattaya had aisles upon aisles of dairy products—dozens of cheeses in all varieties, milk from multiple countries, yogurts in every shape and flavor. This was strikingly different from my time in smaller towns in the Philippines, where such variety was rare or nonexistent. It was a quiet reminder of how Pattaya was a global crossroads, catering to tastes far beyond its tropical locale.
+            The utility poles all around were a mess—too many cables tangled and dangling everywhere. My teacher warned me to watch out for them. He said, “They have poles like this in Japan because of earthquakes, but Pattaya isn’t near any fault lines, so I don’t know why.” Still, he was right—I had recognized those chaotic poles from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
           </PhotoEssayText>
           <PhotoEssayText>
-            The utility poles all around were a mess—too many cables tangled and dangling everywhere. My teacher warned me to watch out for them. He said, “They have poles like this in Japan because of earthquakes, but Pattaya isn’t near any fault lines, so I don’t know why.” Still, he was right—I had recognized those chaotic poles from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
+            Another small detail that stood out early on was the supermarkets, I have snapped photos of whatever interested me there. Pattaya had aisles upon aisles of dairy products—dozens of cheeses in all varieties, milk from multiple countries, yogurts in every shape and flavor. This was strikingly different from my time in smaller towns in the Philippines, where such variety was rare or nonexistent. It was a quiet reminder of how Pattaya was a global crossroads, catering to tastes far beyond its tropical locale.
           </PhotoEssayText>
           <PhotoEssayText>
             But with my photography, I found myself repeatedly drawn to a particular pairing: international couples.
@@ -636,6 +638,35 @@ const essayContent = {
   },
   {
     type: 'text',
+    content: `The pressure to look a certain way extended beyond costumes. I noticed many of the women went to great lengths to avoid the sun. Their skin was often pale, a stark contrast to the tropical heat. Occasionally, before the start of a working day on Soi 6, I saw white powder being carefully applied to faces to achieve a paler complexion. Usually, girls helped with each other’s makeup and grooming and dressing —I have seen for example girls help put on each other's very sparing French maid costume and tying its straps in the back—, but occasionally a guy would go from bar to bar applying powder to women’s faces. Girls who didn’t live in the bars would arrive already dressed for the day—sometimes as a nurse or a police officer, with as much cleavage as possible—carrying umbrellas for shade.
+
+    I remember hearing a story from a man at the gym about his Thai wife, who avoided sunlight at all costs. Even when sitting shotgun in the car, she wore long sleeves and a hat. He found it a bit obnoxious, but for her, it was just part of daily life. This quiet, consistent effort to evade the sun was a reminder of the beauty standards and cultural pressures the women in Pattaya faced every day.`
+  },
+  {
+    type: 'subheading',
+    text: 'Kids',
+    id: 'kids',
+  },
+  {
+    type: 'text',
+    content: `Many of the children I saw on Soi 6 were street vendors, selling trinkets, roses, nuts, and snacks. I often saw babies huddled close to their mothers, who worked as vendors. The babies’ eyes would bounce from one corner to another, taking in everything around them with quiet curiosity. Sometimes, I saw babies and young children with the bar girls, too—usually the child of one of the women. The girls would shower the little ones with love and play, creating tender moments amid the chaos. Thank God, I never saw any kids selling condoms or marijuana, but honestly, I wouldn’t have been surprised either. It made me wonder how much these children really understood about the complex, sometimes harsh world they were growing up in.`
+  },
+  {
+    type: 'subheading',
+    text: 'Other Antics',
+    id: 'other_antics',
+  },
+  {
+    type: 'text',
+    content: `In many bars on Soi 6, where conversation was often limited by language barriers and the transactional nature of the work, the women found ways to engage customers through games. Dice games were common, providing a lighthearted way to pass the time. I also encountered Jenga and Connect Four—games I had never played before. When I bought lady drinks, I often played Connect Four with the girls, which created brief moments of genuine interaction and playfulness amid the otherwise transactional atmosphere.`
+  },
+  {
+    type: 'image',
+    src: '/n/a/',
+    caption: 'Connect four',
+  },
+  {
+    type: 'text',
     content: `On Christmas Eve, the temperature dropped to 22 degrees Celsius. The girls on Soi 6, usually clad in bikinis, wrapped themselves in blankets and laughed as they complained about the sudden chill. Many bars had Christmas-themed outfits, making it as close to a white Christmas as one could get in Thailand—a quirky, trying-to-stay-warm contrast to the usual tropical heat.`,
   },
   {
@@ -769,6 +800,21 @@ const essayContent = {
     She once told me she had a Western boyfriend who sent her money regularly. But she made good money on her own, too. She didn’t talk about struggle or sacrifice—not in the way others did. Her life felt fast-paced, unstable, but self-directed. She often posted photos with her boyfriend too—a middle-aged man with a shaved head and tattoos—like a badge of stability and sponsorship.
 
     She reminded me of how Ray Manzarek once described Jim Morrison in his autobiography: someone who could drink until collapse, then get up and keep going like nothing happened. That was Namtan. She burned through nights, smiled at the hangovers, and stayed standing through it all. Not every story on the street followed the same script. Hers ran louder, looser, and very much on her own terms.`
+  },
+  {
+    type: 'subheading',
+    text: 'Rooms to Let, 400 Baht',
+    id: 'rooms_to_let_400_baht',
+  },
+  {
+    type: 'text',
+    content: `I snuck upstairs once to grab some pictures. The place looked like a hotel corridor, with many doors lining a narrow hallway. I was too scared to step inside any of the rooms, knowing this was a brothel—I didn’t want to open any doors and find a farang with a bar girl. When I returned to the bar, the mamasan shook her finger at me in a reprimanding way; she had seen me on the CCTV, but she didn’t make it a big deal. Another time, at a different bar, I’d beg the mamasan, with whom I was on good terms, to let me go upstairs. Once, I even feigned being sleepy—pressing open hands to the side of my head as if to say “sleep”—but, of course, I was always rebuked.
+
+    On two other occasions, I agreed with a bar girl to go upstairs. One time it was with Linda. At first, she was really confused, thinking I wanted to have sex with her. I explained I just wanted to see the rooms and take photos if possible. She was still puzzled about why I’d be interested in the rooms, but said she’d take me upstairs without asking for any money—though I’d have to pay the mamasan 400 baht to rent the room, which is standard practice for any man who has short-time intercourse with a bar girl on Soi 6.
+
+    I even considered photographing a customer with a girl in one of those rooms, but I never encountered a situation where I felt I could do that respectfully or safely. I met many men, some of whom I took portraits of and occasionally had small conversations with—sometimes even over a beer—but never once did I feel like lingering around them longer than necessary. It seems impossible to me that a Western man today would be comfortable being photographed during sexual intercourse, let alone a sex worker doing that.
+
+    It remains a mystery to me how Mary Ellen Mark managed to capture such intimate images with such precision and mastery in her work on Falkland Road in India—even photographing customers in the cage rooms with the girls. Perhaps times are different now; it was a magazine that sent her down to Mumbai for those pictures, and such access likely doesn’t exist anymore. Maybe it’s no longer possible to do documentary projects of that nature easily. Still, I’m disappointed that she raised the bar so high for this kind of photography—and I haven’t lived up to it.`
   },
   {
     type: 'subheading',
