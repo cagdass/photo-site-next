@@ -16,14 +16,15 @@ const essayContent = {
     render: () => (
       <>
         <PhotoEssayText divClassName="-mt-20" textSize="text-base">
-          My name is Çağdaş—I’m a software engineer currently taking a break,
+          My name is Çağdaş—I’m a software engineer currently taking a career break,
           and a hobby photographer based in Stockholm, Sweden.
           Between December 2023 and June 2024,
           I spent about seven weeks photographing Soi 6,
           a bar street in Pattaya, Thailand.
           Initially, I shared these photos privately with friends and fellow photographers,
-          who encouraged me to consider publishing a book—something completely new to me.
-          Instead, I decided to first create a website and share my work online.
+          who encouraged me to consider publishing a book—something completely new to me. Some of the
+          photos will be showin at a group exhibition at the Arbetet Museum in Sweden later this year. But,
+          for the time being, I decided to create a website and share my work online.
           Earlier this year, I revisited the project, my personal notes and photos,
           posting a selection on the {" "}
           <Link
@@ -69,14 +70,14 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `I first arrived in Pattaya in December 2023. My photography teacher—a close friend—had arranged a place for me to stay. It was partly an escape from the Swedish winter, partly wanderlust. I can't recall whether I’d first heard of Pattaya from him, or if it was its reputation that had reached me. Either way, I was curious. I had three weeks of vacation from my software engineering job, which was draining the life out of me, and I decided to take it all.`
+    content: `I first arrived in Pattaya in December 2023. My photography teacher Halil—also a close friend—had arranged a place for me to stay. It was partly an escape from the Swedish winter, partly wanderlust. I can't recall whether I’d first heard of Pattaya from him, or if it was its reputation that had reached me. Either way, I was curious. I had three weeks of vacation from my software engineering job, which was draining the life out of me, and I decided to take it all.`
   },
   {
     type: 'component',
     collapsible: true,
     render: () => (
       <PhotoEssayText>
-        I had just started photography that summer. My teacher,
+        I had just started photography that summer. My teacher Halil,
         to whom I inevitably refer a lot throughout this writing,
         mentored me with informal lessons and themed assignments
         like nightlife, dreams, and taxi drivers. His homework
@@ -89,7 +90,7 @@ const essayContent = {
     type: 'text',
     content: `During one of our early homework assignments that summer, my teacher told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I believe black and white is more elegant. It cuts through the noise and lets you focus on what really matters.
 
-    But by September, our informal kitchen classes had come to an end. It was time for my teacher to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
+    But by September, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
 
     Before he left though, he gave me the key to his apartment, where I would spend long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite many signed with a dedication to him. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
@@ -126,7 +127,7 @@ const essayContent = {
             At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
           </PhotoEssayText>
           <PhotoEssayText>
-            The utility poles all around were a mess—too many cables tangled and dangling everywhere. My teacher warned me to watch out for them. He said, “They have poles like this in Japan because of earthquakes, but Pattaya isn’t near any fault lines, so I don’t know why.” Still, he was right—I had recognized those chaotic poles from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
+            The utility poles all around were a mess—too many cables tangled and dangling everywhere. Halil warned me to watch out for them. He said, “They have poles like this in Japan because of earthquakes, but Pattaya isn’t near any fault lines, so I don’t know why.” Still, he was right—I had recognized those chaotic poles from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
           </PhotoEssayText>
           <PhotoEssayText>
             Another small detail that stood out early on was the supermarkets, I have snapped photos of whatever interested me there. Pattaya had aisles upon aisles of dairy products—dozens of cheeses in all varieties, milk from multiple countries, yogurts in every shape and flavor. This was strikingly different from my time in smaller towns in the Philippines, where such variety was rare or nonexistent. It was a quiet reminder of how Pattaya was a global crossroads, catering to tastes far beyond its tropical locale.
@@ -154,9 +155,9 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `My teacher enabled my photography from day one. He pointed out photo opportunities, translated short conversations, and showed me which alleys were safe, which bars to avoid, where the light hit just right. If I misread a moment or hesitated, he’d tell me what went wrong.
+    content: `Halil enabled my photography from day one. He pointed out photo opportunities, translated short conversations, and showed me which alleys were safe, which bars to avoid, where the light hit just right. If I misread a moment or hesitated, he’d tell me what went wrong.
 
-    On my first night, after dinner, we went for a walk down Beach Road—something that quickly became our daily ritual. Halfway along, we reached the entrance to the notorious Walking Street. My teacher led me in.
+    On my first night, after dinner, we went for a walk down Beach Road—something that quickly became our daily ritual. Halfway along, we reached the entrance to the notorious Walking Street. Halil led the way in.
 
     The chaos hit immediately. Crowds of tourists clogged the narrow street. Clubs blaring different music from every side, the air thick with smoke and neon. Scantily dressed women rushed around in every direction. Vendors thrust laminated flyers into my face—some with explicit, graphic images advertising sex shows. Security guards stood outside every club, sizing everyone up. It was overwhelming. I felt like I was in the eye of a neon storm, with no way to think clearly, only try to make sense of it.`
   },
@@ -315,7 +316,7 @@ const essayContent = {
     type: 'text',
     content: `Apart from a trip to Chiang Mai and Bangkok for a few days, for the rest of my stay, even though I continued taking photos wherever I was, I returned to Soi 6 almost every day as part of our Beach Road walk—sometimes twice a day, once in the afternoon and again at night. My teacher usually came with me, offering tips on how to interact. He’d watch both me and the street, and later at home, he’d offer critique—on my presence, what I did or didn’t do.
 
-    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, binging TikToks, texting men. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric.`
+    I was starting to learn the rhythm: when the music started, when the bar stools were wiped down, when the girls stirred awake and had breakfast right where they’d work later. Later in the day, before customers started rolling in, they’d often sit idly at the bar, eyes glued to their smartphones—scrolling Instagram, binging TikToks, texting men. It was a digital lull, a quiet prelude to the chaos ahead. When the men began drifting in. Every hour had a different texture. In the afternoon, the street felt softer. There was space. By evening, it grew louder, more compressed, more electric. Save for a few girls that vaped quietly in corners, the faint swirl of smoke mixing with the humid night air.`
   },
   {
     type: 'image',
@@ -818,6 +819,19 @@ const essayContent = {
   },
   {
     type: 'subheading',
+    text: 'r/pattaya',
+    id: 'r_pattaya',
+  },
+  {
+    type: 'text',
+    content: `Much of the male foreign engagement in Pattaya was visible not only in person on Soi 6 but also online—in forums like Flashback in Sweden and subreddits such as r/Pattaya. Many posts come from English-speaking men, primarily tourists or expats, and frequently refer to local women using the common name “Ploy,” turning the women into a meme-like character.
+
+    One post titled “Ploy Broke Up with Me and Ghosted Me After 5 Months” laments a relationship ending and the woman moving on to a different partner. The top comment reads, “You never own Ploy, it’s just your turn. Always rent, never buy.”[^1] Another post questions, “So I met a girl last trip and now she has someone paying her money every month. But this trip she is still seeing me and hasn’t asked for any money. What is she looking for?”[^2] with a comment summarizing the living conditions of “Ploys”: “Y’all are always surprised when Ploy would rather stay in your nice AC hotel room and you pay for all her meals in a restaurant. Otherwise, she’s sharing a dorm room above a bar with 3 other Ploys per bed and eating off food carts.”
+
+    There have even been recent posts with AI-generated images and videos titled “Ploy’s Buffalo is Sick,” or “To Ploy Set,” etc. Posts such as “Miss It” gather many comments like, “We all do buddy… be grateful this kinda place exists for us to enjoy.”[^3] Further glorifying Pattaya, while another post asks how to have a group engagement with 5-6 "Ploys".`
+  },
+  {
+    type: 'subheading',
     text: 'Friends from Soi 6',
     id: 'friends_from_soi_6',
   },
@@ -878,7 +892,7 @@ const essayContent = {
         Do an Interrail all around Europe?
         Bikepack across Europe to Turkey—something
         I’d long dreamed of and{" "}
-        <Link href="/projects/bikepacking" className="underline text-blue-400 hover:text-blue-600">
+        <Link href="/bikepacking" className="underline text-blue-400 hover:text-blue-600">
           eventually and luckily managed later that year.
         </Link>
         &nbsp;Or stay put in Stockholm and search for another job? But in the end, it was dead clear.
