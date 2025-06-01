@@ -90,7 +90,7 @@ const essayContent = {
     type: 'text',
     content: `During one of our early homework assignments that summer, my teacher told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I believe black and white is more elegant. It cuts through the noise and lets you focus on what really matters.
 
-    But by September, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
+    But by autumn, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn't the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
 
     Before he left though, he gave me the key to his apartment, where I would spend long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite many signed with a dedication to him. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
@@ -111,7 +111,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `My photography teacher welcomed me at the bus station in Pattaya one late December night. He took me to the flat, handed me a key, and let me rest and adjust to the tropical warmth. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
+    content: `Halil welcomed me at the bus station in Pattaya one late December night. He took me to the flat, handed me a key, and let me rest and adjust to the tropical warmth. The next morning, despite the jetlag, I fell into his rhythm: gym, breakfast, a walk along Beach Road, dinner at the same family-run restaurant every evening.
 
     He also gave me a tour of the city and a few landmarks. While doing so, he outlined the city for me—the main road, Pattaya Klang, which led down to Beach Road. He showed me the streets that ran parallel to Beach Road, like Third Road and Soi Bukhao, pointing out which were one-way streets and noting various details. This introduction helped me orient myself within the city’s geography and daily flow.
 
@@ -175,7 +175,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `My teacher said he wanted to show me another bar street. He led me to Soi 6.
+    content: `Halil said he wanted to show me another bar street. He led me to Soi 6.
 
     It was a different kind of overwhelming. The bars were open-air, low to the ground, close enough to touch. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled up into one shapeless, abrasive roar.
 
@@ -280,7 +280,7 @@ const essayContent = {
     render:
       () => (
         <PhotoEssayText>
-          My teacher spoke quite a bit of Thai and started teaching me from day one. <em>Sawatdee khrap</em> for hello. <em>Sabai dee mai?</em> for how are you. <em>Tai ruup dai mai?</em> to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—<em>sawatdee khrap</em> became <em>savadikap</em>, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say <em>Nà-làk mâak mâak</em>, meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon!</em> One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked <em>Namkeng! Namkeng!</em>—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for <em>cold</em>. But it sure was entertaining.
+          Halil spoke quite a bit of Thai and started teaching me from day one. <em>Sawatdee khrap</em> for hello. <em>Sabai dee mai?</em> for how are you. <em>Tai ruup dai mai?</em> to ask for a photo. He’d already made a long list of phrases on his phone, transliterated into Turkish—<em>sawatdee khrap</em> became <em>savadikap</em>, easier for me to read and remember. I’d review them before dinner. He was good with people—charming, quick to joke, unafraid to make a fool of himself if it helped build rapport. To a mother holding her toddler, he’d say <em>Nà-làk mâak mâak</em>, meaning very cute. If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon!</em> One night, when it dropped to 22 degrees and locals pulled on hoodies, he hugged himself dramatically and shrieked <em>Namkeng! Namkeng!</em>—ice—rubbing his arms like he was freezing. Maybe he didn’t know the word for <em>cold</em>. But it sure was entertaining.
         </PhotoEssayText>
       )
   },
@@ -505,7 +505,7 @@ const essayContent = {
     type: 'text',
     content: `At first, I judged them—harshly. I wanted to photograph them in a way that exposed something. I wanted to make them look guilty. A few times, I did. One night, out walking along Beach Road, I caught an old man mid-negotiation—his hand resting on a girl’s waist, whispering something into her ear. He had a walking stick. He was old enough to be her great-grandfather. I got pissed off. I lifted my camera and took a shot—point-blank, face to face. He gave me a half-hearted chase, swinging his walking stick and shouting, “Idiot! Come back!” in a thick German accent. I didn’t stop. I didn’t even look back.
 
-    Later at home, my teacher asked, “What were you trying to prove?”`
+    Later at home, Halil asked me, “What were you trying to prove?”`
   },
   {
     type: 'image',
@@ -856,7 +856,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `I had loved Thailand. The warmth, the rhythm, even the chaos—it felt alive in a way Stockholm hadn’t for years. I was filled with dread the moment the plane landed. Minus temperatures outside. A wall of gray. In my head, I heard my teacher’s voice—how he was always the last to get off the plane at Arlanda, dragging his feet, dreading the cold—even though he only returns in spring.
+    content: `I had loved Thailand. The warmth, the rhythm, even the chaos—it felt alive in a way Stockholm hadn’t for years. I was filled with dread the moment the plane landed. Minus temperatures outside. A wall of gray. In my head, I heard Halil's voice—how he was always the last to get off the plane at Arlanda, dragging his feet, dreading the cold—even though he only returns in spring.
 
     I hadn’t had many chances to travel during my six-plus years in Sweden. Gaining citizenship took time and mental stamina, even if I didn’t have to wait as long as some people do. And now, after finally getting that little EU passport of top-tier privilege, I was returning to a place that felt emotionally colder than ever.
 
@@ -874,7 +874,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `Still, I made a small album on my phone of what I thought were the best. I showed it to a few friends. They were astonished. I met a friend of my teacher's at an exhibition, another photographer I look up to. Later when I met him in his darkroom in the old city of Stockholm he told me I had to make a book from my photos, but that I have to go back and get closer. Asking to get photos published—easy for him to say, but I was flattered. The reactions I received made me want to return. To go deeper.
+    content: `Still, I made a small album on my phone of what I thought were the best. I showed it to a few friends. They were astonished. I met Anders, a friend of my teacher Halil's at an exhibition, another strong photographer. Later when I met him in his darkroom in the old city of Stockholm he told me I had to make a book from my photos, but that I have to go back and get closer. Asking to get photos published—easy for him to say, but I was flattered. The reactions I received made me want to return. To go deeper.
 
     But life in Stockholm was far from great. Work was still draining me. Money was tight. The thought of enduring another few months of Swedish winter filled me with dread. I started looking for another job, but the idea of jumping straight into another software engineering role without a real break felt unbearable. I had no energy left.
 
@@ -901,7 +901,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `I rented out my Stockholm bedsit, which more or less covered the mortgage, and booked a one-way ticket to Singapore. My teacher joined me there. We walked, took pictures, ate well. After a few days of sightseeing, we returned to Pattaya. The plan was to take photos, travel somewhere new in Asia, return to our base in Pattaya and repeat.`
+    content: `I rented out my Stockholm bedsit, which more or less covered the mortgage, and booked a one-way ticket to Singapore. Halil joined me there. We walked, took pictures, ate well. After a few days of sightseeing, we returned to Pattaya. The plan was to take photos, travel somewhere new in Asia, return to our base in Pattaya and repeat.`
   },
   {
     type: 'image',
@@ -917,11 +917,11 @@ const essayContent = {
     type: 'text',
     content: `When I got back to Pattaya in March, some people on Soi 6 recognized me. The recognition was warm—smiles, waves, the occasional “photo man!” called out from a bar. That familiarity softened my return.
 
-    I spent a week in Pattaya that March. This time, my teacher didn’t join me in Soi 6. He said that street drained him. I understood. It wasn’t light work. We continued on to the Philippines and Taiwan—two of the few countries in Asia my teacher hadn’t yet visited.
+    I spent a week in Pattaya that March. This time, my teacher didn’t join me in Soi 6. He said that street drained him. I understood. It wasn’t light work. We continued on to the Philippines and Taiwan—two of the few countries in Asia that Halil hadn’t yet visited.
 
-    A few days before I was to leave on a trip to the Philippines with my teacher, I got to know an elderly South African man at the gym. He spoke about his ex-girlfriend from the Philippines—generalizing the beauty of Filipina women in his own blunt way and wistfully wishing he was my age and visiting the Philippines now—but then again, that was part of the scene’s rough honesty. Despite this, he had clearly made an effort to speak fluent Thai and understand local customs, and he talked about his Thai girlfriend with respect. That set him apart from many others who do not deign to be part of Thai society, except to spend money.
+    A few days before I was to leave on a trip to the Philippines with Halil, I got to know an elderly South African man at the gym. He spoke about his ex-girlfriend from the Philippines—generalizing the beauty of Filipina women in his own blunt way and wistfully wishing he was my age and visiting the Philippines now—but then again, that was part of the scene’s rough honesty. Despite this, he had clearly made an effort to speak fluent Thai and understand local customs, and he talked about his Thai girlfriend with respect. That set him apart from many others who do not deign to be part of Thai society, except to spend money.
 
-    I’d been to the Philippines before and helped translate here and there and assumed the tour guide's mantle. A few days after the earthquake in Taiwan we were back in our base. And soon later my teacher returned to Stockholm. Now I was alone.
+    I’d been to the Philippines before and helped translate here and there and assumed the tour guide's mantle. A few days after the earthquake in Taiwan we were back in our base.
 
     What I hadn’t planned for was a motorcycle accident. It happened just before we left for Manila—another motorcyclist crashed into me, and I twisted my ankle badly. I still feel it at the time of writing this, 13 months after the crash and I still haven't managed to see a doctor about it, which is a long story in itself. We, anyways, continued the trip, but my ankle certainly didn't make it easier. After a few weeks of touristing, we returned to Pattaya. During our travels—whether in Singapore, Davao City, or Cebu City—we stumbled upon scenes that echoed Pattaya’s nightlife and sex work culture, though always on a smaller scale. Pattaya remained unmatched in scale, openness, and intensity. And I wasn't ready to deal with that intensity when we returned to Pattaya in April, the pain lingered and I just didn't mentally have the energy to put myself out there. I stayed home some days. But later on, I pushed through. I figured I’d keep photographing for the project while I still had the energy, and start traveling once I needed space. A win-win. I spent another three weeks in Pattaya that April.`
   },
@@ -932,7 +932,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `Linda had reached out while I was traveling in Taiwan. One morning, she texted me saying she’d heard I was in Pattaya. I explained I wasn’t—I was on the road with my teacher. I sent her a photo of the three of us: me, him, and an old friend from Taiwan who had been showing us around. Linda asked if my Taiwanese friend was my “boyfriend.” At first, I thought she was teasing—but later, I learned that the Thai word แฟน (faen) doesn’t specify gender. It just means “romantic partner.”
+    content: `Linda had reached out while I was traveling in Taiwan. One morning, she texted me saying she’d heard I was in Pattaya. I explained I wasn’t—I was on the road with Halil. I sent her a photo of the three of us: me, him, and an old friend from Taiwan who had been showing us around. Linda asked if my Taiwanese friend was my “boyfriend.” At first, I thought she was teasing—but later, I learned that the Thai word แฟน (faen) doesn’t specify gender. It just means “romantic partner.”
 
     We hadn’t talked in a while, so I told her we could get a coffee and catch up once I was back. She said okay.
 
@@ -960,7 +960,7 @@ const essayContent = {
     render: () => (
       <>
         <PhotoEssayText>
-          My teacher had returned to Sweden just as Songkran began.
+          Halil had returned to Sweden just as Songkran began.
           He got splashed a little—but nothing compared to what was waiting for me.
           Luckily for me, he had spoken to his friend who owned the two apartments and, I suspect,
           put in a good word. I was allowed to stay as long as I wanted.
@@ -1051,7 +1051,7 @@ const essayContent = {
           It must have been the same machinery, just smaller.
           Built on the same logic of exploitation and now one bar by the same people that exploit Thai sex workers in Pattaya.
           It made my stomach turn.
-          I remember immediately texting my teacher who was back in Stockholm.
+          I remember immediately texting Halil who was back in Stockholm.
           He said to be careful, and not be too rash to take photos.
         </PhotoEssayText>
       </>

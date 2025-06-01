@@ -67,6 +67,7 @@ export default function PhotoEssayContent({
 
   const [tocVisible, setTocVisible] = useState(true);
   const [tocVisibleDesktop, setTocVisibleDesktop] = useState(true);
+  const [isUserScrolling, setIsUserScrolling] = useState(true);
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const toggleCollapse = (id: string) => {
@@ -74,25 +75,26 @@ export default function PhotoEssayContent({
   };
 
   function handleJumpTo(id: string) {
-    // find the group (heading) that contains this id
     const group = groups.find(g =>
       g.heading.id === id || g.blocks.some(b => b.id === id)
     );
 
     if (group) {
-      // open the section
       setCollapsedSections(prev => ({
         ...prev,
         [group.heading.id]: false
       }));
 
-      // wait for DOM to update, then scroll
+      // temporarily disable scroll tracking
+      setIsUserScrolling(false);
+      setTimeout(() => setIsUserScrolling(true), 1000);
+
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 500); // ⏱️ slight delay to let expand animation/layout finish
+      }, 500);
     }
   }
 
@@ -226,15 +228,18 @@ export default function PhotoEssayContent({
 
   useEffect(() => {
     const handleScroll = () => {
+      if (!isUserScrolling) return;
+      if (!tocVisibleDesktop) return;
+
       let currentId = null;
       for (const heading of headings) {
         const el = document.getElementById(heading.id);
         if (el) {
           const { top } = el.getBoundingClientRect();
-          if (top <= 80) { // adjust offset for your header height
+          if (top <= 80) {
             currentId = heading.id;
           } else {
-            break; // since headings are in order
+            break;
           }
         }
       }
@@ -242,10 +247,10 @@ export default function PhotoEssayContent({
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // init on mount
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [headings]);
+  }, [headings, isUserScrolling]);
 
   function renderEssayContent() {
     return (
@@ -374,11 +379,9 @@ export default function PhotoEssayContent({
 
       {prelude && <div className="my-12">{prelude}</div>}
 
-
-
-      <div className="flex gap-4 px-4 max-w-[1400px] mx-auto">
+      <div className="flex lg:justify-start justify-center gap-4 px-4 max-w-[1400px] mx-auto">
         {hasTableOfContents && (
-          <div className={`hidden lg:flex flex-col self-start sticky top-24 z-30 ${tocVisibleDesktop ? 'w-48' : 'w-8'}`}>
+          <div className={`hidden lg:flex flex-col self-start sticky top-24 z-30 ${tocVisibleDesktop ? 'w-48' : 'w-8 mr-40'}`}>
             <button
               onClick={() => setTocVisibleDesktop(prev => !prev)}
               className="cursor-pointer text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded mb-2"
@@ -395,7 +398,7 @@ export default function PhotoEssayContent({
             </div>
           </div>
         )}
-        <main className="flex-1">
+        <main className="flex-1 align-center min-w-0 max-w-[700px]">
           {renderEssayContent()}
         </main>
         <div className="w-8"></div>
