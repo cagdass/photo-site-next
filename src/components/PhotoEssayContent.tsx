@@ -27,19 +27,19 @@ type CustomSlide = SlideImage & {
   color?: boolean;
 };
 
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false);
+function useIsLgUp(breakpoint = 1024) {
+  const [isLgUp, setIsLgUp] = useState(false);
 
   useEffect(() => {
     function checkWidth() {
-      setIsMobile(window.innerWidth < breakpoint);
+      setIsLgUp(window.innerWidth >= breakpoint);
     }
     checkWidth();
     window.addEventListener("resize", checkWidth);
     return () => window.removeEventListener("resize", checkWidth);
   }, [breakpoint]);
 
-  return isMobile;
+  return isLgUp;
 }
 
 export default function PhotoEssayContent({
@@ -66,6 +66,7 @@ export default function PhotoEssayContent({
   const [showColorMap, setShowColorMap] = useState<Record<number, boolean>>({});
 
   const [tocVisible, setTocVisible] = useState(true);
+  const [tocVisibleDesktop, setTocVisibleDesktop] = useState(true);
   const [activeId, setActiveId] = useState<string | null>(null);
 
   const toggleCollapse = (id: string) => {
@@ -202,11 +203,11 @@ export default function PhotoEssayContent({
     return tempGroups;
   }, [essayBlocks]);
 
-  const isMobile = useIsMobile();
+  const isLgUp = useIsLgUp();
 
-  // initialize collapse state on mount and when isMobile changes
+  // initialize collapse state on mount and when isLgUp changes
   useEffect(() => {
-    if (isMobile) {
+    if (!isLgUp) {
       const allCollapsed: Record<string, boolean> = {};
       groups.forEach(g => {
         if (g.heading.id !== 'default' && g.heading.collapsed !== false) {
@@ -217,7 +218,7 @@ export default function PhotoEssayContent({
     } else {
       setCollapsedSections({});
     }
-  }, [isMobile, groups]);
+  }, [isLgUp, groups]);
 
   const headings = essayBlocks
     .filter(block => block.type === "heading" || block.type === 'subheading')
@@ -372,15 +373,37 @@ export default function PhotoEssayContent({
       </div>
 
       {prelude && <div className="my-12">{prelude}</div>}
-      {hasTableOfContents && (
-        <div className="lg:block w-48 h-0 mt-6 sticky top-24 left-2">
-          <TableOfContents headings={headings} activeId={activeId} />
-        </div>
+
+
+
+      <div className="flex gap-4 px-4 max-w-[1400px] mx-auto">
+        {hasTableOfContents && (
+          <div className={`hidden lg:flex flex-col self-start sticky top-24 z-30 ${tocVisibleDesktop ? 'w-48' : 'w-8'}`}>
+            <button
+              onClick={() => setTocVisibleDesktop(prev => !prev)}
+              className="cursor-pointer text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded mb-2"
+            >
+              {tocVisibleDesktop ? 'Hide' : '☰'}
+            </button>
+
+            <div
+              className={`transition-opacity duration-300 ${tocVisibleDesktop ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+            >
+              <div className="max-h-[80vh] pb-20 overflow-y-auto pr-2">
+                <TableOfContents headings={headings} activeId={activeId} />
+              </div>
+            </div>
+          </div>
+        )}
+        <main className="flex-1">
+          {renderEssayContent()}
+        </main>
+        <div className="w-8"></div>
+      </div>
+
+      {!isLgUp && hasTableOfContents && (
+        <MobileTOC headings={headings} onJumpTo={handleJumpTo} />
       )}
-      {isMobile && hasTableOfContents && <MobileTOC headings={headings} onJumpTo={handleJumpTo} />}
-      <main className="flex-1">
-        {renderEssayContent()}
-      </main>
 
       <Lightbox
         open={lightboxIndex !== null}

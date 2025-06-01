@@ -79,7 +79,7 @@ export default function MobileTOC({ headings, onJumpTo }: MobileTOCProps) {
 
       {/* Fullscreen TOC Overlay */}
       {open && (
-        <div className="fixed inset-0 bg-[var(--background)] text-[var(--foreground)] z-50 p-6 overflow-y-auto">
+        <div className="fixed inset-0 bg-[var(--background)] text-[var(--foreground)] z-50 p-6 pb-20 overflow-y-auto">
           <button
             onClick={() => setOpen(false)}
             className="absolute top-4 right-4 text-2xl"
