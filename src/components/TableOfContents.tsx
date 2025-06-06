@@ -20,6 +20,10 @@ export default function TableOfContents({ headings, activeId }: ToCProps) {
             className="text-gray-500 hover:underline"
             onClick={e => {
               e.preventDefault();
+              if (window.location.hash === '#top') {
+                history.replaceState(null, '', ' ');
+              }
+              window.location.hash = '#top';
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >

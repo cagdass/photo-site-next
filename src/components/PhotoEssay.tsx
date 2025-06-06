@@ -87,34 +87,36 @@ export default function PhotoEssay({
 
   return (
     <div className="font-garamond">
-      <div className="photo-essay-header px-4">
+      <div id="top" className="photo-essay-header px-4">
         <center>
-          <h1 id="cover-title" className="essay-title text-4xl font-bold mb-2">{title}</h1>
-          <p className="text-lg italic">{subtitle}</p>
-          <p className="essay-author">by Çağdaş</p>
-          {published && updatedDate && (
-            <p className="essay-published text-sm text-gray-400">{publishedDate}, {updatedDate}</p>
-          )}
-          {(
-            published && !updatedDate && (
-              <p className="essay-published text-sm text-gray-400">{publishedDate}</p>
-            )
-          )}
-          {!published && (
-            <p className="essay-published text-sm text-red-400">Work in progress</p>
-          )}
-          <div className="share-buttons mb-4 flex justify-center">
-            <ShareButtons url={shareUrl!} title={shareTitle!} />
-          </div>
-          {!photoOnly && showPhotoEssayToggle && (
-            <div className="flex justify-center mb-6">
-              <ToggleSwitch
-                label="Photo-essay mode"
-                checked={showEssay}
-                onChange={() => setShowEssay(!showEssay)}
-              />
+          <section>
+            <h1 id="cover-title" className="essay-title text-4xl font-bold mb-2">{title}</h1>
+            <p className="text-lg italic">{subtitle}</p>
+            <p className="essay-author">by Çağdaş</p>
+            {published && updatedDate && (
+              <p className="essay-published text-sm text-gray-400">{publishedDate}, {updatedDate}</p>
+            )}
+            {(
+              published && !updatedDate && (
+                <p className="essay-published text-sm text-gray-400">{publishedDate}</p>
+              )
+            )}
+            {!published && (
+              <p className="essay-published text-sm text-red-400">Work in progress</p>
+            )}
+            <div className="share-buttons mb-4 flex justify-center">
+              <ShareButtons url={shareUrl!} title={shareTitle!} />
             </div>
-          )}
+            {!photoOnly && showPhotoEssayToggle && (
+              <div className="flex justify-center mb-6">
+                <ToggleSwitch
+                  label="Photo-essay mode"
+                  checked={showEssay}
+                  onChange={() => setShowEssay(!showEssay)}
+                />
+              </div>
+            )}
+          </section>
         </center>
       </div>
       {showEssay
