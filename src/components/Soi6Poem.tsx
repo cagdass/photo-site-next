@@ -4,12 +4,12 @@ import React from 'react';
 
 export default function Soi6Poem() {
   return (
-    <div className="py-8 px-4 max-w-2xl mx-auto">
+    <div className=" px-4 max-w-2xl mx-auto">
       <div className="text-lg leading-relaxed">
         <section className="photo-essay-poem">
           <p className="poem-intro text-base">
-            This doesn’t end with a caption. It ends with a scribble I had forgotten about.
-            Maybe it says more than the photographs ever could.
+            Here is s a scribble I had long forgotten about.
+            Maybe it says some things the photographs forgot.
           </p>
           <br />
 

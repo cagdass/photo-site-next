@@ -76,10 +76,7 @@ const essayContent = {
     collapsible: true,
     render: () => (
       <PhotoEssayText>
-        I had just started photography that summer. My teacher Halil,
-        to whom I inevitably refer a lot throughout this writing,
-        mentored me with informal lessons and themed assignments
-        like nightlife, dreams, and taxi drivers. His homework
+        I began photography that summer. My teacher, Halil—whom I’ll mention often here—mentored me through informal lessons and themed assignments on nightlife, dreams, and taxi drivers. His homework
         taught me how to move around with a camera,
         approach strangers, and <em>shoot with my heart, not my brain</em>.
       </PhotoEssayText>
@@ -89,11 +86,11 @@ const essayContent = {
     type: 'text',
     content: `During one of our early homework assignments that summer, he told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I suspect it was partly a trick he played on me—after all, all his published books are in black and white, though not because he lacked an understanding of light. In any case, monochrome has worked for me ever since, and I prefer it—even though I’ve added an option to show color versions of photos where available throughout this essay.
 
-    But by autumn, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn’t the typical sex tourist—rather, staying in a friend’s apartment in Thailand rent-free made financial sense, and so did escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
+    But by autumn, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn’t the typical sex tourist; rather, staying rent-free in a friend’s Thai apartment made financial sense—just like escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
 
     Before he left though, he gave me the key to his apartment, where I would spend long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite many signed with a dedication to him. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
-    That winter, Stockholm felt lifeless. Colder and darker than usual. My job was draining me. I was buried under my mortgage and rising interest rates. I could barely afford to do the things I used to. I’d spend what little remained of my salary on a few screenings at the film festival, then scraping by on potatoes till the end of the month. Street photography no longer gave me the same spark. Maybe it’s a weak excuse, but I still think Stockholm isn’t the most exciting place for photography—too clean, too quiet, too conforming.
+    That winter, Stockholm felt lifeless. Colder and darker than usual. My job was draining me. I was drowning in mortgage payments and rising interest rates. The things I used to afford felt out of reach. I’d spend what little salary I had left on film festival screenings, then scrape by on potatoes until the month’s end. Street photography no longer gave me the same spark. Maybe it’s a weak excuse, but I still think Stockholm isn’t the most exciting place for photography—too clean, too quiet, too conforming.
 
     Halil and I stayed in touch. By mid-November, when I asked him about visiting him in Thailand, he said I could come. He had a place for me to stay—the vacant unit next door was his friend’s too. I asked if three weeks, all I could take off from work, would be too long. He said, “You can stay here rent-free for as long as you want.”`
   },
@@ -114,7 +111,7 @@ const essayContent = {
 
     He also gave me a tour of the city and a few landmarks. While doing so, he outlined the city for me—the main road, Pattaya Klang, which led down to Beach Road. He showed me the streets that ran parallel to Beach Road, like Third Road and Soi Bukhao, pointing out which were one-way streets and noting various details. This introduction helped me orient myself within the city’s geography and daily flow right from the start.
 
-    I had broken my camera back in Stockholm just before the trip. I worried I wouldn’t be able to photograph anything—especially given all the hype around Pattaya’s many contrasts, most of which interested me, particularly the dynamic of white men purchasing sex from poorer locals—but he lent me his: the older Fujifilm X-Pro1 I had practiced with during the summer, before splashing the cash on an X-Pro3 of my own. We shared the same 18mm f/2.0 lens. The setup was lightweight, unimposing—just wide enough for the close, intimate frames I wanted. It wasn’t as good as my own camera in low light, but somehow its softness brought out a transient effervescence where light was scarce.`
+    I had broken my camera back in Stockholm just before the trip. I worried I wouldn’t be able to photograph anything—especially given all the hype around Pattaya’s many contrasts, most of which interested me, particularly the dynamic of white men purchasing sex from poorer locals—but he lent me his: the good old Fujifilm X-Pro1 I had practiced with during the summer, before splashing the cash on a X-Pro3 of my own, a newer release with better capabilities. We did, however, share the same 18mm f/2.0 lens. The setup was lightweight, unimposing—just wide enough for the close, intimate frames I wanted. It wasn’t as good as my own camera in low light, but somehow its softness brought out a transient effervescence where light was scarce.`
   },
   {
     type: 'component',
@@ -126,7 +123,7 @@ const essayContent = {
             At first, I photographed whatever caught my eye—stray dogs, food carts, fish markets, signs I couldn’t read.
           </PhotoEssayText>
           <PhotoEssayText>
-            The utility poles all around were a mess—too many cables tangled and dangling everywhere. Halil warned me to watch out for them. He said, “They have poles like this in Japan because of earthquakes, but Pattaya isn’t near any fault lines, so I don’t know why.” Still, he was right—I had recognized those chaotic poles from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
+            Utility poles tangled with cables crowded every street. Halil warned me to watch my head. ‘Japan has poles like these for earthquakes,’ he said, ‘but Pattaya isn’t near any fault lines—I don’t know why.’ Still, I recognized the chaos from Moriyama’s gritty photos in his book collection. I could not resist photographing them. I felt like I had stepped into a new world.
           </PhotoEssayText>
           <PhotoEssayText>
             Another small detail that stood out early on was the supermarkets.
@@ -150,13 +147,11 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `But with my photography, I found myself repeatedly drawn to a particular pairing: international couples. Whenever I saw an older Western man—what locals call a farang, meaning foreigner—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it. The contrast spoke volumes. But what struck me just as much was the silence between them. I rarely saw them talk. They’d sit next to each other at a bar or restaurant, their bodies close but their eyes elsewhere—on their phones, on the street, on nothing in particular. It was as if they existed side by side, not together.
-
-    I thought about a girl I once went out with. She had a Swedish father and a Filipina mother. She looked Asian, with little to give her heritage away except for her broad frame and tall height.
+    content: `I once went out with a girl who had a Swedish father and Filipina mother. She looked Asian—her broad frame and tall stature were the only visible hints of her mixed heritage.
 
     She once told me she had stopped walking hand in hand with her father when she was barely a teenager—people would mistake them for a mail-order couple, and her dad for her husband. I remember how bizarre it sounded, and how deeply it must have hurt. In Sweden, growing up not looking “ethnically Swedish” already makes life hard enough. In the Philippines, she said, locals would sometimes shout at them in the street, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
 
-    In my innocent ignorance, around the time we first met I had once passed her a short story—Paper Menagerie by Ken Liu that was on my short story meet-up. She found more in it than I had, and hearing her point of view taught me things I had yet to understand.
+    In my innocent ignorance, around the time we first met I had once passed her a short story—Paper Menagerie by Ken Liu that was discussed with my short story meet-up group. She found more in it than I had, and hearing her point of view taught me things I had yet to understand.
 
     A month or two before arriving in Thailand, I helped organize my teacher’s photobook collection to put it up for sale—browsing through over a thousand worn, signed, lived-in volumes. Two books caught my eye: Kungariket and Drottninglandet by Elin Berge. They portrayed Swedish–Thai couples, always with the Thai partner being a woman—one tracing their lives in Sweden, the other in Thailand. Sitting with those books in silence, slowly flipping each page, I felt the quiet distance and tender awkwardness of coexisting worlds. Even before setting foot in Thailand, I found myself wondering what I might see. What I might photograph.
 
@@ -372,19 +367,31 @@ const essayContent = {
           </sup>.
         </PhotoEssayText>
         <PhotoEssayText>
+          I started walking Soi 6/1 often,
+          partly to catch my breath,
+          partly to find more natural moments—away from the endless calls of “handsome man” and
+          the engineered performances on the main street.
+          It was there that I quickly learned something else: Soi 6/1 was where many of the <em>kathoey</em>s—Thai trans women—waited for customers.
+        </PhotoEssayText>
+        <PhotoEssayText>
           I saw kathoeys everywhere in Thailand—working at 7-Elevens,
           in massage parlors, just walking down the street.
           They were openly visible, a natural part of everyday life.
           Some were engaged in sex work, not only in Pattaya.
           I remember one morning in Chiang Mai when a tuk-tuk driver shouted at me,
           making a crude gesture—grabbing his elbow and raising his forearm—and yelled,
-          “I have ladyboy, big cock, big cock.” Despite the bluntness, their visibility felt normalized.
+          “I have ladyboy, big cock, big cock.” The bluntness was jarring,
+          but what struck me more was how normalized their presence felt.
+        </PhotoEssayText>
+        <PhotoEssayText>
           This stood in stark contrast to Sweden, where I rarely saw openly trans people,
           and where LGBTQ+ folks were often marginalized behind closed doors,
           despite the country’s progressive reputation.
           That contrast made me realize how cultures shape visibility
           and acceptance—and how the kathoeys of Soi 6
           were far more than exotic performers; they were part of the gang.
+        </PhotoEssayText>
+        <PhotoEssayText>
           Of course, I’m not part of Thai society and don’t speak the language,
           so I can’t claim to know what happens in smaller circles.
           But my experience, along with documentaries
@@ -393,19 +400,9 @@ const essayContent = {
           </sup> I’ve watched since returning,
           convinces me that kathoeys are an integral part of the social fabric.
         </PhotoEssayText>
-        <PhotoEssayText>
-          I started walking Soi 6/1 often,
-          partly to catch my breath,
-          partly to find more natural moments—away from the endless calls of “handsome man” and
-          the engineered performances on the main street.
-          It was there that I quickly learned something else: Soi 6/1 was where many of the <em>kathoey</em>s—Thai trans women—waited for customers.
-        </PhotoEssayText>
+
       </>
     )
-  },
-  {
-    type: 'text',
-    content: `In the shadows of the bigger show, another reality unfolded. It was quieter, less aggressive, more vulnerable somehow. And it taught me that Pattaya’s economy of desire had many layers—not all of them equally seen.`
   },
   {
     type: 'image',
@@ -604,7 +601,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `Once, a huge guy—easily close to two meters tall—appeared out of nowhere and slammed his arm onto my back, shouting, “What’s up?” I was startled for a moment, but quickly realized he was simply high and being friendly in his own way. He was British. We exchanged a few words, I took a photo of him, and then he spotted a bar girl. Without hesitation, he wrapped a long shawl he was carrying around her shoulders and pulled her away. She didn’t resist. She just went with him. He disappeared just as suddenly as he had apppeared.
+    content: `Once, a huge guy—easily close to two meters tall—appeared out of nowhere and slammed his arm onto my back, shouting, “What’s up?” I was startled for a moment, but quickly realized he was simply high and being friendly in his own way. He was British. We exchanged a few words, I took a photo of him, and then he spotted a bar girl. Without hesitation, he wrapped a long shawl he was carrying around her shoulders and pulled her away. She didn’t resist. She just went with him. He disappeared just as suddenly as he had appeared.
 
     At the time, I didn’t even know about the bar-fine system—how a customer pays a fee, usually between 1,500 and 2,000 baht, to the bar to “take” a woman out. All I knew was that what I had witnessed felt absurd. And it still does—unless I somehow missed him paying.
 
@@ -856,7 +853,7 @@ const essayContent = {
   {
     girl: 'Mint',
     type: 'text',
-    content: `One of the people I grew close to on Soi 6 was Mint—a kathoey and under another pseudonym. She was upfront from the beginning. As she put it, “I’m ladyboy.”. At first, she saw me as a potential customer. I gently explained I wasn’t interested in that—but asked if I could take her photograph. She absolutely loved the idea. She posed like an experienced model—serious expression, sharp angles—flowing from one stance to the next while I scrambled to frame her properly amid the chaos of Soi 6.
+    content: `One of the people I grew close to on Soi 6 was Mint—a kathoey, and under another pseudonym. At first, she saw me as a potential customer. She was upfront from the start: the first thing she said was, “I’m ladyboy.” I gently explained I wasn’t interested in that—but asked if I could take her photograph. She lit up at the idea. When I raised the camera, she posed like a seasoned model—serious expression, sharp angles—flowing effortlessly from one stance to the next while I scrambled to frame her properly amid the chaos of Soi 6.
 
     Mint became my most enthusiastic model. If I didn't show up one day, she’d text: “I have nice makeup today...no photo?” If I walked past her bar without stopping, she’d run out and drag me back—literally, with strong arms. She was taller than me, stronger too, and completely at ease in her body.
 
@@ -1311,7 +1308,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-lost.jpg',
-    caption: 'Frenchman, a photo I had not exported, only a low-resolution preview survived, June 2024.'
+    caption: 'Frenchman, a photo whose export is missing too, only a low-resolution preview survived, June 2024.'
   },
   {
     type: 'component',
@@ -1351,16 +1348,16 @@ const essayContent = {
     type: 'text',
     content: `Sometimes I wonder if I really documented anything—or if I just circled around it. I walked. I watched. I listened. I photographed. That’s what I brought back.
 
-    When I started writing this, I reached out to every NGO I could find operating in Pattaya. I told them briefly what I had done—offered to mention their work here, in case someone reading this might want to help. I didn’t hear back from any of them.
+    Before writing this, I reached out to every NGO I could find operating in Pattaya. I told them briefly what I had done—offered to mention their work here to give anyone reading this and looking at the pictures a way to help. But honestly, I’m not sure how to help myself. And I didn’t hear back from any of them.
 
-    And yet—despite everything—photography brought me joy. Maybe that’s the most complicated part. Among all this darkness, it gave me something to hold. Something to do. A way to care.
+    And yet—despite everything—photography brought me joy. Maybe that’s the most complicated part.
 
-    That’s what’s left. And I’m leaving it here.`
+    This is what remains: the fragments of a place, its people, and the stories that I had to share. I leave them here, for you to see, to remember and to reckon with.`
   },
   {
     type: 'heading',
-    text: 'Closing',
-    id: 'closing',
+    text: 'A Closing Scribble',
+    id: 'scribble',
     collapsed: true,
   },
   {
@@ -1379,35 +1376,6 @@ const essayContent = {
     alt: 'Closing image from Soi 6',
     caption: 'Dog with a bottle, December 2023.',
   },
-  // {
-  //   item: 'footnotes',
-  //   type: 'component',
-  //   collapsible: false,
-  //   render: () => (
-  //     <section className="mt-12 border-t pt-6" id="footnotes">
-  //       <h2 className="text-lg font-semibold mb-4">Footnotes</h2>
-  //       <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
-  //         <li id="footnote-1" className="mt-10 text-sm text-gray-600">
-  //           [1] Joakim Medin, <i>Thailandsvenskarna</i>, 2019.
-  //           <a href="https://joakimmedin.se/wp-content/uploads/2018/12/Welcome-to-Sin-City-Schyst-resande-okt-2018.pdf"
-  //             className="footnote-ref text-blue-600 hover:underline ml-1" target="_blank" rel="noopener noreferrer">
-  //             PDF ↗
-  //           </a>
-  //           <span
-  //             onClick={() => {
-  //               const el = document.getElementById('ref-1');
-  //               if (el) el.scrollIntoView({ /* behavior: 'smooth' */ });
-  //             }}
-  //             className="ml-2 cursor-pointer text-blue-600 hover:underline"
-  //           >
-  //             ↩︎
-  //           </span>
-  //         </li>
-  //         {/* more footnotes */}
-  //       </ol>
-  //     </section>
-  //   )
-  // }
   {
     type: 'heading',
     id: 'glossary_and_references',
@@ -1418,11 +1386,13 @@ const essayContent = {
     items: [
       { term: 'Farang - ฝรั่ง', definition: 'Thai slang for foreigner, typically white Westerners.' },
       { term: 'Faen - แฟน', definition: 'Thai word for “romantic partner” or “significant other.” Unlike English, faen is gender-neutral and can refer to a boyfriend, girlfriend, or spouse. The term is widely used in Thai conversation and doesn’t specify the legal status or gender of the relationship. It’s common for Thais to refer to long-term partners simply as faen regardless of whether they’re married.' },
-      { term: 'Kathoey - กะเทย', definition: 'A Thai term referring to people assigned male at birth who present femininely. This can include transgender women and, in some contexts, effeminate gay men. While some people in Thailand embrace the term, others may prefer to be identified simply as women or by other labels. The English word “ladyboy” is often used by the locals as well as commonly used in media and tourism but is often considered disrespectful.' },
+      { term: 'Kathoey - กะเทย', definition: 'A Thai term referring to people assigned male at birth who present femininely. This can include transgender women and, in some contexts, effeminate gay men. While some people in Thailand embrace the term, others may prefer to be identified simply as women or by other labels. The English word “ladyboy” is often used by the locals as well as commonly used in media and tourism but is often considered disrespectful by Western standards.' },
       { term: 'Soi - ซอย', definition: 'A small side street branching off a major road in Thailand.' },
       { term: 'Boom boom', definition: 'Colloquial Thai-English term used by sex workers to mean sexual intercourse.' },
       { term: 'Bar fine', definition: 'A fee paid to a bar to take a worker out, typically covering lost income for that night.' },
-      { term: 'Mamasan', definition: 'Originally a Japanese term (ママさん) used to respectfully address a woman in charge of a bar or hostess club. In Thai bar culture, it refers to the woman—often older—who manages the bar and its workers. She recruits staff, oversees daily operations, and enforces rules.' }
+      { term: 'Lady drink', definition: 'A non-alcoholic or lightly alcoholic drink that customers buy for sex workers to keep them company.' },
+      { term: 'Mamasan', definition: 'Originally a Japanese term (ママさん) used to respectfully address a woman in charge of a bar or hostess club. In Thai bar culture, it refers to the woman—often older—who manages the bar and its workers. She recruits staff, oversees daily operations, and enforces rules.' },
+      { term: 'Soi 6/1', definition: 'A sub-street or alley adjacent to Soi 6.' }
     ]
   },
   {

@@ -272,14 +272,15 @@ export default function PhotoEssayContent({
           }
         }
       }
+      console.log(`setting ${currentId}`);
       setActiveId(currentId);
     };
 
-    // window.addEventListener('scroll', handleScroll, { passive: true });
-    // handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [headings, isUserScrolling]);
+  }, [headings, isUserScrolling, tocVisibleDesktop]);
 
   function renderEssayContent() {
     return (
