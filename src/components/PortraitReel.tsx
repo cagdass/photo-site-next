@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 
@@ -57,15 +58,15 @@ export default function PortraitReel({
         className="relative flex scroll-container gap-4 overflow-x-auto px-2 py-4 snap-x snap-mandatory scroll-smooth"
         ref={scrollContainerRef}
       >
-        <div
+        <button
           onClick={() => scrollByImageWidth('left')}
-          className="sticky left-0 top-1/2 -translate-y-1/2
-          bg-black bg-opacity-50 text-white rounded-full p-2
-          hover:bg-opacity-75 transition border cursor-pointer max-h-[30px] flex justify-center items-center"
-          aria-label="Scroll left"
+          className="sticky left-0 max-h-[30px] top-1/2 -translate-y-1/2 z-10
+             bg-[var(--foreground)] border text-[var(--background)]
+             p-1 cursor-pointer rounded-full shadow hover:scale-110 transition"
         >
-          ‹
-        </div>
+          <ChevronLeft size={20} />
+        </button>
+
 
         {images.map((src, idx) => (
           <img
@@ -80,13 +81,11 @@ export default function PortraitReel({
 
         <button
           onClick={() => scrollByImageWidth('right')}
-          className="sticky right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50
-          text-white rounded-full p-2 hover:bg-opacity-75 transition
-          border cursor-pointer max-h-[30px] flex justify-center items-center"
-          aria-label="Scroll right"
-          type="button"
+          className="sticky right-0 max-h-[30px] top-1/2 -translate-y-1/2 right-2 z-10
+             bg-[var(--foreground)] border cursor-pointer text-[var(--background)]
+             p-1 rounded-full shadow hover:scale-110 transition"
         >
-          ›
+          <ChevronRight size={20} />
         </button>
       </div>
 

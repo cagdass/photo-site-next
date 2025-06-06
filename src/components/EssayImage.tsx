@@ -33,7 +33,7 @@ export default function EssayImage({
 
   return (
     <div className="w-full flex justify-center my-8 px-4">
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-8xl">
         <div
           className={`relative w-full h-auto aspect-[3/2] ${onClick ? 'cursor-pointer' : ''}`}
           onClick={onClick}

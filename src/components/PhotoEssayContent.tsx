@@ -5,6 +5,7 @@ import Lightbox, { Render } from "yet-another-react-lightbox";
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import { ImageSlide, SlideImage } from "yet-another-react-lightbox";
 import Image from 'next/image';
+import Link from 'next/link';
 import EssayImage from '@/components/EssayImage';
 import PhotoEssayText from '@/components/PhotoEssayText';
 import MobileTOC from '@/components/MobileTOC';
@@ -16,7 +17,7 @@ const typedImageDimensions = imageDimensions as Record<string, { width: number; 
 
 interface PhotoEssayContentProps {
   cover: { src: string; caption?: string };
-  essayBlocks: any[];
+  essayBlocks: EssayBlock[];
   collapsible?: boolean;
   prelude?: React.ReactNode;
   hasTableOfContents?: boolean;
@@ -26,6 +27,14 @@ interface PhotoEssayContentProps {
 type CustomSlide = SlideImage & {
   color?: boolean;
 };
+
+type EssayBlock =
+  | { type: 'heading' | 'subheading'; id: string; text: string; collapsed?: boolean }
+  | { type: 'text'; content: string }
+  | { type: 'component'; render: () => React.ReactNode }
+  | { type: 'image'; src: string; alt?: string; caption?: string, color?: boolean }
+  | { type: 'footnotes'; items: { id: string; content: string; link?: string, excerpt?: string }[] }
+  | { type: 'glossary'; items: { term: string; definition: string }[] };
 
 function useIsLgUp(breakpoint = 1024) {
   const [isLgUp, setIsLgUp] = useState(false);
@@ -50,6 +59,7 @@ export default function PhotoEssayContent({
   hasTableOfContents = false,
   imgSrcReplaceStr,
 }: PhotoEssayContentProps) {
+  const currentVisibleHeadingRef = useRef<HTMLElement | null>(null);
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
     const initialState: Record<string, boolean> = {};
 
@@ -62,6 +72,8 @@ export default function PhotoEssayContent({
 
     return initialState;
   });
+  const contentRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showColorMap, setShowColorMap] = useState<Record<number, boolean>>({});
 
@@ -76,7 +88,10 @@ export default function PhotoEssayContent({
 
   function handleJumpTo(id: string) {
     const group = groups.find(g =>
-      g.heading.id === id || g.blocks.some(b => b.id === id)
+      g.heading.id === id ||
+      g.blocks.some(b =>
+        ('id' in b) && b.id === id
+      )
     );
 
     if (group) {
@@ -92,7 +107,7 @@ export default function PhotoEssayContent({
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 500);
     }
@@ -218,13 +233,26 @@ export default function PhotoEssayContent({
       });
       setCollapsedSections(allCollapsed);
     } else {
-      setCollapsedSections({});
+      const fromBlocks: Record<string, boolean> = {};
+      essayBlocks.forEach(block => {
+        if (block.type === 'heading' && block.collapsed === true) {
+          fromBlocks[block.id] = true;
+        }
+      });
+      setCollapsedSections(fromBlocks);
     }
   }, [isLgUp, groups]);
 
   const headings = essayBlocks
-    .filter(block => block.type === "heading" || block.type === 'subheading')
-    .map(block => ({ id: block.id, text: block.text, type: block.type }));
+    .filter(
+      (block): block is { type: 'heading' | 'subheading'; id: string; text: string } =>
+        block.type === 'heading' || block.type === 'subheading'
+    )
+    .map(block => ({
+      id: block.id,
+      text: block.text,
+      type: block.type,
+    }));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -238,6 +266,7 @@ export default function PhotoEssayContent({
           const { top } = el.getBoundingClientRect();
           if (top <= 80) {
             currentId = heading.id;
+            currentVisibleHeadingRef.current = el;
           } else {
             break;
           }
@@ -246,8 +275,8 @@ export default function PhotoEssayContent({
       setActiveId(currentId);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    // window.addEventListener('scroll', handleScroll, { passive: true });
+    // handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [headings, isUserScrolling]);
@@ -267,10 +296,31 @@ export default function PhotoEssayContent({
                 }
               }, [isCollapsed]);
 
+              useEffect(() => {
+                Object.entries(contentRefs.current).forEach(([id, el]) => {
+                  if (el && !collapsedSections[id]) {
+                    el.style.maxHeight = `${el.scrollHeight}px`;
+                  }
+                });
+              }, [tocVisibleDesktop]);
+
+              useEffect(() => {
+                const handleResize = () => {
+                  Object.entries(contentRefs.current).forEach(([id, el]) => {
+                    if (el && !collapsedSections[id]) {
+                      el.style.maxHeight = `${el.scrollHeight}px`;
+                    }
+                  });
+                };
+
+                window.addEventListener("resize", handleResize);
+                return () => window.removeEventListener("resize", handleResize);
+              }, [collapsedSections]);
+
               return (
                 <div key={i}>
                   {heading.text && (
-                    <div className="max-w-[900px] px-4 mx-auto">
+                    <div className="px-4 max-w-3xl mx-auto">
                       <div
                         className="flex justify-between items-center cursor-pointer"
                         onClick={() => toggleCollapse(heading.id)}
@@ -287,7 +337,10 @@ export default function PhotoEssayContent({
                   )}
 
                   <div
-                    ref={contentRef}
+                    ref={(el) => {
+                      contentRef.current = el;
+                      contentRefs.current[heading.id] = el;
+                    }}
                     className={`overflow-hidden transition-all duration-300 ease-in-out opacity-100`}
                     style={{ maxHeight: isCollapsed ? 0 : `${contentRef.current?.scrollHeight}px` }}
                   >
@@ -333,6 +386,45 @@ export default function PhotoEssayContent({
                         );
                       }
 
+                      if (block.type === 'footnotes') {
+                        return (
+                          <section key={j} id="footnotes" className="mt-10 text-sm max-w-3xl mx-auto">
+                            <h2 className="text-lg font-bold mb-4">Footnotes & References</h2>
+                            <ol className="list-decimal pl-6 space-y-2">
+                              {block.items.map(note => (
+                                <li key={note.id} id={note.id}>
+                                  <a href={`#ref-${note.id}`} className="ml-1 text-blue-500">↩</a>
+                                  &nbsp;
+                                  {note.content}
+                                  {note.link && (
+                                    <Link href={note.link} className="ml-1 text-blue-500">
+                                      {note.link}
+                                    </Link>
+                                  )}
+                                  {note.excerpt && <p>Excerpt: {note.excerpt}</p>}
+                                </li>
+                              ))}
+                            </ol>
+                          </section>
+                        );
+                      }
+
+                      if (block.type === 'glossary') {
+                        return (
+                          <section key={j} id="glossary" className="mt-10 text-sm max-w-3xl mx-auto">
+                            <h2 className="text-lg font-bold mb-4">Glossary</h2>
+                            <dl className="space-y-3">
+                              {block.items.map((entry, i) => (
+                                <div key={i}>
+                                  <dt className="font-semibold">{entry.term}</dt>
+                                  <dd className="ml-4">{entry.definition}</dd>
+                                </div>
+                              ))}
+                            </dl>
+                          </section>
+                        );
+                      }
+
                       if (block.type === 'component' && typeof block.render === 'function') {
                         return (
                           <div key={j} className="my-8 w-full mx-auto order-first">
@@ -356,7 +448,7 @@ export default function PhotoEssayContent({
   return (
     <>
       <div className="flex justify-center px-4 mt-6">
-        <div className="w-full max-w-[1400px] relative">
+        <div className="w-full max-w-10xl relative">
           <div
             className="cursor-pointer"
             style={{ position: "relative", width: "100%", aspectRatio: "3 / 2" }}
@@ -379,12 +471,16 @@ export default function PhotoEssayContent({
 
       {prelude && <div className="my-12">{prelude}</div>}
 
-      <div className="flex lg:justify-start justify-center gap-4 px-4 max-w-[1400px] mx-auto">
+      <div className="flex lg:justify-start justify-center gap-4 px-4 max-w-10xl mx-auto">
         {hasTableOfContents && (
-          <div className={`hidden lg:flex flex-col self-start sticky top-24 z-30 ${tocVisibleDesktop ? 'w-48' : 'w-8 mr-40'}`}>
+          <div className={`hidden lg:flex flex-col self-start sticky top-24 left-0 z-30 ${tocVisibleDesktop ? 'w-48' : 'w-8'}`}>
             <button
-              onClick={() => setTocVisibleDesktop(prev => !prev)}
-              className="cursor-pointer text-xs text-gray-400 hover:text-white border border-gray-600 px-2 py-1 rounded mb-2"
+              onClick={() => {
+                setTocVisibleDesktop(prev => !prev);
+                // Adjust scroll position to account for sticky headers or padding
+                // window.scrollBy({ top: 80, behavior: 'smooth' });
+              }}
+              className="cursor-pointer text-xs hover:text-gray-400 border border-gray-600 px-2 py-1 rounded mb-2"
             >
               {tocVisibleDesktop ? 'Hide' : '☰'}
             </button>
@@ -398,10 +494,9 @@ export default function PhotoEssayContent({
             </div>
           </div>
         )}
-        <main className="flex-1 align-center min-w-0 max-w-[700px]">
+        <main className={`flex-1 justify-center min-w-0`}>
           {renderEssayContent()}
         </main>
-        <div className="w-8"></div>
       </div>
 
       {!isLgUp && hasTableOfContents && (
