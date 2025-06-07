@@ -264,7 +264,7 @@ export default function PhotoEssayContent({
         const el = document.getElementById(heading.id);
         if (el) {
           const { top } = el.getBoundingClientRect();
-          if (top <= 80) {
+          if (top <= 120) {
             currentId = heading.id;
             currentVisibleHeadingRef.current = el;
           } else {
@@ -272,7 +272,6 @@ export default function PhotoEssayContent({
           }
         }
       }
-      console.log(`setting ${currentId}`);
       setActiveId(currentId);
     };
 

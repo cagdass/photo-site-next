@@ -24,7 +24,10 @@ const essayContent = {
           who encouraged me to consider publishing a book—something completely new to me.
           Another friend let me in on an open call by the Arbetet Museum in Sweden,
           some photos from this series will be shown there later this year.
-          But, for the time being, I decided to create a website and share my work online.
+          But, for the time being, I decided to create a website and share my work online. I’m doing everything by hand,
+          it’s been a lot of work, but I’ve enjoyed it. If you find anything that doesn’t work please let me know, you can find my contact details on the <Link href="/about" className="underline text-blue-400 hover:text-blue-600">
+            About page
+          </Link>.
           Earlier this year, I revisited the project, my personal notes and photos, posting a selection
           on the&nbsp;
           <Link
@@ -49,15 +52,38 @@ const essayContent = {
           and my own evolving thoughts through photography and reflection.
         </PhotoEssayText>
         <PhotoEssayText textSize="text-base">
-          It’s a long and personal read — so if you’d rather skip the context and dive right in,
-          start with{" "}
+          <strong>How to read this essay</strong>
+          <br />
+          This is a long and personal essay composed of many sections. You can read it from start to finish or jump straight into any chapter that interests you. It’s a long read—so if you’d rather skip the broader context, start with&nbsp;
           <a href="#welcome_to_pattaya"
             className="underline text-blue-400 hover:text-blue-600"
-          >Welcome to Pattaya</a>
-          . Otherwise, thank you for joining me at the beginning.
+          >
+            Welcome to Pattaya
+          </a>. If you want to dive deeper into the scene, I recommend&nbsp;
+          <a href="#men"
+            className="underline text-blue-400 hover:text-blue-600">
+            The Men
+          </a> or <a href="#learning_the_ropes"
+            className="underline text-blue-400 hover:text-blue-600">
+            Learning the Ropes
+          </a>. I enjoyed revisiting my notes and memories of pseudonymed girls like&nbsp;
+          <a href="#mint"
+            className="underline text-blue-400 hover:text-blue-600">
+            Mint
+          </a>
+          &nbsp;
+          and
+          &nbsp;
+          <a href="#namtan"
+            className="underline text-blue-400 hover:text-blue-600">Namtan</a>. Otherwise, thank you for joining me at the beginning.
         </PhotoEssayText>
         <PhotoEssayText textSize="text-base">
-          This essay is still a work in progress — much like my thoughts on Pattaya, and the world it reflects.
+          <strong>About the photos: black & white and color</strong>
+          <br />
+          Most photos here are in black and white—the only versions I still have from June 2024 are lower-quality black & white exports. For where neon light or color makes sense, I’ve included color versions. If available, you can switch between black & white and color using the button at the top right of the image.
+        </PhotoEssayText>
+        <PhotoEssayText textSize="text-base">
+          This essay has long been a work in progress — much like my thoughts on Pattaya, and the world it reflects.
         </PhotoEssayText>
       </>
     )
@@ -112,6 +138,12 @@ const essayContent = {
     He also gave me a tour of the city and a few landmarks. While doing so, he outlined the city for me—the main road, Pattaya Klang, which led down to Beach Road. He showed me the streets that ran parallel to Beach Road, like Third Road and Soi Bukhao, pointing out which were one-way streets and noting various details. This introduction helped me orient myself within the city’s geography and daily flow right from the start.
 
     I broke my camera in Stockholm just before the trip and worried I wouldn’t be able to shoot—especially with all the hype around Pattaya’s contrasts, like white men buying sex from poorer locals. Luckily, he lent me his old Fujifilm X-Pro1, which I’d practiced with that summer before splurging on my own X-Pro3, a newer model with better capabilities. We shared the same 18mm f/2.0 lens. The setup was lightweight and unobtrusive—wide enough for the intimate shots I wanted. It wasn’t as good as my own in low light, but its softness somehow added a fleeting glow where light was scarce.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-17.jpg',
+    color: true,
+    caption: 'Fleeting glows, December 2023.'
   },
   {
     type: 'component',
@@ -253,13 +285,13 @@ const essayContent = {
     content: `Then on that first night again, just to test my limits, he took me to a massive brothel lounge where women lined the walls, each with a number and a color code. The colors marked the price. I wasn’t allowed in with my camera—and even without it, I noticed certain guests, especially South Asian men, being delayed or turned away. On our way out, we stopped to chat with a few Indian tourists lingering at the entrance. I hadn't seen anything like it before.`
   },
   {
+    type: 'text',
+    content: `In my first days—while still getting to know the environment—I shot from the hip, at random, whenever the fever took me. I didn’t know what I was doing exactly. The lens was wide, the light was low, and I rarely looked through the viewfinder. I just wandered—snapping, drifting. Most of those images came out blurred, ghosted, smudged at the corners. But later, when I began editing, I grew fond of some of them. There was something dreamlike in their haze. Faces half-caught, eyes like smears of charcoal. I started calling them the Goya photos—they reminded me of his black paintings. A street that looked more like an end-time city than a place on a map. It made me think of Michael Ackerman’s Fiction, or D’Agata’s Insomnia—not in technique, but in tone. Flu photos, in a way. Feverish. Disoriented. Maybe that’s what happens when you walk Soi 6 with a camera and a heartbeat. A Goya painting rendered in CMOS.`
+  },
+  {
     type: 'image',
     src: '/images/pattaya/soi6-49.jpg',
     caption: 'Another Goya face, December 2023.'
-  },
-  {
-    type: 'text',
-    content: `In my first days—while still getting to know the environment—I shot from the hip, at random, whenever the fever took me. I didn’t know what I was doing exactly. The lens was wide, the light was low, and I rarely looked through the viewfinder. I just wandered—snapping, drifting. Most of those images came out blurred, ghosted, smudged at the corners. But later, when I began editing, I grew fond of some of them. There was something dreamlike in their haze. Faces half-caught, eyes like smears of charcoal. I started calling them the Goya photos—they reminded me of his black paintings. A street that looked more like an end-time city than a place on a map. It made me think of Michael Ackerman’s Fiction, or D’Agata’s Insomnia—not in technique, but in tone. Flu photos, in a way. Feverish. Disoriented. Maybe that’s what happens when you walk Soi 6 with a camera and a heartbeat. A Goya painting rendered in CMOS.`
   },
   {
     type: 'component',
@@ -344,12 +376,7 @@ const essayContent = {
     src: '/images/pattaya/soi6-59.jpg',
     caption: 'Allure of the open bar on Soi 6, December 2023.',
   },
-  {
-    type: 'image',
-    src: '/images/pattaya/soi6-1312.jpg',
-    caption: 'Even the police patrol isn’t immune from Soi 6’s rituals, April 2024.'
 
-  },
   {
     type: 'component',
     render: () => (
@@ -368,6 +395,19 @@ const essayContent = {
             <a href="#fn1" className="text-xs underline text-blue-500">[1]</a>
           </sup>.
         </PhotoEssayText>
+      </>
+    )
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-1312.jpg',
+    caption: 'Even the police patrol isn’t immune from Soi 6’s rituals, April 2024.'
+
+  },
+  {
+    type: 'component',
+    render: () => (
+      <>
         <PhotoEssayText>
           I started walking Soi 6/1 often,
           partly to catch my breath,
@@ -458,9 +498,17 @@ const essayContent = {
 
     Some girls didn’t want to be seen. You could tell without words—a raised hand shielding their face before I even lifted my camera. I never bothered them. Occasionally, if I took a photo without asking first, I’d approach afterward to show it and make sure they were okay with it.
 
-    I realized within a few days that the culture around photography in Thailand was very lighthearted. Smiles would naturally grow on faces when people posed, and hands often made peace signs or the Asian heart gesture. I took many photos like that—simple, joyful moments capturing everyday spirit. This was so different from Stockholm, where people are far more reserved, and the camera often feels like a barrier rather than an invitation.
-
-    But more often, I tried to explain the kind of photos I was aiming for. I’d often show them some of my older photos on Instagram and promise to send the picture if they wanted. But what really helped was that I had gathered a few images that aligned with the project’s direction—little summaries of Soi 6 and the sex tourism scene in Thailand. I put those photos into an album on my phone and showed them to my subjects to give a clearer idea. Most of the time, they understood immediately, which made them more serious.
+    I realized within a few days that the culture around photography in Thailand was very lighthearted. Smiles would naturally grow on faces when people posed, and hands often made peace signs or the Asian heart gesture. I took many photos like that—simple, joyful moments capturing everyday spirit. This was so different from Stockholm, where people are far more reserved, and the camera often feels like a barrier rather than an invitation.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-16.jpg',
+    color: true,
+    caption: 'Smile for the camera, April 2024.'
+  },
+  {
+    type: 'text',
+    content: `But more often, I tried to explain the kind of photos I was aiming for. I’d often show them some of my older photos on Instagram and promise to send the picture if they wanted. But what really helped was that I had gathered a few images that aligned with the project’s direction—little summaries of Soi 6 and the sex tourism scene in Thailand. I put those photos into an album on my phone and showed them to my subjects to give a clearer idea. Most of the time, they understood immediately, which made them more serious.
 
     I’d ask them to go back to what they were doing before I arrived with my camera. Of course, a smile might linger, so I’d often do a shush gesture—finger pressed to my lips—or mimic zipping my mouth shut to remind them—a trick Halil taught me. I have tens of thousands of shots from Soi 6, and such a sequence has become a cliché to me: a series of photos of a smiling face turning into a serious one.`
   },
@@ -869,7 +917,7 @@ const essayContent = {
   {
     type: 'subheading',
     text: 'Namtan',
-    id: 'Namtan',
+    id: 'namtan',
   },
   {
     girl: 'Namtan',
