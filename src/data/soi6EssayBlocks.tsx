@@ -81,6 +81,7 @@ const essayContent = {
           <strong>About the photos: black & white and color</strong>
           <br />
           Most photos here are in black and white—the only versions I still have from June 2024 are lower-quality black & white exports. For where neon light or color makes sense, I’ve included color versions. If available, you can switch between black & white and color using the button at the top right of the image.
+          You can also turn off the photo-essay mode at the top of the page, just below the title, to view a separate photo gallery featuring a different set of images. that gallery has a less documentary tone and leans more toward a photobook style.
         </PhotoEssayText>
         <PhotoEssayText textSize="text-base">
           This essay has long been a work in progress — much like my thoughts on Pattaya, and the world it reflects.
