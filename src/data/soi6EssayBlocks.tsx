@@ -111,7 +111,7 @@ const essayContent = {
 
     He also gave me a tour of the city and a few landmarks. While doing so, he outlined the city for me—the main road, Pattaya Klang, which led down to Beach Road. He showed me the streets that ran parallel to Beach Road, like Third Road and Soi Bukhao, pointing out which were one-way streets and noting various details. This introduction helped me orient myself within the city’s geography and daily flow right from the start.
 
-    I had broken my camera back in Stockholm just before the trip. I worried I wouldn’t be able to photograph anything—especially given all the hype around Pattaya’s many contrasts, most of which interested me, particularly the dynamic of white men purchasing sex from poorer locals—but he lent me his: the good old Fujifilm X-Pro1 I had practiced with during the summer, before splashing the cash on a X-Pro3 of my own, a newer release with better capabilities. We did, however, share the same 18mm f/2.0 lens. The setup was lightweight, unimposing—just wide enough for the close, intimate frames I wanted. It wasn’t as good as my own camera in low light, but somehow its softness brought out a transient effervescence where light was scarce.`
+    I broke my camera in Stockholm just before the trip and worried I wouldn’t be able to shoot—especially with all the hype around Pattaya’s contrasts, like white men buying sex from poorer locals. Luckily, he lent me his old Fujifilm X-Pro1, which I’d practiced with that summer before splurging on my own X-Pro3, a newer model with better capabilities. We shared the same 18mm f/2.0 lens. The setup was lightweight and unobtrusive—wide enough for the intimate shots I wanted. It wasn’t as good as my own in low light, but its softness somehow added a fleeting glow where light was scarce.`
   },
   {
     type: 'component',
@@ -134,36 +134,38 @@ const essayContent = {
             where such variety was rare or nonexistent.
             It quietly reminded me how Pattaya was a global crossroads, catering to tastes far beyond its tropical locale.
           </PhotoEssayText>
-          <PhotoEssayText>
-            But with my photography, I found myself repeatedly drawn to a particular pairing: international couples.
-            Whenever I saw an older Western man—what locals call a farang, meaning foreigner—paired with a young,
-            striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it.
-            The contrast spoke volumes. But what struck me just as much was the silence between them.
-            I rarely saw them talk. They’d sit next to each other at a bar or restaurant,
-            their bodies close but their eyes elsewhere—on their phones, on the street, on nothing in particular. It was as if they existed side by side, not together.
-          </PhotoEssayText>
         </>
       )
-  },
-  {
-    type: 'text',
-    content: `I once went out with a girl who had a Swedish father and Filipina mother. She looked Asian—her broad frame and tall stature were the only visible hints of her mixed heritage.
-
-    She once told me she had stopped walking hand in hand with her father when she was barely a teenager—people would mistake them for a mail-order couple, and her dad for her husband. I remember how bizarre it sounded, and how deeply it must have hurt. In Sweden, growing up not looking “ethnically Swedish” already makes life hard enough. In the Philippines, she said, locals would sometimes shout at them in the street, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
-
-    In my innocent ignorance, around the time we first met I had once passed her a short story—Paper Menagerie by Ken Liu that was discussed with my short story meet-up group. She found more in it than I had, and hearing her point of view taught me things I had yet to understand.
-
-    A month or two before arriving in Thailand, I helped organize my teacher’s photobook collection to put it up for sale—browsing through over a thousand worn, signed, lived-in volumes. Two books caught my eye: Kungariket and Drottninglandet by Elin Berge. They portrayed Swedish–Thai couples, always with the Thai partner being a woman—one tracing their lives in Sweden, the other in Thailand. Sitting with those books in silence, slowly flipping each page, I felt the quiet distance and tender awkwardness of coexisting worlds. Even before setting foot in Thailand, I found myself wondering what I might see. What I might photograph.
-
-    I thought about all of these things once I was walking around in Pattaya. I caught myself hoping, foolishly, that many of the older Western men and young Thai women I saw were actually fathers and daughters. That maybe there was a happier story hidden in the pairings. Even when I saw a very young Thai woman—perhaps in her teens—sandwiched between two older Western men on a motorcycle at a traffic light, even though disgust rose in me, I tried to write a kinder story in my head: maybe a father, an uncle, a niece.
-
-    Still, I instinctively took the photo. It’s one of the many photos I took that haunts me—her distressed expression frozen mid-glance. One I will not share. I didn’t ask permission, and they never noticed me. And after all the time I spent in Pattaya, I know better now. They weren’t family.`
   },
   {
     type: 'image',
     src: '/images/pattaya/soi6-03.jpg',
     color: true,
     caption: 'Man with a bar-fined girl, December 2023.'
+  },
+  {
+    type: 'component',
+    render: () => (
+      <>
+        <PhotoEssayText>
+          With my photography, I found myself repeatedly drawn to a particular pairing: international couples. Whenever I saw an older Western man—what locals call a farang, meaning foreigner—paired with a young, striking Thai woman—a common sight in Pattaya—I felt a strong urge to photograph it. The contrast spoke volumes. But what struck me just as much was the silence between them. They rarely talked. Sitting side by side at a bar or restaurant, their bodies close but their eyes elsewhere—on their phones or on nothing in particular. It was as if they existed next to each other, not together.
+        </PhotoEssayText>
+        <PhotoEssayText>
+          I once went out with a girl who had a Swedish father and Filipina mother. She looked Asian—her broad frame and tall stature the only visible hints of her mixed heritage. She told me she stopped holding hands with her father as a teenager—people would mistake them for a mail-order couple, her dad for her husband. In Sweden, growing up not looking “ethnically Swedish” makes life hard enough. In the Philippines, locals sometimes shouted at them, accusing her of betraying her country by marrying an old white man—who was, in fact, her father.
+        </PhotoEssayText>
+        <PhotoEssayText>
+          Before arriving in Thailand, I helped organize my teacher’s photobook collection. Two titles stood out (<em>Kungariket</em> and <em>Drottninglandet</em>), portraying Swedish–Thai couples, always with a Thai woman—their lives traced between Sweden and Thailand. Sitting with those books, flipping pages in silence, I felt the quiet distance and tender awkwardness of coexisting worlds. Even before arriving, I wondered what I might see. What I might photograph.
+        </PhotoEssayText>
+        <PhotoEssayText>
+          Walking Pattaya, I caught myself hoping many of those older Western men and young Thai women were actually fathers and daughters. That maybe a kinder story hid behind the pairings. Even when I saw a very young Thai woman—perhaps in her teens—between two older Western men on a motorcycle, I tried to imagine a father, an uncle, a niece. I instinctively took a photo of them, one I will not share. After all my time in Pattaya, I know better now. They weren’t family.
+        </PhotoEssayText>
+      </>
+    )
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-97.jpg',
+    caption: 'Another international couple, December 2023.',
   },
   {
     type: 'text',
@@ -1031,7 +1033,7 @@ const essayContent = {
     type: 'component',
     render: () => (
       <PhotoEssayText>
-        For a brief moment, I was overwhelmed by the sheer possibilites:
+        For a brief moment, I was overwhelmed by the sheer possibilities:
         Take a classic working-class vacation to Portugal or Spain?
         Visit Africa or the Americas—which I have never done.
         Do an Interrail all around Europe?
@@ -1254,7 +1256,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `I was in Luang Prabang when I got the news—my mother had been diagnosed with cancer back in Turkey. I cut the trip short, hitchhiked to the Laotian captial and began making my way back to Pattaya, trying to figure out how to return home.
+    content: `I was in Luang Prabang when I got the news—my mother had been diagnosed with cancer back in Turkey. I cut the trip short, hitchhiked to the Laotian capital and began making my way back to Pattaya, trying to figure out how to return home.
 
     On the way, I stopped in Udon Thani and Khon Kaen cities in the Isan region, the same part of Thailand where many of the women I’d met in Pattaya had come from. I had originally hoped to stay longer and cover many towns and villages, to meet people, to see the poor villages the girls in Pattaya had described. I wanted to understand what made them leave. I wanted to photograph what I found. But I didn’t have time. I passed through quickly, knowing these would be my final days photographing Soi 6.
 
@@ -1390,8 +1392,11 @@ const essayContent = {
       { term: 'Soi - ซอย', definition: 'A small side street branching off a major road in Thailand.' },
       { term: 'Boom boom', definition: 'Colloquial Thai-English term used by sex workers to mean sexual intercourse.' },
       { term: 'Bar fine', definition: 'A fee paid to a bar to take a worker out, typically covering lost income for that night.' },
+      { term: 'Freelancer', definition: 'A sex worker who works independently, not tied to any bar, often finding clients directly on the street or nearby.' },
       { term: 'Lady drink', definition: 'A non-alcoholic or lightly alcoholic drink that customers buy for sex workers to keep them company.' },
+      { term: 'Long time', definition: 'A longer paid engagement, typically lasting several hours or overnight, often involving a hotel or private room.' },
       { term: 'Mamasan', definition: 'Originally a Japanese term (ママさん) used to respectfully address a woman in charge of a bar or hostess club. In Thai bar culture, it refers to the woman—often older—who manages the bar and its workers. She recruits staff, oversees daily operations, and enforces rules.' },
+      { term: 'Short time', definition: 'A brief paid encounter, usually about an hour or less, often arranged quickly at a bar or nearby location.' },
       { term: 'Soi 6/1', definition: 'A sub-street or alley adjacent to Soi 6.' }
     ]
   },
