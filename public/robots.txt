@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cagdas.photos/sitemap.xml

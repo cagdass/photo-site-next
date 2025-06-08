@@ -292,6 +292,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-49.jpg',
+    color: true,
     caption: 'Another Goya face, December 2023.'
   },
   {
@@ -346,7 +347,6 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/walking_street.jpg',
-    color: true,
     caption: 'The entrance of a Walking Street go-go club, December 2023.',
   },
   {
@@ -925,7 +925,7 @@ const essayContent = {
     type: 'text',
     content: `I first photographed Namtan—yet another pseudonym— in December 2023. She was lively, confident, and always camera-ready. We followed each other on Instagram—I’d send her the pictures I took of her, and in return, I got small glimpses into her life. Unlike many of the women I met, Namtan didn’t have children, and she moved with a kind of freedom that stood out on Soi 6.
 
-    Her stories were often from upscale clubs on Walking Street—flashing lights, expensive bottles, selfies from the VIP section. Then one day, she posted from a hospital bed—she’d drunk too much. A few hours later, she was back behind the bar, working like nothing had happened. She’d drink a beer with me without hesitation.
+    Her stories were often from upscale clubs on Walking Street—flashing lights, expensive bottles, selfies from the VIP section. Then one day, she posted from a hospital bed—she’d drunk too much. A few hours later, she was back behind the bar, working like nothing had happened. She’d drink a beer with me without hesitation. Her nights felt like a Jim Morrison bender—flashing lights, too many drinks, and no plans to stop.
 
     She once told me she had a Western boyfriend who sent her money regularly. But she made good money on her own, too. She didn’t talk about struggle or sacrifice—not in the way others did. Her life felt fast-paced, unstable, but self-directed. Over time, she began posting more photos with her boyfriend—a middle-aged man with a shaved head and tattoos—like a badge of stability and sponsorship. They seemed to spend a lot of time together, laughing often—at least judging by her social media.`
   },

@@ -5,6 +5,29 @@ import PhotoGallery from '@/components/PhotoGallery';
 import miscPhotos from '@/data/miscPhotos';
 import './home.css';
 
+export const metadata = {
+  title: "Çağdaş Öztekin – Photographer",
+  description: "Documentary and street photography by Çağdaş Öztekin. Loosely based in Stockholm, capturing life on the margins.",
+  openGraph: {
+    title: "Çağdaş Öztekin – Photographer",
+    description: "Photo essays and street photography from Southeast Asia, the Balkans, and Europe.",
+    url: "https://cagdas.photos",
+    siteName: "Çağdaş Öztekin",
+    images: [
+      {
+        url: "https://cagdas.photos/hero-back.jpg",
+        width: 600,
+        height: 600,
+        alt: "Çağdaş Öztekin",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  metadataBase: new URL('https://cagdas.photos'),
+  authors: [{ name: "Çağdaş Öztekin" }],
+};
+
 export default function Home() {
   return (
     <section className="px-4">
@@ -22,7 +45,7 @@ export default function Home() {
 
       <div className="max-w-2xl mt-10 mb-8 mx-auto px-4">
         <p className="text-lg leading-relaxed mb-6">
-          I’m a street and documentary photographer — and a budget traveler — among other things, loosely based in Stockholm, Sweden. I explore life on the margins: red light alleys in Thailand, sleepy Asian towns, right-wing extremists, obscure villages by ancient rivers, refugees, genocide memorials, poor gutters, and forgotten corners of the Balkans.
+          My name is Çağdaş Öztekin. Good luck pronouncing that. I’m a street and documentary photographer — and a budget traveler — among other things, loosely based in Stockholm, Sweden. I explore life on the margins: red light alleys in Thailand, sleepy Asian towns, right-wing extremists, obscure villages by ancient rivers, refugees, genocide memorials, poor gutters, and forgotten corners of the Balkans.
           <br /><br />
           I’ve biked across Europe along the eastern edge of the Iron Curtain, from Scandinavia to Turkey. I walk a lot, shoot way too many photos, and edit excruciatingly slowly — always aiming to capture people the way they’d want to be remembered… or at least not forgotten.
         </p>
