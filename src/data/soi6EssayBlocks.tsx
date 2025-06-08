@@ -82,9 +82,7 @@ const essayContent = {
             className="underline text-blue-400 hover:text-blue-600">
             Mint
           </a>
-          &nbsp;
-          and
-          &nbsp;
+          &nbsp;and&nbsp;
           <a href="#namtan"
             className="underline text-blue-400 hover:text-blue-600">Namtan</a>. Otherwise, thank you for joining me at the beginning.
         </PhotoEssayText>
