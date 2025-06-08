@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import Soi6PageClient from './Soi6PageClient';
 
 export const metadata: Metadata = {
-  title: 'Soi 6 — ซอยหก – Çağdaş',
-  description: 'A photo essay documenting seven weeks on Soi 6, Pattaya’s infamous bar street.',
+  title: 'Soi 6, Pattaya – A Photo Essay by Çağdaş Öztekin',
+  description: 'Sex work, nightlife, and fleeting intimacy on Pattaya’s Soi 6 — a bold seven-week street photography essay by Çağdaş Öztekin.',
   openGraph: {
-    title: 'Soi 6 — ซอยหก – Çağdaş',
-    description: 'A photo essay documenting seven weeks on Soi 6, Pattaya’s infamous bar street.',
+    title: 'Soi 6, Pattaya – A Photo Essay by Çağdaş Öztekin',
+    description: 'Sex work, nightlife, and fleeting intimacy on Pattaya’s Soi 6 — a bold seven-week street photography essay by Çağdaş Öztekin.',
     url: 'https://cagdas.photos/soi6',
     siteName: 'Çağdaş',
     images: [
@@ -14,15 +14,15 @@ export const metadata: Metadata = {
         url: 'https://cagdas.photos/images/pattaya/soi6-01.jpg',
         width: 1200,
         height: 630,
-        alt: 'Soi 6 Pattaya cover photo',
+        alt: 'Cover photo from Soi 6 photo essay by Çağdaş Öztekin',
       },
     ],
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Soi 6 — ซอยหก – Çağdaş',
-    description: 'A photo essay documenting seven weeks on Soi 6, Pattaya’s infamous bar street.',
+    title: 'Soi 6, Pattaya – A Photo Essay by Çağdaş Öztekin',
+    description: 'Sex work, nightlife, and fleeting intimacy on Pattaya’s Soi 6 — a bold seven-week street photography essay by Çağdaş Öztekin.',
     images: ['https://cagdas.photos/images/pattaya/soi6-01.jpg'],
   },
 };

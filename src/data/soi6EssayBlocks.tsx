@@ -17,17 +17,28 @@ const essayContent = {
       <>
         <PhotoEssayText divClassName="-mt-20" textSize="text-base">
           My name is Çağdaş—I’m a software engineer currently taking a career break,
-          and a hobby photographer based in Stockholm, Sweden.
+          and a hobby photographer based in Stockholm, Sweden. I started taking informal
+          photography classes from my friend{" "}
+          <Link href="https://halil.se"
+            className="underline text-blue-400 hover:text-blue-600">
+            Halil
+          </Link> in May 2023.
           Between December 2023 and June 2024,
           I spent about seven weeks photographing Soi 6, a bar street in Pattaya, Thailand.
           Initially, I shared these photos privately with friends and fellow photographers,
-          who encouraged me to consider publishing a book—something completely new to me.
-          Another friend let me in on an open call by the Arbetet Museum in Sweden,
-          some photos from this series will be shown there later this year.
-          But, for the time being, I decided to create a website and share my work online. I’m doing everything by hand,
+          including Halil who oversaw most of my work,
+          people encouraged me to consider publishing a book—something completely new to me.
+          Another photographer friend, Duygu, let me in on an open call by the Arbetet Museum in Sweden,
+          some photos from this series will be shown there later this year. And another photographer friend
+          Erhan Can has been helping me with retouching before printing. It’s the first time I’m printing a photo, my hands are shaking. Big thanks to everyone
+          who helped and cheered me on thus far.
+          But, for the time being, I decided to create a website and share my work online
+          as well as my experiences and observations. I’m doing everything by hand,
           it’s been a lot of work, but I’ve enjoyed it. If you find anything that doesn’t work please let me know, you can find my contact details on the <Link href="/about" className="underline text-blue-400 hover:text-blue-600">
             About page
           </Link>.
+        </PhotoEssayText>
+        <PhotoEssayText textSize="text-base">
           Earlier this year, I revisited the project, my personal notes and photos, posting a selection
           on the&nbsp;
           <Link
@@ -42,8 +53,8 @@ const essayContent = {
           >
             Reddit
           </Link>.
-        </PhotoEssayText>
-        <PhotoEssayText textSize="text-base">
+
+
           The strong reactions I received inspired me to write this essay.
           Many people know Pattaya by reputation — but few understand the systems at play.
           I don’t claim to understand it.
