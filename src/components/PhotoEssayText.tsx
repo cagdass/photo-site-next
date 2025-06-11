@@ -11,7 +11,7 @@ export default function PhotoEssayText({
   children,
   divClassName = '',
   pClassName = '',
-  textSize = 'text-xl',
+  textSize = 'text-lg sm:text-lg md:text-lg lg:text-[20px] xl:text-[24px]',
 }: Props) {
   return (
     <div

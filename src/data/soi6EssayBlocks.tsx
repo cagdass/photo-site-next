@@ -7,6 +7,8 @@ import PortraitReel from '@/components/PortraitReel';
 import Soi6Poem from '@/components/Soi6Poem';
 import PhotoEssayText from '@/components/PhotoEssayText';
 
+const introductionTextSize = 'text-base md:text-lg lg:text-xl xl:text-[20px] leading-relaxed mb-6';
+
 const essayContent = {
   options: {
     imgSrcReplaceStr: '/pattaya/'
@@ -15,7 +17,7 @@ const essayContent = {
     type: 'component',
     render: () => (
       <>
-        <PhotoEssayText divClassName="-mt-20" textSize="text-base">
+        <PhotoEssayText divClassName="-mt-20" textSize={introductionTextSize}>
           My name is Çağdaş—I’m a software engineer currently taking a career break,
           and a hobby photographer based in Stockholm, Sweden. I started taking informal
           photography classes from my friend{" "}
@@ -38,7 +40,7 @@ const essayContent = {
             About page
           </Link>.
         </PhotoEssayText>
-        <PhotoEssayText textSize="text-base">
+        <PhotoEssayText textSize={introductionTextSize}>
           Earlier this year, I revisited the project, my personal notes and photos, posting a selection
           on the&nbsp;
           <Link
@@ -57,12 +59,16 @@ const essayContent = {
 
           The strong reactions I received inspired me to write this essay.
           Many people know Pattaya by reputation — but few understand the systems at play.
-          I don’t claim to understand it.
+          I don’t claim to understand it either.
+
+          You don’t have to look far to see Soi 6: stock photos and YouTube walk-throughs show the bars, the girls, the spectacle—racking up thousands, sometimes millions of views. But most of them go no deeper than tourist tips. I wasn’t interested in just showing what’s there. I wanted to return, to listen, to sit with what made me uncomfortable—and bring back something more than a passing glance.
+
+
           This isn’t an exposé, nor a photojournalistic report.
           It’s a personal attempt to explore a place, the people in it,
           and my own evolving thoughts through photography and reflection.
         </PhotoEssayText>
-        <PhotoEssayText textSize="text-base">
+        <PhotoEssayText textSize={introductionTextSize}>
           <strong>How to read this essay</strong>
           <br />
           This is a long and personal essay composed of many sections. You can read it from start to finish or jump straight into any chapter that interests you. It’s a long read—so if you’d rather skip the broader context, start with&nbsp;
@@ -86,13 +92,13 @@ const essayContent = {
           <a href="#namtan"
             className="underline text-blue-400 hover:text-blue-600">Namtan</a>. Otherwise, thank you for joining me at the beginning.
         </PhotoEssayText>
-        <PhotoEssayText textSize="text-base">
+        <PhotoEssayText textSize={introductionTextSize}>
           <strong>About the photos: black & white and color</strong>
           <br />
           Most photos here are in black and white—the only versions I still have from June 2024 are lower-quality black & white exports. For where neon light or color makes sense, I’ve included color versions. If available, you can switch between black & white and color using the button at the top right of the image.
           You can also turn off the photo-essay mode at the top of the page, just below the title, to view a separate photo gallery featuring a different set of images. that gallery has a less documentary tone and leans more toward a photobook style.
         </PhotoEssayText>
-        <PhotoEssayText textSize="text-base">
+        <PhotoEssayText textSize={introductionTextSize}>
           This essay has long been a work in progress — much like my thoughts on Pattaya, and the world it reflects.
         </PhotoEssayText>
       </>
@@ -122,9 +128,16 @@ const essayContent = {
     type: 'text',
     content: `During one of our early homework assignments that summer, he told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I suspect it was partly a trick he played on me—after all, all his published books are in black and white, though not because he lacked an understanding of light. In any case, monochrome has worked for me ever since, and I prefer it—even though I’ve added an option to show color versions of photos where available throughout this essay.
 
-    But by autumn, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn’t the typical sex tourist; rather, staying rent-free in a friend’s Thai apartment made financial sense—just like escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.
-
-    Before he left though, he gave me the key to his apartment, where I would spend long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite many signed with a dedication to him. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
+    But by autumn, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn’t the typical sex tourist; rather, staying rent-free in a friend’s Thai apartment made financial sense—just like escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-05.jpg',
+    caption: 'A usual Soi 6 scene, April 2024.'
+  },
+  {
+    type: 'text',
+    content: `Before he left though, he gave me the key to his apartment, where I would spend long hours in his home library. He owns more than a thousand books—mostly doorstops, many by masters, quite many signed with a dedication to him. I’d leaf through monographs, street photography collections, retrospective volumes. I cataloged them all for him, and helped sell a few in his absence, hoping it might help his finances.
 
     That winter, Stockholm felt lifeless. Colder and darker than usual. My job was draining me. I was drowning in mortgage payments and rising interest rates. The things I used to afford felt out of reach. I’d spend what little salary I had left on film festival screenings, then scrape by on potatoes until the month’s end. Street photography no longer gave me the same spark. Maybe it’s a weak excuse, but I still think Stockholm isn’t the most exciting place for photography—too clean, too quiet, too conforming.
 
@@ -229,9 +242,16 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `Halil stopped me and said he wanted to show me another bar street. He led me to Soi 6.
-
-    It was a different kind of overwhelming. The bars littered both sides of the narrow street. They were open-air, low to the ground, close enough to touch. Every sign was in English. Not Thai. This place was not for the locals. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled up into one shapeless, abrasive roar.
+    content: `Halil stopped me and said he wanted to show me another bar street. He led me to Soi 6.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-93.jpg',
+    caption: 'A different kind of overwhelming, June 2024.'
+  },
+  {
+    type: 'text',
+    content: `It was a different kind of overwhelming. The bars littered both sides of the narrow street. They were open-air, low to the ground, close enough to touch. Every sign was in English. Not Thai. This place was not for the locals. Bar girls lined the fronts, outnumbering everyone else ten to one. Flickering neon bounced off high heels and bare skin. Above the bars, TVs blared European football matches and old Western music videos—Guns N’ Roses, the Eagles, Aerosmith. From every direction came noise: thumping bass, crashing cymbals, screeching guitar solos—colliding with the constant chorus of women’s voices calling into the street. The music, the voices, the scooters, the engines—all tangled up into one shapeless, abrasive roar.
 
     Older men perched on bar stools overlooking the street, under a canopy of tiny ceiling fans twirling in different spiral directions, clutched beers wrapped in foam sleeves—trying and failing to keep them cold in the humid night air. If not perched, they drifted—some in groups, some alone—pilgrimming up and down the street. Food carts cluttered the few gaps left along the street. And children, quite a few of them, wove through it all—selling flowers, nuts, napkins, or any old trinket might pass as charm. Sometimes it was a toddler, added for sympathy, wrapped around a mother’s hip as she peddled roses or cashews.`
   },
@@ -239,7 +259,7 @@ const essayContent = {
     type: 'image',
     src: '/images/pattaya/soi6-04.jpg',
     color: true,
-    caption: 'Some even part of the workforce, April 2024.'
+    caption: 'Some children even part of the workforce, April 2024.'
   },
   {
     type: 'component',
@@ -337,8 +357,8 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-05.jpg',
-    caption: 'A usual Soi 6 scene, April 2024.'
+    src: '/images/pattaya/soi6-88.jpg',
+    caption: 'Namkeng! Namkeng!, March 2024.'
   },
   {
     type: 'text',
@@ -492,6 +512,11 @@ const essayContent = {
     }
   },
   {
+    type: 'subheading',
+    text: 'First Portraits',
+    id: 'first_portraits',
+  },
+  {
     type: 'text',
     content: `Back on Soi 6, I began to recognize faces. Some bar girls would wave. A few started calling me “photo man.” They’d pull me aside from the crowd, pose, and ask me to send the pictures later. I started exchanging contact info—Instagram, Line, WhatsApp. Sometimes I’d get a message within ten minutes: “Where is my pic???” At the end of each day, back at home, I made sure to send everyone their photos. It became part of my nightly ritual—reviewing the day’s shots, selecting a few to show my teacher for critique, and sending the ones I promised to the girls. Occasionally, I’d even spot my photos posted on their profiles, and feel a quiet satisfaction.
 
@@ -566,9 +591,16 @@ const essayContent = {
     type: 'text',
     content: `Of course, part of me felt uneasy. I was “buying” time, and by extension, buying the photos. I couldn’t help but feel strange about it—here I was, a six-months-into-it, barely-budding photographer, buying drinks for sex workers. But when I managed to take a photograph that felt real, one that captured something more than a transaction, it somehow made up for it.
 
-    For most, when I asked where they came from, the answer was always the same: Isan. Isan. Isan. Thailand’s northeast—a rice-farming region, poor and hard to leave. Many sex workers from Isan that I spoke to had children. Many were in their early twenties but already had multiple kids. While they earned money in Pattaya, they’d send money back home, and their children were raised by the women’s own parents. The father was always a Thai man and was typically out of the picture. The women weren’t so happy to talk about them anyway. But they spoke about their children openly and without shame. In fact, they lit up when I asked. There was a sincere, almost childlike happiness in their voices and eyes. They would scroll through the photo gallery on their mobile phones and bombard me with snaps of their little kids, laughing and proud. I vividly remember one woman tapping her phone’s lock screen and beaming, “My baby—two years!” then grinning at me like she’d pulled off a magic trick.
-
-    I’d ask when they last saw their children. It was usually months. Sometimes the grandparents would visit Pattaya with the kids so the family could reunite. They'd show me pictures of those reunions. I wondered if it was a question better left alone. But I’d always ask to get more of an idea. I kept trying to make sense of the system that had brought them here—the same system that pulled in millions of men every year.
+    For most, when I asked where they came from, the answer was always the same: Isan. Isan. Isan. Thailand’s northeast—a rice-farming region, poor and hard to leave. Many sex workers from Isan that I spoke to had children. Many were in their early twenties but already had multiple kids. While they earned money in Pattaya, they’d send money back home, and their children were raised by the women’s own parents. The father was always a Thai man and was typically out of the picture. The women weren’t so happy to talk about them anyway. But they spoke about their children openly and without shame. In fact, they lit up when I asked. There was a sincere, almost childlike happiness in their voices and eyes. They would scroll through the photo gallery on their mobile phones and bombard me with snaps of their little kids, laughing and proud. I vividly remember one woman tapping her phone’s lock screen and beaming, “My baby—two years!” then grinning at me like she’d pulled off a magic trick.`
+  },
+  {
+    type: 'image',
+    src: '/images/pattaya/soi6-94.jpg',
+    caption: 'Out late on a school night, April 2024.'
+  },
+  {
+    type: 'text',
+    content: `I’d ask when they last saw their children. It was usually months. Sometimes the grandparents would visit Pattaya with the kids so the family could reunite. They'd show me pictures of those reunions. I wondered if it was a question better left alone. But I’d always ask to get more of an idea. I kept trying to make sense of the system that had brought them here—the same system that pulled in millions of men every year.
 
     After my first few conversations, I went home and started watching YouTube documentaries about it. As I later reaffirmed in essays and books I read about sex workers from Pattaya, many of them dreamt of building a concrete house in their village in Isan, instead of the traditional bamboo house. I immediately thought of my time in the rural parts of the underdeveloped but touristy island of Palawan in the Philippines when I visited Southeast Asia for the first time a year earlier. I would occasionally be pointed out a concrete house and told, “That means they have an Overseas Filipino Worker in the family sending remittances.”`
   },

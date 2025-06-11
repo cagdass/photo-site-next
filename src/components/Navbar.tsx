@@ -196,7 +196,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
         }}
       >
         <div
-          className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"
+          className=" mx-auto px-4 py-3 flex items-center justify-between"
           onClick={handleMenuClick}
         >
           <Link href="/" className="flex items-center gap-2">
@@ -209,7 +209,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
               id="navbar-page-title"
               onClick={handleMenuClick}
               className={`
-      absolute left-1/2 -translate-x-1/2 text-md md:hidden
+      absolute left-1/2 -translate-x-1/2 md:hidden lg:block  text-md mt-1
       transition-opacity duration-500 ease-in-out font-garamond
       ${showPageTitleInNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'}
     `}
@@ -218,7 +218,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
             </div>
           )}
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 mr-6">
             {renderDesktopNav()}
             <div className="md:hidden">
               <button

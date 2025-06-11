@@ -53,7 +53,11 @@ export default function EssayImage({
             sizes="(min-width: 1024px) 900px, 100vw"
             className={`rounded object-contain transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'
               }`}
-            onLoad={() => setLoaded(true)}
+            onLoad={(e) => {
+              if (e.currentTarget.complete) {
+                setLoaded(true);
+              }
+            }}
           />
 
           {/* Toggle button */}

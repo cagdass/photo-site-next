@@ -12,7 +12,7 @@ export default function TableOfContents({ headings, activeId }: ToCProps) {
       aria-label="Table of contents"
     >
       <h3 className="font-semibold mb-2">Contents</h3>
-      <ul className="space-y-2 text-sm">
+      <ul className="space-y-2 text-base lg:text-xl xl:text-lg">
         {/* back to top link */}
         <li>
           <a

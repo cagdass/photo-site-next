@@ -158,7 +158,7 @@ export default function PhotoEssayContent({
         src: useColor ? customSlide.src.replace(imgSrcReplaceStr, imgSrcReplaceStr + 'color/') : customSlide.src,
       };
 
-      const [loaded, setLoaded] = useState(false);
+      // const [loaded, setLoaded] = useState(false);
 
       return (
         <div className="relative flex items-center justify-center"
@@ -325,7 +325,7 @@ export default function PhotoEssayContent({
                         className="flex justify-between items-center cursor-pointer"
                         onClick={() => toggleCollapse(heading.id)}
                       >
-                        <h2 className="text-2xl font-bold" id={heading.id}>{heading.text}</h2>
+                        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold" id={heading.id}>{heading.text}</h2>
                         <button
                           className={`text-sm cursor-pointer transition-transform duration-300 transform ${isCollapsed ? 'rotate-270' : 'rotate-0'}`}
                         >
@@ -361,7 +361,7 @@ export default function PhotoEssayContent({
                           <div key={j} className="max-w-2xl px-4 mx-auto mt-10 mb-4">
                             <h3
                               id={block.id}
-                              className="subheading text-xl font-bold"
+                              className="subheading text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold"
                             >
                               {block.text}
                             </h3>
@@ -388,8 +388,8 @@ export default function PhotoEssayContent({
 
                       if (block.type === 'footnotes') {
                         return (
-                          <section key={j} id="footnotes" className="mt-10 text-sm max-w-3xl mx-auto">
-                            <h2 className="text-lg font-bold mb-4">Footnotes & References</h2>
+                          <section key={j} id="footnotes" className="mt-10 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+                            <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-4">Footnotes & References</h2>
                             <ol className="list-decimal pl-6 space-y-2">
                               {block.items.map(note => (
                                 <li key={note.id} id={note.id}>
@@ -411,8 +411,8 @@ export default function PhotoEssayContent({
 
                       if (block.type === 'glossary') {
                         return (
-                          <section key={j} id="glossary" className="mt-10 text-sm max-w-3xl mx-auto">
-                            <h2 className="text-lg font-bold mb-4">Glossary</h2>
+                          <section key={j} id="glossary" className="mt-10 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+                            <h2 className="font-bold mb-4">Glossary</h2>
                             <dl className="space-y-3">
                               {block.items.map((entry, i) => (
                                 <div key={i}>
