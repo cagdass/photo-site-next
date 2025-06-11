@@ -390,14 +390,15 @@ export default function PhotoEssayContent({
                         return (
                           <section key={j} id="footnotes" className="mt-10 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
                             <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-4">Footnotes & References</h2>
-                            <ol className="list-decimal pl-6 space-y-2">
+                            <ol className="list-decimal pl-6 space-y-2 max-w-prose break-words">
                               {block.items.map(note => (
                                 <li key={note.id} id={note.id}>
                                   <a href={`#ref-${note.id}`} className="ml-1 text-blue-500">↩</a>
                                   &nbsp;
                                   {note.content}
+                                  <br />
                                   {note.link && (
-                                    <Link href={note.link} className="ml-1 text-blue-500">
+                                    <Link href={note.link} className="text-blue-500 underline inline-block max-w-full">
                                       {note.link}
                                     </Link>
                                   )}
@@ -412,7 +413,7 @@ export default function PhotoEssayContent({
                       if (block.type === 'glossary') {
                         return (
                           <section key={j} id="glossary" className="mt-10 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
-                            <h2 className="font-bold mb-4">Glossary</h2>
+                            <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-4">Glossary</h2>
                             <dl className="space-y-3">
                               {block.items.map((entry, i) => (
                                 <div key={i}>
