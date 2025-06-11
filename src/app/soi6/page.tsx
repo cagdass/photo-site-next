@@ -1,6 +1,5 @@
-import { Suspense } from 'react';
 import { Metadata } from 'next';
-import Soi6PageClient from './Soi6PageClient';
+import Soi6Wrapper from './Soi6Wrapper';
 
 export const metadata: Metadata = {
   title: 'Soi 6, Pattaya – A Photo Essay by Çağdaş Öztekin',
@@ -29,9 +28,5 @@ export const metadata: Metadata = {
 };
 
 export default function Soi6Page() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Soi6PageClient />
-    </Suspense>
-  );
+  return <Soi6Wrapper />;
 }
