@@ -830,8 +830,8 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/n/a/',
-    caption: 'Connect four',
+    src: '/images/pattaya/soi6-44.jpg',
+    caption: 'A game of Connect Four, June 2024.',
   },
   {
     type: 'text',
@@ -839,8 +839,9 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/n/a',
-    caption: 'Christmas '
+    src: '/images/pattaya/soi6-22.jpg',
+    color: true,
+    caption: 'A freezing Thai Christmas, December 2023.'
   },
   {
     type: 'subheading',
@@ -1483,17 +1484,17 @@ const essayContent = {
   {
     type: 'glossary',
     items: [
-      { term: 'Farang - ฝรั่ง', definition: 'Thai slang for foreigner, typically white Westerners.' },
-      { term: 'Faen - แฟน', definition: 'Thai word for “romantic partner” or “significant other.” Unlike English, faen is gender-neutral and can refer to a boyfriend, girlfriend, or spouse. The term is widely used in Thai conversation and doesn’t specify the legal status or gender of the relationship. It’s common for Thais to refer to long-term partners simply as faen regardless of whether they’re married.' },
-      { term: 'Kathoey - กะเทย', definition: 'A Thai term referring to people assigned male at birth who present femininely. This can include transgender women and, in some contexts, effeminate gay men. While some people in Thailand embrace the term, others may prefer to be identified simply as women or by other labels. The English word “ladyboy” is often used by the locals as well as commonly used in media and tourism but is often considered disrespectful by Western standards.' },
-      { term: 'Soi - ซอย', definition: 'A small side street branching off a major road in Thailand.' },
-      { term: 'Boom boom', definition: 'Colloquial Thai-English term used by sex workers to mean sexual intercourse.' },
       { term: 'Bar fine', definition: 'A fee paid to a bar to take a worker out, typically covering lost income for that night.' },
+      { term: 'Boom boom', definition: 'Colloquial Thai-English term used by sex workers to mean sexual intercourse.' },
+      { term: 'Faen - แฟน', definition: 'Thai word for “romantic partner” or “significant other.” Unlike English, faen is gender-neutral and can refer to a boyfriend, girlfriend, or spouse. The term is widely used in Thai conversation and doesn’t specify the legal status or gender of the relationship. It’s common for Thais to refer to long-term partners simply as faen regardless of whether they’re married.' },
+      { term: 'Farang - ฝรั่ง', definition: 'Thai slang for foreigner, typically white Westerners.' },
       { term: 'Freelancer', definition: 'A sex worker who works independently, not tied to any bar, often finding clients directly on the street or nearby.' },
+      { term: 'Kathoey - กะเทย', definition: 'A Thai term referring to people assigned male at birth who present femininely. This can include transgender women and, in some contexts, effeminate gay men. While some people in Thailand embrace the term, others may prefer to be identified simply as women or by other labels. The English word “ladyboy” is often used by the locals as well as commonly used in media and tourism but is often considered disrespectful by Western standards.' },
       { term: 'Lady drink', definition: 'A non-alcoholic or lightly alcoholic drink that customers buy for sex workers to keep them company.' },
       { term: 'Long time', definition: 'A longer paid engagement, typically lasting several hours or overnight, often involving a hotel or private room.' },
       { term: 'Mamasan', definition: 'Originally a Japanese term (ママさん) used to respectfully address a woman in charge of a bar or hostess club. In Thai bar culture, it refers to the woman—often older—who manages the bar and its workers. She recruits staff, oversees daily operations, and enforces rules.' },
       { term: 'Short time', definition: 'A brief paid encounter, usually about an hour or less, often arranged quickly at a bar or nearby location.' },
+      { term: 'Soi - ซอย', definition: 'A small side street branching off a major road in Thailand.' },
       { term: 'Soi 6/1', definition: 'A sub-street or alley adjacent to Soi 6.' }
     ]
   },
@@ -1504,10 +1505,10 @@ const essayContent = {
         id: 'fn1',
         content: (
           <>
-            Tanakorn, Aim. “No Suspected Sex Workers Found During Pattaya Tourist Police’s Inspection, According to Police.” The Pattaya News, 15 Jan. 2023,
+            Tanakorn, Aim. “No Suspected Sex Workers Found During Pattaya Tourist Police’s Inspection, According to Police.” The Pattaya News, 15 Jan. 2023.
           </>
         ),
-        link: 'thepattayanews.com/2023/01/15/no-suspected-sex-workers-found-during-pattaya-tourist-polices-inspection-according-to-police/'
+        link: 'https://thepattayanews.com/2023/01/15/no-suspected-sex-workers-found-during-pattaya-tourist-polices-inspection-according-to-police/'
       },
       {
         id: 'fn2',
@@ -1596,7 +1597,7 @@ const essayContent = {
         id: 'fn11',
         content: (
           <>
-            Empower Foundation. <em>Hit & Run: The Impact of Anti-Trafficking Policy and Practice on Sex Workers’ Human Rights in Thailand</em>. Empower Foundation, 2012. Accessed 2 June 2025.`,
+            Empower Foundation. <em>Hit & Run: The Impact of Anti-Trafficking Policy and Practice on Sex Workers’ Human Rights in Thailand</em>. Empower Foundation, 2012. Accessed 2 June 2025.
           </>
         ),
         link: 'https://www.aidsdatahub.org/sites/default/files/resource/hit-and-run-impact-anti-trafficking-policies-eng-empower-2012.pdf',

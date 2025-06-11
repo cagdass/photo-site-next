@@ -243,6 +243,74 @@ export default function PhotoEssayContent({
     }
   }, [isLgUp, groups]);
 
+  // Build hashToHeadingIdMap dynamically from the groups
+  const hashToHeadingIdMap = useMemo(() => {
+    const map: Record<string, string> = {};
+
+    groups.forEach(group => {
+      const headingId = group.heading.id;
+      if (headingId) {
+        map[headingId] = headingId;
+
+        group.blocks.forEach(block => {
+          if (block.type === 'subheading' && block.id) {
+            map[block.id] = headingId;
+          }
+          if (block.type === 'footnotes') {
+            block.items.forEach(item => {
+              if (item.id) {
+                map[item.id] = headingId;
+                map[`ref-${item.id}`] = headingId;
+              }
+            });
+          }
+        });
+      }
+    });
+
+    return map;
+  }, [groups]);
+
+  useEffect(() => {
+    const handleHashNav = () => {
+      const hash = window.location.hash?.slice(1);
+      console.log("[hashnav] current hash:", hash);
+      if (!hash) return;
+
+      const el = document.getElementById(hash);
+      if (!el) {
+        console.log("[hashnav] element not found:", hash);
+        return;
+      }
+
+      // Find closest ancestor div[ref] — i.e. the collapsible content container
+      const sectionWrapper = el.closest('div[data-section-id]');
+      if (!sectionWrapper) {
+        console.log("[hashnav] no collapsible section found");
+      }
+
+      const sectionId = sectionWrapper?.getAttribute('data-section-id');
+      console.log("[hashnav] expanding sectionId:", sectionId);
+
+      if (sectionId) {
+        setCollapsedSections(prev => ({
+          ...prev,
+          [sectionId]: false,
+        }));
+      }
+
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        console.log("[hashnav] scrolled to:", hash);
+      }, 400);
+    };
+
+    window.addEventListener('hashchange', handleHashNav);
+    handleHashNav();
+
+    return () => window.removeEventListener('hashchange', handleHashNav);
+  }, []);
+
   const headings = essayBlocks
     .filter(
       (block): block is { type: 'heading' | 'subheading'; id: string; text: string } =>
@@ -317,6 +385,8 @@ export default function PhotoEssayContent({
                 return () => window.removeEventListener("resize", handleResize);
               }, [collapsedSections]);
 
+
+
               return (
                 <div key={i}>
                   {heading.text && (
@@ -332,11 +402,13 @@ export default function PhotoEssayContent({
                           ▼
                         </button>
                       </div>
+
                       <hr className="mt-2 mb-4" />
                     </div>
                   )}
 
                   <div
+                    data-section-id={heading.id}
                     ref={(el) => {
                       contentRef.current = el;
                       contentRefs.current[heading.id] = el;
@@ -388,9 +460,9 @@ export default function PhotoEssayContent({
 
                       if (block.type === 'footnotes') {
                         return (
-                          <section key={j} id="footnotes" className="mt-10 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+                          <section key={j} id="footnotes" className="mt-10 mx-auto px-4 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
                             <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-4">Footnotes & References</h2>
-                            <ol className="list-decimal pl-6 space-y-2 max-w-prose break-words">
+                            <ol className="list-decimal break-words">
                               {block.items.map(note => (
                                 <li key={note.id} id={note.id}>
                                   <a href={`#ref-${note.id}`} className="ml-1 text-blue-500">↩</a>
@@ -412,9 +484,9 @@ export default function PhotoEssayContent({
 
                       if (block.type === 'glossary') {
                         return (
-                          <section key={j} id="glossary" className="mt-10 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+                          <section key={j} id="glossary" className="mt-10 mx-auto px-4 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
                             <h2 className="text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-4">Glossary</h2>
-                            <dl className="space-y-3">
+                            <dl className="space-y-3 max-w-2xl">
                               {block.items.map((entry, i) => (
                                 <div key={i}>
                                   <dt className="font-semibold">{entry.term}</dt>
