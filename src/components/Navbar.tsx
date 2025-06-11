@@ -44,22 +44,25 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
 
   const [showPageTitleInNavbar, setShowPageTitleInNavbar] = useState(false);
 
+
+
   useEffect(() => {
-    const target = document.getElementById('cover-title'); // or h1 container
+    if (!pageTitle) return; // don’t do anything if there's no title to show
+
+    const target = document.getElementById('cover-title');
     if (!target) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         setShowPageTitleInNavbar(!entry.isIntersecting);
       },
-      { rootMargin: '-100px 0px 0px 0px' } // adjust for fixed navbar height
+      { rootMargin: '-100px 0px 0px 0px' }
     );
 
     observer.observe(target);
 
     return () => observer.disconnect();
-  }, []);
-
+  }, [pageTitle]); // 👈 re-run when pageTitle changes
   const toggleMenu = () => {
     setMenuOpen((v) => !v);
   };
@@ -208,8 +211,8 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
             <div
               id="navbar-page-title"
               onClick={handleMenuClick}
-              className={`
-      absolute left-1/2 -translate-x-1/2 md:hidden lg:block text-md mt-1
+              className={`cursor-pointer
+      absolute left-1/2 -translate-x-1/2 md:hidden lg:block text-md
       transition-opacity duration-500 ease-in-out font-garamond
       ${showPageTitleInNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'}
     `}
