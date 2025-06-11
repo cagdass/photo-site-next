@@ -26,7 +26,7 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  metadataBase: new URL('https://cagdas.photos'),
+  // metadataBase: new URL('https://cagdas.photos'),
   authors: [{ name: "Çağdaş Öztekin" }],
 };
 
