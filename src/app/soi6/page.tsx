@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Metadata } from 'next';
 import Soi6PageClient from './Soi6PageClient';
 
@@ -28,5 +29,9 @@ export const metadata: Metadata = {
 };
 
 export default function Soi6Page() {
-  return <Soi6PageClient />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Soi6PageClient />
+    </Suspense>
+  );
 }

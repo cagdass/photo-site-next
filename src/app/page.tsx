@@ -1,7 +1,9 @@
 // app/page.tsx
+import { Suspense } from 'react';
 import HeroFlip from '@/components/HeroFlip';
 import HomePageProjects from '@/components/HomePageProjects';
-import PhotoGallery from '@/components/PhotoGallery';
+// import PhotoGallery from '@/components/PhotoGallery';
+import PhotoGalleryWrapper from '@/components/PhotoGalleryWrapper';
 import miscPhotos from '@/data/miscPhotos';
 import './home.css';
 
@@ -76,7 +78,9 @@ export default function Home() {
       </p>
 
       <div className="mt-4">
-        <PhotoGallery photos={miscPhotos} />
+        <Suspense fallback={<div>Loading gallery...</div>}>
+          <PhotoGalleryWrapper photos={miscPhotos} />
+        </Suspense>
       </div>
     </section>
   );

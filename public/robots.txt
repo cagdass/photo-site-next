@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://cagdas.photos
+
+# Sitemaps
 Sitemap: https://cagdas.photos/sitemap.xml

@@ -1,6 +1,7 @@
 import PhotoEssay from '@/components/PhotoEssay';
 import { Metadata } from 'next';
-import songkranPhotos from '@/data/songkranPhotos'; // array of photos only
+import { Suspense } from 'react';
+import SongkranPageClient from './SongkranPageClient';
 
 export const metadata: Metadata = {
   title: 'Songkran — Brief',
@@ -27,23 +28,10 @@ export const metadata: Metadata = {
     images: ['https://cagdas.photos/images/songkran/songkran-01.jpg'],
   },
 };
-
-export default function SongkranBriefPage() {
+export default function SongkranPage() {
   return (
-    <PhotoEssay
-      title="Songkran"
-      subtitle="Thailand's wettest day with a waterproof camera."
-      cover={{
-        src: '/images/songkran/songkran-01.jpg',
-        caption: 'Caption',
-      }}
-      published={true}
-      publishedDate="Published on 16 May 2025"
-      essayBlocksContent={{ blocks: [] }}
-      photoBlocks={songkranPhotos}
-      photoOnly={true}
-      shareUrl="https://cagdas.photos/brief/songkran"
-      shareTitle="Songkran — Brief"
-    />
+    <Suspense fallback={<div>Loading...</div>}>
+      <SongkranPageClient />
+    </Suspense>
   );
 }

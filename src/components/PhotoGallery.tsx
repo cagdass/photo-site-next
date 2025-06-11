@@ -17,6 +17,8 @@ interface Photo {
   height: number;
 }
 
+export type { Photo };
+
 interface PhotoGalleryProps {
   photos: Photo[];
 }

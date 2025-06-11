@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import PhotoEssay from '@/components/PhotoEssay';
-import sihanoukvilleEssayBlocks from '@/data/sihanoukvilleEssayBlocks';
-import sihanoukvillePhotos from '@/data/sihanoukvillePhotos';
+import SihanoukvillePageClient from './SihanoukvillePageClient';
 
 export const metadata: Metadata = {
   title: 'Sihanoukville – Çağdaş',
@@ -31,20 +31,8 @@ export const metadata: Metadata = {
 
 export default function SihanoukvillePage() {
   return (
-    <PhotoEssay
-      title="Sihanoukville"
-      subtitle="One day in a Cambodian city in rapid transformation"
-      cover={{
-        src: '/images/sihanoukville/sihanoukville-01.jpg',
-        caption: 'Morning in the city.',
-      }}
-      published={true}
-      publishedDate="Published on 6 May 2025"
-      essayBlocksContent={sihanoukvilleEssayBlocks}
-      photoBlocks={sihanoukvillePhotos}
-      showPhotoEssayToggle={true}
-      shareUrl="https://cagdas.photos/brief/sihanoukville"
-      shareTitle="A Brief Photo Series on Sihanoukville"
-    />
+    <Suspense fallback={<div>Loading...</div>}>
+      <SihanoukvillePageClient />
+    </Suspense>
   );
 }

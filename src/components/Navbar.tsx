@@ -209,7 +209,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
               id="navbar-page-title"
               onClick={handleMenuClick}
               className={`
-      absolute left-1/2 -translate-x-1/2 md:hidden lg:block  text-md mt-1
+      absolute left-1/2 -translate-x-1/2 md:hidden lg:block text-md mt-1
       transition-opacity duration-500 ease-in-out font-garamond
       ${showPageTitleInNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'}
     `}
