@@ -7,7 +7,7 @@ import PortraitReel from '@/components/PortraitReel';
 import Soi6Poem from '@/components/Soi6Poem';
 import PhotoEssayText from '@/components/PhotoEssayText';
 
-const introductionTextSize = 'text-base md:text-lg lg:text-xl xl:text-[20px] leading-relaxed mb-6';
+const introductionTextSize = 'text-sm  lg:text-base xl:text-[18px] leading-relaxed mb-6';
 
 const essayContent = {
   options: {
@@ -126,7 +126,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `During one of our early homework assignments that summer, he told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I suspect it was partly a trick he played on me—after all, all his published books are in black and white, though not because he lacked an understanding of light. In any case, monochrome has worked for me ever since, and I prefer it—even though I’ve added an option to show color versions of photos where available throughout this essay.
+    content: `During one of our early homework assignments that summer, he told me, “You don’t understand the light yet. We need to work in black and white so you can see it better.” And we never switched to color. To anyone who asks why I still shoot in black and white, I jokingly say, “I haven’t been confirmed to understand light yet.” But honestly, I suspect it was partly a trick he played on me—after all, all his published books are in black and white, though not because he lacked an understanding of light. In any case, monochrome has worked for me ever since, and I prefer it—even though throughout this essay I’ve added an option to show color versions of select photos where the neon pleased me.
 
     But by autumn, our informal kitchen classes had come to an end. It was time for Halil to return to Pattaya, Thailand, where he spent his winters. He wasn’t the typical sex tourist; rather, staying rent-free in a friend’s Thai apartment made financial sense—just like escaping another Swedish winter. In fact, he had been talking about photographing Pattaya long before I even picked up a camera, though by now, I think he’s too disinterested to photograph and publish another book.`
   },
@@ -315,8 +315,15 @@ const essayContent = {
     content: `Then on that first night again, just to test my limits, he took me to a massive brothel lounge where women lined the walls, each with a number and a color code. The colors marked the price. I wasn’t allowed in with my camera—and even without it, I noticed certain guests, especially South Asian men, being delayed or turned away. On our way out, we stopped to chat with a few Indian tourists lingering at the entrance. I hadn't seen anything like it before.`
   },
   {
-    type: 'text',
-    content: `In my first days—while still getting to know the environment—I shot from the hip, at random, whenever the fever took me. I didn’t know what I was doing exactly. The lens was wide, the light was low, and I rarely looked through the viewfinder. I just wandered—snapping, drifting. Most of those images came out blurred, ghosted, smudged at the corners. But later, when I began editing, I grew fond of some of them. There was something dreamlike in their haze. Faces half-caught, eyes like smears of charcoal. I started calling them the Goya photos—they reminded me of his black paintings. A street that looked more like an end-time city than a place on a map. It made me think of Michael Ackerman’s Fiction, or D’Agata’s Insomnia—not in technique, but in tone. Flu photos, in a way. Feverish. Disoriented. Maybe that’s what happens when you walk Soi 6 with a camera and a heartbeat. A Goya painting rendered in CMOS.`
+    type: 'component',
+    render:
+      () => (
+        <>
+          <PhotoEssayText>
+            In my first days—while still getting to know the environment—I shot from the hip, at random, whenever the fever took me. I didn’t know what I was doing exactly. The lens was wide, the light was low, and I rarely looked through the viewfinder. I just wandered—snapping, drifting. Most of those images came out blurred, ghosted, smudged at the corners. But later, when I began editing, I grew fond of some of them. There was something dreamlike in their haze. Faces half-caught, eyes like smears of charcoal. I started calling them the <em>Goya photos</em>—they reminded me of his black paintings. A street that looked more like an end-time city than a place on a map. It made me think of Michael Ackerman’s <em>Fiction</em>, or D’Agata’s <em>Insomnia</em>—not in technique, but in tone. Flu photos, in a way. Feverish. Disoriented. Maybe that’s what happens when you walk Soi 6 with a camera and a heartbeat. A Goya painting rendered in CMOS.
+          </PhotoEssayText>
+        </>
+      )
   },
   {
     type: 'image',
@@ -371,7 +378,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. Motorcycles swooshed past and the occasional car crawled through, but it was highly walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already live-streaming their own stories. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers or flashlights at any raised lens, and most of the action was hidden behind closed doors. I didn’t go back to the Walking Street again, I wasn’t interested in where I couldn’t photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. And it became what it was when I was there to photograph.`
+    content: `We quickly decided that Soi 6 was the most photographable street—narrow, compact, alive. Motorcycles swooshed past and the occasional car crawled through, but it was highly walkable. Most people didn’t mind the camera; many vloggers wandered around with selfie sticks already live-streaming their own stories. It was different from Walking Street, where “No Photo” signs hung everywhere, bouncers waved laser pointers or flashlights at any raised lens, and most of the action was hidden behind closed doors. I didn’t go back to Walking Street again, I wasn’t interested in where I couldn’t photograph. My teacher told me that when he had first photographed Pattaya, Soi 6 had been more like Walking Street: guarded, closed off, hostile to cameras. But after the pandemic, something had shifted. And it became what it was when I was there to photograph.`
   },
   {
     type: 'image',
