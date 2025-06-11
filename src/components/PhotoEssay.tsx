@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import ShareButtons from '@/components/ShareButtons';
 import ToggleSwitch from './ToggleSwitch';
 import PhotoEssayContent from '@/components/PhotoEssayContent';
@@ -51,8 +52,21 @@ export default function PhotoEssay({
   hasTableOfContents = false,
 }: PhotoEssayProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [showEssay, setShowEssay] = useState(!photoOnly);
+
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [showEssay, setShowEssay] = useState(() => !searchParams.get('gallery') && !photoOnly);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (showEssay) {
+      params.delete('gallery');
+    } else {
+      params.set('gallery', '1');
+    }
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.replaceState({}, '', newUrl);
+  }, [showEssay]);
 
   const essayBlocks = essayBlocksContent.blocks;
   const essayOptions = essayBlocksContent.options || {};

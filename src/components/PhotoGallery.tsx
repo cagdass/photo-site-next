@@ -1,12 +1,13 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from "react";
-import { RenderImageContext, RenderImageProps, RowsPhotoAlbum } from "react-photo-album";
+import { useEffect, useState } from "react";
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+import { RowsPhotoAlbum, RenderImageProps, RenderImageContext } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "react-photo-album/rows.css";
 import "yet-another-react-lightbox/styles.css";
-import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 interface Photo {
   src: string;
@@ -25,13 +26,7 @@ function renderNextImage(
   { photo, width, height }: RenderImageContext
 ) {
   return (
-    <div
-      style={{
-        width: "100%",
-        position: "relative",
-        aspectRatio: `${width} / ${height}`,
-      }}
-    >
+    <div style={{ width: "100%", position: "relative", aspectRatio: `${width} / ${height}` }}>
       <Image
         fill
         src={photo.src || photo}
@@ -45,9 +40,35 @@ function renderNextImage(
 }
 
 export default function PhotoGallery({ photos }: PhotoGalleryProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
   const [index, setIndex] = useState<number | null>(null);
 
-  // Prepare slides for lightbox (react-photo-album photos to lightbox format)
+  // 1. On URL change → update Lightbox index
+  useEffect(() => {
+    const photoIndex = parseInt(searchParams.get('photo') || '', 10);
+    if (!isNaN(photoIndex) && photoIndex >= 0 && photoIndex < photos.length) {
+      setIndex(photoIndex);
+    } else {
+      setIndex(null);
+    }
+  }, [searchParams, photos.length]);
+
+  // 2. Sync router query string when lightbox index changes
+  const updateUrl = (newIndex: number | null, replace = false) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (newIndex === null) {
+      params.delete('photo');
+    } else {
+      params.set('photo', newIndex.toString());
+    }
+    const url = `${pathname}?${params.toString()}`;
+    replace ? router.replace(url) : router.push(url);
+  };
+
+  // 3. Prepare lightbox slides
   const slides = photos.map(({ src, caption }) => ({
     src,
     title: caption || "",
@@ -63,14 +84,15 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           size: "1168px",
           sizes: [{ viewport: "(max-width: 1200px)", size: "calc(100vw - 32px)" }],
         }}
-        onClick={({ index }) => setIndex(index)}
+        onClick={({ index }) => updateUrl(index)}
       />
 
       <Lightbox
         open={index !== null}
-        close={() => setIndex(null)}
+        close={() => updateUrl(null)}
         slides={slides}
         index={index ?? 0}
+        on={{ view: ({ index: i }) => updateUrl(i, true) }}
         plugins={[Zoom]}
         zoom={{ maxZoomPixelRatio: 2 }}
       />
