@@ -6,6 +6,7 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import { ImageSlide, SlideImage } from "yet-another-react-lightbox";
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import EssayImage from '@/components/EssayImage';
 import PhotoEssayText from '@/components/PhotoEssayText';
 import MobileTOC from '@/components/MobileTOC';
@@ -76,6 +77,10 @@ export default function PhotoEssayContent({
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [showColorMap, setShowColorMap] = useState<Record<number, boolean>>({});
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const [tocVisible, setTocVisible] = useState(true);
   const [tocVisibleDesktop, setTocVisibleDesktop] = useState(true);
@@ -195,6 +200,31 @@ export default function PhotoEssayContent({
     },
   };
 
+  useEffect(() => {
+    const essayIndex = parseInt(searchParams.get('essay') || '', 10);
+    if (!isNaN(essayIndex) && essayIndex >= 0 && essayIndex < slides.length) {
+      setLightboxIndex(essayIndex);
+    } else {
+      setLightboxIndex(null);
+    }
+  }, [searchParams, slides.length]);
+
+  const setEssayIndexInUrl = (newIndex: number | null, replace = false) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (newIndex === null) {
+      params.delete('essay');
+    } else {
+      params.set('essay', newIndex.toString());
+    }
+    const url = `${pathname}?${params.toString()}${window.location.hash}`;
+
+    if (replace) {
+      router.replace(url, { scroll: false });
+    } else {
+      router.push(url, { scroll: false });
+    }
+  };
+
   type Group = {
     heading: { id: string; text: string, collapsed?: boolean, };
     blocks: typeof essayBlocks;
@@ -274,23 +304,23 @@ export default function PhotoEssayContent({
   useEffect(() => {
     const handleHashNav = () => {
       const hash = window.location.hash?.slice(1);
-      console.log("[hashnav] current hash:", hash);
+      // console.log("[hashnav] current hash:", hash);
       if (!hash) return;
 
       const el = document.getElementById(hash);
       if (!el) {
-        console.log("[hashnav] element not found:", hash);
+        // console.log("[hashnav] element not found:", hash);
         return;
       }
 
       // Find closest ancestor div[ref] — i.e. the collapsible content container
       const sectionWrapper = el.closest('div[data-section-id]');
       if (!sectionWrapper) {
-        console.log("[hashnav] no collapsible section found");
+        // console.log("[hashnav] no collapsible section found");
       }
 
       const sectionId = sectionWrapper?.getAttribute('data-section-id');
-      console.log("[hashnav] expanding sectionId:", sectionId);
+      // console.log("[hashnav] expanding sectionId:", sectionId);
 
       if (sectionId) {
         setCollapsedSections(prev => ({
@@ -301,7 +331,8 @@ export default function PhotoEssayContent({
 
       setTimeout(() => {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        console.log("[hashnav] scrolled to:", hash);
+        // console.log("[hashnav] scrolled to:", hash);
+        window.history.replaceState(null, '', `#${hash}`);
       }, 400);
     };
 
@@ -348,6 +379,16 @@ export default function PhotoEssayContent({
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [headings, isUserScrolling, tocVisibleDesktop]);
+
+  const clearHash = () => {
+    // const scrollY = window.scrollY;
+    // const scrollX = window.scrollX;
+    const params = new URLSearchParams(searchParams.toString());
+    const url = `${pathname}?${params.toString()}`;
+    window.history.replaceState(null, '', url);
+    // Restore scroll after URL update to prevent jump
+    // window.scrollTo(scrollX, scrollY);
+  };
 
   function renderEssayContent() {
     return (
@@ -452,7 +493,10 @@ export default function PhotoEssayContent({
                             caption={block.caption}
                             showColor={!!showColorMap[slideIndex]}
                             toggleColor={() => toggleColor(slideIndex)}
-                            onClick={() => setLightboxIndex(slides.findIndex(slide => slide.src === block.src))}
+                            onClick={() => {
+                              clearHash();
+                              setEssayIndexInUrl(slides.findIndex(slide => slide.src === block.src));
+                            }}
                             {...(block.color && imgSrcReplaceStr ? { imgSrcReplaceStr } : {})}
                           />
                         );
@@ -578,13 +622,15 @@ export default function PhotoEssayContent({
 
       <Lightbox
         open={lightboxIndex !== null}
-        close={() => setLightboxIndex(null)}
+        close={() => setEssayIndexInUrl(null)}
         slides={slides}
         index={lightboxIndex ?? 0}
-        on={{ view: ({ index: currentIndex }) => setLightboxIndex(currentIndex) }}
+        on={{
+          view: ({ index: currentIndex }) => setEssayIndexInUrl(currentIndex, true),
+        }}
         plugins={[Zoom]}
         zoom={{ maxZoomPixelRatio: 2 }}
-        render={render}  // use custom slide render with color toggle
+        render={render}
       />
     </>
   );

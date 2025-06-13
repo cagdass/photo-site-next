@@ -16,14 +16,14 @@ export default function TableOfContents({ headings, activeId }: ToCProps) {
         {/* back to top link */}
         <li>
           <a
-            href="#top"
+            href="#"
             className="text-gray-500 hover:underline"
             onClick={e => {
               e.preventDefault();
               if (window.location.hash === '#top') {
                 history.replaceState(null, '', ' ');
               }
-              window.location.hash = '#top';
+              window.location.hash = '#';
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
