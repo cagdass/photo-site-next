@@ -31,6 +31,11 @@ function handleMenuClick(e: React.MouseEvent<HTMLElement>) {
   // only scroll to top if clicked directly on container (not on links/buttons inside)
   if (e.target === e.currentTarget) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // ✅ clear the hash from URL while preserving query params
+    const { pathname, search } = window.location;
+    const url = `${pathname}${search}`;
+    window.history.replaceState(null, '', url);
   }
 }
 

@@ -61,6 +61,9 @@ export default function PhotoEssayContent({
   imgSrcReplaceStr,
 }: PhotoEssayContentProps) {
   const currentVisibleHeadingRef = useRef<HTMLElement | null>(null);
+  const initialHash = typeof window !== 'undefined' ? window.location.hash?.slice(1) : null;
+
+  const pendingExpandIdRef = useRef<string | null>(initialHash || null);
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>(() => {
     const initialState: Record<string, boolean> = {};
 
@@ -112,7 +115,7 @@ export default function PhotoEssayContent({
       setTimeout(() => {
         const el = document.getElementById(id);
         if (el) {
-          // el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 500);
     }
@@ -256,11 +259,18 @@ export default function PhotoEssayContent({
   useEffect(() => {
     if (!isLgUp) {
       const allCollapsed: Record<string, boolean> = {};
+
       groups.forEach(g => {
         if (g.heading.id !== 'default' && g.heading.collapsed !== false) {
           allCollapsed[g.heading.id] = true;
         }
       });
+
+      if (pendingExpandIdRef.current) {
+        allCollapsed[pendingExpandIdRef.current] = false;
+        pendingExpandIdRef.current = null; // clear it
+      }
+
       setCollapsedSections(allCollapsed);
     } else {
       const fromBlocks: Record<string, boolean> = {};
@@ -269,6 +279,7 @@ export default function PhotoEssayContent({
           fromBlocks[block.id] = true;
         }
       });
+
       setCollapsedSections(fromBlocks);
     }
   }, [isLgUp, groups]);
@@ -304,7 +315,6 @@ export default function PhotoEssayContent({
   useEffect(() => {
     const handleHashNav = () => {
       const hash = window.location.hash?.slice(1);
-      // console.log("[hashnav] current hash:", hash);
       if (!hash) return;
 
       const el = document.getElementById(hash);
@@ -313,16 +323,15 @@ export default function PhotoEssayContent({
         return;
       }
 
-      // Find closest ancestor div[ref] — i.e. the collapsible content container
-      const sectionWrapper = el.closest('div[data-section-id]');
-      if (!sectionWrapper) {
-        // console.log("[hashnav] no collapsible section found");
-      }
+      const sectionId =
+        el.getAttribute('data-section-id') ||
+        el.getAttribute('id') ||
+        el.closest('[data-section-id]')?.getAttribute('data-section-id');
 
-      const sectionId = sectionWrapper?.getAttribute('data-section-id');
-      // console.log("[hashnav] expanding sectionId:", sectionId);
+      // console.log('[hashnav] resolved sectionId:', sectionId);
 
       if (sectionId) {
+        pendingExpandIdRef.current = sectionId;
         setCollapsedSections(prev => ({
           ...prev,
           [sectionId]: false,
@@ -330,10 +339,9 @@ export default function PhotoEssayContent({
       }
 
       setTimeout(() => {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // console.log("[hashnav] scrolled to:", hash);
+        handleJumpTo(hash);
         window.history.replaceState(null, '', `#${hash}`);
-      }, 400);
+      }, 100);
     };
 
     window.addEventListener('hashchange', handleHashNav);
@@ -577,7 +585,10 @@ export default function PhotoEssayContent({
               className="rounded"
               priority={true}
               data-testid="essay-cover-img"
-              onClick={() => setLightboxIndex(0)}
+              onClick={() => {
+                clearHash();
+                setEssayIndexInUrl(0);
+              }}
             />
           </div>
           <p className="image-caption mb-4 text-center italic text-gray-500 text-sm mt-2">
