@@ -133,6 +133,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-05.jpg',
+    slug: 'ususal-scene',
     caption: 'A usual Soi 6 scene, April 2024.'
   },
   {
@@ -152,6 +153,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-02.jpg',
+    slug: 'welcome-to-pattaya',
     caption: 'The customer is always welcome, June 2024.'
   },
   {
@@ -165,6 +167,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-17.jpg',
+    slug: 'fleeting-glows',
     color: true,
     caption: 'Fleeting glows, December 2023.'
   },
@@ -195,6 +198,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-03.jpg',
+    slug: 'odd-couple',
     color: true,
     caption: 'Man with a bar-fined girl, December 2023.'
   },
@@ -220,6 +224,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-97.jpg',
+    slug: 'another-odd-couple',
     caption: 'Another international couple, December 2023.',
   },
   {
@@ -233,6 +238,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-19.jpg',
+    slug: 'pussy-club',
     color: true,
     caption: 'Children were often around, March 2024.',
   },
@@ -247,6 +253,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-93.jpg',
+    slug: 'talk-about-overwhelming',
     caption: 'A different kind of overwhelming, June 2024.'
   },
   {
@@ -258,6 +265,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-04.jpg',
+    slug: 'flower-girl',
     color: true,
     caption: 'Some children even part of the workforce, April 2024.'
   },
@@ -307,6 +315,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-34.jpg',
+    slug: 'goya-smile',
     caption: 'The Goya smile, December 2023.'
   },
   {
@@ -328,6 +337,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-49.jpg',
+    slug: 'goya-gubben',
     color: true,
     caption: 'Another Goya face, December 2023.'
   },
@@ -355,9 +365,9 @@ const essayContent = {
             To a mother holding her toddler, he’d point at the kid and say <em>Nà-làk mâak mâak</em>, meaning very cute.
             If the heat was unbearable, he’d complain loudly to a stranger: <em>Róon</em>!
             One night, when it dropped to 22 degrees and locals pulled on hoodies,
-            he hugged himself dramatically and shrieked <em>Namkeng</em>! <em>Namkeng</em>!—ice—rubbing his arms like he was freezing.
+            he hugged himself dramatically and shrieked <em>Namkeng</em>! <em>Namkeng</em>!— meaning ice—rubbing his arms like he was freezing.
             It was also the word he used to describe Sweden whenever a local was asking about us where we came from.
-            Maybe he didn’t know the word for cold. But it didn’t matter and it sure was entertaining.
+            Maybe he didn’t know the word for cold. But it didn’t matter. It sure was entertaining and a perfect icebreaker.
           </PhotoEssayText>
         </>
       )
@@ -365,6 +375,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-88.jpg',
+    slug: 'breaking-the-ice',
     caption: 'Namkeng! Namkeng!, March 2024.'
   },
   {
@@ -383,6 +394,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/walking_street.jpg',
+    slug: 'night-watchmen',
     caption: 'The entrance of a Walking Street go-go club, December 2023.',
   },
   {
@@ -411,6 +423,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-59.jpg',
+    slug: 'open-bar',
     caption: 'Allure of the open bar on Soi 6, December 2023.',
   },
 
@@ -438,6 +451,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-1312.jpg',
+    slug: 'acab',
     caption: 'Even the police patrol isn’t immune from Soi 6’s rituals, April 2024.'
 
   },
@@ -486,6 +500,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-41.jpg',
+    slug: 'trans-sex-worker',
     caption: 'A trans sex worker at a Soi 6/1 bar, April 2024.'
   },
   {
@@ -532,6 +547,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-06.jpg',
+    slug: 'make-up',
     caption: 'Makeup check before work, June 2024.'
   },
   {
@@ -545,6 +561,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-16.jpg',
+    slug: 'say-cheese',
     color: true,
     caption: 'Smile for the camera, April 2024.'
   },
@@ -557,6 +574,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-66.jpg',
+    slug: 'pictureception',
     color: true,
     caption: 'Picture in a picture, April 2024.'
   },
@@ -573,6 +591,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-07.jpg',
+    slug: 'usual-work-night',
     caption: 'A usual night at work, April 2024.'
   },
   {
@@ -592,6 +611,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-31.jpg',
+    slug: 'in-a-bar',
     caption: 'In such a bar, March 2024.'
   },
   {
@@ -603,6 +623,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-94.jpg',
+    slug: 'boy-in-a-cart',
     caption: 'Out late on a school night, April 2024.'
   },
   {
@@ -614,6 +635,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-65.jpg',
+    slug: 'pyjamas',
     caption: 'Changing into pyjamas, April 2024.'
   },
   {
@@ -653,6 +675,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-47.jpg',
+    slug: 'walking-stick-men',
     caption: 'There must be some way out of here, June 2024.'
   },
   {
@@ -668,6 +691,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-09.jpg',
+    slug: 'yankees',
     caption: 'Yankees that have been on a medical Turkish trip, June 2024.'
   },
   {
@@ -696,6 +720,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-92.jpg',
+    slug: 'shawl-laddie',
     caption: 'Man with a shawl, December 2023.'
   },
   {
@@ -711,6 +736,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-13.jpg',
+    slug: 'yet-another-odd-couple',
     caption: 'An international couple, December 2023.',
   },
   {
@@ -722,6 +748,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-98.jpg',
+    slug: 'the-millionaire',
     caption: 'A made guy, March 2024.',
   },
   {
@@ -759,6 +786,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-10.jpg',
+    slug: 'roll-call',
     caption: 'Mamasan taking the roll call, March 2024.',
   },
   {
@@ -800,6 +828,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-80.jpg',
+    slug: 'birthday-girl',
     caption: 'Birthday girl, June 2024.',
   },
   {
@@ -831,6 +860,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-44.jpg',
+    slug: 'connect-four',
     caption: 'A game of Connect Four, June 2024.',
   },
   {
@@ -840,6 +870,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-22.jpg',
+    slug: 'merry-christmas',
     color: true,
     caption: 'A freezing Thai Christmas, December 2023.'
   },
@@ -918,6 +949,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-08.jpg',
+    slug: 'wheelchair-man',
     caption: 'Street scene, June 2024.',
   },
   {
@@ -943,6 +975,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-71.jpg',
+    slug: 'with-a-customer',
     caption: 'With a customer, April 2024.',
   },
   {
@@ -962,6 +995,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-82.jpg',
+    slug: 'splish-splash',
     caption: 'Nightfall after the water fights during Songkran, April 2024.',
   },
   {
@@ -1114,6 +1148,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-90.jpg',
+    slug: 'baby',
     caption: 'All alone and lost, April 2024.',
     color: true,
   },
@@ -1151,6 +1186,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-11.jpg',
+    slug: 'make-up-girls',
     caption: 'Flower-selling girls putting on makeup, April 2024.'
   },
   {
@@ -1175,6 +1211,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-75.jpg',
+    slug: 'london-bloke',
     caption: 'Tourist from London and bar girls posing, June 2024.'
   },
   {
@@ -1188,6 +1225,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-78.jpg',
+    slug: 'linda-in-the-water',
     caption: 'Linda in the water, April 2024.',
     color: true,
   },
@@ -1200,6 +1238,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-77.jpg',
+    slug: 'water-gun',
     caption: 'Ineffective weapon during Songkran, April 2024.',
   },
   {
@@ -1227,6 +1266,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-00.jpg',
+    slug: 'collapsed',
     caption: 'Collapsed woman, April 2024. (Photographed with an OM System TG-7)'
 
   },
@@ -1239,6 +1279,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-32.jpg',
+    slug: 'commotion',
     caption: 'There is too much confusion, June 2024.'
   },
   {
@@ -1252,6 +1293,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-38.jpg',
+    slug: 'powder-room',
     caption: 'Powder room, April 2024.'
   },
   {
@@ -1265,6 +1307,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-95.jpg',
+    slug: 'law-and-order',
     caption: 'Law and order, March 2024.'
   },
   {
@@ -1307,6 +1350,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/cambodia.jpg',
+    slug: 'cambodia',
     caption: 'At a Phnom Penh bar, May 2024.',
   },
   {
@@ -1345,6 +1389,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-12.jpg',
+    slug: 'a-short-getaway',
     caption: 'A short getaway, December 2023.',
   },
   {
@@ -1369,6 +1414,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-33.jpg',
+    slug: 'french-maids',
     caption: 'French maids, June 2024.',
   },
   {
@@ -1408,6 +1454,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-lost.jpg',
+    slug: 'frenchman',
     caption: 'Frenchman, a photo whose export is missing too, only a low-resolution preview survived, June 2024.'
   },
   {
@@ -1442,6 +1489,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-14.jpg',
+    slug: 'fourth-wall',
     caption: 'Breaking the fourth wall, April 2024.',
   },
   {
@@ -1473,6 +1521,7 @@ const essayContent = {
   {
     type: 'image',
     src: '/images/pattaya/soi6-15.jpg',
+    slug: 'mans-best-friend',
     alt: 'Closing image from Soi 6',
     caption: 'Dog with a bottle, December 2023.',
   },

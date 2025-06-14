@@ -22,6 +22,7 @@ export default function Soi6PageClient() {
       cover={{
         src: '/images/pattaya/soi6-01.jpg',
         caption: 'Start of a new working day, June 2024.',
+        slug: 'new-working-day',
       }}
       published={false}
       publishedDate="Work in progress"

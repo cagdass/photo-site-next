@@ -14,6 +14,7 @@ export interface PhotoEssayProps {
   cover: {
     src: string;
     caption?: string;
+    slug?: string,
   };
   published?: boolean;
   publishedDate?: string;

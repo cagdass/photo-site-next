@@ -18,6 +18,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-02.jpg',
+      slug: 'construction-site',
       caption: 'Cambodian workers entering a Chinese-funded construction site'
     },
     {
@@ -27,6 +28,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-03.jpg',
+      slug: 'guitar-hero',
       caption: 'A young guitar hero',
       orientation: 'portrait'
     },
@@ -37,6 +39,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-04.jpg',
+      slug: 'tuk-tuks',
       caption: 'Busy street',
     },
     {
@@ -46,6 +49,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-05.jpg',
+      slug: 'street-vendeuse',
       caption: 'Street vendeuse',
     },
     {
@@ -55,6 +59,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-06.jpg',
+      slug: 'casino-st',
       caption: 'Casino St.',
     },
     {
@@ -65,6 +70,7 @@ const sihanoukvilleEssayBlocks = {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-07.jpg',
       caption: 'A new colony?',
+      slug: 'a-new-colony',
       orientation: 'portrait',
     },
     {
@@ -89,6 +95,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-08.jpg',
+      slug: 'contrasting-neighborhoods',
       caption: 'A poor local quarter surrounded by high-rises',
     },
     {
@@ -98,6 +105,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-09.jpg',
+      slug: 'sleepy-bulldog',
       caption: 'Sleepy Bulldog',
     },
     {
@@ -107,6 +115,7 @@ const sihanoukvilleEssayBlocks = {
     {
       type: 'image',
       src: '/images/sihanoukville/sihanoukville-10.jpg',
+      slug: 'tuktuk-driver',
       caption: 'Tuktuk driver'
     },
   ],

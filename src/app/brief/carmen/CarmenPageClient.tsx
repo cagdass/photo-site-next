@@ -22,6 +22,7 @@ export default function CarmenPageClient() {
       cover={{
         src: '/images/carmen/carmen-13.jpg',
         caption: 'Another fun night at the pub.',
+        slug: 'pub-man',
       }}
       published={true}
       publishedDate="Published on 17 May 2025"

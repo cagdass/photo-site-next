@@ -23,6 +23,7 @@ export default function SihanoukvillePageClient() {
       cover={{
         src: '/images/sihanoukville/sihanoukville-01.jpg',
         caption: 'Morning in the city.',
+        slug: 'a-new-morning',
       }}
       published={true}
       publishedDate="Published on 6 May 2025"

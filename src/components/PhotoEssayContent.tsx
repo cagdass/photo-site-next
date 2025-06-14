@@ -17,7 +17,7 @@ import imageDimensions from '@/data/imageDimensions';
 const typedImageDimensions = imageDimensions as Record<string, { width: number; height: number }>;
 
 interface PhotoEssayContentProps {
-  cover: { src: string; caption?: string };
+  cover: { src: string; caption?: string, slug?: string };
   essayBlocks: EssayBlock[];
   collapsible?: boolean;
   prelude?: React.ReactNode;
@@ -27,13 +27,14 @@ interface PhotoEssayContentProps {
 
 type CustomSlide = SlideImage & {
   color?: boolean;
+  slug?: string,
 };
 
 type EssayBlock =
   | { type: 'heading' | 'subheading'; id: string; text: string; collapsed?: boolean }
   | { type: 'text'; content: string }
   | { type: 'component'; render: () => React.ReactNode }
-  | { type: 'image'; src: string; alt?: string; caption?: string, color?: boolean }
+  | { type: 'image'; src: string; alt?: string; caption?: string, color?: boolean, slug: string }
   | { type: 'footnotes'; items: { id: string; content: string; link?: string, excerpt?: string }[] }
   | { type: 'glossary'; items: { term: string; definition: string }[] };
 
@@ -126,10 +127,11 @@ export default function PhotoEssayContent({
   const slides: CustomSlide[] = useMemo(() => [
     {
       src: cover.src,
+      slug: cover.slug,
       ...(typedImageDimensions[cover.src] || {
         width: 1200,
         height: 800
-      })
+      }),
     },
     ...imageBlocks.map(b => {
       const key = b.src;
@@ -138,6 +140,7 @@ export default function PhotoEssayContent({
         src: b.src,
         color: b.color,
         caption: b.caption,
+        slug: b.slug,
         alt: b.alt,
         ...(typedImageDimensions[b.src] || {
           width: 1200,
@@ -204,28 +207,33 @@ export default function PhotoEssayContent({
   };
 
   useEffect(() => {
-    const essayIndex = parseInt(searchParams.get('essay') || '', 10);
-    if (!isNaN(essayIndex) && essayIndex >= 0 && essayIndex < slides.length) {
-      setLightboxIndex(essayIndex);
-    } else {
+    const slug = searchParams.get('photo');
+    if (!slug) {
       setLightboxIndex(null);
+      return;
     }
-  }, [searchParams, slides.length]);
 
-  const setEssayIndexInUrl = (newIndex: number | null, replace = false) => {
+    const index = slides.findIndex(slide => slide.slug === slug);
+    if (index !== -1) {
+      setLightboxIndex(index);
+    } else {
+      setLightboxIndex(null); // fallback in case slug is invalid
+    }
+  }, [searchParams, slides]);
+
+  const setEssaySlugInUrl = (newIndex: number | null, replace = false) => {
     const params = new URLSearchParams(searchParams.toString());
-    if (newIndex === null) {
-      params.delete('essay');
-    } else {
-      params.set('essay', newIndex.toString());
-    }
-    const url = `${pathname}?${params.toString()}${window.location.hash}`;
 
-    if (replace) {
-      router.replace(url, { scroll: false });
+    if (newIndex === null) {
+      params.delete('photo');
     } else {
-      router.push(url, { scroll: false });
+      const slug = slides[newIndex]?.slug;
+      if (!slug) return; // safeguard
+      params.set('photo', slug);
     }
+
+    const url = `${pathname}?${params.toString()}${window.location.hash}`;
+    replace ? router.replace(url, { scroll: false }) : router.push(url, { scroll: false });
   };
 
   type Group = {
@@ -503,7 +511,7 @@ export default function PhotoEssayContent({
                             toggleColor={() => toggleColor(slideIndex)}
                             onClick={() => {
                               clearHash();
-                              setEssayIndexInUrl(slides.findIndex(slide => slide.src === block.src));
+                              setEssaySlugInUrl(slides.findIndex(slide => slide.src === block.src));
                             }}
                             {...(block.color && imgSrcReplaceStr ? { imgSrcReplaceStr } : {})}
                           />
@@ -587,7 +595,7 @@ export default function PhotoEssayContent({
               data-testid="essay-cover-img"
               onClick={() => {
                 clearHash();
-                setEssayIndexInUrl(0);
+                setEssaySlugInUrl(0);
               }}
             />
           </div>
@@ -633,11 +641,11 @@ export default function PhotoEssayContent({
 
       <Lightbox
         open={lightboxIndex !== null}
-        close={() => setEssayIndexInUrl(null)}
+        close={() => setEssaySlugInUrl(null)}
         slides={slides}
         index={lightboxIndex ?? 0}
         on={{
-          view: ({ index: currentIndex }) => setEssayIndexInUrl(currentIndex, true),
+          view: ({ index: currentIndex }) => setEssaySlugInUrl(currentIndex, true),
         }}
         plugins={[Zoom]}
         zoom={{ maxZoomPixelRatio: 2 }}

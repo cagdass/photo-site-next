@@ -18,6 +18,7 @@ const carmenEssayBlocks = {
     {
       type: 'image',
       src: '/images/carmen/carmen-22.jpg',
+      slug: 'bar-façade',
       caption: 'The cult bar façade at night',
     },
     {
@@ -27,12 +28,14 @@ const carmenEssayBlocks = {
     {
       type: 'image',
       src: '/images/carmen/carmen-05.jpg',
+      slug: 'sharp-jacket',
       caption: 'Sharp jacket. Sharper stare.',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-08.jpg',
       caption: 'A look of love and beer-light.',
+      slug: 'star-crossed-lovers',
       orientation: 'portrait',
     },
     {
@@ -43,16 +46,19 @@ const carmenEssayBlocks = {
       type: 'image',
       src: '/images/carmen/carmen-24.jpg',
       caption: 'Makeup touches between drinks',
+      slug: 'make-up-refresh',
       orientation: 'portrait',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-18.jpg',
+      slug: 'chess-emperor',
       caption: 'The chessmaster',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-14.jpg',
+      slug: 'before-the-flash',
       caption: 'Before the flash — joy in layers',
     },
     {
@@ -67,11 +73,13 @@ const carmenEssayBlocks = {
     {
       type: 'image',
       src: '/images/carmen/carmen-10.jpg',
+      slug: 'powder-room',
       caption: 'Confronted in Carmen’s bathroom',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-11.jpg',
+      slug: 'talking-feet',
       caption: 'Feet speak too',
     },
     {
@@ -81,16 +89,19 @@ const carmenEssayBlocks = {
     {
       type: 'image',
       src: '/images/carmen/carmen-25.jpg',
+      slug: 'last-call',
       caption: 'Last pint of the night',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-16.jpg',
+      slug: 'staged-moment',
       caption: 'Some moments can’t be staged',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-28.jpg',
+      slug: 'rainy-night',
       caption: 'Rain, neon, and memory outside Carmen',
       orientation: 'portrait',
     },
@@ -101,17 +112,20 @@ const carmenEssayBlocks = {
     {
       type: 'image',
       src: '/images/carmen/carmen-30.jpg',
+      slug: 'boys-boys',
       caption: 'Arms up, head down. Safe.',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-23.jpg',
+      slug: 'dark-light',
       caption: 'Caught in shadow and light',
     },
     {
       type: 'image',
       src: '/images/carmen/carmen-35.jpg',
       caption: 'You. Me. The camera. Outside Carmen.',
+      slug: 'lasse',
       orientation: 'portrait',
     },
   ],

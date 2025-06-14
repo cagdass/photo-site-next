@@ -22,6 +22,7 @@ export default function BikepackingPageClient() {
       cover={{
         src: '/images/bikepacking/bikepacking-01.jpg',
         caption: 'Swung by small Russia',
+        slug: 'Albanian-climb',
       }}
       published={false}
       essayBlocksContent={{ blocks: [] }}
