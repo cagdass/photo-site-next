@@ -50,3 +50,10 @@ h3[id] {
   scroll-margin-top: 20px;
   /* match your sticky header height */
 }
+
+body.modal-open .floating-ui,
+body.modal-open .contents-button,
+body.modal-open nav,
+body.modal-open footer {
+  display: none !important;
+}

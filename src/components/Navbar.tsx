@@ -207,7 +207,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
           className=" mx-auto px-4 py-3 flex items-center justify-between"
           onClick={handleMenuClick}
         >
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 mt-0.5">
             <img src="/logo.png" alt="Logo" className="h-8 logo-img" />
             <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
           </Link>
@@ -217,7 +217,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
               id="navbar-page-title"
               onClick={handleMenuClick}
               className={`cursor-pointer
-      absolute left-1/2 -translate-x-1/2 md:hidden lg:block text-md
+      absolute left-1/2 -translate-x-1/2 md:hidden lg:block text-md mt-1
       transition-opacity duration-500 ease-in-out font-garamond
       ${showPageTitleInNavbar ? 'opacity-100' : 'opacity-0 pointer-events-none'}
     `}

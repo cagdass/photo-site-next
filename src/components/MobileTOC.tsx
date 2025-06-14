@@ -61,6 +61,19 @@ export default function MobileTOC({ headings, onJumpTo }: MobileTOCProps) {
     };
   }, []);
 
+  useEffect(() => {
+    const hideForQR = () => setHiddenByMenu(true);
+    const showForQR = () => setHiddenByMenu(false);
+
+    eventBus.on('qrModalOpened', hideForQR);
+    eventBus.on('qrModalClosed', showForQR);
+
+    return () => {
+      eventBus.off('qrModalOpened', hideForQR);
+      eventBus.off('qrModalClosed', showForQR);
+    };
+  }, []);
+
   if (hiddenByMenu) return null;
 
   return (
