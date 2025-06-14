@@ -24,6 +24,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/images/pattaya/:path*',
+        destination: '/api/404',
+      },
+    ];
+  },
 }
 
 export default nextConfig;
