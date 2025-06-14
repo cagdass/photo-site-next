@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function SamosBriefPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <SamosPageClient />
     </Suspense>
   );

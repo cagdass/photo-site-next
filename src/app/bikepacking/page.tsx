@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function BikepackingPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <BikepackingPageClient />
     </Suspense>
   );

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 export default function SongkranPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <SongkranPageClient />
     </Suspense>
   );

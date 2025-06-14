@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
 export default function SihanoukvillePage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <SihanoukvillePageClient />
     </Suspense>
   );

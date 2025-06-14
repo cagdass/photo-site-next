@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function CarmenPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <CarmenPageClient />
     </Suspense>
   );
