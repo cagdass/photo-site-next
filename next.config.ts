@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: "/soi6",
         permanent: true,
       },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };
