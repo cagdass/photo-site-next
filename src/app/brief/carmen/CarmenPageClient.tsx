@@ -5,6 +5,7 @@ import { usePageTitle } from '@/context/PageTitleContext';
 import PhotoEssay from '@/components/PhotoEssay';
 import carmenEssayBlocks from '@/data/carmenEssayBlocks';
 import carmenPhotos from '@/data/carmenPhotos';
+import { getImageUrl } from '@/utils/cdn';
 // import your essay content, etc.
 
 export default function CarmenPageClient() {
@@ -20,7 +21,7 @@ export default function CarmenPageClient() {
       title="Carmen"
       subtitle="A few photos from Södermalm's infamous dive bar"
       cover={{
-        src: '/images/carmen/carmen-13.jpg',
+        src: getImageUrl('carmen/carmen-13.jpg'),
         caption: 'Another fun night at the pub.',
         slug: 'pub-man',
       }}

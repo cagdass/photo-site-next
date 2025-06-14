@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { getImageUrl } from '@/utils/cdn';
 
 export default function HomePageProjects() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -30,27 +31,26 @@ export default function HomePageProjects() {
   const featured = [
     {
       id: '/soi6',
-      image: '/images/pattaya/portraits/soi6_portrait-01.jpg',
+      image: getImageUrl('pattaya/portraits/soi6_portrait-01.jpg'),
       title: 'Soi 6',
       caption: 'For seven weeks, I photographed a bar street in Pattaya, Thailand'
     },
     {
       id: '/brief/sihanoukville',
-      image: '/images/sihanoukville/sihanoukville-07.jpg',
+      image: getImageUrl('sihanoukville/sihanoukville-07.jpg'),
       title: 'Sihanoukville',
       caption: 'One day in a Cambodian city in rapid transformation'
     },
     {
       id: '/brief/songkran',
-      image: '/images/songkran/songkran-01.jpg',
+      image: getImageUrl('songkran/songkran-01.jpg'),
       objectPosition: 'object-[60%_center]',
       title: 'Songkran',
       caption: "I photographed Thailand's wettest day with a waterproof camera"
     },
     {
       id: '/brief/carmen',
-      image: '/images/carmen/carmen-05.jpg',
-      // objectPosition: 'object-[60%_center]',
+      image: getImageUrl('carmen/carmen-05.jpg'),
       title: 'Carmen',
       caption: "Scenes from Stockholm's trashiest, most likely, bar"
     },

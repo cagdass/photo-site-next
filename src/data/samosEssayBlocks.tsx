@@ -2,6 +2,7 @@
 
 const samosEssayBlocks = {
   options: {
+    imgUrlBase: 'samos/',
     imgSrcReplaceStr: '/samos/'
   },
   blocks: [

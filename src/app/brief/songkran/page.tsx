@@ -2,6 +2,9 @@ import PhotoEssay from '@/components/PhotoEssay';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 import SongkranPageClient from './SongkranPageClient';
+import { getImageUrl } from '@/utils/cdn';
+
+const coverImageUrl = getImageUrl('songkran/songkran-01.jpg');
 
 export const metadata: Metadata = {
   title: 'Songkran — Brief',
@@ -13,7 +16,7 @@ export const metadata: Metadata = {
     siteName: 'Çağdaş',
     images: [
       {
-        url: 'https://cagdas.photos/images/songkran/songkran-01.jpg',
+        url: getImageUrl('songkran/songkran-01.jpg'),
         width: 1200,
         height: 630,
         alt: 'Songkran festival water fight in Thailand',
@@ -25,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Songkran — Brief',
     description: "Thailand's wettest day with a waterproof camera.",
-    images: ['https://cagdas.photos/images/songkran/songkran-01.jpg'],
+    images: [getImageUrl('songkran/songkran-01.jpg')],
   },
 };
 export default function SongkranPage() {

@@ -6,12 +6,14 @@ import FootnoteButton from '@/components/FootnoteButton';
 import PortraitReel from '@/components/PortraitReel';
 import Soi6Poem from '@/components/Soi6Poem';
 import PhotoEssayText from '@/components/PhotoEssayText';
+import { getImageUrl } from '@/utils/cdn';
 
 const introductionTextSize = 'text-sm  lg:text-base xl:text-[18px] leading-relaxed mb-6';
 
 const essayContent = {
   options: {
-    imgSrcReplaceStr: '/pattaya/'
+    imgSrcReplaceStr: '/pattaya/',
+    imgUrlBase: 'pattaya/',
   },
   blocks: [{
     type: 'component',
@@ -132,7 +134,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-05.jpg',
+    src: 'soi6-05.jpg',
     slug: 'ususal-scene',
     caption: 'A usual Soi 6 scene, April 2024.'
   },
@@ -152,7 +154,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-02.jpg',
+    src: 'soi6-02.jpg',
     slug: 'welcome-to-pattaya',
     caption: 'The customer is always welcome, June 2024.'
   },
@@ -166,7 +168,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-17.jpg',
+    src: 'soi6-17.jpg',
     slug: 'fleeting-glows',
     color: true,
     caption: 'Fleeting glows, December 2023.'
@@ -197,7 +199,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-03.jpg',
+    src: 'soi6-03.jpg',
     slug: 'odd-couple',
     color: true,
     caption: 'Man with a bar-fined girl, December 2023.'
@@ -223,7 +225,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-97.jpg',
+    src: 'soi6-97.jpg',
     slug: 'another-odd-couple',
     caption: 'Another international couple, December 2023.',
   },
@@ -237,7 +239,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-19.jpg',
+    src: 'soi6-19.jpg',
     slug: 'pussy-club',
     color: true,
     caption: 'Children were often around, March 2024.',
@@ -252,7 +254,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-93.jpg',
+    src: 'soi6-93.jpg',
     slug: 'talk-about-overwhelming',
     caption: 'A different kind of overwhelming, June 2024.'
   },
@@ -264,7 +266,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-04.jpg',
+    src: 'soi6-04.jpg',
     slug: 'flower-girl',
     color: true,
     caption: 'Some children even part of the workforce, April 2024.'
@@ -314,7 +316,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-34.jpg',
+    src: 'soi6-34.jpg',
     slug: 'goya-smile',
     caption: 'The Goya smile, December 2023.'
   },
@@ -336,7 +338,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-49.jpg',
+    src: 'soi6-49.jpg',
     slug: 'goya-gubben',
     color: true,
     caption: 'Another Goya face, December 2023.'
@@ -374,7 +376,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-88.jpg',
+    src: 'soi6-88.jpg',
     slug: 'breaking-the-ice',
     caption: 'Namkeng! Namkeng!, March 2024.'
   },
@@ -393,7 +395,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/walking_street.jpg',
+    src: 'walking_street.jpg',
     slug: 'night-watchmen',
     caption: 'The entrance of a Walking Street go-go club, December 2023.',
   },
@@ -422,7 +424,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-59.jpg',
+    src: 'soi6-59.jpg',
     slug: 'open-bar',
     caption: 'Allure of the open bar on Soi 6, December 2023.',
   },
@@ -450,7 +452,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-1312.jpg',
+    src: 'soi6-1312.jpg',
     slug: 'acab',
     caption: 'Even the police patrol isn’t immune from Soi 6’s rituals, April 2024.'
 
@@ -499,7 +501,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-41.jpg',
+    src: 'soi6-41.jpg',
     slug: 'trans-sex-worker',
     caption: 'A trans sex worker at a Soi 6/1 bar, April 2024.'
   },
@@ -520,7 +522,7 @@ const essayContent = {
     render: () => {
       const beachRoadImages = Array.from({ length: 18 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
-        return `/images/pattaya/beach_road/beach_road-${num}.jpg`;
+        return getImageUrl(`pattaya/beach_road/beach_road-${num}.jpg`);
       });
 
       return (
@@ -546,7 +548,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-06.jpg',
+    src: 'soi6-06.jpg',
     slug: 'make-up',
     caption: 'Makeup check before work, June 2024.'
   },
@@ -560,7 +562,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-16.jpg',
+    src: 'soi6-16.jpg',
     slug: 'say-cheese',
     color: true,
     caption: 'Smile for the camera, April 2024.'
@@ -573,7 +575,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-66.jpg',
+    src: 'soi6-66.jpg',
     slug: 'pictureception',
     color: true,
     caption: 'Picture in a picture, April 2024.'
@@ -590,7 +592,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-07.jpg',
+    src: 'soi6-07.jpg',
     slug: 'usual-work-night',
     caption: 'A usual night at work, April 2024.'
   },
@@ -610,7 +612,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-31.jpg',
+    src: 'soi6-31.jpg',
     slug: 'in-a-bar',
     caption: 'In such a bar, March 2024.'
   },
@@ -622,7 +624,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-94.jpg',
+    src: 'soi6-94.jpg',
     slug: 'boy-in-a-cart',
     caption: 'Out late on a school night, April 2024.'
   },
@@ -634,7 +636,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-65.jpg',
+    src: 'soi6-65.jpg',
     slug: 'pyjamas',
     caption: 'Changing into pyjamas, April 2024.'
   },
@@ -674,7 +676,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-47.jpg',
+    src: 'soi6-47.jpg',
     slug: 'walking-stick-men',
     caption: 'There must be some way out of here, June 2024.'
   },
@@ -690,7 +692,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-09.jpg',
+    src: 'soi6-09.jpg',
     slug: 'yankees',
     caption: 'Yankees that have been on a medical Turkish trip, June 2024.'
   },
@@ -719,7 +721,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-92.jpg',
+    src: 'soi6-92.jpg',
     slug: 'shawl-laddie',
     caption: 'Man with a shawl, December 2023.'
   },
@@ -735,7 +737,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-13.jpg',
+    src: 'soi6-13.jpg',
     slug: 'yet-another-odd-couple',
     caption: 'An international couple, December 2023.',
   },
@@ -747,7 +749,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-98.jpg',
+    src: 'soi6-98.jpg',
     slug: 'the-millionaire',
     caption: 'A made guy, March 2024.',
   },
@@ -785,7 +787,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-10.jpg',
+    src: 'soi6-10.jpg',
     slug: 'roll-call',
     caption: 'Mamasan taking the roll call, March 2024.',
   },
@@ -827,7 +829,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-80.jpg',
+    src: 'soi6-80.jpg',
     slug: 'birthday-girl',
     caption: 'Birthday girl, June 2024.',
   },
@@ -859,7 +861,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-44.jpg',
+    src: 'soi6-44.jpg',
     slug: 'connect-four',
     caption: 'A game of Connect Four, June 2024.',
   },
@@ -869,7 +871,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-22.jpg',
+    src: 'soi6-22.jpg',
     slug: 'merry-christmas',
     color: true,
     caption: 'A freezing Thai Christmas, December 2023.'
@@ -948,7 +950,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-08.jpg',
+    src: 'soi6-08.jpg',
     slug: 'wheelchair-man',
     caption: 'Street scene, June 2024.',
   },
@@ -974,7 +976,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-71.jpg',
+    src: 'soi6-71.jpg',
     slug: 'with-a-customer',
     caption: 'With a customer, April 2024.',
   },
@@ -994,7 +996,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-82.jpg',
+    src: 'soi6-82.jpg',
     slug: 'splish-splash',
     caption: 'Nightfall after the water fights during Songkran, April 2024.',
   },
@@ -1021,9 +1023,17 @@ const essayContent = {
     type: 'text',
     content: `I snuck upstairs in a Soi 6 bar once to grab some pictures. The place looked like a hotel corridor, with many doors lining a narrow hallway. I was too scared to step inside any of the rooms, knowing this was a brothel after all—I didn’t want to open any doors and find a farang with a bar girl. When I returned to the bar, the mamasan shook her finger at me in a reprimanding way; she had seen me on the CCTV, but she didn’t make it a big deal. Another time, at a different bar, I’d beg the mamasan, with whom I was on good terms, to let me go upstairs. Once, I even feigned being sleepy—pressing open hands to the side of my head as if to say “sleep”—but, of course, I was always rebuked.
 
-    On two other occasions, I agreed with a bar girl to go upstairs. One of those times was with Linda. At first, she was confused—she thought I wanted to have sex. I explained that I just wanted to see the rooms and, if possible, take some photos. She was still puzzled as to why anyone would be interested in the rooms, but said she’d take me upstairs without asking for money—though I’d still have to pay the mamasan 400 baht to rent the room, which is the standard fee for any man having short-time intercourse with a bar girl on Soi 6.
-
-    I even considered photographing a customer with a girl in one of those rooms, but I never encountered a situation where I could do that respectfully—or safely. I met many men, some of whom I photographed and occasionally chatted with—sometimes even over a beer—but I never felt like lingering around them longer than necessary. It seems impossible to me that a Western man today would be comfortable being photographed during sex—let alone a sex worker. And anyway, I didn’t see the point of taking such photos.`
+    On two other occasions, I agreed with a bar girl to go upstairs. One of those times was with Linda. At first, she was confused—she thought I wanted to have sex. I explained that I just wanted to see the rooms and, if possible, take some photos. She was still puzzled as to why anyone would be interested in the rooms, but said she’d take me upstairs without asking for money—though I’d still have to pay the mamasan 400 baht to rent the room, which is the standard fee for any man having short-time intercourse with a bar girl on Soi 6.`
+  },
+  {
+    type: 'image',
+    src: 'soi6-69.jpg',
+    slug: 'room-for-hire',
+    caption: 'Room for hire for short-time, June 2024.',
+  },
+  {
+    type: 'text',
+    content: `I even considered photographing a customer with a girl in one of those rooms, but I never encountered a situation where I could do that respectfully—or safely. I met many men, some of whom I photographed and occasionally chatted with—sometimes even over a beer—but I never felt like lingering around them longer than necessary. It seems impossible to me that a Western man today would be comfortable being photographed during sex—let alone a sex worker. And anyway, I didn’t see the point of taking such photos.`
   },
   {
     type: 'component',
@@ -1102,7 +1112,7 @@ const essayContent = {
     render: () => {
       const portraitImages = Array.from({ length: 29 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
-        return `/images/pattaya/portraits/soi6_portrait-${num}.jpg`;
+        return getImageUrl(`pattaya/portraits/soi6_portrait-${num}.jpg`);
       });
 
       return <PortraitReel
@@ -1147,7 +1157,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-90.jpg',
+    src: 'soi6-90.jpg',
     slug: 'baby',
     caption: 'All alone and lost, April 2024.',
     color: true,
@@ -1185,7 +1195,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-11.jpg',
+    src: 'soi6-11.jpg',
     slug: 'make-up-girls',
     caption: 'Flower-selling girls putting on makeup, April 2024.'
   },
@@ -1210,7 +1220,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-75.jpg',
+    src: 'soi6-75.jpg',
     slug: 'london-bloke',
     caption: 'Tourist from London and bar girls posing, June 2024.'
   },
@@ -1224,7 +1234,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-78.jpg',
+    src: 'soi6-78.jpg',
     slug: 'linda-in-the-water',
     caption: 'Linda in the water, April 2024.',
     color: true,
@@ -1237,7 +1247,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-77.jpg',
+    src: 'soi6-77.jpg',
     slug: 'water-gun',
     caption: 'Ineffective weapon during Songkran, April 2024.',
   },
@@ -1265,7 +1275,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-00.jpg',
+    src: 'soi6-00.jpg',
     slug: 'collapsed',
     caption: 'Collapsed woman, April 2024. (Photographed with an OM System TG-7)'
 
@@ -1278,7 +1288,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-32.jpg',
+    src: 'soi6-32.jpg',
     slug: 'commotion',
     caption: 'There is too much confusion, June 2024.'
   },
@@ -1292,7 +1302,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-38.jpg',
+    src: 'soi6-38.jpg',
     slug: 'powder-room',
     caption: 'Powder room, April 2024.'
   },
@@ -1306,7 +1316,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-95.jpg',
+    src: 'soi6-95.jpg',
     slug: 'law-and-order',
     caption: 'Law and order, March 2024.'
   },
@@ -1349,7 +1359,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/cambodia.jpg',
+    src: 'cambodia.jpg',
     slug: 'cambodia',
     caption: 'At a Phnom Penh bar, May 2024.',
   },
@@ -1388,7 +1398,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-12.jpg',
+    src: 'soi6-12.jpg',
     slug: 'a-short-getaway',
     caption: 'A short getaway, December 2023.',
   },
@@ -1413,7 +1423,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-33.jpg',
+    src: 'soi6-33.jpg',
     slug: 'french-maids',
     caption: 'French maids, June 2024.',
   },
@@ -1453,7 +1463,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-lost.jpg',
+    src: 'soi6-lost.jpg',
     slug: 'frenchman',
     caption: 'Frenchman, a photo whose export is missing too, only a low-resolution preview survived, June 2024.'
   },
@@ -1463,7 +1473,7 @@ const essayContent = {
     render: () => {
       const scenes = Array.from({ length: 24 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
-        return `/images/pattaya/scenes/scene-${num}.gif`;
+        return getImageUrl(`pattaya/scenes/scene-${num}.gif`);
       });
 
       return (
@@ -1488,7 +1498,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-14.jpg',
+    src: 'soi6-14.jpg',
     slug: 'fourth-wall',
     caption: 'Breaking the fourth wall, April 2024.',
   },
@@ -1520,7 +1530,7 @@ const essayContent = {
   },
   {
     type: 'image',
-    src: '/images/pattaya/soi6-15.jpg',
+    src: 'soi6-15.jpg',
     slug: 'mans-best-friend',
     alt: 'Closing image from Soi 6',
     caption: 'Dog with a bottle, December 2023.',

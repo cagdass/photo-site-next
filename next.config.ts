@@ -15,6 +15,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-};
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.cagdas.photos',
+        pathname: '/**',
+      },
+    ],
+  },
+}
 
 export default nextConfig;

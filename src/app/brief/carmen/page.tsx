@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import CarmenPageClient from './CarmenPageClient';
 import { Suspense } from 'react';
+import { getImageUrl } from '@/utils/cdn';
 
 export const metadata: Metadata = {
   title: 'Carmen – Çağdaş',
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'Çağdaş',
     images: [
       {
-        url: 'https://cagdas.photos/images/carmen/carmen-22.jpg',
+        url: getImageUrl('carmen/carmen-22.jpg'),
         width: 1200,
         height: 630,
         alt: 'Piss on the wall',
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Carmen – Çağdaş',
     description: 'Scenes from Stockholm\'s trashiest, most likely, bar',
-    images: ['https://cagdas.photos/images/carmen/carmen-22.jpg'],
+    images: [getImageUrl('carmen/carmen-22.jpg')],
   },
 };
 

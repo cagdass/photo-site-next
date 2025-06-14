@@ -5,6 +5,7 @@ import HomePageProjects from '@/components/HomePageProjects';
 // import PhotoGallery from '@/components/PhotoGallery';
 import PhotoGalleryWrapper from '@/components/PhotoGalleryWrapper';
 import miscPhotos from '@/data/miscPhotos';
+import { getImageUrl } from '@/utils/cdn';
 import './home.css';
 
 export const metadata = {
@@ -17,7 +18,7 @@ export const metadata = {
     siteName: "Çağdaş Öztekin",
     images: [
       {
-        url: "https://cagdas.photos/hero-back.jpg",
+        url: getImageUrl('hero-back.jpg'),
         width: 600,
         height: 600,
         alt: "Çağdaş Öztekin",

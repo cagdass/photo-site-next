@@ -6,6 +6,7 @@ import PhotoEssay from '@/components/PhotoEssay';
 import ScrollMapPhotoEssay from '@/components/ScrollMapPhotoEssay';
 import sihanoukvilleEssayBlocks from '@/data/sihanoukvilleEssayBlocks';
 import sihanoukvillePhotos from '@/data/sihanoukvillePhotos';
+import { getImageUrl } from '@/utils/cdn';
 // import your essay content, etc.
 
 export default function SihanoukvillePageClient() {
@@ -21,7 +22,7 @@ export default function SihanoukvillePageClient() {
       title="Sihanoukville"
       subtitle="One day in a Cambodian city in rapid transformation"
       cover={{
-        src: '/images/sihanoukville/sihanoukville-01.jpg',
+        src: getImageUrl('sihanoukville/sihanoukville-01.jpg'),
         caption: 'Morning in the city.',
         slug: 'a-new-morning',
       }}

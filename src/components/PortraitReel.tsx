@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import Image from 'next/image';
 import 'yet-another-react-lightbox/styles.css';
 
 type PortraitReelProps = {
@@ -67,16 +68,20 @@ export default function PortraitReel({
           <ChevronLeft size={20} />
         </button>
 
-
         {images.map((src, idx) => (
-          <img
+          <div
             key={idx}
-            src={src}
-            alt=""
-            className={`h-80 w-auto object-cover rounded-lg shadow-md snap-start cursor-pointer ${orientation === 'landscape' ? 'aspect-[3/2]' : 'aspect-[2/3]'
-              }`}
+            className={`relative h-80 ${orientation === 'landscape' ? 'aspect-[3/2]' : 'aspect-[2/3]'} flex-shrink-0 rounded-lg overflow-hidden shadow-md snap-start cursor-pointer`}
             onClick={() => openLightbox(idx)}
-          />
+          >
+            <Image
+              src={src}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 60vw, 240px"
+            />
+          </div>
         ))}
 
         <button

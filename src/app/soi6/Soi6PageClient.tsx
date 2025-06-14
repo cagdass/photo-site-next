@@ -5,6 +5,7 @@ import { usePageTitle } from '@/context/PageTitleContext';
 import PhotoEssay from '@/components/PhotoEssay';
 import soi6EssayBlocks from '@/data/soi6EssayBlocks';
 import soi6Photos from '@/data/soi6Photos'; // array of photos only
+import { getImageUrl } from '@/utils/cdn';
 // import your essay content, etc.
 
 export default function Soi6PageClient() {
@@ -20,7 +21,7 @@ export default function Soi6PageClient() {
       title="Soi 6 — ซอยหก"
       subtitle="For seven weeks, I photographed a bar street in Pattaya, Thailand"
       cover={{
-        src: '/images/pattaya/soi6-01.jpg',
+        src: getImageUrl('pattaya/soi6-01.jpg'),
         caption: 'Start of a new working day, June 2024.',
         slug: 'new-working-day',
       }}

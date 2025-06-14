@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Suspense } from 'react';
 import PhotoEssay from '@/components/PhotoEssay';
 import SihanoukvillePageClient from './SihanoukvillePageClient';
+import { getImageUrl } from '@/utils/cdn';
 
 export const metadata: Metadata = {
   title: 'Sihanoukville – Çağdaş',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     siteName: 'Çağdaş',
     images: [
       {
-        url: 'https://cagdas.photos/images/sihanoukville/sihanoukville-01.jpg',
+        url: getImageUrl('sihanoukville/sihanoukville-01.jpg'),
         width: 1200,
         height: 630,
         alt: 'Morning in Sihanoukville',
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sihanoukville – Çağdaş',
     description: 'One day in a Cambodian city in rapid transformation',
-    images: ['https://cagdas.photos/images/sihanoukville/sihanoukville-01.jpg'],
+    images: [getImageUrl('sihanoukville/sihanoukville-01.jpg')],
   },
 };
 

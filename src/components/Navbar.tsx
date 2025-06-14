@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { eventBus } from '@/utils/eventBus';
+import { getImageUrl } from '@/utils/cdn';
 
 const LINKS = [
   { to: '/', label: 'Home' },
@@ -128,7 +129,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
       {/* LOGO at top-left */}
       <div className="absolute top-3 left-4 z-50">
         <Link href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="h-8 logo-img" />
+          <img src={getImageUrl('logo.png')} alt="Logo" className="h-8 logo-img" />
           <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
         </Link>
       </div>
@@ -208,7 +209,7 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
           onClick={handleMenuClick}
         >
           <Link href="/" className="flex items-center gap-2 mt-0.5">
-            <img src="/logo.png" alt="Logo" className="h-8 logo-img" />
+            <img src={getImageUrl('logo.png')} alt="Logo" className="h-8 logo-img" />
             <span className="font-semibold text-lg tracking-tight">Çağdaş</span>
           </Link>
 

@@ -23,6 +23,7 @@ export interface PhotoEssayProps {
     blocks: any[];
     options?: {
       imgSrcReplaceStr?: string,
+      imgUrlBase?: string,
     },
   },
   photoBlocks: any[];
@@ -71,7 +72,7 @@ export default function PhotoEssay({
 
   const essayBlocks = essayBlocksContent.blocks;
   const essayOptions = essayBlocksContent.options || {};
-  const { imgSrcReplaceStr } = essayOptions;
+  const { imgSrcReplaceStr, imgUrlBase } = essayOptions;
 
   const toggleCollapse = (id: string) => {
     setCollapsedSections(prev => ({ ...prev, [id]: !prev[id] }));
@@ -143,6 +144,7 @@ export default function PhotoEssay({
             collapsible={collapsible}
             hasTableOfContents={hasTableOfContents}
             {...(imgSrcReplaceStr ? { imgSrcReplaceStr } : {})}
+            {...(imgUrlBase ? { imgUrlBase } : {})}
           />
         )
         : (

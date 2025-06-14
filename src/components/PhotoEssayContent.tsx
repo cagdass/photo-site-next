@@ -13,6 +13,8 @@ import MobileTOC from '@/components/MobileTOC';
 import TableOfContents from '@/components/TableOfContents';
 import 'yet-another-react-lightbox/styles.css';
 import imageDimensions from '@/data/imageDimensions';
+import { getImageUrl } from '@/utils/cdn';
+import { img } from 'framer-motion/client';
 
 const typedImageDimensions = imageDimensions as Record<string, { width: number; height: number }>;
 
@@ -23,6 +25,7 @@ interface PhotoEssayContentProps {
   prelude?: React.ReactNode;
   hasTableOfContents?: boolean;
   imgSrcReplaceStr?: string,
+  imgUrlBase?: string,
 }
 
 type CustomSlide = SlideImage & {
@@ -60,6 +63,7 @@ export default function PhotoEssayContent({
   prelude,
   hasTableOfContents = false,
   imgSrcReplaceStr,
+  imgUrlBase,
 }: PhotoEssayContentProps) {
   const currentVisibleHeadingRef = useRef<HTMLElement | null>(null);
   const initialHash = typeof window !== 'undefined' ? window.location.hash?.slice(1) : null;
@@ -137,7 +141,7 @@ export default function PhotoEssayContent({
       const key = b.src;
 
       return {
-        src: b.src,
+        src: getImageUrl(imgUrlBase + b.src),
         color: b.color,
         caption: b.caption,
         slug: b.slug,
@@ -160,7 +164,7 @@ export default function PhotoEssayContent({
 
   const render: Render = {
     slide: ({ slide, offset, rect }) => {
-      const customSlide = slide as CustomSlide; // ✅ type cast here
+      const customSlide = slide as CustomSlide;
       const index = slides.findIndex(s => s.src === customSlide.src);
       const useColor = showColorMap[index] && customSlide.color && imgSrcReplaceStr;
 
@@ -223,12 +227,19 @@ export default function PhotoEssayContent({
 
   const setEssaySlugInUrl = (newIndex: number | null, replace = false) => {
     const params = new URLSearchParams(searchParams.toString());
+    console.log('Setting slug for index:', newIndex);
+    console.log('Slides length:', slides.length);
 
-    if (newIndex === null) {
+    if (newIndex === null || newIndex < 0 || newIndex >= slides.length) {
       params.delete('photo');
     } else {
-      const slug = slides[newIndex]?.slug;
-      if (!slug) return; // safeguard
+      const slide = slides[newIndex];
+      console.log('Slide:', slide);
+      const slug = slide?.slug;
+      if (!slug) {
+        console.warn('No slug found for slide at index:', newIndex);
+        return;
+      }
       params.set('photo', slug);
     }
 
@@ -499,19 +510,20 @@ export default function PhotoEssayContent({
                       }
 
                       if (block.type === 'image') {
-                        const slideIndex = slides.findIndex(s => s.src === block.src);
+                        const fullSrc = getImageUrl(imgUrlBase + block.src);
+                        const slideIndex = slides.findIndex(s => s.src === fullSrc);
 
                         return (
                           <EssayImage
                             key={j}
-                            src={block.src}
+                            src={fullSrc}
                             alt={block.alt}
                             caption={block.caption}
                             showColor={!!showColorMap[slideIndex]}
                             toggleColor={() => toggleColor(slideIndex)}
                             onClick={() => {
                               clearHash();
-                              setEssaySlugInUrl(slides.findIndex(slide => slide.src === block.src));
+                              setEssaySlugInUrl(slides.findIndex(slide => slide.src === fullSrc));
                             }}
                             {...(block.color && imgSrcReplaceStr ? { imgSrcReplaceStr } : {})}
                           />

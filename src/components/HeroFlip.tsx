@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { getImageUrl } from '@/utils/cdn';
 import '../styles/HeroFlip.css';
 
 export default function HeroFlip() {
@@ -52,8 +53,8 @@ export default function HeroFlip() {
       }}
     >
       <div className="flipper">
-        <img src="/hero.jpg" alt="Hero" className="front" />
-        <img src="/hero-back.jpg" alt="Hero Back" className="back" />
+        <img src={getImageUrl('hero.jpg')} alt="Hero" className="front" />
+        <img src={getImageUrl('hero-back.jpg')} alt="Hero Back" className="back" />
       </div>
     </div>
   );
