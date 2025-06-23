@@ -22,14 +22,14 @@ const soi6Photos = [
   {
     src: getImageUrl('pattaya/soi6-04.jpg'),
     alt: 'A little girl selling flowers amidst body parts',
-    width: 800,
-    height: 1200,
+    width: 1200,
+    height: 800,
   },
   {
     src: getImageUrl('pattaya/portraits/soi6_portrait-03.jpg'),
     alt: 'A bar girl\'s hearty smile',
-    width: 1200,
-    height: 800,
+    width: 800,
+    height: 1200,
   },
   {
     src: getImageUrl('pattaya/soi6-51.jpg'),

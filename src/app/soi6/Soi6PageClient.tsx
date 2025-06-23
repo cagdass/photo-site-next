@@ -21,7 +21,7 @@ export default function Soi6PageClient() {
       title="Soi 6 — ซอยหก"
       subtitle="For seven weeks, I photographed a bar street in Pattaya, Thailand"
       cover={{
-        src: getImageUrl('pattaya/soi6-01.jpg'),
+        src: getImageUrl('pattaya/soi6-cover.jpg'),
         caption: 'Start of a new working day, June 2024.',
         slug: 'new-working-day',
       }}
