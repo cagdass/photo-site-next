@@ -40,8 +40,8 @@ const soi6Photos = [
   {
     src: getImageUrl('pattaya/soi6-05.jpg'),
     alt: 'Street scene with many bar girls and some men',
-    width: 800,
-    height: 1200,
+    width: 1200,
+    height: 800,
   },
   {
     src: getImageUrl('pattaya/soi6-35.jpg'),
