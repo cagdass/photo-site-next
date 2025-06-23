@@ -22,8 +22,8 @@ async function walk(dir) {
 
       try {
         const metadata = await sharp(fullPath).metadata();
-          const relativePath = path.relative(path.join(__dirname, '../'), fullPath);
-const publicPath = '/' + relativePath.replace(/^public\//, '').replace(/\\/g, '/');
+        const relativePath = path.relative(path.join(__dirname, '../'), fullPath);
+        const publicPath = '/' + relativePath.replace(/^public\//, '').replace(/\\/g, '/');
 
         if (metadata.width && metadata.height) {
           result[publicPath] = {
@@ -41,10 +41,20 @@ const publicPath = '/' + relativePath.replace(/^public\//, '').replace(/\\/g, '/
 }
 
 (async () => {
+  if (!fs.existsSync(imageDir)) {
+    console.log('⚠️  Skipping image dimension generation: public/images folder not found.');
+    process.exit(0);
+  }
+
   await walk(imageDir);
 
-    const content = `export default ${JSON.stringify(result, null, 2)} as const;`;
+  if (Object.keys(result).length === 0) {
+    console.log('⚠️  No images found. Skipping output.');
+    process.exit(0);
+  }
+
+  const content = `export default ${JSON.stringify(result, null, 2)} as const;`;
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-    fs.writeFileSync(outputPath, content);
+  fs.writeFileSync(outputPath, content);
   console.log(`✅ Wrote ${Object.keys(result).length} entries to ${outputPath}`);
 })();
