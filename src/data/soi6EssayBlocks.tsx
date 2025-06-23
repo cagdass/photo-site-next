@@ -750,6 +750,7 @@ const essayContent = {
   {
     type: 'image',
     src: 'soi6-13.jpg',
+    color: true,
     slug: 'yet-another-odd-couple',
     caption: 'An international couple, December 2023.',
   },
@@ -869,7 +870,7 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `In many bars on Soi 6, where conversation was often limited by language barriers and the transactional nature of the work, the women found ways to engage customers through games. Dice games were common, providing a lighthearted way to pass the time. I also encountered Jenga and Connect Four—games I had never played before. When I bought lady drinks, I often played Connect Four with the girls, which created brief moments of genuine interaction and playfulness amid the otherwise transactional atmosphere.`
+    content: `In many bars on Soi 6, where conversation was often limited by language barriers and the transactional nature of the work, the women found ways to engage customers through games. Dice games were common, providing a lighthearted way to pass the time. I also encountered Jenga and Connect Four—games I had never played before. When I bought lady-drinks, I often played Connect Four with the girls, which created brief moments of genuine interaction and playfulness amid the otherwise transactional atmosphere.`
   },
   {
     type: 'image',
@@ -990,6 +991,7 @@ const essayContent = {
     type: 'image',
     src: 'soi6-71.jpg',
     slug: 'with-a-customer',
+    color: true,
     caption: 'With a customer, April 2024.',
   },
   {
@@ -1584,7 +1586,7 @@ This is what remains: the fragments of a place, its people, and the stories I ha
       { term: 'Farang - ฝรั่ง', definition: 'Thai slang for foreigner, typically white Westerners.' },
       { term: 'Freelancer', definition: 'A sex worker who works independently, not tied to any bar, often finding clients directly on the street or nearby.' },
       { term: 'Kathoey - กะเทย', definition: 'A Thai term referring to people assigned male at birth who present femininely. This can include transgender women and, in some contexts, effeminate gay men. While some people in Thailand embrace the term, others may prefer to be identified simply as women or by other labels. The English word “ladyboy” is often used by the locals as well as commonly used in media and tourism but is often considered disrespectful by Western standards.' },
-      { term: 'Lady drink', definition: 'A non-alcoholic or lightly alcoholic drink that customers buy for sex workers to keep them company.' },
+      { term: 'Lady-drink', definition: 'A non-alcoholic or lightly alcoholic drink that customers buy for sex workers to keep them company.' },
       { term: 'Long time', definition: 'A longer paid engagement, typically lasting several hours or overnight, often involving a hotel or private room.' },
       { term: 'Mamasan', definition: 'Originally a Japanese term (ママさん) used to respectfully address a woman in charge of a bar or hostess club. In Thai bar culture, it refers to the woman—often older—who manages the bar and its workers. She recruits staff, oversees daily operations, and enforces rules.' },
       { term: 'Short time', definition: 'A brief paid encounter, usually about an hour or less, often arranged quickly at a bar or nearby location.' },
