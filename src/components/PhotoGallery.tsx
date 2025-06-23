@@ -78,7 +78,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
   }));
 
   return (
-    <div style={{ padding: "0 20px" }}>
+    <div style={{ padding: "0 40px" }}>
       <RowsPhotoAlbum
         photos={photos}
         render={{ image: renderNextImage }}

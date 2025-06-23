@@ -32,13 +32,20 @@ const essayContent = {
           Initially, I shared these photos privately with friends and fellow photographers,
           including Halil who oversaw most of my work,
           people encouraged me to consider publishing a book—something completely new to me.
-          Another photographer friend, Duygu, let me in on an open call by the Arbetet Museum in Sweden,
-          some photos from this series will be shown there later this year. And another photographer friend
-          Erhan Can has been helping me with retouching before printing. It’s the first time I’m printing a photo, my hands are shaking. Big thanks to everyone
+          Another photographer friend,{" "}
+          <Link href="https://www.duygu.se"
+            className="underline text-blue-400 hover:text-blue-600">
+            Duygu
+          </Link>, let me in on an open call by the Arbetet Museum in Sweden,
+          some photos from this series will be shown there later this year. And another photographer friend{" "}
+          <Link href="https://www.erhancan.se"
+            className="underline text-blue-400 hover:text-blue-600">
+            Erhan Can
+          </Link> has been helping me with retouching before printing. It’s the first time I’m printing a photo, my hands are shaking. Big thanks to everyone
           who helped and cheered me on thus far.
           But, for the time being, I decided to create a website and share my work online
           as well as my experiences and observations. I’m doing everything by hand,
-          it’s been a lot of work, but I’ve enjoyed it. If you find anything that doesn’t work please let me know, you can find my contact details on the <Link href="/about" className="underline text-blue-400 hover:text-blue-600">
+          it’s been a lot of work, but I’ve enjoyed it. Thanks also to all the friends that have visited my website and read the work-in-progress version of this essay and gave me feedback! If you find anything that doesn’t work please let me know, you can find my contact details on the <Link href="/about" className="underline text-blue-400 hover:text-blue-600">
             About page
           </Link>.
         </PhotoEssayText>
@@ -135,6 +142,7 @@ const essayContent = {
   {
     type: 'image',
     src: 'soi6-05.jpg',
+    color: true,
     slug: 'ususal-scene',
     caption: 'A usual Soi 6 scene, April 2024.'
   },
@@ -1504,13 +1512,36 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `Sometimes I wonder if I really documented anything—or if I just circled around it. I walked. I watched. I listened. I photographed. That’s what I brought back.
+    content: `Sometimes I wonder if I really documented anything—or if I just circled around it. I walked. I watched. I listened. I photographed. That’s what I brought back.`
+  },
+  {
+    type: 'component',
+    render: () => (
+      <>
+        <PhotoEssayText>
+          Before writing this, I reached out to every NGO I could find working in Pattaya. I offered to mention their work here—to give anyone reading this, looking at these pictures, a way to help. But honestly, I’m not sure how to help myself. And I didn’t hear back from any of them—except ASPNW. Their communications officer said I was welcome to include them, but didn’t explain what they actually do. I was referred to the website, so I’ll just share that{" "}
+          <Link href="www.apnsw.net"
+            className="underline text-blue-400 hover:text-blue-600">
+            here
+          </Link>.
+        </PhotoEssayText>
+      </>
+    )
+  },
+  {
+    type: 'text',
+    content: `In the past couple of months, I’ve checked in with a few people. May is back in Pattaya, working again. Namtan seems to be in a relationship with an older Western man. She shares stories from their outings on Instagram, often laughing. Mint hasn’t replied, but her timeline is now filled with posts professing love for her boyfriend—another farang. Linda hasn’t answered either. I hope she’s okay.
 
-    Before writing this, I reached out to every NGO I could find operating in Pattaya. I told them briefly what I had done—offered to mention their work here to give anyone reading this and looking at the pictures a way to help. But honestly, I’m not sure how to help myself. And I didn’t hear back from any of them.
+One woman I photographed but didn’t name in this essay has since moved to the UK and is now with a man from there. The rest—many unnamed here but still connected to me on social media—are still in Pattaya. They post occasionally. A birthday party. A night out. A drink raised to the camera.
 
-    And yet—despite everything—photography brought me joy. Maybe that’s the most complicated part.
+I’ve spent the last couple of months in Stockholm—retouching, selecting, writing. Halil is back in town now too. Sometimes we walk around Södermalm in the evenings and talk about Pattaya. Last week, I mentioned seeing a video of a Western guy taunting women and security on Soi 6, only to get lynched. Halil just said, “Western men go down there and do all kinds of disgrace—for a fifth of what it would cost them back home. And they still manage to disrespect the locals.” Pretty much sums it up.
 
-    This is what remains: the fragments of a place, its people, and the stories that I had to share. I leave them here, for you to see, to remember and to reckon with.`
+I’m sure there’s still a lot I haven’t managed to say. But I also feel like I did what I could to outline Soi 6, Pattaya, and the Thailand I saw—through my memories and photos. And I’m glad I’ve managed to share it while it’s still fresh, now that it’s been a year since I left Thailand for the last time.
+
+And yet—despite everything—photography brought me joy. Maybe that’s the most complicated part.
+
+This is what remains: the fragments of a place, its people, and the stories I had to share. I leave them here—for you to see, to remember, and to reckon with.
+`
   },
   {
     type: 'heading',
