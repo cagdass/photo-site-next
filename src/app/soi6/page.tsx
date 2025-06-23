@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Soi6Wrapper from './Soi6Wrapper';
+import { getImageUrl } from '@/utils/cdn';
 
 export const metadata: Metadata = {
   title: 'Soi 6, Pattaya – A Photo Essay by Çağdaş Öztekin',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'Çağdaş',
     images: [
       {
-        url: 'https://cagdas.photos/images/pattaya/soi6-cover.jpg',
+        url: getImageUrl('pattaya/soi6-cover.jpg'),
         width: 1200,
         height: 630,
         alt: 'Cover photo from Soi 6 photo essay by Çağdaş Öztekin',
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Soi 6, Pattaya – A Photo Essay by Çağdaş Öztekin',
     description: 'For seven weeks, I photographed sex work, nightlife and fleeting intimacy on a bar street in Pattaya.',
-    images: ['https://cagdas.photos/images/pattaya/soi6-cover.jpg'],
+    images: [getImageUrl('pattaya/soi6-cover.jpg')],
   },
 };
 
