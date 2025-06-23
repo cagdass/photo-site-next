@@ -434,6 +434,7 @@ const essayContent = {
     type: 'image',
     src: 'soi6-59.jpg',
     slug: 'open-bar',
+    color: true,
     caption: 'Allure of the open bar on Soi 6, December 2023.',
   },
 
@@ -602,6 +603,7 @@ const essayContent = {
     type: 'image',
     src: 'soi6-07.jpg',
     slug: 'usual-work-night',
+    color: true,
     caption: 'A usual night at work, April 2024.'
   },
   {
@@ -621,6 +623,7 @@ const essayContent = {
   {
     type: 'image',
     src: 'soi6-31.jpg',
+    color: true,
     slug: 'in-a-bar',
     caption: 'In such a bar, March 2024.'
   },
@@ -645,6 +648,7 @@ const essayContent = {
   {
     type: 'image',
     src: 'soi6-65.jpg',
+    color: true,
     slug: 'pyjamas',
     caption: 'Changing into pyjamas, April 2024.'
   },
@@ -1118,7 +1122,7 @@ const essayContent = {
     type: 'component',
     collapsible: false,
     render: () => {
-      const portraitImages = Array.from({ length: 29 }, (_, i) => {
+      const portraitImages = Array.from({ length: 28 }, (_, i) => {
         const num = String(i + 1).padStart(2, '0'); // pad 1 → 01
         return getImageUrl(`pattaya/portraits/soi6_portrait-${num}.jpg`);
       });
