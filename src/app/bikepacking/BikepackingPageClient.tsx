@@ -5,7 +5,7 @@ import { usePageTitle } from '@/context/PageTitleContext';
 import PhotoEssay from '@/components/PhotoEssay';
 import ScrollMapPhotoEssay from '@/components/ScrollMapPhotoEssay';
 import bikepackingEssayBlocks from '@/data/bikepackingEssayBlocks';
-// import your essay content, etc.
+import { getImageUrl } from '@/utils/cdn';
 
 export default function BikepackingPageClient() {
   const [, setPageTitle] = usePageTitle();
@@ -20,7 +20,7 @@ export default function BikepackingPageClient() {
       title="Bikepacking"
       subtitle="Heading home"
       cover={{
-        src: '/images/bikepacking/bikepacking-01.jpg',
+        src: getImageUrl('bikepacking/bikepacking-01.jpg'),
         caption: 'Swung by small Russia',
         slug: 'Albanian-climb',
       }}

@@ -2,8 +2,9 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { getImageUrl } from '@/utils/cdn';
 
-// Fake route resembling your bike trip (Sweden to Turkey)
+// Fake route resembling the bike trip (Sweden to Turkey)
 const routePoints = [
   { x: 180, y: 150 },   // Stockholm
   { x: 210, y: 145 },   // Tallinn
@@ -39,7 +40,7 @@ export default function ScrollMapPhotoEssay() {
       <div className="w-full md:w-1/2 relative">
         <svg viewBox="0 0 400 400" className="w-full h-[400px]">
           <image
-            href="/images/bikepacking/europe.png"
+            href={getImageUrl('bikepacking/europe.png')}
             x="0"
             y="0"
             width="400"
@@ -118,7 +119,7 @@ function PhotoBlock({
       <div className="text-xl font-semibold">{caption}</div>
       <div className="mt-2 text-sm text-gray-500">
         <img
-          src={`/images/bikepacking/test${String((index + 1) % 9 + 1).padStart(2, '0')}.PNG`}
+          src={getImageUrl(`bikepacking/test${String((index + 1) % 9 + 1).padStart(2, '0')}.PNG`)}
           alt={`Photo Stop ${index + 1}`}
           className="w-36 rounded mt-4"
         />
