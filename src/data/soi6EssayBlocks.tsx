@@ -30,14 +30,14 @@ const essayContent = {
           Between December 2023 and June 2024,
           I spent about seven weeks photographing Soi 6, a bar street in Pattaya, Thailand.
           Initially, I shared these photos privately with friends and fellow photographers,
-          including Halil who oversaw most of my work,
-          people encouraged me to consider publishing a book—something completely new to me.
+          including Halil who oversaw most of my work.
+          People encouraged me to consider publishing a book—something completely new to me.
           Another photographer friend,{" "}
           <Link href="https://www.duygu.se"
             className="underline text-blue-400 hover:text-blue-600">
             Duygu
-          </Link>, let me in on an open call by the Arbetet Museum in Sweden,
-          some photos from this series will be shown there later this year. And another photographer friend{" "}
+          </Link>, let me in on an open call by the Arbetet Museum in Sweden.
+          Some photos from this series will be shown there later this year. And another photographer friend{" "}
           <Link href="https://www.erhancan.se"
             className="underline text-blue-400 hover:text-blue-600">
             Erhan Can
@@ -1536,15 +1536,15 @@ const essayContent = {
   },
   {
     type: 'text',
-    content: `In the past couple of months, I’ve checked in with a few people. May is back in Pattaya, working again. Namtan seems to be in a relationship with an older Western man. She shares stories from their outings on Instagram, often laughing. Mint hasn’t replied, but her timeline is now filled with posts professing love for her boyfriend—another farang. Linda hasn’t answered either. I hope she’s okay.
+    content: `In the past couple of months, I’ve checked in with a few people. May is back in Pattaya, working again, not on Soi 6, but on another bar street. Namtan no longer works on Soi 6. She is in a relationship with an older Western man. She shares stories from their outings on Instagram, often laughing. A few days before publishing this, she was flying to Germany for the summer with her boyfriend. Mint hasn’t replied to my texts in a while. But her timeline is now filled with posts professing love for her boyfriend—another farang. Linda is still on Soi 6.
 
-One woman I photographed but didn’t name in this essay has since moved to the UK and is now with a man from there. The rest—many unnamed here but still connected to me on social media—are still in Pattaya. They post occasionally. A birthday party. A night out. A drink raised to the camera.
+    Another woman I photographed, but didn’t name in this essay, has since moved to the UK and is now with a man from there. The rest—many unnamed here but still connected to me on social media—are still in Pattaya. They post occasionally. A birthday party. A night out. A drink raised to the camera.
 
-I’ve spent the last couple of months in Stockholm—retouching, selecting, writing. Halil is back in town now too. Sometimes we walk around Södermalm in the evenings and talk about Pattaya. Last week, I mentioned seeing a video of a Western guy taunting women and security on Soi 6, only to get lynched. Halil just said, “Western men go down there and do all kinds of disgrace—for a fifth of what it would cost them back home. And they still manage to disrespect the locals.” Pretty much sums it up.
+    I’ve spent the last couple of months in Stockholm—retouching, selecting, writing. Halil is back in town now too. Sometimes we walk around Södermalm in the evenings and talk about Pattaya. Last week, I mentioned seeing a video of a Western guy taunting women and security on Soi 6, only to get lynched. Halil just said, “Western men go down there and do all kinds of disgrace—for a fifth of what it would cost them back home. And they still manage to disrespect the locals.” Pretty much sums it up.
 
-I’m sure there’s still a lot I haven’t managed to say. But I also feel like I did what I could to outline Soi 6, Pattaya, and the Thailand I saw—through my memories and photos. And I’m glad I’ve managed to share it while it’s still fresh, now that it’s been a year since I left Thailand for the last time.
+    I’m sure there’s still a lot I haven’t managed to say. But I also feel like I did what I could to outline Soi 6, Pattaya, and the Thailand I saw—through my memories and photos. And I’m glad I’ve managed to share it while it’s still fresh, now that it’s been a year since I left Thailand for the last time.
 
-And yet—despite everything—photography brought me joy. Maybe that’s the most complicated part.
+    And yet—despite everything—photography brought me joy. Maybe that’s the most complicated part.
 
 This is what remains: the fragments of a place, its people, and the stories I had to share. I leave them here—for you to see, to remember, and to reckon with.
 `

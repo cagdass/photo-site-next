@@ -34,12 +34,14 @@ export default function HomePageProjects() {
       image: getImageUrl('pattaya/portraits/soi6_portrait-01.jpg'),
       title: 'Soi 6',
       caption: 'For seven weeks, I photographed a bar street in Pattaya, Thailand'
+      // 30 June 2025
     },
     {
-      id: '/brief/sihanoukville',
-      image: getImageUrl('sihanoukville/sihanoukville-07.jpg'),
-      title: 'Sihanoukville',
-      caption: 'One day in a Cambodian city in rapid transformation'
+      id: '/brief/carmen',
+      image: getImageUrl('carmen/carmen-05.jpg'),
+      title: 'Carmen',
+      caption: "Scenes from Stockholm's trashiest, most likely, bar"
+      // 17 May 2025
     },
     {
       id: '/brief/songkran',
@@ -47,13 +49,16 @@ export default function HomePageProjects() {
       objectPosition: 'object-[60%_center]',
       title: 'Songkran',
       caption: "I photographed Thailand's wettest day with a waterproof camera"
+      // 16 May 2025
     },
     {
-      id: '/brief/carmen',
-      image: getImageUrl('carmen/carmen-05.jpg'),
-      title: 'Carmen',
-      caption: "Scenes from Stockholm's trashiest, most likely, bar"
+      id: '/brief/sihanoukville',
+      image: getImageUrl('sihanoukville/sihanoukville-07.jpg'),
+      title: 'Sihanoukville',
+      caption: 'One day in a Cambodian city in rapid transformation'
+      // 6 May 2025
     },
+
     // {
     //   id: '/brief/songkran3',
     //   image: '/images/songkran/songkran-01.jpg',
