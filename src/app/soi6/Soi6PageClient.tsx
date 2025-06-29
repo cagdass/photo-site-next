@@ -25,8 +25,8 @@ export default function Soi6PageClient() {
         caption: 'Start of a new working day, June 2024.',
         slug: 'new-working-day',
       }}
-      published={false}
-      publishedDate="Work in progress"
+      published={true}
+      publishedDate="Published on 30 June 2025"
       essayBlocksContent={soi6EssayBlocks}
       photoBlocks={soi6Photos}
       shareUrl="https://cagdas.photos/soi6"
