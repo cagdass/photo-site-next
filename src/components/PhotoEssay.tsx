@@ -7,6 +7,7 @@ import ToggleSwitch from './ToggleSwitch';
 import PhotoEssayContent from '@/components/PhotoEssayContent';
 import PhotoGallery from '@/components/PhotoGallery';
 import 'yet-another-react-lightbox/styles.css';
+import Link from 'next/link';
 
 export interface PhotoEssayProps {
   title: string;
@@ -108,7 +109,12 @@ export default function PhotoEssay({
           <section>
             <h1 id="cover-title" className="essay-title text-4xl font-bold mb-2">{title}</h1>
             <p className="text-lg italic">{subtitle}</p>
-            <p className="essay-author">by Çağdaş</p>
+            <p className="essay-author">by{" "}
+              <Link href="/about"
+                className="underline text-blue-400 hover:text-blue-600">
+                Çağdaş
+              </Link>
+            </p>
             {published && updatedDate && (
               <p className="essay-published text-sm text-gray-400">{publishedDate}, {updatedDate}</p>
             )}
