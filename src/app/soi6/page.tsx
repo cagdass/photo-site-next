@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description: 'For seven weeks, I photographed sex work, nightlife and fleeting intimacy on a bar street in Pattaya.',
     url: 'https://cagdas.photos/soi6',
     siteName: 'Çağdaş',
+    publishedTime: '2025-06-30',
     images: [
       {
         url: 'https://cagdas.photos/images/pattaya/soi6-01.jpg',
