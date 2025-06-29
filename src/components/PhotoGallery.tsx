@@ -68,7 +68,9 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
     }
     const url = `${pathname}?${params.toString()}`;
     const withHash = `${url}${window.location.hash}`;
-    replace ? router.replace(withHash) : router.push(withHash);
+    replace
+      ? router.replace(withHash, { scroll: false })
+      : router.push(withHash, { scroll: false });
   };
 
   // 3. Prepare lightbox slides
