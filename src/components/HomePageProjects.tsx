@@ -32,7 +32,7 @@ export default function HomePageProjects() {
     {
       id: '/soi6',
       image: getImageUrl('pattaya/portraits/soi6_portrait-01.jpg'),
-      title: 'Soi 6',
+      title: 'Soi 6 - ซอยหก',
       caption: 'For seven weeks, I photographed a bar street in Pattaya, Thailand'
       // 30 June 2025
     },
