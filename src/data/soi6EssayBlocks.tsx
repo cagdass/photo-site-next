@@ -116,6 +116,14 @@ const essayContent = {
           <PhotoEssayText textSize={introductionTextSize}>
             This essay has long been a work in progress — much like my thoughts on Pattaya, and the world it reflects.
           </PhotoEssayText>
+          <PhotoEssayText textSize={introductionTextSize}>
+            <em>Correction: </em>
+            In my essay in the {" "}
+            <a href="#starting_to_shoot"
+              className="underline text-blue-400 hover:text-blue-600">
+              Starting to Shoot
+            </a> section, I equate “Kathoey” with “Thai trans women,” but this is not necessarily accurate. A reader kindly pointed out that in Thailand, “Kathoey” is often described as a third gender and is not exactly equivalent to “trans women” as understood in Western contexts. While some embrace the term, many who would be described as “Kathoey” by others may prefer to identify simply as “phuying” (woman) or “phuying praphet song” (second type of woman). Please bear this in mind while reading, and thank you to the reader who provided this clarification.
+          </PhotoEssayText>
         </>
       )
     },
