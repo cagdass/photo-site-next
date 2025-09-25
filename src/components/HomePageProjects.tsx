@@ -37,6 +37,14 @@ export default function HomePageProjects() {
       // 30 June 2025
     },
     {
+      id: '/brief/jajce-market',
+      image: getImageUrl('jajce-market/color/jajce-market-02.jpg'),
+      objectPosition: 'object-[60%_center]',
+      title: 'Jajce Market',
+      caption: "Half an hour in a colorful marketplace in a small Bosnian town."
+      // 25 Sept 2025
+    },
+    {
       id: '/brief/carmen',
       image: getImageUrl('carmen/carmen-05.jpg'),
       title: 'Carmen',
@@ -102,7 +110,13 @@ export default function HomePageProjects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className={`w-full h-auto aspect-[2/3] object-cover transition duration-300 group-hover:brightness-110 ${project.objectPosition || 'object-center'}`}
+                  className={`
+    w-full h-auto aspect-[2/3] object-cover
+    transition duration-500 ease-in-out
+    group-hover:brightness-110
+    ${project.objectPosition || 'object-center'}
+    ${project.title === 'Jajce Market' ? 'grayscale group-hover:grayscale-0' : ''}
+  `}
                 />
                 <div className="absolute bottom-0 w-full bg-black/60 text-white px-3 py-2 h-[4.5rem] transition-all duration-300 group-hover:bg-black/80 group-hover:translate-y-[6px]">
                   <h3 className="text-base font-semibold leading-tight">{project.title}</h3>
