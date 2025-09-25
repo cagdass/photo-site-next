@@ -1,10 +1,11 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { RowsPhotoAlbum, RenderImageProps, RenderImageContext } from "react-photo-album";
-import Lightbox from "yet-another-react-lightbox";
+import Lightbox, { Render } from "yet-another-react-lightbox";
+import { ImageSlide, SlideImage } from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "react-photo-album/rows.css";
 import "yet-another-react-lightbox/styles.css";
@@ -15,12 +16,20 @@ interface Photo {
   caption?: string;
   width: number;
   height: number;
+  /** enable Color/B&W toggle for this photo */
+  color?: boolean;
 }
 
 export type { Photo };
 
 interface PhotoGalleryProps {
   photos: Photo[];
+  /**
+   * Base segment in the photo URL that, when present,
+   * will be replaced with `${imgSrcReplaceStr}color/` on toggle.
+   * Example: "pattaya/" -> "pattaya/color/"
+   */
+  imgSrcReplaceStrGallery?: string;
 }
 
 function renderNextImage(
@@ -31,24 +40,27 @@ function renderNextImage(
     <div style={{ width: "100%", position: "relative", aspectRatio: `${width} / ${height}` }}>
       <Image
         fill
-        src={photo.src || photo}
+        src={(photo as any).src || photo}
         alt={alt}
         title={title}
         sizes={sizes}
-        placeholder={"blurDataURL" in photo ? "blur" : undefined}
+        placeholder={"blurDataURL" in (photo as any) ? "blur" : undefined}
       />
     </div>
   );
 }
 
-export default function PhotoGallery({ photos }: PhotoGalleryProps) {
+type CustomSlide = SlideImage & { color?: boolean };
+
+export default function PhotoGallery({ photos, imgSrcReplaceStrGallery }: PhotoGalleryProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const [index, setIndex] = useState<number | null>(null);
+  const [showColorMap, setShowColorMap] = useState<Record<number, boolean>>({});
 
-  // 1. On URL change → update Lightbox index
+  // 1) URL -> Lightbox index
   useEffect(() => {
     const photoIndex = parseInt(searchParams.get('photo') || '', 10);
     if (!isNaN(photoIndex) && photoIndex >= 0 && photoIndex < photos.length) {
@@ -58,7 +70,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
     }
   }, [searchParams, photos.length]);
 
-  // 2. Sync router query string when lightbox index changes
+  // 2) Update URL when Lightbox index changes
   const updateUrl = (newIndex: number | null, replace = false) => {
     const params = new URLSearchParams(searchParams.toString());
     if (newIndex === null) {
@@ -66,18 +78,69 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
     } else {
       params.set('photo', newIndex.toString());
     }
-    const url = `${pathname}?${params.toString()}`;
-    const withHash = `${url}${window.location.hash}`;
-    replace
-      ? router.replace(withHash, { scroll: false })
-      : router.push(withHash, { scroll: false });
+    const url = `${pathname}?${params.toString()}${window.location.hash}`;
+    replace ? router.replace(url, { scroll: false }) : router.push(url, { scroll: false });
   };
 
-  // 3. Prepare lightbox slides
-  const slides = photos.map(({ src, caption }) => ({
-    src,
-    title: caption || "",
-  }));
+  // 3) Build slides (keep width/height for YARL layout)
+  const slides: CustomSlide[] = useMemo(
+    () =>
+      photos.map(({ src, caption, width, height, color }) => ({
+        src,
+        description: caption || "",
+        width,
+        height,
+        color,
+      })),
+    [photos]
+  );
+
+  // 4) Toggle handler for a single index
+  function toggleColor(i: number) {
+    setShowColorMap(prev => ({ ...prev, [i]: !prev[i] }));
+  }
+
+  // 5) Custom renderer to switch src and show toggle button
+  const render: Render = {
+    slide: ({ slide, offset, rect, index: i }) => {
+      const customSlide = slide as CustomSlide;
+
+      const useColor =
+        Boolean(showColorMap[i]) && Boolean(customSlide.color) && Boolean(imgSrcReplaceStrGallery);
+
+      const updatedSlide: CustomSlide = {
+        ...customSlide,
+        src:
+          useColor && imgSrcReplaceStrGallery
+            ? customSlide.src.replace(imgSrcReplaceStrGallery, `${imgSrcReplaceStrGallery}color/`)
+            : customSlide.src,
+      };
+
+      return (
+        <div
+          className="relative flex items-center justify-center"
+          style={{ width: rect.width, height: rect.height }}
+        >
+          <ImageSlide slide={updatedSlide} offset={offset} rect={rect} />
+          {customSlide.color && imgSrcReplaceStrGallery && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleColor(i);
+              }}
+              className="absolute top-1 -mt-1 left-1 w-20 bg-black border
+                font-garamond
+                bg-opacity-70 text-white py-1 cursor-pointer
+                z-50 rounded text-center select-none hover:bg-opacity-40"
+              aria-label="Toggle color"
+            >
+              {useColor ? "B & W" : "Color"}
+            </button>
+          )}
+        </div>
+      );
+    },
+  };
 
   return (
     <div style={{ padding: "0 40px" }}>
@@ -100,6 +163,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
         on={{ view: ({ index: i }) => updateUrl(i, true) }}
         plugins={[Zoom]}
         zoom={{ maxZoomPixelRatio: 2 }}
+        render={render}
       />
     </div>
   );

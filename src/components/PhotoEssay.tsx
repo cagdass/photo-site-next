@@ -35,6 +35,7 @@ export interface PhotoEssayProps {
   showPhotoEssayToggle?: boolean;
   photoOnly?: boolean;
   hasTableOfContents?: boolean;
+  imgSrcReplaceStrGallery?: string;
 }
 
 export default function PhotoEssay({
@@ -53,6 +54,7 @@ export default function PhotoEssay({
   showPhotoEssayToggle = false,
   photoOnly = false,
   hasTableOfContents = false,
+  imgSrcReplaceStrGallery,
 }: PhotoEssayProps) {
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
 
@@ -154,7 +156,9 @@ export default function PhotoEssay({
           />
         )
         : (
-          <PhotoGallery photos={photoBlocks} />
+          <PhotoGallery photos={photoBlocks}
+            {...(imgSrcReplaceStrGallery ? { imgSrcReplaceStrGallery } : {})}
+          />
         )}
     </div>
   );
