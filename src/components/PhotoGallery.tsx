@@ -102,7 +102,8 @@ export default function PhotoGallery({ photos, imgSrcReplaceStrGallery }: PhotoG
 
   // 5) Custom renderer to switch src and show toggle button
   const render: Render = {
-    slide: ({ slide, offset, rect, index: i }) => {
+    slide: ({ slide, offset, rect, }) => {
+      const i = index ?? 0; // use outer state
       const customSlide = slide as CustomSlide;
 
       const useColor =
