@@ -145,51 +145,55 @@ export default function Navbar({ pageTitle = '' }: NavbarProps) {
       </button>
 
       {/* Menu content */}
-      <div className="flex flex-col justify-start items-center h-full px-6 py-8 space-y-6 pt-20">
-        <ul className="text-center text-xl font-semibold space-y-4 mt-6 w-full">
-          {LINKS.map((item, idx) =>
-            item.subLinks ? (
-              <li key={idx}>
-                <button
-                  onClick={() => toggleSection(item.label)}
-                  className="w-full flex text-xl items-center justify-center gap-2 py-2 uppercase tracking-wide"
-                >
-                  {item.label}
-                  <span>{expanded[item.label] ? '▾' : '▸'}</span>
-                </button>
-                <ul
-                  className={`transition-all duration-300 ease-in-out overflow-hidden text-lg font-normal ${expanded[item.label] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                >
-                  {item.subLinks.map((sub, sidx) => (
-                    <li key={sidx}>
-                      <Link
-                        href={sub.to}
-                        className="block py-1 hover:underline"
-                        onClick={() => toggleMenu()}
-                      >
-                        {sub.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ) : (
-              <li key={idx}>
-                <Link
-                  href={item.to}
-                  onClick={() => toggleMenu()}
-                  className="block py-2 hover:underline uppercase tracking-wide"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            )
-          )}
-        </ul>
+      <div className="flex flex-col justify-start mt-12 items-center h-full px-6 py-8 space-y-6 pt-20 max-h-[60vh] overflow-y-auto ">
+        <div>
+          <ul className="text-center text-xl font-semibold space-y-4 w-full">
+            {LINKS.map((item, idx) =>
+              item.subLinks ? (
+                <li key={idx}>
+                  <button
+                    onClick={() => toggleSection(item.label)}
+                    className="w-full flex text-xl items-center justify-center gap-2 py-2 uppercase tracking-wide"
+                  >
+                    {item.label}
+                    <span>{expanded[item.label] ? '▾' : '▸'}</span>
+                  </button>
+                  <ul
+                    className={`transition-all duration-300 ease-in-out overflow-hidden text-lg font-normal ${expanded[item.label] ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                  >
+                    {item.subLinks.map((sub, sidx) => (
+                      <li key={sidx}>
+                        <Link
+                          href={sub.to}
+                          className="block py-1 hover:underline"
+                          onClick={() => toggleMenu()}
+                        >
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li key={idx}>
+                  <Link
+                    href={item.to}
+                    onClick={() => toggleMenu()}
+                    className="block py-2 hover:underline uppercase tracking-wide"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
 
-        <div className="dark-theme-button pt-8 border-t w-full flex justify-center mt-auto cursor-pointer">
-          <ThemeToggle />
+        <div className="dark-theme-button bottom z-100 border-t w-full flex justify-center  cursor-pointer">
+          <div className="mt-4 -mb-10">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </div>
