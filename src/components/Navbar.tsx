@@ -19,7 +19,7 @@ const LINKS = [
     label: 'Shorts',
     subLinks: [
       { to: '/brief/jajce-market', label: 'Jajce Market' },
-      { to: '/brief/samos', label: 'Samos' },
+      // { to: '/brief/samos', label: 'Samos' },
       { to: '/brief/sihanoukville', label: 'Sihanoukville' },
       { to: '/brief/songkran', label: 'Songkran' },
       { to: '/brief/carmen', label: 'Carmen' },
